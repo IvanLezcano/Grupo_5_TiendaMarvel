@@ -1,0 +1,18 @@
+*{
+    color: white;
+    font-size: 3rem;
+    background-color: red;
+    text-align: center;
+}
+.reparacion{
+    font-size:1rem
+}
+.fueradelheader{
+    background-color: red;
+    width:  100%;
+}
+.fueradelheader img{
+    width: 60%;
+    border-radius: 20%;
+    margin: 2rem
+}
