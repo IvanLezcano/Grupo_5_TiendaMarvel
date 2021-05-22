@@ -1,6 +1,6 @@
 
 
-![](imagenes/Readme.jpg)
+![](Imagenes/Readme.jpg)
 
 
 # Grupo 5: [TiendaMarvel][website]
