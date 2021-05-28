@@ -34,13 +34,7 @@ A simple vista, soy solo uno más de los millones de residentes de la costa Atl�
 
 ###Cristial Lell:
 
-*
-
-*
-
-*
-
-*
+Un joven de Tucumán, nada sobresaliente en su vida junto a los demás jóvenes del lugar. Hasta que los requerimientos de sus amigos desafían la realidad, su sentido programador se activa para demostrar que nada es imposible en la dimensión de los ceros y unos. Lo llaman **Mr. ROBOT**
 
 
 
