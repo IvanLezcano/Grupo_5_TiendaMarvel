@@ -14,7 +14,7 @@ Nuestra tienda se enfoca en vender productos de marvel para toda latinoamerica, 
 integrantes!
 
 
-###Ezequien Bauer:
+##Ezequien Bauer:
 
 Nombre:Ezequiel Bauer
 Ubicación : Mar del Plata, Buenos Aires, Argentina
@@ -22,7 +22,7 @@ Ubicación : Mar del Plata, Buenos Aires, Argentina
 A simple vista, soy solo uno más de los millones de residentes de la costa Atlántica, un esposo y trabajador aplicado como cualquier otro. Pero cuando mí equipo me convoca, tengo el poder de transportar cualquier tipo de información a la dimensión en donde lo requieran, los individuos de este planeta me conocen como **THE MODULE**
 
 
-###Lu Rojas:
+**Lu Rojas**:
 
 *
 
