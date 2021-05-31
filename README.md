@@ -14,7 +14,7 @@ Nuestra tienda se enfoca en vender productos de marvel para toda latinoamerica, 
 integrantes!
 
 
-<span style="font-size:25px;color:Green">Ezequiel Bauer</span>
+<span style="font-size:25px">Ezequiel Bauer</span>
 
 Nombre:Ezequiel Bauer
 Ubicación : Mar del Plata, Buenos Aires, Argentina
