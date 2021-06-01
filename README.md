@@ -9,7 +9,7 @@ Bienvenido!
 
 Nuestra tienda se enfoca en vender productos de marvel para toda latinoamerica, traer a tu casa el merchandising y todas las novedades sobre tu franquicia favorita a costos accesibles y a la puerta de tu casa! excelsior!
 
-**contexto**
+**Contexto**
 
 Trabajamos para una compañia quien recientemente a tenido contacto con marvel estudios, quien busca poder conseguir intermediarios para poder traer todos sus productos de manera accesible y a precios acordes al territorio de la republica Argentina.
 La compañia cierra trato con marvel y sale en busca de programadores para poder llevar a cabo una pagina E-commerce para poder asi tener un alcanze mucho mayor y dar una buena cara a la franquicia trayendo una pagina que contenga tanto productos como tambien promocionales de todo lo relacionado a Marvel , incluyendo una interaccion amigable para el usuario y que sea tanto util como E-commerce asi como tambien un sitio para que la persona pueda volver reiteradas veces a visitar la pagina
@@ -30,13 +30,10 @@ A simple vista, soy solo uno más de los millones de residentes de la costa Atl�
 
 
 ## Lu Rojas
-*
 
-*
-
-*
-
-*
+Conocida como Roja en el mundo digital y analógico, ya no existe persona viva que recuerde su nombre con el cual fue anotada en su
+nacimiento.
+Su fama es tal vez asociada a su poder primario ligado a hacer del mundo un lugar más hermoso, creativo y armoníco en cuál vivir, encontrar el límite a este poder y ver que era pura fantasía la llevo a transitar un camino de búsqueda y evolución, y así poder pasar de crear hermosas ilusiones a la vista, pero que eran solo eso, ilusiones, crear un verdadero mundo nuevo, y como este camino no le sería para nada fácil reunió a los mejores compañeros para tremenda misión y así es como evoluciono y paso de ser "La Roja" a **AdobeWitch**
 
 ## Cristial Lell
 
