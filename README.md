@@ -29,11 +29,12 @@ Ubicación : Mar del Plata, Buenos Aires, Argentina
 A simple vista, soy solo uno más de los millones de residentes de la costa Atlántica, un esposo y trabajador aplicado como cualquier otro. Pero cuando mí equipo me convoca, tengo el poder de transportar cualquier tipo de información a la dimensión en donde lo requieran, los individuos de este planeta me conocen como **THE MODULE**
 
 
-## Lu Rojas
+## Lucía Cámara
 
 Conocida como Roja en el mundo digital y analógico, ya no existe persona viva que recuerde su nombre con el cual fue anotada en su
 nacimiento.
 Su fama es tal vez asociada a su poder primario ligado a hacer del mundo un lugar más hermoso, creativo y armoníco en cuál vivir, encontrar el límite a este poder y ver que era pura fantasía la llevo a transitar un camino de búsqueda y evolución, y así poder pasar de crear hermosas ilusiones a la vista, pero que eran solo eso, ilusiones, crear un verdadero mundo nuevo, y como este camino no le sería para nada fácil reunió a los mejores compañeros para tremenda misión y así es como evoluciono y paso de ser "La Roja" a **AdobeWitch**
+
 
 ## Cristial Lell
 
