@@ -21,7 +21,7 @@ La compañia cierra trato con marvel y sale en busca de programadores para poder
 **A continuacion usted esta por leer archivos secreots confidenciales sobre los integrantes de esta organizacion de superheroes de la programacion, le pedimos cautela y discrecion, esta bajo su propio riesgo**
 
 
-### Ezequiel Bauer
+## Ezequiel Bauer
 
 Nombre:Ezequiel Bauer
 Ubicación : Mar del Plata, Buenos Aires, Argentina
