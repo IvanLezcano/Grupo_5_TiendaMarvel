@@ -52,7 +52,15 @@ Atrapado en este bucle de interaciones, rodeado de condicionales, las cadenas de
 
 
 
+## Paginas de referencia : 
 
+https://www.marvel.com/
+https://www.wizardingworld.com/
+https://www.shopdisney.com/marvel-content/#
+https://tndt.com.ar/marvel
+https://www.ovnipress.net/
+https://www.lego.com/es-ar
+https://www.dafiti.com.ar/
 
 
 
