@@ -54,7 +54,8 @@ Atrapado en este bucle de interaciones, rodeado de condicionales, las cadenas de
 
 ## Paginas de referencia : 
 
-https://www.marvel.com/
+https://www.marvel.com/ <br>
+
 https://www.wizardingworld.com/
 https://www.shopdisney.com/marvel-content/#
 https://tndt.com.ar/marvel
