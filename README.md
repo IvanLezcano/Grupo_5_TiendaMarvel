@@ -36,7 +36,7 @@ nacimiento.
 Su fama es tal vez asociada a su poder primario ligado a hacer del mundo un lugar más hermoso, creativo y armoníco en cuál vivir, encontrar el límite a este poder y ver que era pura fantasía la llevo a transitar un camino de búsqueda y evolución, y así poder pasar de crear hermosas ilusiones a la vista, pero que eran solo eso, ilusiones, crear un verdadero mundo nuevo, y como este camino no le sería para nada fácil reunió a los mejores compañeros para tremenda misión y así es como evoluciono y paso de ser "La Roja" a **AdobeWitch**
 
 
-## Cristial Lell
+## Cristian Lell
 
 Un joven de Tucumán, nada sobresaliente en su vida junto a los demás jóvenes del lugar. Hasta que los requerimientos de sus amigos desafían la realidad, su sentido programador se activa para demostrar que nada es imposible en la dimensión de los ceros y unos. Lo llaman **Mr. ROBOT**
 
