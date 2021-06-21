@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+:root {
+  --color-blue: #364e6f;
+  --color-gainsboro: #d3dcdf;
+  --color-red: #ff0000;
+  --color-cordovan: #954348;
+  --color-independence: #3f4f68;
+  --color-oxfordBlue: #152034;
+  --color-black: #000000;
+}
