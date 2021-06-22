@@ -17,23 +17,73 @@ header{
     .menu{
         display: none;
     }
-    .btn{
+    .navegacion .btn{
         color: white;
         
         font-size: 0.5rem !important;
     }
-    .btn-secondary{
+    .navegacion .btn-secondary{
         border: none !important;
         background-color:var(--color-oxfordBlue);
 
         font-size: 1.5rem !important;}
-    .dropdown-toggle{
-        font-size: 0.5rem !important;
+        .navegacion .dropdown-toggle{
+        font-size: 1rem !important;
         background-color:var(--color-oxfordBlue);
 
     }
-    .dropdown-menu{
+    .navegacion .dropdown-menu{
         font-size: 12px !important;
         background-color:var(--color-oxfordBlue);
     }
+    .fa-shopping-cart{
+        color: white;
+    }
+    .registrarse{
+        background-color: transparent;
+        text-decoration: none;
+        color: white;
+        width: 20%;
+        border: none;
+        position: relative;
+        top: -5px;
+    }
+    .unidos{
+        display: flex;
+    }
+    input{
+        width: 40%;
+    }
 }
+@media (min-width: 768px){
+
+.menumobile{
+    display: none;
+}
+.menu{
+    display: inline-block !important;
+    display: flex;
+}
+
+header img{
+    width: 20%;
+    height: 30%;
+  
+}
+.navegacion input{
+    width: 55%;
+    height: 30px;
+    border-radius: 15px;
+}
+.registrarse{
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    width: 15%;
+    border: none;
+    position: relative;
+    top: -5px;
+    font-size: 2rem;
+}
+
+} 
