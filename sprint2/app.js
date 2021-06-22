@@ -9,6 +9,12 @@ app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "index.html"))
 );
 
+app.get("/footer", (req, res) =>
+  res.sendFile(path.join(__dirname, "public" , "header-footer", "footer.html"))
+);
+app.get("/header", (req, res) =>
+  res.sendFile(path.join(__dirname, "public", "header-footer", "header.html"))
+);
 app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );
