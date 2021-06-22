@@ -60,6 +60,18 @@ header{
 .menumobile{
     display: none;
 }
+.menus{
+    display: flex !important;
+}
+.menus ul{
+    padding-left: 0 !important;
+    
+
+}
+.resto {
+    flex-direction:row !important;
+
+}
 .menu{
     display: inline-block !important;
     display: flex;
