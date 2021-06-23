@@ -46,6 +46,21 @@ header{
     .menu{
         display: none;
     }
+    .menumobile{
+        background-color: transparent !important;
+        border: none;
+    }
+    #dropdownMenuButton1{
+        height: 20px !important;
+        box-shadow: none !important;
+    }
+    .fa-shopping-cart{
+        color: white;
+    }
+    .re{
+        display: none;
+    }
+    
 
     /* .navegacion {
         display: block !important;
@@ -205,6 +220,16 @@ input{
     width: 100% !important;
     margin: auto !important;
     display: flex !important;
+}
+header .botonderegistrarse a{
+    display: block;
+
+}
+#dropdownMenuButton1{
+    height: 100% !important;
+}
+.re{
+    display: block;
 }
 
 
