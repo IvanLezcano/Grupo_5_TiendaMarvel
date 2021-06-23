@@ -7,13 +7,54 @@ header{
 
 
 @media (max-width: 768px){
-    .navegacion {
-        display: inline !important;
+    header nav{
+        display: flex !important;
+    }
+    header{
+        border-bottom: 3px solid black;
+    }
+   
+    .busqueda{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .imagenNavegacion{
+        width: 20% !important;
+        border-right: 3px solid black;
+    }
+    .imagenNavegacion img{
+        width: 100% !important;
+    }
+  
+    .botonderegistrarse{
+        align-items: center;
+        
+        align-self: center;
+        height: 100% !important;
+        
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center;
+        border-left: 3px solid black;
+    }
+    .botonderegistrarse button{
+        height: 20% !important;
+        
+
+    }
+    .menu{
+        display: none;
+    }
+
+    /* .navegacion {
+        display: block !important;
+        height: 30% !important;
     
     }
     header img{
         width: 20%;
-        height:30%;
+        height:30% !important;
         border-right: 3px solid black;
 
     }
@@ -43,23 +84,24 @@ header{
         color: white;
     }
     .registrarse{
+        width: 100% !important;
+        height:100% !important;
         background-color: transparent;
         text-decoration: none;
         color: white;
-        width: 20%;
-        height: 100%;
         border: none;
-        position: relative;
-        top: -5px;
+        padding-top: 40% !important;
     }
     .buscador{
         width: 60%;
-        border-right: 3px solid black;
         display: inline !important;
     }
     .botonderegistrarse{
         display: inline-block !important;
         border-left: 3px solid black;
+        height: 100% !important;
+        padding-left: 2.5%;
+        padding-top: 5%;
     }
     .unidos{
         display: flex;
@@ -67,14 +109,21 @@ header{
     input{
         width: 40%;
     }
+    .busqueda{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-around !important;
+    } */
 }
 @media (min-width: 768px){
+
+    
 
 .menumobile{
     display: none;
 }
-.menus{
-    display: flex !important;
+.menu{
+    display: inline !important;
 }
 .menus ul{
     padding-left: 0 !important;
@@ -95,14 +144,10 @@ header{
 header img{
     width: 20%;
     height: 30%;
-    border-right: 3px solid black;
 
   
 }
-.busqueda{
-    display: inline-block !important;
 
-}
 .buscador input{
     height: 30px;
     border-radius: 15px;
@@ -116,15 +161,29 @@ header img{
     border: none;
     font-size: 2rem;
     text-align: center !important;
+    margin-left: 4rem;
+    padding-top: 20%;
+    padding-bottom: 10%;
+
+
+
+}
+.linea{
+    display: inline !important;
+    border-left: 3px solid black !important;
 }
 .buscador{
+    display: flex;
+    height: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
     width: 60%;
-    border-right: 3px solid black;
-    display: inline !important;
+
 }
 .botonderegistrarse{
-    display: inline-block !important;
-    border-left: 3px solid black;
+    width: 20% !important;
+    
+
 }
 
 .resto button{
@@ -139,7 +198,13 @@ header img{
 
 }
 input{
-    width: 40%;
+    width: 70%;
+}
+
+.menu{
+    width: 100% !important;
+    margin: auto !important;
+    display: flex !important;
 }
 
 

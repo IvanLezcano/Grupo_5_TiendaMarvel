@@ -19,21 +19,30 @@
 <body>
     <header>
 
-
+        <nav>
 
         <section class="busqueda">
-            <div class="navegacion">
+
+
+            <div class="imagenNavegacion">
                 <img src="/img/torre.png" alt="">
-                <div class="buscador">
+            </div>
+
+
+            <div class="buscador">
                 <button><i class="fas fa-search"></i></button>
                 <input type="text">
-                </div>
+            </div>
 
-                <button class="btn btn-secondary dropdown-toggle menumobile" type="button" id="dropdownMenuButton1"
+
+
+            <div class="menuMobile">
+            <button class="btn btn-secondary dropdown-toggle menumobile" type="button" id="dropdownMenuButton1"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     ☰
-                </button>
-
+            </button>
+        
+            
                 <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
                     <li> <a href="/novedades"><button type="button" class="btn btn-secondary">NOVEDADES</button></a>
                     </li>
@@ -43,24 +52,20 @@
                     <li> <a href="/quiz"><button type="button" class="btn btn-secondary">QUIZ</button></a> </li>
                     <li> <a href="/nosotros"><button type="button" class="btn btn-secondary">NOSOTROS</button></a> </li>
                 </ul>
+            </div>
 
 
 
-
-
-                <div class="botonderegistrarse">
-                <a href="/registrarse"><button class="registrarse">registrarse <br>
-                        comprar <i class="fas fa-shopping-cart"></i></button></a>
-                    </div>
-
+            <div class="botonderegistrarse" >
+                <a href="/registrarse"> registrarse</a>
+                <a href="/comprar">comprar</a>
+                <i class="fas fa-shopping-cart"></i>
             </div>
 
 
 
         </section>
-
-
-
+        </nav>
 
 
         <section class="menu">
@@ -92,7 +97,6 @@
                     </ul>
                 </div>
             </div>
-            <div></div>
         </section>
     </header>
 
