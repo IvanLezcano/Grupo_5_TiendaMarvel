@@ -86,7 +86,7 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-bottom: 10px;
   }
 
@@ -105,7 +105,7 @@
   }
 
   .footer .footer_logo {
-    margin-left: -6rem;
+    margin-left: -4rem;
     width: 50%;
   }
 
@@ -113,10 +113,10 @@
   /* === footer-nav === */
 
   .footer .footer_nav {
-    margin: 11rem 0rem 1rem 0rem;
+    align-self: center;
+    margin: 10rem 0rem 1rem 0rem;
     text-align: left;
-    width: 43%;
-    height: 10rem;
+    height: 11rem;
     padding-left: 1rem;
     border-top: none;
     border-left: 1px solid rgb(102, 100, 100);
@@ -127,14 +127,17 @@
   /* === footer-seguinos === */
 
   .footer .footer_seguinos-redes {
-    width: 30%;
+    width: 40%;
+    height: 100%;
+    margin-right: 5%;
   }
   
   .footer .footer_redes-sociales {
-    font-size: 2rem;
-    width: 20%;
+    font-size: 3rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
   }
+
 }
