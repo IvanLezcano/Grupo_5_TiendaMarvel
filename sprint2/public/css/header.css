@@ -12,6 +12,7 @@ header{
     }
     header{
         border-bottom: 3px solid black;
+        width: 100%;
     }
    
     .busqueda{
@@ -131,7 +132,7 @@ header{
     } */
 }
 @media (min-width: 768px){
-
+   
     
 
 .menumobile{
@@ -140,6 +141,7 @@ header{
 .menu{
     display: inline !important;
 }
+
 .menus ul{
     padding-left: 0 !important;
     
