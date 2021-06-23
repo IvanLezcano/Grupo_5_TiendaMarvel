@@ -15,6 +15,10 @@ app.get("/footer", (req, res) =>
 app.get("/header", (req, res) =>
   res.sendFile(path.join(__dirname, "public", "header-footer", "header.html"))
 );
+app.get("/header", (req, res) =>
+  res.sendFile(path.join(__dirname, "public", "header-footer", "carrito.html"))
+);
+
 app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );
