@@ -2,6 +2,7 @@ header{
     background-color:var(--color-oxfordBlue);
     margin: 0 !important;
     padding: 0 !important;
+    box-sizing: border-box !important;
 }
 
 
@@ -13,6 +14,8 @@ header{
     header img{
         width: 20%;
         height:30%;
+        border-right: 3px solid black;
+
     }
     .menu{
         display: none;
@@ -44,9 +47,19 @@ header{
         text-decoration: none;
         color: white;
         width: 20%;
+        height: 100%;
         border: none;
         position: relative;
         top: -5px;
+    }
+    .buscador{
+        width: 60%;
+        border-right: 3px solid black;
+        display: inline !important;
+    }
+    .botonderegistrarse{
+        display: inline-block !important;
+        border-left: 3px solid black;
     }
     .unidos{
         display: flex;
@@ -69,21 +82,28 @@ header{
 
 }
 .resto {
-    flex-direction:row !important;
+    padding-left: 0 !important;
+    display: flex !important;
 
 }
 .menu{
-    display: inline-block !important;
     display: flex;
+    justify-content: center;
+    border-top: 3px solid black;
 }
 
 header img{
     width: 20%;
     height: 30%;
+    border-right: 3px solid black;
+
   
 }
-.navegacion input{
-    width: 55%;
+.busqueda{
+    display: inline-block !important;
+
+}
+.buscador input{
     height: 30px;
     border-radius: 15px;
 }
@@ -92,10 +112,35 @@ header img{
     text-decoration: none;
     color: white;
     width: 15%;
+    height: 50%;
     border: none;
-    position: relative;
-    top: -5px;
     font-size: 2rem;
+    text-align: center !important;
 }
+.buscador{
+    width: 60%;
+    border-right: 3px solid black;
+    display: inline !important;
+}
+.botonderegistrarse{
+    display: inline-block !important;
+    border-left: 3px solid black;
+}
+
+.resto button{
+    background-color: black !important;
+    font-size: 1.3rem;
+}
+.menus .btn{
+    
+    background-color: black !important;
+    font-size: 1.3rem;
+
+
+}
+input{
+    width: 40%;
+}
+
 
 } 
