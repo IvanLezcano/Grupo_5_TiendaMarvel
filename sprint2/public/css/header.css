@@ -6,13 +6,12 @@ header{
 }
 
 
-@media (max-width: 768px){
+@media (min-width: 319px){
     header nav{
         display: flex !important;
     }
     header{
         border-bottom: 3px solid black;
-        width: 100%;
     }
    
     .busqueda{
@@ -132,7 +131,7 @@ header{
     } */
 }
 @media (min-width: 768px){
-   
+
     
 
 .menumobile{
@@ -141,7 +140,6 @@ header{
 .menu{
     display: inline !important;
 }
-
 .menus ul{
     padding-left: 0 !important;
     
@@ -232,7 +230,8 @@ header .botonderegistrarse a{
 }
 .re{
     display: block;
+    font-size: 3rem;
 }
 
 
-} 
+}
