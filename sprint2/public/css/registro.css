@@ -1,0 +1,119 @@
+@import url("./general.css");
+
+.registro{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--color-oxfordBlue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* === logo-info === */
+
+.registro .logo-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+
+/* === logo === */
+
+.registro .logo-info img{
+    width: 31%;
+    height: 90%;
+    margin-left: -1rem;
+}
+
+
+/* === info === */
+
+.registro .logo-info .info{
+    width: 70%;
+    margin-right: 0.5rem;
+}
+
+.registro .logo-info .info h6{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.registro .logo-info .info p{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+
+
+/* === cuenta-google === */
+
+.registro .cuenta-google{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.registro .cuenta-google a{
+    color: var(--color-red);
+}
+
+
+
+/* === inputs === */
+
+.registro .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    
+}
+
+.registro .inputs label{
+    font-size: 1.6rem;
+}
+
+.registro .inputs input{
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+
+.registro .inputs input:hover{
+    outline: none;
+    border: 2.5px solid var(--color-red);
+}
+
+
+/* === btn-registrarse === */
+
+.registro .btn-registrarse{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    border-radius: 16px;
+    border: none;
+    padding: 0.8rem;
+    background-color: var(--color-red);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+/* === logueate === */
+
+.registro .logueate{
+    margin-bottom:3rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.registro .logueate a{
+    color: var(--color-red);
+}
