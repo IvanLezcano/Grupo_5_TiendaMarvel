@@ -162,7 +162,10 @@ header img{
 
   
 }
+.busqueda{
+    width: 100%;
 
+}
 .buscador input{
     height: 30px;
     border-radius: 15px;
