@@ -1,0 +1,40 @@
+.carrito {
+   background-color: #d3dcdf;
+}
+.general{
+    padding: 20px 40px;
+}
+.carrito header{
+    background-color: #d3dcdf;
+    height:20vh;
+    display: flex;
+    border: solid 1px blue;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.carrito button{
+    background-color:#bc0000;
+    color:white;
+}
+.carrito article{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.carrito article img{
+    width: 20%;
+    height: 80%;
+}
+
+.carrito article .descripcion{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    border-right: solid 1px black;
+}
+
+.carrito article .descripcion span{
+   padding-top: 20%;
+}

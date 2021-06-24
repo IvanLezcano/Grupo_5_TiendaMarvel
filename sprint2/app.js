@@ -3,20 +3,17 @@ const app = express();
 const port = 3000;
 const path = require("path");
 
-app.use(express.static("public"));
+app.use(express.static('public'));
 
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "index.html"))
 );
 
-app.get("/footer", (req, res) =>
-  res.sendFile(path.join(__dirname, "public" , "header-footer", "footer.html"))
+app.get("/carrito", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "views" , "carrito.html"))
 );
-app.get("/header", (req, res) =>
-  res.sendFile(path.join(__dirname, "public", "header-footer", "header.html"))
-);
-app.get("/header", (req, res) =>
-  res.sendFile(path.join(__dirname, "public", "header-footer", "carrito.html"))
+app.get("/descripcion-producto", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "views", "descripcion-producto.html"))
 );
 
 app.listen(port, () =>
