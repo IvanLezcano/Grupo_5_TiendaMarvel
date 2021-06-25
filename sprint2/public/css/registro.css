@@ -49,11 +49,17 @@
     font-weight: 300;
 }
 
-
+.registro .registrarse{
+    width: 100vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 
 /* === cuenta-google === */
 
 .registro .cuenta-google{
+    margin: 2rem;
     font-size: 1.6rem;
     font-weight: 400;
 }
@@ -102,13 +108,18 @@
     background-color: var(--color-red);
     color: white;
     margin-bottom: 1rem;
+    
+}
+.registro .btn-registrarse:hover{
+   
+    box-shadow: 0px 0px 10px 4px var(--color-red);
 }
 
 
 /* === logueate === */
 
 .registro .logueate{
-    margin-bottom:3rem;
+    margin:2rem;
     font-size: 2.2rem;
     font-weight: 400;
     text-align: left;
@@ -117,3 +128,113 @@
 .registro .logueate a{
     color: var(--color-red);
 }
+
+/* ======= TABLET ======= */
+@media (min-width: 768px){
+    
+    .registro-body {
+        background-color: var(--color-independence);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+    
+    
+    .registro{
+        margin:auto;
+        border-radius: 20px;
+        height: 70vh;
+        max-width: 80vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+
+    /* ===== logo-info ===== */
+
+    .registro .logo-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 45%;
+        height: 100%;
+    }
+    
+    /* === logo === */
+    .registro .logo-info img {
+        width: 100%;
+        height: 30rem;
+        margin-left: -14rem; 
+        
+    }
+    
+    
+    /* === info === */
+    .registro .logo-info .info {
+        width: 100%;
+        margin-left: 4rem;
+    }
+
+
+    .registro .logo-info .info h6{
+        margin: 2rem 0;
+    }
+
+    /* ===== registrarse ===== */
+    
+    .registro .registrarse{
+        margin: 0;
+        padding: 0;
+        width: 56%;
+        height: 100%;
+        justify-content: center;
+    } 
+
+       
+    /* ===== cuenta-google ===== */
+    .registro .cuenta-google {
+        margin: 2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        height: 4rem;
+    }
+
+
+    /* ===== label ===== */
+    .registro .inputs label {
+        font-size: 1.6rem;
+        width: 67%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+
+   /* ===== inputs ===== */
+   .registro .inputs{
+       width: 90%;
+    }
+  
+    
+    /* ===== logueate ===== */
+    .registro .logueate {
+        font-size: 2rem;
+     
+    }
+}
+
+/* ====== DESKTOP ======*/
+
+@media (min-width: 1024px){
+      .registro{
+        max-height: 70vh;
+    }
+
+
+
+    .registro .inputs input:focus-visible{
+        outline: none;
+        border: 2.5px solid var(--color-red);
+    }
+    
+} 
