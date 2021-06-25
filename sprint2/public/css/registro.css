@@ -93,7 +93,10 @@
 
 .registro .inputs input:hover{
     outline: none;
-    border: 2.5px solid var(--color-red);
+}
+.registro .inputs input:focus-visible{
+    outline: none;
+    border: 2px solid  var(--color-red);
 }
 
 
@@ -233,8 +236,6 @@
 
 
     .registro .inputs input:focus-visible{
-        outline: none;
-        border: 2.5px solid var(--color-red);
     }
 
     .registro .logo-info img {
