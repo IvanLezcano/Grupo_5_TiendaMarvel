@@ -231,12 +231,10 @@
 @media (min-width: 1024px){
       .registro{
         max-height: 73vh;
+        max-width: 45vw;
     }
 
 
-
-    .registro .inputs input:focus-visible{
-    }
 
     .registro .logo-info img {
         width: 90%;
