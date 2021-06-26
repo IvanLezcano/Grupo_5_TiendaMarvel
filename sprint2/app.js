@@ -12,9 +12,9 @@ app.get("/", (req, res) =>
 app.get("/registrarse", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "registrarse.html"))
 );
-// app.get("/login", (req, res) =>
-//   res.sendFile(path.join(__dirname, "views", "login.html"))
-// );
+app.get("/login", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "login.html"))
+);
 app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );

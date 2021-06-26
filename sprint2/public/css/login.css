@@ -1,0 +1,89 @@
+@import url("./general.css");
+
+.login{
+    background-color: var(--color-oxfordBlue);
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.login .login-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+/* === titulo === */
+.login-main .titulo{
+    font-size: 2rem;
+    color: var(--color-independence);
+}
+
+.login-main .titulo h2{
+    font-weight: 400;
+
+}
+
+
+/* === ingresa-con-google === */
+
+.login-main .ingresa-google{
+    height: 2rem;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1.6rem;
+    margin-top: -2rem;
+}
+
+.login-main .ingresa-google a{
+    color:var(--color-red);
+}
+
+/* === iniciar-sesion === */
+
+.login-main .iniciar-sesion .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-gainsboro);
+    font-size: 1.4rem;
+}
+
+.login-main .iniciar-sesion input{
+    margin: 0.5rem 0 1.7rem 0;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    width: 100%;
+}
+
+
+/* === recuperar-clave === */
+.login-main .iniciar-sesion .recuperar-cont{
+    font-size: 1rem;
+    color: var(--color-independence);
+    margin-bottom: 2rem;
+
+}
+.login-main .iniciar-sesion .recuperar-cont a{
+    color: var(--color-cordovan);
+}
+
+/* === ingresa === */
+.login-main .btn-ingresa{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    border-radius: 16px;
+    border: none;
+    padding: 0.5rem;
+    width: 9rem;
+    background-color: var(--color-red);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* === logo === */
+.login-main .logo img{
+    width: 15rem;
+}
