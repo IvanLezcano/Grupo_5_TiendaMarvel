@@ -15,6 +15,6 @@ app.get("/registrarse", (req, res) =>
 app.get("/login", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "login.html"))
 );
-app.listen(3010, () =>
+app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );
