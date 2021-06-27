@@ -1,6 +1,11 @@
 @media (min-width: 319px){
     
-
+.envio{
+    display: none;
+}
+.envioMobile{
+    display: flex;
+}
 main{
     width: 100%;
 }
@@ -30,6 +35,10 @@ main{
         height: 60px !important;
     }
     
+
+
+
+
     
 
 
@@ -39,6 +48,12 @@ main{
 
 
 @media (min-width: 768px){
+.envioMobile{
+    display: none;
+}
+.envio{
+    display: flex;
+}
 
 
 main{
