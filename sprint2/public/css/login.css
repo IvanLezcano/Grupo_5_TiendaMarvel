@@ -86,6 +86,12 @@
   color: white;
   margin-bottom: 1rem;
 }
+.login-main .btn-ingresa:hover{
+   
+  box-shadow: 0px 0px 10px 4px var(--color-red);
+}
+
+
 
 /* === logo === */
 .login img {
@@ -175,6 +181,7 @@
 @media (min-width: 1024px) {
   .login .login-main{
     max-width: 40%;
+    max-height: 62vh;
   }
 
 
