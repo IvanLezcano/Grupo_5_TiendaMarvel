@@ -1,10 +1,11 @@
-main{
+.kids{
     width: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
 }
 #game-iframe{
+    margin: 30px;
     width: 80%;
     height: 50rem;
 }
