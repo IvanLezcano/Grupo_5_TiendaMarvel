@@ -108,13 +108,13 @@
     margin: auto;
     border-radius: 20px;
     height: 66vh;
-    max-width: 80vw;
+    max-width: 55vw;
   }
 
   /* === logo === */
   .login .cont-img {
     height: 95%;
-    width: 30%;
+    width: 27%;
   }
 
   .login img {
@@ -126,7 +126,7 @@
 
   .login .cont-login {
     height: 100%;
-
+    width: 70%;
     margin-left: -2rem;
   }
 
@@ -168,4 +168,14 @@
     margin-left: -10rem;
   }
   
+}
+
+/* === ESCRITORIO === */
+
+@media (min-width: 1024px) {
+  .login .login-main{
+    max-width: 40%;
+  }
+
+
 }
