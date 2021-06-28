@@ -15,6 +15,15 @@ app.get("/registro", (req, res) =>
 app.get("/login", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "login.html"))
 );
+app.get("/kids", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "kids.html"))
+);
+app.get("/quiz", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "quiz.html"))
+);
+app.get("/novedades", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "novedades.html"))
+);
 app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );

@@ -1,0 +1,18 @@
+main{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+#game-iframe{
+    width: 80%;
+    height: 50rem;
+}
+.ironman{
+    animation-duration: 10s !important;
+
+}
+.ironman img{
+    width: 20%;
+    
+}
