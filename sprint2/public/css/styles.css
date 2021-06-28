@@ -3,7 +3,6 @@
 @import url('./index.css');
 @import url('./header.css');
 @import url('./footer.css');
-@import url('./carrito.css');
-@import url('./descripcion-producto.css');
 @import url('./registro.css');
-
+@import url('./login.css');
+@import url('./home.css');

@@ -17,11 +17,11 @@ app.get("/descripcion-producto", (req, res) =>
 );
 
 app.get("/registro", (req, res) =>
-  res.sendFile(path.join(__dirname, "views", "registro.html"))
+  res.sendFile(path.join(__dirname, "views", "registrarse.html"))
 );
-// app.get("/login", (req, res) =>
-//   res.sendFile(path.join(__dirname, "views", "login.html"))
-// );
+app.get("/login", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "login.html"))
+);
 app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );

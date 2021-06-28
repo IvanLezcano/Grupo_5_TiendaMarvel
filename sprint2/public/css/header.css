@@ -1,5 +1,5 @@
 header{
-    background-color:var(--color-oxfordBlue);
+    background-color:var(--color-header);
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
@@ -11,20 +11,40 @@ header{
         display: flex !important;
     }
     header{
-        border-bottom: 3px solid black;
+        border-bottom: 3px solid #262626;
     }
-   
+        
+
+
+
     .busqueda{
+        
         display: flex !important;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+    }
+    .busqueda input{
+        width: 85%;
+        height: 30px;
+        border-radius: 10px;
+    }
+    .busqueda .buscador button{
+        border: none;
+        background-color: transparent;
+    }
+    .fa-search{
+        color: white;
+        margin-right: 5px;
     }
     .imagenNavegacion{
-        width: 20% !important;
-        border-right: 3px solid black;
+        max-width: 30% !important;
     }
     .imagenNavegacion img{
-        width: 100% !important;
+        width: 130px !important;
+        max-width: 100% !important;
+
+     
     }
   
     .botonderegistrarse{
@@ -36,8 +56,13 @@ header{
         display: flex !important;
         flex-direction: column !important;
         justify-content: center;
-        border-left: 3px solid black;
-    }
+        border-left: 3px solid #262626;
+            width: 20% !important;
+            
+        
+        }
+        
+ 
     .botonderegistrarse button{
         height: 20% !important;
         
@@ -54,84 +79,55 @@ header{
         height: 20px !important;
         box-shadow: none !important;
     }
+    .botonderegistrarse  #dropdownMenuButton1{
+        height: 20px !important;
+        box-shadow: none !important;
+        font-size: 25px;
+    }
+
+    
     .fa-shopping-cart{
         color: white;
+        font-size: 30px;
     }
     .re{
         display: none;
     }
-    
-
-    /* .navegacion {
-        display: block !important;
-        height: 30% !important;
-    
-    }
-    header img{
-        width: 20%;
-        height:30% !important;
-        border-right: 3px solid black;
-
-    }
-    .menu{
-        display: none;
-    }
-    .navegacion .btn{
-        color: white;
-        
-        font-size: 0.5rem !important;
-    }
-    .navegacion .btn-secondary{
-        border: none !important;
-        background-color:var(--color-oxfordBlue);
-
-        font-size: 1.5rem !important;}
-        .navegacion .dropdown-toggle{
-        font-size: 1rem !important;
-        background-color:var(--color-oxfordBlue);
-
-    }
-    .navegacion .dropdown-menu{
-        font-size: 12px !important;
-        background-color:var(--color-oxfordBlue);
-    }
-    .fa-shopping-cart{
-        color: white;
-    }
-    .registrarse{
-        width: 100% !important;
-        height:100% !important;
-        background-color: transparent;
-        text-decoration: none;
-        color: white;
-        border: none;
-        padding-top: 40% !important;
-    }
     .buscador{
-        width: 60%;
-        display: inline !important;
-    }
-    .botonderegistrarse{
-        display: inline-block !important;
-        border-left: 3px solid black;
-        height: 100% !important;
-        padding-left: 2.5%;
-        padding-top: 5%;
-    }
-    .unidos{
         display: flex;
+        justify-content:center;
+        align-items: center;
+        width: 50%;
     }
-    input{
-        width: 40%;
+   
+    .botonderegistrarse .btn-secondary{
+        background-color:var(--color-header);
+        border: none;
+
+       }
+      
+    .botonderegistrarse .dropdown-menu{
+        background-color:var(--color-header);
+        border-radius: 10px !important;
+
+
     }
-    .busqueda{
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-around !important;
-    } */
+
+ 
+
 }
 @media (min-width: 768px){
+    .imagenNavegacion{
+        width: 20% !important;
+    }
+     .dropdown-menu{
+        background-color:var(--color-header);
+        border-radius: 10px !important;
 
+
+    }
+    
+  
     
 
 .menumobile{
@@ -153,16 +149,15 @@ header{
 .menu{
     display: flex;
     justify-content: center;
-    border-top: 3px solid black;
+    border-top: 3px solid #262626;
 }
 
-header img{
-    width: 20%;
-    height: 30%;
 
-  
+
+.busqueda{
+    width: 100%;
+
 }
-
 .buscador input{
     height: 30px;
     border-radius: 15px;
@@ -183,9 +178,12 @@ header img{
 
 
 }
+.fa-search{
+    font-size: 20px;
+}
 .linea{
     display: inline !important;
-    border-left: 3px solid black !important;
+    border-left: 3px solid #262626 !important;
 }
 .buscador{
     display: flex;
@@ -200,20 +198,31 @@ header img{
     
 
 }
+header ul li a{
+    color: white !important;
+}
+.buscador{
+    width: 60%;
+}
+.imagenNavegacion{
+    border-right: 3px solid #262626 !important;
+}
 
 .resto button{
-    background-color: black !important;
+    background-color: #262626 !important;
     font-size: 1.3rem;
 }
 .menus .btn{
     
-    background-color: black !important;
+    background-color: #262626 !important;
     font-size: 1.3rem;
 
 
 }
-input{
+.buscador input{
     width: 70%;
+    height: 40px;
+    font-size: 15px;
 }
 
 .menu{
@@ -230,8 +239,26 @@ header .botonderegistrarse a{
 }
 .re{
     display: block;
-    font-size: 3rem;
+    font-size: 1.5rem;
+}
+.enlinea{
+    width: 100%;
+    display: flex;
+    justify-content:space-around !important;
+    align-items: center;
+    
+
+}
+.referencias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
+}
+@media (min-width: 1024px){
+
+    
 }

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Registro</title>
   </head>
-  <body class="registro">
+  <body class="registro-body">
+    <main class="registro">
     <section class="logo-info">
       <img src="/img/torre.png" alt="logo-torre" />
         <div class="info">
@@ -16,25 +17,28 @@
             </h6>
             <p>Comprar en nuestro sitio</p>
             <p>Enterarte novedades</p>
-            <p>Sorteos y Descuentos</p>
+            <p>Sorteos y Descuentos Exclusivos</p>
             <p>y más...</p>
         </div>
     </section>
+    <section class="registrarse">
     <h4 class="cuenta-google">Crear Cuenta con <a href="#">Google</a></h4>
     <form method="" class="inputs">
         <label for="usuario">Usuario</label>
         <input type="text" id="usuario" required>
         <label for="contrasena">Contraseña</label>
-        <input type="text" id="contrasena" required>
+        <input type="password" id="contrasena" required>
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" required>
         <label for="email">Email</label>
-        <input type="text" id="email" required>
+        <input type="email" id="email" required>
         <button class="btn-registrarse">REGISTRARSE</button>
     </form>
     <h2 class="logueate">
         Si ya tenes Cuenta <br>
-        <a href="#">Logueate</a>
+        <a href="/login">Logueate</a>
     </h2>
+  </section>
+  </main>
   </body>
 </html>
