@@ -53,8 +53,16 @@ main{
 }
 .envio{
     display: flex;
+    justify-content: center !important;
+    align-items: center !important;
 }
-
+.icono{
+    font-size: 20px;
+    margin-right: 6px;
+}
+.iconotext{
+    font-size: 30px;
+}
 
 main{
     width: 100%;
