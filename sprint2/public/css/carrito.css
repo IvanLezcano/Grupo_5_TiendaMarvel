@@ -1,40 +1,306 @@
 .carrito {
-   background-color: #d3dcdf;
+  background-color: #d3dcdf;
 }
-.general{
-    padding: 20px 40px;
+.general {
+  padding: 20px 40px;
 }
-.carrito header{
-    background-color: #d3dcdf;
-    height:20vh;
-    display: flex;
-    border: solid 1px blue;
-    justify-content: space-between;
-    align-items: flex-end;
+.carrito h1{
+  font-size: 2.5em;
 }
-
-.carrito button{
-    background-color:#bc0000;
-    color:white;
+.carrito h2{
+  font-size: 2em;
 }
-.carrito article{
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
+.carrito h4{
+  font-size: 1.5em;
 }
-
-.carrito article img{
-    width: 20%;
-    height: 80%;
+.carrito h5{
+  font-size: 1.2em;
+}
+.carrito p{
+  font-size: 1.4em;
+}
+.carrito span{
+  font-size: 2em;
+}
+.carrito a{
+  font-size: 1.2em;
 }
 
-.carrito article .descripcion{
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
-    border-right: solid 1px black;
+.carrito .header {
+  background-color: #d3dcdf;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: solid 1px black;
+  /*padding-bottom: 60px; no lo toma*/
 }
 
-.carrito article .descripcion span{
-   padding-top: 20%;
+.carrito .titulo {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.carrito button {
+  background-color: #bc0000;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+}
+.carrito article {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 15px 15px;
+  border-bottom: solid 1px black;
+  height: 60vh;
+}
+.carrito .article{
+  width: 70%;
+  display: flex;
+}
+
+.carrito article img {
+  width: 20%;
+  height: 80%;
+  padding-right: 20px;
+}
+
+.carrito article .descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding-right: 20px; */
+  border-right: solid 1px black;
+  flex-grow: 2;
+}
+.carrito .imagen {
+  display: flex;
+  height: 100%;
+  width: 30%;
+}
+.carrito .imagen img {
+  height: 100%;
+  width: 100%;
+}
+.carrito .descripcion{
+  width: 40%;
+}
+
+.carrito .precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin-left: 5px;
+  
+}
+
+.carrito .precio .subrayado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  border-bottom: solid 1px black;
+}
+
+/*----------    SECTION LIQUIDACION -------------*/
+.carrito .liquidacion {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.carrito .liquidacion h2,
+form {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.carrito form input[type="text"] {
+  border-radius: 8px;
+  width: 25vw;
+  height: 6.2vh;
+}
+
+.carrito .subtotal {
+  background-color: #c8ccce;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin-left: 15px;
+}
+
+/*--------------LIQUIDACION----------*/
+
+
+/*=====================MEDIAS QUERIES====================*/
+
+/*=====TABLET====*/
+@media (min-width:768px) {
+
+}
+
+/*====DESKTOP====*/
+@media (min-width:1024px) {
+.carrito {
+  background-color: #d3dcdf;
+  font-size: 16px;
+}
+.general {
+  padding: 20px 40px;
+}
+.carrito .header {
+  background-color: #d3dcdf;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: solid 1px black;
+  /*padding-bottom: 60px; no lo toma*/
+}
+
+.carrito .titulo {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.carrito button {
+  background-color: #bc0000;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+}
+.carrito article {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 15px 15px;
+  border-bottom: solid 1px black;
+  height: 60vh;
+}
+
+.carrito article img {
+  width: 20%;
+  height: 80%;
+  padding-right: 20px;
+}
+
+.carrito article .descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 20px;
+  border-right: solid 1px black;
+  flex-grow: 2;
+}
+.carrito .imagen {
+  display: flex;
+  height: 100%;
+  width: 30%;
+}
+.carrito .imagen img {
+  height: 100%;
+  width: 100%;
+}
+.carrito .descripcion{
+  width: 40%;
+}
+
+.carrito .precio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin-left: 5px;
+  
+}
+
+.carrito .precio .subrayado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  border-bottom: solid 1px black;
+}
+
+/*----------    SECTION LIQUIDACION -------------*/
+.carrito .facturacion{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 45vh;
+
+}
+
+.carrito .tarjetas {
+  display: flex;
+  flex-wrap: wrap; 
+  height: 100%;
+  width: 70%;
+  padding: 10px 10px 10px 15px;
+}
+.carrito .descuento{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito .img-tarjetas{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  
+}
+.carrito .imagen-tarjetas{
+  width: 100%;
+  height: 80%;
+   
+}
+
+.carrito .liquidacion{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+
+}
+
+.carrito .subtotal{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.carrito .total-general {
+  background-color: #bebfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 70%;
+  padding-bottom: 15px
+  
+}
+.carrito .total{
+  display: flex;
+  justify-content: space-between;
+}
+.carrito .cuotas{
+  display: flex;
+  justify-content: space-between;
+}
 }
