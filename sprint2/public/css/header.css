@@ -27,9 +27,13 @@ header{
         width: 100%;
     }
     .busqueda input{
-        width: 85%;
+        width: 75% !important;
         height: 30px;
         border-radius: 10px;
+    }
+    header form{
+        display: flex !important;
+        width: 100% !important;
     }
     .busqueda .buscador button{
         border: none;
@@ -37,6 +41,7 @@ header{
     }
     .fa-search{
         color: white;
+        font-size: 20px;
         margin-right: 5px;
     }
     .imagenNavegacion{
@@ -127,6 +132,16 @@ header{
         border-radius: 10px !important;
 
 
+    }
+    .busqueda input{
+        width: 75% !important;
+        height: 30px;
+        border-radius: 10px;
+    }
+    header form{
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center;
     }
     
   
