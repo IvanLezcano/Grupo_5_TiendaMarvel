@@ -9,36 +9,50 @@
   </head>
   <body class="registro-body">
     <main class="registro">
-    <section class="logo-info">
-      <a href="/" class="img"><img src="/img/torre.png" alt="logo-torre"/></a>
+      <section class="logo-info">
+        <a href="/" class="img"
+          ><img src="/img/torre.png" alt="logo-torre"
+        /></a>
         <div class="info">
-            <h6>
-                Sumate a nuestra comunidad para  poder disfrutar nuestros beneficios
-            </h6>
-            <p>Comprar en nuestro sitio</p>
-            <p>Enterarte novedades</p>
-            <p>Sorteos y Descuentos Exclusivos</p>
-            <p>y más...</p>
+          <h6>
+            Sumate a nuestra comunidad para poder disfrutar nuestros beneficios
+          </h6>
+          <p>Comprar en nuestro sitio</p>
+          <p>Enterarte novedades</p>
+          <p>Sorteos y Descuentos Exclusivos</p>
+          <p>y más...</p>
         </div>
-    </section>
-    <section class="registrarse">
-    <h4 class="cuenta-google">Crear Cuenta con <a href="#">Google</a></h4>
-    <form method="" class="inputs">
-        <label for="usuario">Usuario</label>
-        <input type="text" id="usuario" required>
-        <label for="contrasena">Contraseña</label>
-        <input type="text" id="contrasena" required>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" required>
-        <label for="email">Email</label>
-        <input type="text" id="email" required>
-        <button class="btn-registrarse">REGISTRARSE</button>
-    </form>
-    <h2 class="logueate">
-        Si ya tenes Cuenta <br>
-        <a href="/login">Logueate</a>
-    </h2>
-  </section>
-  </main>
+      </section>
+      <section class="registrarse">
+        <h4 class="cuenta-google">Crear Cuenta con <a href="#">Google</a></h4>
+        <form method="" class="inputs">
+          <div>
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" required name="usuario" />
+          </div>
+
+          <div>
+            <label for="contrasena">Contraseña</label>
+            <input type="text" id="contrasena" required name="password" />
+          </div>
+
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required name="nombre" />
+          </div>
+    
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" required name="email" />
+          </div>
+
+          <button class="btn-registrarse">REGISTRARSE</button>
+        </form>
+        <h2 class="logueate">
+          Si ya tenes Cuenta <br />
+          <a href="/login">Logueate</a>
+        </h2>
+      </section>
+    </main>
   </body>
 </html>
