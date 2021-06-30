@@ -5,8 +5,21 @@
 }
 .envioMobile{
     display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+    background-color:var(--color-header);
+    margin-bottom: 20px;
+    height: 5rem !important;
+
+}
+.subelemento{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 main{
+
+
     width: 100%;
 }
 
@@ -35,15 +48,176 @@ main{
         height: 60px !important;
     }
     
+    .icono{
+        font-size: 20px;
+        margin-right: 6px;
+        color: white;
+    }
+    .iconotext h6{
+        font-size: 7px;
+        color: white;
+
+    }
 
 
 
 
+
+
+
+
+
+
+    .categorias{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
     
+    }
+    .cadacategoria{
+        width: 100%;
+        margin-bottom: 3rem;
+    
+    }
+    .categorias img{
+        width: 100%;
+        height: 10rem;
+        border-radius: 10px 10px  0 0;
+
+    }
+    .titulocategoria{
+        font-family: 'Bebas Neue';
+    
+        background-color: #d3dbde;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: #152033;
+    }
+    .titulocategoria h3{
+        font-size: 2rem;
+        margin: 0 !important;
+    }
+    .titulocategoria p{
+        font-size: 1rem;
+        margin: 0 !important;
+    }
+    .vermas{
+        font-family: 'Bebas Neue';
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        height: 3rem;
+        width: 50%;
+        border-radius: 5px 5px 0 0;
+    
+    }
+    .vermas h4{
+        color: white;
+        margin: 0 !important;
+        font-size: 2rem;
+        font-family: 'Bebas Neue';
+    
+    }
+
+    .TIENDA{
+        
+        width: 90%;
+        font-family: 'Bebas Neue';
+        font-size: 3rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px  solid black;
+        border-bottom: 2px  solid black;
+
+    }
+    .titulogeneral{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .verdemasproductos{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+    .verproductos{
+        border-radius: 10px;
+        background-color: red;
+        font-size: 2rem;
+        padding-left: 60px;
+        padding-right: 60px;
+        text-decoration: none;
+        color: white;
 
 
+    }
+    .verproductos a{
+        font-family: 'Bebas Neue';
 
+        text-decoration: none;
+        color: white;
+
+    }
+    .destacados2{
+        display: none;
+    }
+    .destacados{
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
+    
+    }
+    .cadadestacado{
+        width: 100%;
+        margin-bottom: 3rem;
+    
+    }
+    .destacados img{
+        width: 100%;
+        height: 10rem;
+        border-radius: 10px 10px  0 0;
+
+    }
+    .titulodestacado{
+        font-family: 'Bebas Neue';
+    
+        background-color: #d3dbde;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: #152033;
+    }
+    .titulodestacado h3{
+        font-size: 2rem;
+        margin: 0 !important;
+    }
+    .titulodestacado p{
+        font-size: 1rem;
+        margin: 0 !important;
+    }
 }
+
+
 
 
 
@@ -53,8 +227,28 @@ main{
 }
 .envio{
     display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+.icono{
+    font-size: 25px;
+    margin-right: 15px;
+    color: black;
 
+}
+.subelemento{
+    display: flex !important;
+    align-items: center !important;
+
+}
+.iconotext h6{
+    font-size: 10px;
+    color: black;
+
+}
 
 main{
     width: 100%;
@@ -85,5 +279,203 @@ main{
     width: 10rem !important;
     height: 10rem !important;
 }
+.categorias{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    padding: 5px ;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.cadacategoria{
+    width: 33%;
+
+}
+.categorias img{
+    width: 100%;
+    height: 20rem;
+    border-radius: 5px 5px 0 0px;
+
+}
+.titulocategoria{
+    font-family: 'Bebas Neue';
+
+    background-color: #d3dbde;
+    border-radius: 5px 5px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #152033;
+}
+.titulocategoria h3{
+    font-size: 5rem;
+    margin: 0 !important;
+}
+.titulocategoria p{
+    font-size: 2rem;
+    margin: 0 !important;
+}
+.destacados{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.vermas{
+    font-family: 'Bebas Neue';
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 6rem;
+    width: 50%;
+    border-radius: 10px 10px 0 0;
+
+}
+.vermas h4{
+    color: white;
+    margin: 0 !important;
+    font-size: 4rem;
+    font-family: 'Bebas Neue';
+
+}
+.verdemasproductos{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.verproductos{
+    border-radius: 10px;
+    background-color: red;
+    font-size: 3rem;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    text-decoration: none;
+    color: white;
+
+
+}
+.verproductos a{
+    font-family: 'Bebas Neue';
+
+    text-decoration: none;
+    color: white;
+
+}
+
+}
+
+@media (min-width: 1024px){
+
+    .categorias{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px ;
+        margin-left: 40px;
+        margin-right: 40px;
+    
+    }
+    .cadacategoria{
+        width: 30%;
+    
+    }
+    .categorias img{
+        width: 100%;
+        height: 30rem;
+    }
+    .titulocategoria{
+        font-family: 'Bebas Neue';
+    
+        background-color: #d3dbde;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: #152033;
+    }
+    .titulocategoria h3{
+        font-size: 5rem;
+        margin: 0 !important;
+    }
+    .titulocategoria p{
+        font-size: 2rem;
+        margin: 0 !important;
+    }
+    .vermas{
+        font-family: 'Bebas Neue';
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        height: 6rem;
+        width: 50%;
+        border-radius: 10px 10px 0 0;
+    
+    }
+    .vermas h4{
+        color: white;
+        margin: 0 !important;
+        font-size: 4rem;
+        font-family: 'Bebas Neue';
+    
+    }
+    
+.destacados{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    padding: 20px ;
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+.cadadestacado{
+    width: 20%;
+
+}
+.destacados img{
+    width: 100%;
+    height: 20rem;
+
+}
+.titulodestacado{
+    font-family: 'Bebas Neue';
+
+    background-color: #d3dbde;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #152033;
+}
+.titulodestacado h3{
+    font-size: 2.5rem;
+    margin: 0 !important;
+}
+.titulodestacado p{
+    font-size: 1.5rem;
+    margin: 0 !important;
+}
+
 
 }
