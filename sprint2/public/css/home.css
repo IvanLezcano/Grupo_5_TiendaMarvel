@@ -66,7 +66,7 @@ main{
 
 
 
-
+   
 
     .categorias{
         display: flex;
@@ -380,6 +380,17 @@ main{
 }
 
 @media (min-width: 1024px){
+    .zoom {
+      
+        transition: transform .2s;
+      
+      }
+      
+      .zoom:hover {
+        -ms-transform: scale(1.0); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.2); 
+      }
 
     .categorias{
         display: flex;

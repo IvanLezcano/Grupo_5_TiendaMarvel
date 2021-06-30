@@ -221,9 +221,7 @@ color: #3f4f68;
 
 /*=====TABLET====*/
 @media (min-width:768px) {
-  .carrito-body{
-    padding: 10px 40px;
-  }
+  
   .carrito{
   max-width: 900px;
   margin: 0 auto;
