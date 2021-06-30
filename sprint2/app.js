@@ -24,6 +24,9 @@ app.get("/quiz", (req, res) =>
 app.get("/novedades", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "novedades.html"))
 );
+app.get("/productos", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "productos.html"))
+);
 app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );

@@ -15,7 +15,9 @@ header{
     }
         
 
-
+.nenes{
+    display: none !important;
+}
 
     .busqueda{
         
@@ -25,9 +27,13 @@ header{
         width: 100%;
     }
     .busqueda input{
-        width: 85%;
+        width: 75% !important;
         height: 30px;
         border-radius: 10px;
+    }
+    header form{
+        display: flex !important;
+        width: 100% !important;
     }
     .busqueda .buscador button{
         border: none;
@@ -35,13 +41,14 @@ header{
     }
     .fa-search{
         color: white;
+        font-size: 20px;
         margin-right: 5px;
     }
     .imagenNavegacion{
         max-width: 30% !important;
     }
     .imagenNavegacion img{
-        width: 130px !important;
+        width: 250px !important;
         max-width: 100% !important;
 
      
@@ -126,6 +133,16 @@ header{
 
 
     }
+    .busqueda input{
+        width: 75% !important;
+        height: 30px;
+        border-radius: 10px;
+    }
+    header form{
+        display: flex !important;
+        width: 100% !important;
+        justify-content: center;
+    }
     
   
     
@@ -150,6 +167,7 @@ header{
     display: flex;
     justify-content: center;
     border-top: 3px solid #262626;
+    width: 100% !important;
 }
 
 
@@ -239,7 +257,7 @@ header .botonderegistrarse a{
 }
 .re{
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.8em;
 }
 .enlinea{
     width: 100%;
@@ -255,10 +273,28 @@ header .botonderegistrarse a{
     justify-content: center;
     align-items: center;
 }
-
-
+.fa-shopping-cart{
+    color: white;
+    font-size: 40px;
+}
 }
 @media (min-width: 1024px){
-
-    
+    .re{
+        display: block;
+        font-size: 2.5rem;
+    }
+    .fa-shopping-cart{
+        color: white;
+        font-size: 50px;
+    }
+ .menu{
+display: flex !important; 
+}
+.btn{
+    width: 12rem;
+    height: 4rem;
+}
+#dropdownMenuButton1{
+    height: 4rem !important;
+}
 }
