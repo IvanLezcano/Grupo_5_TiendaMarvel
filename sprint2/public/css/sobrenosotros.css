@@ -1,0 +1,170 @@
+@media (min-width: 319px){
+    .descripcion{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Bebas Neue';
+    
+    }
+    .nosotros1{
+        width: 30% !important; 
+    }
+    .nosotros1 img{
+        width: 100% !important;
+    }
+    .nosotros3{
+        width: 30% !important; 
+    }
+    .nosotros3 img{
+        width: 100% !important;
+    }
+    .nosotros2 h3{
+        font-family: 'Bebas Neue';
+    
+        font-size: 0.8rem;
+        text-align: center;
+        background-color: red;
+        border: blue 4px outset;
+    
+    }
+    .titulosobrenosotros h2{
+        text-align: center;
+        color: black;
+        background-color: red;
+        border: blue 4px outset;
+        font-size: 3rem;
+        font-family: 'Bebas Neue';
+    
+    
+    
+    
+    }
+    .nosotros4{
+        width: 100%;
+    
+    }
+    .nosotros4 img{
+        width: 100%;
+        
+    }
+}
+@media (min-width: 768px){
+    .descripcion{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Bebas Neue';
+    
+    }
+    .nosotros1{
+        width: 30% !important; 
+    }
+    .nosotros1 img{
+        width: 100% !important;
+    }
+    .nosotros3{
+        width: 30% !important; 
+    }
+    .nosotros3 img{
+        width: 100% !important;
+    }
+    .nosotros2 h3{
+        font-family: 'Bebas Neue';
+    
+        font-size: 3rem;
+        text-align: center;
+        background-color: red;
+        border: blue 4px outset;
+    
+    }
+    .titulosobrenosotros h2{
+        text-align: center;
+        color: black;
+        background-color: red;
+        border: blue 4px outset;
+        font-size: 4rem;
+        font-family: 'Bebas Neue';
+    
+    
+    
+    
+    }
+    .nosotros4{
+        width: 100%;
+    
+    }
+    .nosotros4 img{
+        width: 100%;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1024px){.descripcion{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Bebas Neue';
+
+}
+.nosotros1{
+    width: 30% !important; 
+}
+.nosotros1 img{
+    width: 100% !important;
+}
+.nosotros3{
+    width: 30% !important; 
+}
+.nosotros3 img{
+    width: 100% !important;
+}
+.nosotros2 h3{
+    font-family: 'Bebas Neue';
+
+    font-size: 3rem;
+    text-align: center;
+    background-color: red;
+    border: blue 4px outset;
+
+}
+.titulosobrenosotros h2{
+    text-align: center;
+    color: black;
+    background-color: red;
+    border: blue 4px outset;
+    font-size: 4rem;
+    font-family: 'Bebas Neue';
+
+
+
+
+}
+.nosotros4{
+    width: 100%;
+
+}
+.nosotros4 img{
+    width: 100%;
+    
+}
+
+}
+
+
+
+
+
+
+
+
+
