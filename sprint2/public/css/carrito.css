@@ -234,9 +234,7 @@ color: #3f4f68;
 
 /*=====TABLET====*/
 @media (min-width:768px) {
-  body{
-    padding: 10px 40px;
-  }
+  
   .carrito{
   font-size: 14px;
   }

@@ -17,10 +17,15 @@
         <h4 class="ingresa-google">Ingresa con <a href="#">Google</a></h4>
         <section class="iniciar-sesion">
           <form method="" class="inputs">
-            <label for="usuario">Usuario</label>
-            <input type="text" id="usuario" required />
-            <label for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" required />
+            <div>
+              <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" required name="usuario" />
+            </div>
+            <div>
+              <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" required name="password" />
+            </div>
+            
             <p class="recuperar-cont">
               tus credenciales fueron robadas por hydra?...
               <a href="#">Recuperalas</a>
