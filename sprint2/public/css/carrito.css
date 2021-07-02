@@ -234,7 +234,10 @@ color: #3f4f68;
 
 /*=====TABLET====*/
 @media (min-width:768px) {
-  
+  .carrito p{
+    font-size: 1.6rem;
+    color: #3f4f68;
+  }
   .carrito{
   font-size: 14px;
   }
@@ -366,6 +369,10 @@ color: #3f4f68;
 
 /*========DESKTOP=======*/
 @media (min-width:1024px) {
+  .carrito p{
+    font-size: 1.6rem;
+    color: #3f4f68;
+  }
 
   .carrito {
   padding: 30px 80px; 

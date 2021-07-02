@@ -10,6 +10,7 @@
        
    }
 
+
 .producto-article-imagen{
     width: 100%;
     max-width: 560px; 
@@ -79,41 +80,50 @@
 .producto-article-cont-descripcion-comprar-imagen img{
     width: 100%;
 } 
+.tarjetadeladescripciondelproductoalfinal{
+    display: none;
+}
+.producto-article-cont-descripcion-comprar-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
+.producto-article-cont-descripcion-comprar-button h3{
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.producto-article-cont-descripcion-comprar-button .fa-shopping-cart{
+    font-size: 1.5rem;
+    padding: 0 !important;
 
+}
 
 
 /*===============TABLET================*/
 @media(min-width:768px) {
-
-    body{
-        font-size: 15px;
-    }
-    .producto-article{
-    padding: 20px 160px 50px;
-    max-width: 900px;
-    }
-
-
-}
-
-/*================DESKTOP================*/
-@media (min-width:1024px) {
-   .descripcion-producto{
+    .descripcion-producto{
         font-size: 14px;
-        background-color: #152034;
+        background-color: #d3dcdf;
     } 
    
     .producto-article{
     flex-direction: row;
+    justify-content: flex-start;
+    max-width: 1050px;
     margin: 0 auto; 
-    height: 80vh;
+    padding: 5px 35px 40px;
+    height: 100vh;
     border-radius: 5px;       
    }
    .producto-article-imagen{
     width: 40%;
     height: 90%;
     
+}
+.metodos{
+    display: none;
 }
 .producto-article-cont-descripcion{
     width: 60%;
@@ -133,24 +143,110 @@
 .producto-article-cont-descripcion1 h6{
     margin-bottom: 50px;
 }
-.producto-article-cont-descripcion-comprar{
-    justify-content: flex-start;
-    margin: 25px 0 0;
-    padding-left: 10px;
-    height: 35%;
-}
 .producto-article-cont-descripcion-comprar-button{
-    width: 11rem;
-    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 100%;
+   height: 60px;
+   max-width: 500px;
+   margin-bottom: 30px;
+   border-radius: 15px;
 }
 .producto-article-cont-descripcion-comprar-button h3{
-    font-size: 2.3rem;
+   font-size: 3rem;
 
 }
-.producto-article-imagen img{
-    width: 24rem;
+.producto-article-cont-descripcion-comprar-button .fa-shopping-cart{
+   font-size: 2.5rem;
+
 }
+.producto-article-cont-descripcion-comprar-imagen img{
+   width: 100%;
+} 
+.tarjetadeladescripciondelproductoalfinal{
+   display: block;
+   width: 100%;
+
+}
+.tarjetadeladescripciondelproductoalfinal img{
+   width: 100%;
 }
 
+}
+
+/*================DESKTOP================*/
+@media (min-width:1024px) {
+    .descripcion-producto{
+         font-size: 14px;
+         background-color: #d3dcdf;
+     } 
+    
+     .producto-article{
+     flex-direction: row;
+     justify-content: flex-start;
+     max-width: 1050px;
+     margin: 0 auto; 
+     padding: 5px 35px 40px;
+     height: 100vh;
+     border-radius: 5px;       
+    }
+    .producto-article-imagen{
+     width: 40%;
+     height: 90%;
+     
+ }
+ .metodos{
+     display: none;
+ }
+ .producto-article-cont-descripcion{
+     width: 60%;
+     padding: 40px 80px 10px 100px;
+ }
+ .producto-article-cont-descripcion1{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding-left: 10px;
+     height: 55%;
+ }
+ .producto-article-cont-descripcion1 p, h6, h5{
+     font-size: 18px;
+     padding: 0;
+ }
+ .producto-article-cont-descripcion1 h6{
+     margin-bottom: 50px;
+ }
+ .producto-article-cont-descripcion-comprar-button{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    width: 100%;
+    height: 60px;
+    max-width: 500px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.producto-article-cont-descripcion-comprar-button h3{
+    font-size: 3rem;
+
+}
+.producto-article-cont-descripcion-comprar-button .fa-shopping-cart{
+    font-size: 2.5rem;
+
+}
+.producto-article-cont-descripcion-comprar-imagen img{
+    width: 100%;
+} 
+.tarjetadeladescripciondelproductoalfinal{
+    display: block;
+    width: 100%;
+
+}
+.tarjetadeladescripciondelproductoalfinal img{
+    width: 100%;
+}
+
+}
 
 
