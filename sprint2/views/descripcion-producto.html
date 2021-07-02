@@ -17,74 +17,85 @@
 
 </head>
 
-<body class="descripcion">
+<body>
     <header>
 
         <nav>
 
-            <section class="busqueda">
+        <section class="busqueda">
 
 
-                <div class="imagenNavegacion">
-                    <img src="/img/torre.png" alt="">
+            <div class="imagenNavegacion">
+                <img src="/img/torre.png" alt="">
+            </div>
+
+
+            <div class="buscador">
+              <form action="/productos" method="GET">
+                <button type="submit"><i class="fas fa-search"></i></button>
+
+              <input type="text" name="producto" placeholder="   Busca tus productos!">
+            </form>
+          </div>
+
+
+
+            <div class="botonderegistrarse" >
+              <DIV class="enlinea">
+                <div class="referencias">
+                <a class="re" href="/registro"> Registrate</a>
+                <a class="re" href="/login">Ingresá</a>
+              </div>
+              <div>
+                <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+              </div>
+              </DIV>
+
+            <div class="menuMobile">
+                <button class="btn btn-secondary dropdown-toggle menumobile" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        ☰
+                </button>
+            
+                
+                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                      <li> <a href="/"><button type="button" class="btn btn-secondary">HOME</button></a>
+                      </li>  
+                      <li> <a href="/novedades"><button type="button" class="btn btn-secondary">NOVEDADES</button></a>
+                        </li>
+                        <li> <a href="/productos"><button type="button" class="btn btn-secondary">PRODUCTOS</button></a>
+                        </li>
+                        <li> <a href="/contacto"><button type="button" class="btn btn-secondary">CONTACTOS</button></a>
+                        </li>
+                        <li class="nenes"> <a href="/kids"><button type="button" class="btn btn-secondary ">KIDS</button></a></li>
+                        <li> <a href="/quiz"><button type="button" class="btn btn-secondary">QUIZ</button></a> </li>
+                        <li> <a href="/registro"><button type="button" class="btn btn-secondary">REGISTRARSE</button></a>
+                        </li>
+                        <li> <a href="/login"><button type="button" class="btn btn-secondary">LOGUEARSE</button></a>
+                        </li>
+                        <li> <a href="/nosotros"><button type="button" class="btn btn-secondary">NOSOTROS</button></a> </li>
+                    </ul>
                 </div>
-
-
-                <div class="buscador">
-                    <button><i class="fas fa-search"></i></button>
-                    <input type="text" placeholder="   Busca tus productos!">
-                </div>
-
-
-
-                <div class="botonderegistrarse">
-                    <DIV class="enlinea">
-                        <div class="referencias">
-                            <a class="re" href="/registro"> Registrate</a>
-                            <a class="re" href="/comprar">Ingresá</a>
-                        </div>
-                        <div>
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                    </DIV>
-
-                    <div class="menuMobile">
-                        <button class="btn btn-secondary dropdown-toggle menumobile" type="button"
-                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            ☰
-                        </button>
-
-
-                        <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
-                            <li> <a href="/novedades"><button type="button"
-                                        class="btn btn-secondary">NOVEDADES</button></a>
-                            </li>
-                            <li> <a href="/contacto"><button type="button"
-                                        class="btn btn-secondary">CONTACTOS</button></a>
-                            </li>
-                            <li> <a href="/kids"><button type="button" class="btn btn-secondary">KIDS</button></a></li>
-                            <li> <a href="/quiz"><button type="button" class="btn btn-secondary">QUIZ</button></a> </li>
-                            <li> <a href="/registro"><button type="button"
-                                        class="btn btn-secondary">REGISTRARSE</button></a>
-                            </li>
-                            <li> <a href="/login"><button type="button" class="btn btn-secondary">LOGUEARSE</button></a>
-                            </li>
-                            <li> <a href="/nosotros"><button type="button"
-                                        class="btn btn-secondary">NOSOTROS</button></a> </li>
-                        </ul>
-                    </div>
+    
+    
+               
+            </div>
 
 
 
-                </div>
-
-
-
-            </section>
+        </section>
         </nav>
 
 
         <section class="menu">
+          <div>
+            <ul class="resto">
+
+                <li> <a href="/"><button type="button" class="btn btn-secondary">HOME</button></a>
+                </li>
+               
+            </ul>
+        </div>
             <div class="menus">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
@@ -92,29 +103,29 @@
                         PRODUCTOS
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="/ropa">Ropa</a></li>
-                        <li><a class="dropdown-item" href="/merchandising">Merchandising aleatorio</a></li>
-                        <li><a class="dropdown-item" href="/juguetes">Juguetitos</a></li>
+                        <li><a class="dropdown-item" href="/productos">Ropa</a></li>
+                        <li><a class="dropdown-item" href="/productos">Merchandising aleatorio</a></li>
+                        <li><a class="dropdown-item" href="/productos">Juguetitos</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div>
-                <ul class="resto">
+                <div>
+                    <ul class="resto">
 
-                    <li> <a href="/novedades"><button type="button" class="btn btn-secondary">NOVEDADES</button></a>
-                    </li>
-                    <li> <a href="/contacto"><button type="button" class="btn btn-secondary">CONTACTOS</button></a>
-                    </li>
-                    <li> <a href="/kids"><button type="button" class="btn btn-secondary">KIDS</button></a></li>
-                    <li> <a href="/quiz"><button type="button" class="btn btn-secondary">QUIZ</button></a> </li>
-                    <li> <a href="/nosotros"><button type="button" class="btn btn-secondary">NOSOTROS</button></a>
-                    </li>
-                </ul>
-            </div>
+                        <li> <a href="/novedades"><button type="button" class="btn btn-secondary">NOVEDADES</button></a>
+                        </li>
+                        <li> <a href="/contacto"><button type="button" class="btn btn-secondary">CONTACTOS</button></a>
+                        </li>
+                        <li> <a href="/kids"><button type="button" class="btn btn-secondary">KIDS</button></a></li>
+                        <li> <a href="/quiz"><button type="button" class="btn btn-secondary">QUIZ</button></a> </li>
+                        <li> <a href="/nosotros"><button type="button" class="btn btn-secondary">NOSOTROS</button></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-    </header> 
+    </header>
 
 
     <main class="descripcion-producto">
@@ -128,7 +139,7 @@
             </div>
             <div class="producto-article-cont-descripcion">
                 <div class="producto-article-cont-descripcion1">
-                    <div>
+                    <div class="textodescripcion">
                     <h4>HASBRO</h4>
                     <h6>Figura Spider Man-Home Coming</h6>
                     <h5>Envio Gratis</h5>
@@ -150,48 +161,50 @@
             
         </article>
         <div class="producto-article-cont-descripcion-comprar-imagen">
-            <img class="" src="/img/tarjetas.PNG">
+            <img class="metodos" src="/img/tarjetas.PNG">
             </div>
     </main>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <footer class="footer">
-      <div class="footer_cont-imagen-nav">
-        <img class="footer_logo" src="/img/torre.png" alt="logo" />
-        <nav class="footer_nav">
-            <ul>
-              <li><a href="#">NOVEDADES</a></li>
-              <li><a href="#">AYUDA/ FAQS</a></li>
-              <li><a href="#">NOSOTROS</a></li>
-              <li><a href="#">TRABAJA CON NOSOTROS</a></li>
-            </ul>
-          </nav>
-      </div>
-   
-      <section class="footer_seguinos-redes">
-        <h3 class="footer_seguinos">SEGUINOS:</h3>
-        <ul class="footer_redes-sociales">
-          <li>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </li>
+<!-- <script src="//code.tidio.co/6pullirs8m8ebzn5zvohbqs4hmup3ze3.js" async></script> -->
+
+
+<footer class="footer">
+  <div class="footer_cont-imagen-nav">
+    <img class="footer_logo" src="/img/torre.png" alt="logo" />
+    <nav class="footer_nav">
+        <ul>
+          <li><a href="#">NOVEDADES</a></li>
+          <li><a href="#">AYUDA/ FAQS</a></li>
+          <li><a href="#">NOSOTROS</a></li>
+          <li><a href="#">TRABAJA CON NOSOTROS</a></li>
         </ul>
-      </section>
-    </footer> 
-  </body>
+      </nav>
+  </div>
+
+  <section class="footer_seguinos-redes">
+    <h3 class="footer_seguinos">SEGUINOS:</h3>
+    <ul class="footer_redes-sociales">
+      <li>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </li>
+    </ul>
+  </section>
+</footer>
+</body>
 </html>
-
-
-
-
