@@ -10,4 +10,8 @@
 @import url('./descripcion-producto.css');
 @import url('./kids.css');
 @import url('./quiz.css');
+@import url('./novedades.css');
+html {
+    scroll-behavior: smooth;
+  }
 
