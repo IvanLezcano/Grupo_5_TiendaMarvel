@@ -1,11 +1,16 @@
 @media (min-width: 319px){
+
 .opinion{
+    font-family: 'Bebas Neue';
+
     text-align: center;
     background-color: blue;
     color: white;
     border-radius: 2px;
 }
 .strangetext{
+    font-family: 'Bebas Neue';
+
     background-color: transparent;
     text-align: center;
     font-weight: bold;
@@ -15,28 +20,38 @@
     display: flex;
 }
 .strange{
+    font-family: 'Bebas Neue';
+
     width: 50%;
 }
 .strange img{
     width: 100%;
 }
 .botonesdeprueba{
+    font-family: 'Bebas Neue';
+
     width: 50%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 .botonesdeprueba button{
+    font-family: 'Bebas Neue';
+
     padding: 10px;
     font-size: 10px;
     color: black;
 }
 .negativa button:hover{
+    font-family: 'Bebas Neue';
+
     color: blue;
     display: none;
 
 }
 #mensaje{
+    font-family: 'Bebas Neue';
+
     text-align: center;
     font-size: 60px;
     background-color: blue;
@@ -64,7 +79,9 @@
 .quizz main{
     background-color: white !important;
 }
-.container{
+.container3{
+    font-family: 'Bebas Neue';
+
     text-align: center !important;
     align-items: center !important;
     justify-content:  center !important;
@@ -82,11 +99,13 @@
 
 }
 .container{
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Bebas Neue';
 
 
 }
 .pregunta{
+    font-family: 'Bebas Neue';
+
     color:red;
     font-size: 2rem;
     border-bottom: 9px solid blue;
@@ -97,9 +116,13 @@
     border-top: none;
 }
 .tabla{
+    font-family: 'Bebas Neue';
+
     background-color: blue;
 }
 .QUIZTITLE{
+    font-family: 'Bebas Neue';
+
     margin-top: 30px;
     margin-bottom: 30px;
     color: red;
@@ -108,6 +131,8 @@ td{
     background-color: rgb(225, 225, 255);
 }
 .titulogeneral{
+    font-family: 'Bebas Neue';
+
     background-color: white;
 }}
 
@@ -180,10 +205,14 @@ td{
         background-color: white;
     }
     .botonquizz{
+        font-family: 'Bebas Neue';
+
         margin: 0 !important;
         padding: 20px !important;
     }
     .test{
+        font-family: 'Bebas Neue';
+
         display: flex;
     }
     .strange{
@@ -196,10 +225,9 @@ td{
         width: 50%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
     }
     .botonesdeprueba button{
-        padding: 30px;
+        padding: 40px;
         font-size: 20px;
     }
     .negativa button:hover{
@@ -208,6 +236,8 @@ td{
 
     }
     #mensaje{
+        font-family: 'Bebas Neue';
+
         text-align: center;
         font-size: 150px;
         background-color: blue;
@@ -217,6 +247,8 @@ td{
 
     }
     .opinion{
+        font-family: 'Bebas Neue';
+
         text-align: center;
         background-color: blue;
         color: white;
@@ -224,6 +256,8 @@ td{
         font-size: 3rem;
     }
     .strangetext{
+        font-family: 'Bebas Neue';
+
         background-color: transparent;
         text-align: center;
         font-weight: bold;

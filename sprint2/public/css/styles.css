@@ -10,5 +10,12 @@
 @import url('./descripcion-producto.css');
 @import url('./kids.css');
 @import url('./quiz.css');
-@import url('./cargadeproducto.css');
+@import url('./novedades.css');
 @import url('./modificarproducto.css');
+@import url('./cargadeproducto.css');
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
