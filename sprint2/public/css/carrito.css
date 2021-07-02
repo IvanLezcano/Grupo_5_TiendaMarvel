@@ -40,7 +40,7 @@
 .carrito {
   background-color: #d3dcdf;
   padding:0;
-  font-family: Ubuntu;
+  font-family: "Ubuntu"; 
   
 }
 .carrito-encabezado {
@@ -236,7 +236,7 @@ color: #3f4f68;
 @media (min-width:768px) {
   
   .carrito{
-  font-size: 14px;
+  font-size: 18px;
   }
 .carrito-encabezado {
    flex-direction: row;
@@ -245,6 +245,7 @@ color: #3f4f68;
   align-items: flex-end;
   max-width: 800px;
   margin: 0 auto;
+  
   
   }
   .carrito main{
