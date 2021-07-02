@@ -279,11 +279,11 @@ header .botonderegistrarse a{
 @media (min-width: 1024px){
     .re{
         display: block;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .fa-shopping-cart{
         color: white;
-        font-size: 50px;
+        font-size: 40px;
     }
  .menu{
 display: flex !important; 

@@ -1,0 +1,10 @@
+@media (min-width: 320px){
+}
+@media (min-width: 768px){
+}
+@media (min-width: 1024px){
+    textarea{
+        font-size: 3rem !important;
+    }
+    
+}
