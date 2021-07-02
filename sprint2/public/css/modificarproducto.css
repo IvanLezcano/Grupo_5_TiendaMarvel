@@ -4,7 +4,21 @@
     font-family: 'Ubuntu',sans-serif;
     color: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+.modificar-producto .volver{
+    display: flex;
+    justify-content: space-around;    
+    align-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 80%;
+}
+.modificar-producto .volver a{
+    color: #fff;
 }
 .modificar-producto .modificar{
     text-align: center;
@@ -28,7 +42,7 @@
 .modificar-producto h1{
     font-size: 2.2rem;
     margin-top: 1rem;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
 } 
 
 .modificar-producto .form div{
@@ -88,6 +102,13 @@
 
 
 @media (min-width: 700px){
+    .modificar-producto .volver{
+        justify-content: space-around;    
+        margin-bottom: 2rem;
+    }
+    .modificar-producto .volver a{
+       font-size: 1.5rem;
+    }
     .modificar-producto .form{
         text-align: center;
         width: 60%;
