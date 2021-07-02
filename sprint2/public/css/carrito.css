@@ -1,0 +1,385 @@
+.carrito h1{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  }
+.carrito h2{
+  font-size: 2em;
+  text-transform: uppercase;
+  }
+  .carrito h3{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  }
+.carrito h4{
+  font-size: 1.5rem;
+  color: #3f4f68;
+}
+.carrito h5{
+  font-size: 1.2rem;
+  color: #3f4f68;
+}
+.carrito h6{
+  font-size: .6rem;
+  color: #3f4f68;
+}
+.carrito p{
+  font-size: 1.2rem;
+  color: #3f4f68;
+}
+.carrito span{
+  font-size: 2rem;
+  color: #3f4f68;
+}
+.carrito a{
+  font-size: 1.2rem;
+}
+
+@media (min-width:310px) {
+.carrito {
+  background-color: #d3dcdf;
+  max-width: 470px;
+  margin: 0 auto;
+  padding:0;/* 20px 25px */;
+}
+.carrito-encabezado {
+  background-color: #d3dcdf;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom: solid 1px #808282;
+  
+}
+
+.carrito-encabezado-titulo {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.carrito-encabezado-titulo-button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.carrito-encabezado-titulo-button button {
+  background-color: #bc0000;
+  color: white;
+  border-radius: 15px;
+  font-size: .8rem;
+  font-weight: 900;
+  height: 3rem;
+  padding: 5px 30px;
+  
+}
+
+/*=====ARTICULOS=======*/
+.carrito-main-article {
+  display: flex;
+  flex-direction: column; 
+  padding: 15px 15px;
+  border-bottom: solid 1px #808282;
+  height: 100vh;
+}
+.carrito-main-producto {
+  height: 95%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.carrito-main-producto-imagen {
+  display: flex;
+  justify-content: center;
+  height: 65%;
+  width: 100%;
+}
+.carrito-main-producto-imagen img {
+  height: 100%;
+  width: 80%;
+}
+.carrito-main-producto-descripcion {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+ }
+
+.carrito-main-article-precio {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5%;
+  margin-left: 10px;
+  
+}
+
+.carrito-main-article-precio-subrayado {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+    
+}
+
+/*----------    SECTION FACTURACION -------------*/
+.carrito-facturacion{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  }
+
+.carrito-facturacion-tarjetas {
+  display: flex;
+  flex-wrap: wrap; 
+  flex-direction: column;
+  width: 100%;
+  height: 50%; 
+  padding: 10px 10px;
+}
+.carrito-facturacion-tarjetas-descuento{
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  margin-bottom: 10px;
+}
+.carrito-facturacion-tarjetas-descuento h3{
+  color: #3f4f68;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.carrito-facturacion-tarjetas-descuento input{
+  width: 12rem;
+  height: 2rem;
+  border-radius: 13px;
+  border: none;
+  
+}
+
+.carrito-facturacion-tarjetas-descuento-imagen{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: flex-end;
+  
+}
+.carrito-facturacion-tarjetas-descuento-imagen img{
+  width: 100%;
+  height: 100%;
+   
+}
+
+.carrito-facturacion-cobro{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  
+}
+
+.carrito-facturacion-cobro-subtotal{
+  width: 100%;
+  height: 30%;
+  background-color: #c8ccce;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px 20px;
+}
+
+.carrito-facturacion-cobro-total-general {
+  background-color: #bebfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 70%;
+  padding:0 5px 20px;
+  
+}
+.carrito-facturacion-cobro-total-general-i{
+  display: flex;
+  justify-content: space-between;
+}
+.carrito-facturacion-cobro-total-general-i-precio{
+font-size: 2.3rem;
+color: #3f4f68;
+}
+.carrito-facturacion-cobro-total-general-cuotas{
+  display: flex;
+  justify-content: space-between;
+}
+.carrito-facturacion-cobro-total-general-cuotas a{
+  color:#954348;
+}
+}
+
+/*========================================================================*/
+/*=====================MEDIAS QUERIES====================*/
+
+/*=====TABLET====*/
+@media (min-width:768px) {
+  
+  .carrito{
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 14px;
+  }
+.carrito-encabezado {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  }
+  .carrito-encabezado-titulo {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 73%;
+}
+.carrito-encabezado-titulo h3 {
+  font-size: 1.1rem;
+} 
+.carrito-encabezado-titulo-button{
+  width: 27%;
+  margin-right: auto;
+
+}
+
+ .carrito-encabezado-titulo-button button {
+  font-size: .7rem;
+} 
+
+/*=====ARTICULOS=======*/
+.carrito-main-article {
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+.carrito-main-producto{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.carrito-main-producto-imagen {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  padding-right: 20px;
+}
+.carrito-main-producto-imagen img {
+  height: 100%;
+  width: 100%;
+}
+
+.carrito-main-producto-descripcion{
+  width: 50%;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.carrito-main-article-precio {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  
+}
+
+.carrito-main-article-precio-subrayado {
+  align-items: center;
+}
+
+/*----------    SECTION FACTURACION -------------*/
+.carrito-facturacion{
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 40vh;
+
+}
+
+.carrito-facturacion-tarjetas {
+  flex-direction: row;
+  height: 100%;
+  width: 63.5%;
+  padding: 10px 10px 10px 15px;
+}
+.carrito-facturacion-tarjetas-descuento{
+  width: 100%;
+  height: 30%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.carrito-facturacion-tarjetas-descuento-imagen{
+   height: 70%;
+ 
+}
+.carrito-facturacion-tarjetas-descuento-imagen img{
+ height: 60%;
+ margin-bottom: 10px;
+}
+
+.carrito-facturacion-cobro{
+  width: 36.5%;
+
+}
+
+.carrito-facturacion-cobro-subtotal{
+  margin: 0;
+}
+
+}
+
+/*========DESKTOP=======*/
+@media (min-width:1024px) {
+
+  .carrito {
+  max-width: 1300px;
+  padding: 30px 80px; 
+  font-size: 20px;
+  }
+
+.carrito-encabezado {
+  justify-content: space-between;
+  align-items: flex-end;
+ 
+  }
+
+/*=====ARTICULOS=======*/
+.carrito-main-article {
+  flex-wrap: nowrap;
+  height: 60vh;
+}
+.carrito-main-producto{
+  height: 100%;
+  width: 65%;
+}
+
+.carrito-main-producto-imagen {
+  flex: none;
+  width: 30%;
+}
+
+.carrito-main-producto-descripcion{
+  width: 70%;
+  border-right: solid 1px #808282;
+  
+}
+
+.carrito-main-article-precio {
+  width: 35%;
+  height: 100%;
+}
+
+.carrito-main-article-precio-subrayado {
+ border-bottom: solid 1px #808282;
+}
+
+
+}
