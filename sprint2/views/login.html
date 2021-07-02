@@ -20,12 +20,17 @@
             <div>
               <label for="usuario">Usuario</label>
             <input type="text" id="usuario" required name="usuario" />
+              <span class="alerta-usuario">* USUARIO INCORRECTO</span>
             </div>
             <div>
               <label for="contrasena">Contraseña</label>
             <input type="password" id="contrasena" required name="password" />
+            <span class="alerta-contrasena">* CONTRASEÑA INCORRECTA</span>
             </div>
-            
+            <div class="recordarme">
+              <input type="checkbox" name="recordarme" id="recordarme">
+              <label for="recordarme">Recordarme</label>
+            </div>
             <p class="recuperar-cont">
               tus credenciales fueron robadas por hydra?...
               <a href="#">Recuperalas</a>

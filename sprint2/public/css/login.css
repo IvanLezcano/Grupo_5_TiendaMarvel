@@ -48,12 +48,27 @@
   font-size: 1.4rem;
   margin-top: 5rem;
 }
+.login-main .iniciar-sesion .inputs span {
+  font-size: 1.2rem;
+  margin-top: -1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #C2381A;
+  font-weight: 500;
+}
+
 
 .login-main .iniciar-sesion div {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
+}
+.login-main .iniciar-sesion .recordarme {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  align-items: baseline;
 }
 
 .login-main .iniciar-sesion input {
@@ -165,7 +180,9 @@
     margin-left: -8rem;
   }
 
-
+  .login-main .iniciar-sesion .recordarme {
+    width: 10%;
+  }
     /* === .recuperar-cont === */
   .login-main .iniciar-sesion .recuperar-cont {
         margin: 0 11rem 2rem -3rem;

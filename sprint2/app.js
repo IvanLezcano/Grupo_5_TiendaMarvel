@@ -30,6 +30,9 @@ app.get("/productos", (req, res) =>
 app.get("/cargadeproducto", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "cargadeproducto.html"))
 );
+app.get("/modificar", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "modificarproducto.html"))
+);
 app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );

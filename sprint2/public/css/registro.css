@@ -83,15 +83,19 @@
     width: 70%;
     
 }
+.registro .inputs div{
+    margin-bottom: 1rem;
+}
 
 .registro .inputs label{
     font-size: 1.6rem;
 }
 
 .registro .inputs input{
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     border-radius: 1rem;
     padding: 0.2rem;
+    width: 100%;
 }
 
 .registro .inputs input:hover{
@@ -101,7 +105,14 @@
     outline: none;
     border: 2px solid  var(--color-red);
 }
-
+.registro span {
+    font-size: 1.2rem;
+    margin-top: -1.2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    color: #C2381A;
+    font-weight: 500;
+  }
 
 /* === btn-registrarse === */
 
@@ -229,8 +240,8 @@
 
     .registro .inputs input{
         width: 100%;
+        margin-bottom: 1.5rem;
     }
-  
     
     /* ===== logueate ===== */
     .registro .logueate {
@@ -243,7 +254,7 @@
 
 @media (min-width: 1024px){
       .registro{
-        max-height: 68vh;
+        max-height: 75vh;
         max-width: 50vw;
     }
 
@@ -253,8 +264,15 @@
     .registro .inputs label {
         width: 100%;
     }
+    .registro .inputs div {
+        margin-bottom: 0rem;
+        
 
+    }
 
+    .registro span {
+        font-size: 1.1rem;
+    }
     .registro .inputs input {
         margin-bottom: 1.5rem;
         border-radius: 1rem;
