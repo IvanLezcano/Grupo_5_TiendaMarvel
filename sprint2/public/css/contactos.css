@@ -4,7 +4,7 @@
         padding-left: 10px;
         
     }
-    textarea{
+    .textarea2{
         width: 100% !important;
         height: 20px !important;
         font-size: 1rem !important;
@@ -23,7 +23,7 @@
     }
 }
 @media (min-width: 768px){
-    textarea{
+    .textarea2{
         font-size: 3rem !important;
     }
     .contacto{
@@ -51,7 +51,7 @@
     }
 }
 @media (min-width: 1024px){
-    textarea{
+    .textarea2{
         font-size: 3rem !important;
     }
     .contacto{
@@ -65,7 +65,7 @@
     .contacto input{
         width: 100%;
     }
-    .form-control{
+    .form-control .jaja{
         height: 5rem !important;
         font-size: 3rem;
 
