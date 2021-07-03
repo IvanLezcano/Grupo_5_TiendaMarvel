@@ -39,7 +39,7 @@
   background-color: #d3dcdf;
   padding:0;
   font-family: Ubuntu;
-  font-size: 16px;
+  font-size: 12px;
   
 }
 .carrito-encabezado {
@@ -318,13 +318,12 @@ color: #3f4f68;
 }
 
 /*----------    SECTION FACTURACION -------------*/
-
 .carrito-facturacion{
-    flex-direction: row;
+  flex-direction: row;
   flex-wrap: wrap;
   height: 35vh;
   padding-bottom: 20px;
-}
+  }
 .carrito-facturacion-tarjetas {
   flex-direction: row;
   height: 100%;
@@ -428,6 +427,7 @@ color: #3f4f68;
 }
 .carrito-facturacion{
   height: 45vh;
+  padding-bottom: 0;
   }
   
 }
