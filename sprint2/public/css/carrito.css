@@ -320,13 +320,7 @@ color: #3f4f68;
 }
 
 /*----------    SECTION FACTURACION -------------*/
-.carrito-facturacion{
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 30vh;
 
-}
 
 .carrito-facturacion-tarjetas {
   flex-direction: row;
