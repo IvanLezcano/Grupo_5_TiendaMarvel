@@ -41,12 +41,12 @@ main{
           justify-content:  center !important;
       }
       .carousel-control-prev-icon{
-        width: 60px !important;
+        width: 40px !important;
         height: 60px !important;
     
       }
       .carousel-control-next-icon{
-        width: 60px !important;
+        width: 40px !important;
         height: 60px !important;
     }
     

@@ -255,7 +255,7 @@ header .botonderegistrarse a{
 }
 .re{
     display: block;
-    font-size: 1.8em;
+    font-size: 1.3em;
 }
 .enlinea{
     width: 100%;
@@ -279,11 +279,11 @@ header .botonderegistrarse a{
 @media (min-width: 1024px){
     .re{
         display: block;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .fa-shopping-cart{
         color: white;
-        font-size: 50px;
+        font-size: 40px;
     }
  .menu{
 display: flex !important; 
@@ -294,5 +294,8 @@ display: flex !important;
 }
 #dropdownMenuButton1{
     height: 4rem !important;
+}
+.re{
+    font-size: 2.4;
 }
 }

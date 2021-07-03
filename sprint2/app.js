@@ -31,6 +31,9 @@ app.get("/quiz", (req, res) =>
 app.get("/novedades", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "novedades.html"))
 );
+app.get("/nosotros", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "sobrenosotros.html"))
+);
 app.get("/productos", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "productos.html"))
 );
@@ -40,6 +43,21 @@ app.get("/carrito", (req, res) =>
 app.get("/descripcion", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "descripcion-producto.html"))
 );
-app.listen(port, () =>
+app.get("/cargadeproducto", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "cargadeproducto.html"))
+);
+app.get("/modificar", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "modificarproducto.html"))
+);
+app.get("/contacto", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "contactos.html"))
+);
+app.get("/carga", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "modificarproducto.html"))
+);
+app.get("/modificar", (req, res) =>
+  res.sendFile(path.join(__dirname, "views", "cargadeproducto.html"))
+);
+  app.listen(port, () =>
   console.log("Server runing in http://localhost:" + port)
 );
