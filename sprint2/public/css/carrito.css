@@ -1,5 +1,7 @@
+@media (min-width:320px) {
+
 .carrito h1{
-  font-size: 1.2rem;
+  font-size: 1.2em;
   text-transform: uppercase;
   }
 .carrito h2{
@@ -7,40 +9,37 @@
   text-transform: uppercase;
   }
   .carrito h3{
-  font-size: 1.4rem;
+  font-size: 1.4em;
   text-transform: uppercase;
   }
 .carrito h4{
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #3f4f68;
 }
 .carrito h5{
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: #3f4f68;
 }
 .carrito h6{
-  font-size: .6rem;
+  font-size: .6em;
   color: #3f4f68;
 }
 .carrito p{
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: #3f4f68;
 }
 .carrito span{
-  font-size: 2rem;
+  font-size: 2em;
   color: #3f4f68;
 }
 .carrito a{
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
-
-@media (min-width:320px) {
-
-
 .carrito {
   background-color: #d3dcdf;
   padding:0;
-  font-family: "Ubuntu"; 
+  font-family: Ubuntu;
+  font-size: 16px;
   
 }
 .carrito-encabezado {
@@ -146,11 +145,11 @@
 .carrito-facturacion-tarjetas-descuento h3{
   color: #3f4f68;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 .carrito-facturacion-tarjetas-descuento input{
-  width: 12rem;
-  height: 2rem;
+  width: 12em;
+  height: 2em;
   border-radius: 13px;
   border: none;
   
@@ -201,7 +200,7 @@
   justify-content: space-between;
 }
 .carrito-facturacion-cobro-total-general-i-precio{
-font-size: 2.3rem;
+font-size: 2.3em;
 color: #3f4f68;
 }
 .carrito-facturacion-cobro-total-general-cuotas{
@@ -223,9 +222,9 @@ color: #3f4f68;
   border-radius: 15px;
   font-family: "Bebas Neue";
   font-weight: 900; 
-  height: 3rem;
+  height: 3em;
   padding: 5px 30px;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 }
 
@@ -234,12 +233,9 @@ color: #3f4f68;
 
 /*=====TABLET====*/
 @media (min-width:768px) {
-  .carrito p{
-    font-size: 1.6rem;
-    color: #3f4f68;
-  }
+  
   .carrito{
-  font-size: 18px;
+  font-size: 14px;
   }
 .carrito-encabezado {
    flex-direction: row;
@@ -248,7 +244,6 @@ color: #3f4f68;
   align-items: flex-end;
   max-width: 800px;
   margin: 0 auto;
-  
   
   }
   .carrito main{
@@ -259,7 +254,7 @@ color: #3f4f68;
   width: 70%;
 }
 .carrito-encabezado-titulo h1 {
-  font-size: 1.1rem;
+  font-size: 1.4em;
 } 
 .carrito-encabezado-titulo-button1{
   width: 30%;
@@ -273,9 +268,9 @@ color: #3f4f68;
   border-radius: 15px;
   font-family: "Bebas Neue"; 
   font-weight: 900; 
-  height: 3rem;
+  height: 3em;
   padding: 5px 30px;
-  font-size: 1.1rem;
+  font-size: 1.1em;
 } 
 
 /*=====ARTICULOS=======*/
@@ -283,6 +278,7 @@ color: #3f4f68;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 70vh;
   }
 .carrito-main-producto{
   height: 80%;
@@ -322,14 +318,13 @@ color: #3f4f68;
 }
 
 /*----------    SECTION FACTURACION -------------*/
+
 .carrito-facturacion{
-  flex-direction: row;
+    flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
-  height: 40vh;
-
+  height: 35vh;
+  padding-bottom: 20px;
 }
-
 .carrito-facturacion-tarjetas {
   flex-direction: row;
   height: 100%;
@@ -341,7 +336,14 @@ color: #3f4f68;
   height: 30%;
   flex-direction: row;
   justify-content: space-between;
-  flex-grow: 1;
+  }
+  .carrito-facturacion-tarjetas-descuento h3{
+   font-size: 1.6em;
+}
+.carrito-facturacion-tarjetas-descuento input{
+  width: 12em;
+  height: 2.5em;
+   
 }
 
 .carrito-facturacion-tarjetas-descuento-imagen{
@@ -370,11 +372,8 @@ color: #3f4f68;
 
 /*========DESKTOP=======*/
 @media (min-width:1024px) {
-  .carrito p{
-    font-size: 1.6rem;
-    color: #3f4f68;
-  }
 
+ 
   .carrito {
   padding: 30px 80px; 
   font-size: 20px;
@@ -392,7 +391,7 @@ color: #3f4f68;
   }
   
   .carrito-encabezado-titulo h1 {
-  font-size: 1.4rem;
+  font-size: 1.3em;
 } 
 
 /*=====ARTICULOS=======*/
@@ -407,11 +406,11 @@ color: #3f4f68;
 
 .carrito-main-producto-imagen {
   flex: none;
-  width: 30%;
+  width: 40%;
 }
 
 .carrito-main-producto-descripcion{
-  width: 70%;
+  width: 60%;
   border-right: solid 1px #808282;
   
 }
@@ -425,6 +424,10 @@ color: #3f4f68;
  border-bottom: solid 1px #808282;
 }
 .carrito-facturacion-tarjetas-descuento h3{
- font-size: 1.5rem;
+ font-size: 1.2em;
 }
+.carrito-facturacion{
+  height: 45vh;
+  }
+  
 }
