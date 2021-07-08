@@ -20,8 +20,8 @@
     }
     .nosotros2 h3{
         font-family: 'Bebas Neue';
-    
-        font-size: 0.8rem;
+        height: 50%;
+        font-size: 2rem;
         text-align: center;
         background-color: red;
         border: blue 4px outset;
@@ -131,7 +131,8 @@
 .nosotros2 h3{
     font-family: 'Bebas Neue';
 
-    font-size: 3rem;
+    font-size: 4rem;
+    height: 50%;
     text-align: center;
     background-color: red;
     border: blue 4px outset;
@@ -142,7 +143,7 @@
     color: black;
     background-color: red;
     border: blue 4px outset;
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: 'Bebas Neue';
 
 

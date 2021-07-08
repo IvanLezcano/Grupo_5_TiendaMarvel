@@ -74,18 +74,20 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         margin-left: 40px;
         margin-right: 40px;
     
     }
     .cadacategoria{
         width: 100%;
+        max-width: 24rem;
         margin-bottom: 3rem;
     
     }
     .categorias img{
         width: 100%;
-        height: 10rem;
+        height: 20rem;
         border-radius: 10px 10px  0 0;
 
     }
@@ -192,14 +194,18 @@ main{
         display: none;
     }
     .destacados{
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         margin-left: 40px;
         margin-right: 40px;
     
     }
     .cadadestacado{
-        width: 100%;
+        width: 40%;
+        max-width: 12rem;
+
         margin-bottom: 3rem;
     
     }
@@ -237,6 +243,18 @@ main{
 
 @media (min-width: 768px){
     .TIENDA2{
+         
+        width: 90%;
+        font-size: 3rem;
+        font-family: 'Bebas Neue';
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px  solid black;
+        border-bottom: 2px  solid black;
+
+    }
+    .TIENDA23{
          
         width: 90%;
         font-size: 3rem;
@@ -427,7 +445,10 @@ main{
     
     }
     .cadacategoria{
-        width: 30%;
+        width: 100% !important;
+        max-width: 30rem;
+
+        
     
     }
     .categorias img{
@@ -486,6 +507,8 @@ main{
 }
 .cadadestacado{
     width: 20%;
+    max-width: 30rem;
+
 
 }
 .destacados img{
