@@ -30,11 +30,17 @@
             </div>
             <div>
                 <label for="descripcion">Descripción del producto</label>
-                <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..."></textarea>
+                <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..." style="resize: none;"></textarea>
             </div>
             <div>
                 <label for="categoria">Categoría</label>
-                <input type="text" name="categoria" id="categoria" placeholder="Añadir categoría">
+                <label for=""></label>
+                <select name="categoria">
+                    <option value="figuras">Figuras</option>
+                    <option value="ropa" selected>Ropa</option>
+                    <option value="comics">Comics</option>
+                    <option value="merchandising">Merchandising</option>
+                  </select>
             </div>
             <button type="submit">Publicar</button>
         </form>
