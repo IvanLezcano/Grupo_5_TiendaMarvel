@@ -9,26 +9,38 @@
   </head>
 
   <body class="login">
+    <h1 class="titulo">Login</h1>
     <main class="login-main">
-      <section class="cont-login">
-        <section class="titulo">
-          <h2>Login</h2>
-        </section>
-        <h4 class="ingresa-google">Ingresa con <a href="#">Google</a></h4>
-        <section class="iniciar-sesion">
-          <form action="" method="" class="inputs" enctype="multipart/form-data"> 
+
+          <form
+            action=""
+            method=""
+            class="inputs"
+            enctype="multipart/form-data"
+          >
+          <h4 class="ingresa-google">Ingresa con <a href="#">Google</a></h4>
             <div>
-              <label for="usuario">Usuario</label>
-            <input type="text" id="usuario" required name="usuario" />
+              <input
+                type="text"
+                id="usuario"
+                required
+                name="usuario"
+                placeholder="Usuario"
+              />
               <span class="alerta-usuario">* USUARIO INCORRECTO</span>
             </div>
             <div>
-              <label for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" required name="password" />
-            <span class="alerta-contrasena">* CONTRASEÑA INCORRECTA</span>
+              <input
+                type="password"
+                id="contrasena"
+                required
+                name="password"
+                placeholder="Contraseña"
+              />
+              <span class="alerta-contrasena">* CONTRASEÑA INCORRECTA</span>
             </div>
             <div class="recordarme">
-              <input type="checkbox" name="recordarme" id="recordarme">
+              <input type="checkbox" name="recordarme" id="recordarme" />
               <label for="recordarme">Recordarme</label>
             </div>
             <p class="recuperar-cont">
@@ -37,7 +49,6 @@
             </p>
             <button class="btn-ingresa">INGRESA</button>
           </form>
-        </section>
       </section>
       <a href="/" class="cont-img">
         <img src="/img/torre.png" alt="logo-torre" />

@@ -1,212 +1,210 @@
 @import url("./general.css");
 
-.login {
+.login{
+    font-family: "Ubuntu", sans-serif;
   background-color: var(--color-oxfordBlue);
-  height: 100vh;
-  font-family: "Ubuntu", sans-serif;
-}
-
-.login .login-main {
-  height: 100%;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
+  height: 90vh;
+}
+.login p{
+  font-size: 1.1rem;
 }
 
-/* === titulo === */
-.login-main .titulo {
+.login-main{
+  height: 80%;
+}
+.login .titulo{
+  flex-direction: column;
+    justify-content: center;
+  height: 20%;
+  margin-bottom: 1rem;
   font-size: 2rem;
   color: var(--color-independence);
 }
-
-.login-main .titulo h2 {
-  font-weight: 400;
+.login-main .ingresa-google{
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
 }
 
-/* === ingresa-con-google === */
-
-.login-main .ingresa-google {
-  height: 2rem;
-  font-weight: 400;
-  color: #fff;
-  font-size: 1.6rem;
-  margin-top: 4rem;
-}
-
-.login-main .ingresa-google a {
-  color: var(--color-red);
-}
-
-/* === iniciar-sesion === */
-.login-main .iniciar-sesion .inputs {
+/* === formulario === */
+.login-main .inputs{
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--color-gainsboro);
-  font-size: 1.4rem;
-  margin-top: 5rem;
+  justify-content: center;
 }
-.login-main .iniciar-sesion .inputs span {
-  font-size: 1.2rem;
-  margin-top: -1.2rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  color: #C2381A;
-  font-weight: 500;
-}
-
-
-.login-main .iniciar-sesion div {
+.login-main .inputs div{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  padding:1rem;
 }
-.login-main .iniciar-sesion .recordarme {
-  display: flex;
-  flex-direction: row;
-  width: 40%;
-  align-items: baseline;
-}
-
-.login-main .iniciar-sesion input {
-  margin: 0.5rem 0 1.7rem 0;
+.login-main .inputs input {
   border-radius: 1rem;
-  padding: 0.3rem;
+  padding: 0.2rem;
   width: 100%;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.login-main .iniciar-sesion input:active {
+.login-main .inputs input:hover {
   outline: none;
 }
-.login-main .iniciar-sesion input:focus-visible {
+.login-main .inputs input:focus-visible {
   outline: none;
   border: 2px solid var(--color-red);
 }
 
-/* === recuperar-clave === */
-.login-main .iniciar-sesion .recuperar-cont {
-  font-size: 1rem;
-  color: var(--color-independence);
-  margin-bottom: 2rem;
+.login-main .inputs .recordarme {
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+
 }
-.login-main .iniciar-sesion .recuperar-cont a {
-  color: var(--color-cordovan);
+.login-main .inputs .recordarme input{
+  margin: 0.5rem;
+  width: 15px;
+}
+.login-main span {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #c2381a;
 }
 
-/* === ingresa === */
+.login-main .recuperar-cont{
+  margin: 0.5rem;
+}
+.login-main a {
+  color: var(--color-red);
+}
+
+/* === logo === */
+.cont-img img{
+  width: 150px;
+}
+
+/* === boton === */
 .login-main .btn-ingresa {
   font-family: "Bebas Neue", cursive;
   font-size: 2rem;
   border-radius: 16px;
+  margin: 1rem;
+  padding:1rem;
   border: none;
-  padding: 0.5rem;
-  width: 9rem;
   background-color: var(--color-red);
   color: white;
-  margin-bottom: 1rem;
 }
-.login-main .btn-ingresa:hover{
-   
+.login-main .btn-ingresa:hover {
   box-shadow: 0px 0px 10px 4px var(--color-red);
 }
 
-
-
-/* === logo === */
-.login img {
-  width: 15rem;
-}
-
-/* ======= TABLET ======= */
+/* ==== TABLET ==== */
 @media (min-width: 768px) {
   .login {
     background-color: var(--color-independence);
     width: 100vw;
     height: 100vh;
     display: flex;
+    
   }
-
-  .login .login-main {
+  .login .titulo{
+    color: #fff;
+    display: flex;
+  }
+  .login .login-main{
+    margin: auto;
+    border-radius: 20px;
+    height: 60%;
+    margin: 0;
+    max-width: 60vw;
     background-color: var(--color-oxfordBlue);
     display: flex;
     flex-direction: row-reverse;
-    margin: auto;
-    border-radius: 20px;
-    height: 66vh;
-    max-width: 55vw;
+    justify-content: space-between;
+    align-items: center;
   }
-
-  /* === logo === */
-  .login .cont-img {
-    height: 95%;
-    width: 27%;
+  .login .login-main h4{
+    margin:0;
   }
-
-  .login img {
-    width: 20rem;
-    margin-left: -4rem;
+  /* ===== inputs ===== */
+  .login .inputs {
+    width: 65%;
+    height: 70%;
+    justify-content: space-evenly;
+    align-items: center;
   }
-
-  /* === cont-login === */
-
-  .login .cont-login {
-    height: 100%;
-    width: 70%;
-    margin-left: -2rem;
-  }
-
-  .login-main .titulo h2 {
-    width: 66%;
-  }
-
-  /* === ingresa-con-google === */
-
-  .login-main .ingresa-google {
-      width: 78%;
-
-  }
-
-  /* === iniciar-sesion === */
-  .login-main .iniciar-sesion .inputs label {
-    width: 100%;
-    text-align: left;
-  }
-
-  .login-main .iniciar-sesion input {
-    width: 80%;
-    margin-left: -8rem;
-  }
-
-  .login-main .iniciar-sesion .recordarme {
-    width: 10%;
-  }
-    /* === .recuperar-cont === */
-  .login-main .iniciar-sesion .recuperar-cont {
-        margin: 0 11rem 2rem -3rem;
-    
-    }
-
-
-    /* === ingresa === */
-    .login-main .btn-ingresa {
-    font-size: 3rem;
-    padding: 0.8rem;
-    width: 10rem;
-    margin-left: -10rem;
+  .login .inputs div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 20%;
+    margin: 0;
   }
   
-}
-
-/* === ESCRITORIO === */
-
-@media (min-width: 1024px) {
-  .login .login-main{
-    max-width: 40%;
-    max-height: 66vh;
+  .login .inputs input {
+    width: 100%;
+    margin: 0;
+    height: 40%;
+    padding: 1rem;
+  }
+  
+  /* ===== label ===== */
+  .login .inputs div label {
+    font-size: 1.3rem;
+    text-align: left;
+    margin: 0;
+  }
+  
+  /* ===== span ===== */
+  .login .inputs div span {
+    height: 20%;
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* ===== boton ===== */
+  .login .inputs .btn-ingresa {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0.7rem;
+    width: 8rem;
   }
 
+  /* === recuperar contraseña === */
+  .login-main .recuperar-cont {
+    margin: 0px 0 0.9rem -3.5rem;
+}
+  /* === logo === */
+  .login .cont-img {
+    height: 50%;
+    width: 40%;
+  }
+  .login .cont-img img{
+    height: 100%;
+    width: 100%;
+  }
 
+}
+@media (min-width: 768px) {
+  .login{
+    justify-content: end;
+  }
+  .login .login-main{
+    max-width: 55vw;
+  }
+  .login .inputs{
+    justify-content: center;
+  }
+  .login .inputs div {
+    max-width: 70%;
+}
+  .login .inputs div span {
+    font-size: 1.3rem;
+  }
 }
