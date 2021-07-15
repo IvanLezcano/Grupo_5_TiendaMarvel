@@ -26,14 +26,14 @@ main{
 }
 
     .carousel-inner {
-        height: 150px !important;
+        height: 30% !important;
         background-color: black !important;
         
       }
       
       .carousel-item  img {
          align-self: center !important;
-          height: 150px !important;
+          height:30% !important;
           width: 100% !important;
           margin: auto !important;
           text-align: center !important;
@@ -299,7 +299,7 @@ main{
 }
 
 .carousel-inner {
-    height: 350px !important;
+    height: 30% !important;
     background-color: black !important;
     font-size: 2rem;
     
@@ -307,8 +307,8 @@ main{
   
   .carousel-item  img {
      align-self: center !important;
-      height: 350px !important;
       width: 100% !important;
+      height: 30% !important;
       margin: auto !important;
       text-align: center !important;
       align-items:  center !important;
