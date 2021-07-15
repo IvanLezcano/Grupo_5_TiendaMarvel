@@ -43,7 +43,12 @@
         background-color: green;}
   }
 
-  .botoncorrecto{
+  @keyframes botonnegativo {
+    0%   {}
+    3%  {display: none !important;}
+  
+  }
+  .botoncorrecto:hover{
     animation-name: botonmistico;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -58,13 +63,12 @@
     background-color: red;
    
 }
-.negativa button:hover{
-    font-family: 'Bebas Neue';
+/* .negativa:hover{
+    animation-name:botonnegativo ;
+    animation-duration: ;
 
-    color: blue;
-    display: none;
 
-}
+} */
 #mensaje{
     font-family: 'Bebas Neue';
 
@@ -245,9 +249,10 @@ td{
         padding: 40px;
         font-size: 20px;
     }
-    .negativa button:hover{
+    .negativa:hover{
         color: blue;
-        display: none;
+        display: none !important;
+
 
     }
     #mensaje{
