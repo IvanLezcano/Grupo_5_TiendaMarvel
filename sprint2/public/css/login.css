@@ -104,6 +104,13 @@
 
 /* ==== TABLET ==== */
 @media (min-width: 768px) {
+  .pruebass{
+    width: 40%;
+  }
+  .pruebass img{
+    max-width: 100% !important;
+
+  }
   .login {
     background-color: var(--color-independence);
     width: 100vw;
