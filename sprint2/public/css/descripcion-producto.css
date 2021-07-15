@@ -1,4 +1,8 @@
 
+.descripcion-producto{
+    background-color: #d3dcdf;
+    padding: 6% 10%;
+}
 
 .producto-article{
    background-color: #152034;
@@ -7,7 +11,7 @@
     display: flex;
     flex-direction: column;
     color: white;
-       
+    border-radius: 5px; 
    }
 
 
@@ -115,7 +119,7 @@
     margin: 0 auto; 
     padding: 5px 35px 0px;
     height: 100vh;
-    border-radius: 5px;       
+          
    }
    .producto-article-imagen{
     width: 40%;
