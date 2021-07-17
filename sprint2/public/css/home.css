@@ -204,7 +204,7 @@ main{
     }
     .cadadestacado{
         width: 100%;
-        max-width: 80%;
+        max-width: 25rem;
 
         margin-bottom: 3rem;
     

@@ -228,6 +228,8 @@ header ul li a{
     background-color: #262626 !important;
     font-size: 1.3rem;
 }
+
+
 .menus .btn{
     
     background-color: #262626 !important;
@@ -275,8 +277,28 @@ header .botonderegistrarse a{
     color: white;
     font-size: 40px;
 }
+.cargarymodificar{
+    width: 100% !important;
+    display: flex !important;
+    padding-left: 23px !important;
+
+}
+.cargarymodificar button{
+   background-color: #262626 !important;
+   font-size: 1.3rem;
+}
 }
 @media (min-width: 1024px){
+ .cargarymodificar{
+     width: 100% !important;
+     display: flex !important;
+     padding-left: 63px !important;
+
+ }
+ .cargarymodificar button{
+    background-color: #262626 !important;
+    font-size: 1.3rem;
+ }
     .re{
         display: block;
         font-size: 1.5rem;
