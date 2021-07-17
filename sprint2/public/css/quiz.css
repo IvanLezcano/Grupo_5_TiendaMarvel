@@ -14,7 +14,7 @@
         z-index: -1;
       
     }
-    form{
+    .form2{
         border: red 9px outset;
         border-radius: 10px;
     }
