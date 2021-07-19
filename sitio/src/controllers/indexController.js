@@ -1,8 +1,6 @@
 module.exports = {
   index: (req, res) => {
-    return res.render("index", {
-      title: "TorreMarvel",
-    });
+    return res.render("index");
   },
   contactos: (req, res) => {
     return res.render("contactos");

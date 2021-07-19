@@ -6,7 +6,7 @@ const {
   quiz
 } = require("../controllers/playsController");
 
-/* /products */
+/* /plays */
 router.get("/kids", kids);
 router.get("/quiz", quiz);
 

@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { descripcion, carrito, lista, carga, modificar } = require("../controllers/productsController");
 
-/* /products */
+/* /productos */
 router.get("/", lista);
 router.get("/descripcion", descripcion);
 router.get("/carrito", carrito);

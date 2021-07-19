@@ -6,7 +6,7 @@ const {
  registro
 } = require("../controllers/usersController");
 
-/* /products */
+/* /users */
 router.get("/login", login);
 router.get("/registro", registro);
 
