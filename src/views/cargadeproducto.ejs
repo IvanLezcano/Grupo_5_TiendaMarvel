@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head')  %> 
+<body class="carga-de-producto">
+    <h1>Carga de Producto</h1>
+    <div class="volver">
+        <a href="/productos"> << Volver a productos</a> <a href="/">Ir a Home >></a>
+
+    </div>
+    <main class="carga">
+        <form action="" method="GET" enctype="multipart/form-data" class="form"> 
+            <div>
+                <input type="text" id="nombreProducto" name="nombre-producto" placeholder="Nombre de Producto">
+            </div>
+            <div>
+                <label for="imagen">Imagen</label>
+                <input type="file" name="imagen" id="imagenProducto">
+            </div>
+            <div>
+                <input type="number" name="precio" id="precioProducto"
+                placeholder="Precio">
+                <input type="number" name="stock" id="stockProducto" placeholder="Stock">
+                <input type="number" name="id" id="idProducto" placeholder="id">            
+            </div>
+            <div>
+                <label for="descripcion">Descripción del producto</label>
+                <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..." ></textarea>
+            </div>
+            <div>
+                <label for="categoria">Categoría</label>
+                <select name="categoria">
+                    <option value="figuras">Figuras</option>
+                    <option value="ropa" selected>Ropa</option>
+                    <option value="comics">Comics</option>
+                    <option value="merchandising">Merchandising</option>
+                  </select>
+            </div>
+            <button type="submit">Publicar</button>
+        </form>
+    </main>
+   
+</body>
+</html>
