@@ -1,52 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head')  %> 
+<%- include('./partials/head') %>
 
   <body class="login">
     <h1 class="titulo">Login</h1>
     <main class="login-main">
 
-          <form
-            action=""
-            method=""
-            class="inputs"
-            enctype="multipart/form-data"
-          >
-          <h4 class="ingresa-google">Ingresa con <a href="#">Google</a></h4>
-            <div>
-              <input
-                type="text"
-                id="usuario"
-                required
-                name="usuario"
-                placeholder="Usuario"
-              />
-              <span class="alerta-usuario">* USUARIO INCORRECTO</span>
-            </div>
-            <div>
-              <input
-                type="password"
-                id="contrasena"
-                required
-                name="password"
-                placeholder="Contraseña"
-              />
-              <span class="alerta-contrasena">* CONTRASEÑA INCORRECTA</span>
-            </div>
-            <div class="recordarme">
-              <input type="checkbox" name="recordarme" id="recordarme" />
-              <label for="recordarme">Recordarme</label>
-            </div>
-            <p class="recuperar-cont">
-              tus credenciales fueron robadas por hydra?...
-              <a href="#">Recuperalas</a>
-            </p>
-            <button class="btn-ingresa">INGRESA</button>
-          </form>
+      <form action="" method="" class="inputs" enctype="multipart/form-data">
+        <h4 class="ingresa-google">Ingresa con <a href="#">Google</a></h4>
+        <div>
+          <input type="text" id="usuario" required name="usuario" placeholder="Usuario" />
+          <span class="alerta-usuario">* USUARIO INCORRECTO</span>
+        </div>
+        <div>
+          <input type="password" id="contrasena" required name="password" placeholder="Contraseña" />
+          <span class="alerta-contrasena">* CONTRASEÑA INCORRECTA</span>
+        </div>
+        <div class="recordarme">
+          <input type="checkbox" name="recordarme" id="recordarme" />
+          <label for="recordarme">Recordarme</label>
+        </div>
+        <p class="recuperar-cont">
+          tus credenciales fueron robadas por hydra?...
+          <a href="#">Recuperalas</a>
+        </p>
+        <button class="btn-ingresa">INGRESA</button>
+      </form>
       </section>
       <a href="/" class="cont-img">
         <img src="/img/torre.png" alt="logo-torre" />
       </a>
     </main>
   </body>
+
 </html>
