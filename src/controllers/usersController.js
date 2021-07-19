@@ -9,8 +9,6 @@ module.exports = {
   },
   
   registro: (req, res) => {
-    return res.render("registrarse", {
-      title: "Registro",
-    });
+    return res.render("registrarse");
   },
 }

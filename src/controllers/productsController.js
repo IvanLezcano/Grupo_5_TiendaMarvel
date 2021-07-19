@@ -4,9 +4,7 @@ const path = require("path");
 module.exports = {
   
   descripcion: (req, res) => {
-    return res.render("descripcion-producto", {
-      title: "descripcion",
-    });
+    return res.render("descripcion-producto");
 
     /* let producto = productos.find(
         (producto) => producto.id === +req.params.id
@@ -15,24 +13,16 @@ module.exports = {
       return res.send(producto); */
   },
   carrito: (req, res) => {
-    return res.render("carrito", {
-      title: "carrito",
-    });
+    return res.render("carrito");
   },
   lista: (req, res) => {
-    return res.render("productos", {
-      title: "productos",
-    });
+    return res.render("productos");
   },
   carga: (req, res) => {
-    return res.render("cargadeproducto", {
-      title: "carga de producto",
-    });
+    return res.render("cargadeproducto");
   },
   modificar: (req, res) => {
-    return res.render("modificarproducto", {
-      title: "Modificar producto",
-    });
+    return res.render("modificarproducto");
   },
 };
 

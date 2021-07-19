@@ -5,18 +5,12 @@ module.exports = {
     });
   },
   contactos: (req, res) => {
-    return res.render("contactos", {
-      title: "contactos",
-    });
+    return res.render("contactos");
   },
   nosotros: (req, res) => {
-    return res.render("sobrenosotros", {
-      title: "Torre Marvel",
-    });
+    return res.render("sobrenosotros");
   },
   novedades: (req, res) => {
-    return res.render("novedades", {
-      title: "novedades",
-    });
+    return res.render("novedades");
   }
 }

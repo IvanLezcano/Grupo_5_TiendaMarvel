@@ -1,13 +1,9 @@
 module.exports = {
   kids: (req, res) => {
-    return res.render("kids", {
-      title: "kids",
-    });
+    return res.render("kids");
   },
   quiz: (req, res) => {
-    return res.render("quiz", {
-      title: "quiz",
-    });
+    return res.render("quiz");
   },
   
 };
