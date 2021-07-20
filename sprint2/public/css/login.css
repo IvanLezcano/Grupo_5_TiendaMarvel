@@ -104,13 +104,6 @@
 
 /* ==== TABLET ==== */
 @media (min-width: 768px) {
-  .pruebass{
-    width: 40%;
-  }
-  .pruebass img{
-    max-width: 100% !important;
-
-  }
   .login {
     background-color: var(--color-independence);
     width: 100vw;
@@ -212,6 +205,6 @@
     max-width: 70%;
 }
   .login .inputs div span {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }

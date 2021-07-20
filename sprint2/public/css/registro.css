@@ -139,9 +139,6 @@
 .registro .btn-registrarse:hover {
   box-shadow: 0px 0px 10px 4px var(--color-red);
 }
-.intento img{
-  width: 10rem !important;
-}
 
 /* === logueate === */
 
@@ -157,15 +154,6 @@
 
 /* ======= TABLET ======= */
 @media (min-width: 768px) {
-  .intento{
-    width: 50%;
-  }
-  .intento img{
-    width: 100% !important;
-    margin-left: -8rem;
-
-  }
-  
   .registro-body {
     background-color: var(--color-independence);
     width: 100vw;
@@ -196,7 +184,7 @@
 
   /* === logo === */
   .registro .logo-info .img {
-    width: 20rem;
+    width: 90%;
     height: 45%;
   }
 
@@ -324,16 +312,13 @@
   }
 
   .registro .logo-info .img {
-    width: 20rem;
+    width: 90%;
+    height: 45%;
     margin-left: -14rem;
   }
 }
 
 @media (min-width: 1300px) {
-  .registro .logo-info .img {
-    width: 25rem;
-    margin-left: -14rem;
-  }
 
   .registro{
     max-height: 65vh;
