@@ -12,6 +12,10 @@ header{
     }
     header{
         border-bottom: 3px solid #262626;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+
     }
         
 
@@ -51,6 +55,7 @@ header{
 
      
     }
+
   
     .botonderegistrarse{
         align-items: center;
@@ -63,9 +68,8 @@ header{
         justify-content: center;
         border-left: 3px solid #262626;
             width: 20% !important;
-            
-        
-        }
+    
+    }
         
  
     .botonderegistrarse button{
@@ -75,11 +79,18 @@ header{
     }
     .menu{
         display: none;
+        background-color:var(--color-header);
+       
     }
+
+    /* barra de navegacion */
     .menumobile{
         background-color: transparent !important;
         border: none;
+        
     }
+    
+    
     #dropdownMenuButton1{
         height: 20px !important;
         box-shadow: none !important;
@@ -122,6 +133,11 @@ header{
 
 }
 @media (min-width: 768px){
+
+     header{
+        
+        position: relative;
+    }
     .imagenNavegacion{
         width: 20% !important;
     }
@@ -241,10 +257,18 @@ header ul li a{
     font-size: 15px;
 }
 
+
 .menu{
     width: 100% !important;
     margin: auto !important;
     display: flex !important;
+    background-color:var(--color-header);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.dropdown-item{
+    color: white;
 }
 header .botonderegistrarse a{
     display: block;
