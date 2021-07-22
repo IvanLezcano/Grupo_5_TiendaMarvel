@@ -262,7 +262,7 @@ header ul li a{
     width: 100% !important;
     margin: auto !important;
     display: flex !important;
-    background-color:var(--color-header);
+    background-color:transparent;
     position: sticky;
     top: 0;
     z-index: 10;
