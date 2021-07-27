@@ -242,9 +242,11 @@ main{
 
 
 @media (min-width: 768px){
+    
     .cadadestacado{
         width: 100%;
         max-width: 25rem;
+        margin-left: 5px;
 
         margin-bottom: 3rem;
     

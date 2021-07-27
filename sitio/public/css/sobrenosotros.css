@@ -1,6 +1,6 @@
 @media (min-width: 319px){
     .fondo2{
-        background-image: url("../images/0e6056e77dadf86ab7f51438f8565313.jpg");
+        background-image: url("../img/0e6056e77dadf86ab7f51438f8565313.jpg");
         -webkit-filter: blur(5px);
         -moz-filter: blur(5px);
         -o-filter: blur(5px);
@@ -14,8 +14,22 @@
         z-index: -1;
       
     }
+    @keyframes bordeadoflashero {
+        0%   {border-radius: 0px;background-color: rgb(234, 0, 0,0.5);}
+        25%  {border-radius: 7px;background-color: rgb(248, 251, 33,0.5);}
+        35%  {border-radius: 0px;background-color: rgb(20, 16, 253,0.5);}
+        50%  {border-radius: 10px;background-color: rgb(1, 233, 5,0.5);}
+
+        60%  {border-radius: 8px;background-color: rgb(233, 1, 229,0.5);}
+        80%  {border-radius: 15px;background-color: rgb(233, 121, 1,0.5);}
+        100% {    border-radius: 0px ;
+            background-color: rgb(234, 0, 0,0.5);}
+      }
+    
+  
     
     .descripcion{
+        
         display: flex !important;
         justify-content: space-between;
         align-items: center;
@@ -35,6 +49,9 @@
         width: 100% !important;
     }
     .nosotros2 h3{
+        animation-name: bordeadoflashero;
+        animation-duration: 9s;
+        animation-iteration-count: infinite;
         font-family: 'Bebas Neue';
         height: 50%;
         font-size: 2rem;
