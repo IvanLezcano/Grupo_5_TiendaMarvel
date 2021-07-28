@@ -1,8 +1,12 @@
+const { Console } = require('console');
 const fs = require('fs')
 const path = require("path");
 
 let categoriasDB = path.join(__dirname,'../data/categorias.json')
 let categorias = JSON.parse(fs.readFileSync(categoriasDB, "utf-8"));
+
+let productosDB = path.join(__dirname,'../data/productos.json')
+let productos = JSON.parse(fs.readFileSync(productosDB, "utf-8"));
 
 module.exports = {
   
@@ -25,7 +29,13 @@ module.exports = {
     return res.render("cargadeproducto",{categorias});
   },
   modificar: (req, res) => {
-    return res.render("modificarproducto");
+    let producto = productos.find(producto => producto.id === 1)
+    console.log(producto.nombre)
+    return res.render('modificarproducto',{
+      categorias,
+      productos,
+      producto
+  })
   },
 };
 
