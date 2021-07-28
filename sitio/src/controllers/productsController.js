@@ -1,5 +1,8 @@
+const fs = require('fs')
 const path = require("path");
 
+let categoriasDB = path.join(__dirname,'../data/categorias.json')
+let categorias = JSON.parse(fs.readFileSync(categoriasDB, "utf-8"));
 
 module.exports = {
   
@@ -19,7 +22,7 @@ module.exports = {
     return res.render("productos");
   },
   carga: (req, res) => {
-    return res.render("cargadeproducto");
+    return res.render("cargadeproducto",{categorias});
   },
   modificar: (req, res) => {
     return res.render("modificarproducto");

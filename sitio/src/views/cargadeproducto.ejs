@@ -9,9 +9,9 @@
 
     </div>
     <main class="carga">
-        <form action="" method="GET" enctype="multipart/form-data" class="form"> 
+        <form action="" method="POST" enctype="multipart/form-data" class="form"> 
             <div>
-                <input type="text" id="nombreProducto" name="nombre-producto" placeholder="Nombre de Producto">
+                <input type="text" id="nombreProducto" name="nombre" placeholder="Nombre de Producto">
             </div>
             <div>
                 <label for="imagen">Imagen</label>
@@ -30,15 +30,13 @@
             <div>
                 <label for="categoria">Categoría</label>
                 <select name="categoria">
-                    <option value="figuras">Figuras</option>
-                    <option value="ropa" selected>Ropa</option>
-                    <option value="comics">Comics</option>
-                    <option value="merchandising">Merchandising</option>
+                    <% categorias.forEach(categoria => { %>
+                        <option value="<%= categoria %>"><%= categoria %> </option> 
+                    <% }) %>
                   </select>
             </div>
             <button type="submit">Publicar</button>
         </form>
     </main>
-   
 </body>
 </html>
