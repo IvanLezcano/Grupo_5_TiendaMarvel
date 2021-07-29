@@ -12,6 +12,9 @@ header{
     }
     header{
         border-bottom: 3px solid #262626;
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
         
 
@@ -129,6 +132,11 @@ header{
 
 }
 @media (min-width: 768px){
+
+     header{
+        
+        position: relative;
+    }
     .imagenNavegacion{
         width: 20% !important;
     }
@@ -255,6 +263,12 @@ header ul li a{
     width: 100% !important;
     margin: auto !important;
     display: flex !important;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.dropdown-item{
+    color: white;
 }
 header .botonderegistrarse a{
     display: block;
