@@ -12,14 +12,17 @@
     <main class="modificar">
       <form action="" method="GET" class="form">
         <div>
-          <input type="text" id="nombreProducto" name="nombre" value=<%=   producto.nombre%>" />
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombreProducto" name="nombre" value=<%=   producto.nombre%> />
         </div>
         <div>
           <label for="imagen">Imagen</label>
           <input type="file" name="imagen" id="imagenProducto" />
         </div>
         <div>
+          <label for="precioProducto">Precio</label>
           <input type="number" name="precio" id="precioProducto" value="<%= producto.precio %>" />
+          <label for="stockProducto">Stock</label>
           <input type="number" name="stock" id="stockProducto" value="<%= producto.stock %>" />
         </div>
         <div>
@@ -31,9 +34,7 @@
           <label for="categoria">Categoría</label>
           <select name="categoria" id="categoria">
            <% categorias.forEach(categoria => { %>
-            <% if ( producto.categoria === categoria) { %>
               <option value="<%= categoria %>" <%= categoria == producto.category ? 'selected' : null %> ><%= categoria %></option>
-            <% } %>
            <% }) %> 
             
           </select>

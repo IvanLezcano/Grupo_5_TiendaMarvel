@@ -172,6 +172,9 @@ textarea::placeholder {
     color: var(--color-black);
     text-align: center;
   }
+  .modificar-producto .form input, textarea{
+    font-size: 1.6rem;
+}
   .modificar-producto .form #imagenProducto {
     margin: auto;
   }
@@ -180,7 +183,7 @@ textarea::placeholder {
   }
   .modificar-producto .form select {
     width: 75%;
-    
+    font-size: 1.6rem;
   }
 }
 
