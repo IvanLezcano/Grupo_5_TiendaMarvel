@@ -1,6 +1,29 @@
+const fs = require('fs')
+const path = require("path");
+let productosDB = path.join(__dirname,'../data/productos.json')
+let productos = JSON.parse(fs.readFileSync(productosDB, "utf-8"));
+let producto = path.join(__dirname,'../data/producto.json')
+let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
+
+
+
 module.exports = {
   index: (req, res) => {
-    return res.render("index");
+    return res.render("index",{productoparavista, ofertas : productoparavista.filter(producto => producto.estado === "oferta")}
+    )},
+    detail : (req,res) => {
+      let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
+      console.log(productofinal)
+      return res.render('descripcion-producto',{
+        productofinal,productoparavista
+      })
+  },
+  carrito : (req,res) => {
+    let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
+    console.log(productofinal)
+    return res.render('carrito',{
+      productofinal,productoparavista
+    })
   },
   contactos: (req, res) => {
     return res.render("contactos");

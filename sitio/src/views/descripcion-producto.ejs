@@ -8,25 +8,25 @@
     <main class="descripcion-producto">
       <article class="producto-article">
         <div class="producto-article-imagen">
-          <p>inicio>Marvel>Spiderman>Figura tanto por cuanto</p>
-          <img src="/img/figuras/muñeco-SpiderMan.jpg" />
+          <p>inicio>Marvel>Spiderman><%= productofinal.nombre %> </p>
+          <img src="/images/merchandinsing/<%= productofinal.imagen %>" />
         </div>
         <div class="producto-article-cont-descripcion">
           <div class="producto-article-cont-descripcion1">
             <div class="textodescripcion">
               <h4>HASBRO</h4>
-              <h6>Figura Spider Man-Home Coming</h6>
-              <h5>Envio Gratis</h5>
+              <h6><%= productofinal.nombre %> </h6>
+              <h5><%= productofinal.descripcion %></h5>
             </div>
 
             <div>
-              <span>$1000</span>
+              <span>$<%= productofinal.precio %></span>
               <p>Ver cuotas</p>
             </div>
           </div>
           <div class="producto-article-cont-descripcion-comprar">
             <button class="producto-article-cont-descripcion-comprar-button">
-              <h3><i class="fas fa-shopping-cart"></i> Comprar</h3>
+              <h3><i class="fas fa-shopping-cart"></i> <a href="/productos/carrito/<%= productofinal.id %>">Comprar</a> </h3>
             </button>
           </div>
           <div class="tarjetadeladescripciondelproductoalfinal">

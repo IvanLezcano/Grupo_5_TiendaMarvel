@@ -84,8 +84,77 @@
           alert("el doctor strange ya sabia que dirias que es la mejor pagina del mundo!")
 
           return document.getElementById("mensaje").innerHTML = "Gracias por elegirnos!"
+        
+          
+          
 
         }
+        let vengadorrandom = () => {
+         
+          let  aleatorio = Math.round(Math.random()*12);
+
+
+          console.log(aleatorio)
+          if (aleatorio===1){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[0].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[0].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "Eres tan rapido y habil como las arañas, tienes una doble vida y sin dudas seras un gran fotografo"}
+           
+
+          else if (aleatorio===2){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[1].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[1].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "De seguro tienes un gran martillo, te gusta viajar por europa y tener el pelo largo, LOKIIII"}
+
+          else if (aleatorio===3){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[2].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[2].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "tal como una hormiga aunque parezcas diminuto tienes un gran poder"}
+            else if (aleatorio===4){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[3].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[3].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "si bien no eres del todo bueno, al menos eres un gran doctor "}
+
+            else if (aleatorio===5){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[4].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[4].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "nada te detiene, eres grande por dentro como por fuera"}
+            else if (aleatorio===6){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[5].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[5].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "orgulloso y patriota, todo un capitan"}
+            else if (aleatorio===7){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[6].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[6].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "Haces que todos te hagan caso con un solo chasquido ;D"}
+            else if (aleatorio===8){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[7].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[7].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "Y tus padres dijeron que esas clases particulares no servirian para nada"}
+            else if (aleatorio===9){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[8].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[8].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "A veces para ti no todo es un lecho de rosas, APLASTA!"}
+            else if (aleatorio===10){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[9].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[9].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "Tu ....eres....iron man...(chasquea y se muere)"}
+            else if (aleatorio===11){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[10].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[10].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "Para vos todo es una broma, no sabes guardar tus sentimientos sin herir a nadie, y todo lo que haces lleva a un fracaso inminente, realmente el rey de los engaños vive en uno"}
+            else if (aleatorio===12){
+            document.getElementById('imagebox').innerHTML = "<%= superheroeparseado[11].nombre %>"
+            document.getElementById('imageboxx').innerHTML = '<img class="animate__animated animate__bounce" src="../images/<%= superheroeparseado[11].imagen%>">'
+            document.getElementById('imageboxxx').innerHTML = "sos todo un visionario, aparte de que tus amigos te ven como una maquina!"}
+       
+          }
+          
+          
+
+        
+        
+      
 
       </script>
 
@@ -98,7 +167,7 @@
 
 
 
-      <div class="container container3">
+      <div id ="TRIVIA" class="container container3">
         <form class="form2" name="test">
           <table width="100%">
             <tbody>
@@ -569,6 +638,31 @@
 
       </div>
       <h2 id="mensaje"></h2>
+
+      <div class="titulosobrenosotros">
+        <h2 id="VENGADOR">¡Descubre que vengador eres!!</h2>
+        </div>
+
+        <div class="random">
+
+          <div class="random">
+                  <div>
+
+                    <button type="submit" class="botoncorrecto2" onclick="vengadorrandom()">Descubre que vengador eres</button>
+                  </div>
+
+                            <div class="animate__animated animate__zoomInDown" id="imagebox">  
+                              
+                            </div>
+                            <div  id="imageboxx">
+
+          </div>
+          <div id=imageboxxx>
+
+          </div>
+      </div>
+      </div>
+
 
       <%- include('./partials/footer') %>
   </body>

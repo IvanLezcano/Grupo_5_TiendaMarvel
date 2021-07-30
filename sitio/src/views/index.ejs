@@ -19,7 +19,7 @@
 
             <section class="categorias">
               <article class="cadacategoria zoom">
-                <img src="../images/merchandinsing/Mochila.jpeg" alt="">
+                <img src="../images/merchandinsing/comic2.png" alt="">
                 <div class="titulocategoria">
                   <h3>COMICS</h3>
                   <P>Emocion en viñetas</P>
@@ -32,10 +32,11 @@
 
               </article>
               <article class="cadacategoria zoom">
-                <img src="../images/merchandinsing/Mochila.jpeg" alt="">
+                <img src="../images/merchandinsing/figura7.jpg" alt="">
+
                 <div class="titulocategoria">
                   <h3>FIGURAS</h3>
-                  <P>Emocion en viñetas</P>
+                  <P>Capturando momentos</P>
                   <div class="vermas">
                     <a href="/productos#FIGURAS">
                       <h4>ver mas</h4>
@@ -46,9 +47,10 @@
               </article>
               <article class="cadacategoria zoom">
                 <img src="../images/merchandinsing/Mochila.jpeg" alt="">
+
                 <div class="titulocategoria">
                   <h3>MERCHANDISING</h3>
-                  <P>Emocion en viñetas</P>
+                  <P>Los mejores accesorios</P>
                   <div class="vermas">
                     <a href="/productos#MERCHANDISING">
                       <h4>ver mas</h4>
@@ -74,84 +76,36 @@
             <section class="destacados">
 
 
-
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-              </article>
-
-
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
+              <% for( let index = 0; index < 4; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/detail/<%= productoparavista[index].id %>"><img src="/images/merchandinsing/<%=productoparavista[index].imagen%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= productoparavista[index].nombre %> </h3>
+                    <P><%= productoparavista[index].descripcion %></P>
+                  </div>
+  
+                </article>
+                <% } %>
+            
             </section>
             <section class="destacados destacados2">
 
 
 
-
-              <article class="cadadestacado ">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
+              <% for( let index = 4; index < 8; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/detail/<%= productoparavista[index].id %>"><img src="/images/merchandinsing/<%=productoparavista[index].imagen%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= productoparavista[index].nombre %> </h3>
+                    <P><%= productoparavista[index].descripcion %></P>
+                  </div>
+  
+                </article>
+                <% } %>
 
             </section>
 
@@ -172,41 +126,20 @@
             </div>
 
             <section class="destacados">
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
+            
 
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="../images/merchandinsing/Mochila.jpeg" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
+              <% for( let index = 0; index < 4; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/detail/<%= ofertas[index].id %>"><img src="/images/merchandinsing/<%=ofertas[index].imagen%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= ofertas[index].nombre %> </h3>
+                    <P><%= ofertas[index].descripcion %></P>
+                  </div>
+  
+                </article>
+                <% } %>
 
             </section>
 
