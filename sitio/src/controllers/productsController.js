@@ -9,7 +9,6 @@ let productosDB = path.join(__dirname,'../data/productos.json')
 let productos = JSON.parse(fs.readFileSync(productosDB, "utf-8"));
 let producto = path.join(__dirname,'../data/producto.json')
 let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
-let carritodinamico = []
 
 
 module.exports = {
@@ -42,10 +41,9 @@ module.exports = {
 },
 carrito : (req,res) => {
   let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
-  carritodinamico.push(productofinal.id)
-  console.log(productofinal)
+
   return res.render('carrito',{
-    productofinal,productoparavista
+    productofinal,productoparavista,
   })
 },
 search : (req,res) => {
