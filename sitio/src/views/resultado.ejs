@@ -10,7 +10,9 @@
  
     <%- include('./partials/header') %>
 
-
+    <% if (resultado2) { %>
+     
+ 
     <div class="productostotales">
         <% resultado2.forEach(resultado2 => { %>
      
@@ -19,13 +21,17 @@
             <div class="titulodestacado2">
             <h3><%= resultado2.nombre %> </h3>
             <P><%= resultado2.descripcion %></P>
-            <p>JAJAJAJA</p>
+            <p><%= resultado2.marca %></p>
+            <p>$<%= resultado2.precio %></p>
+
             </div>
 
         </article>
-    
+      
 
     <% }) %>
+
+    <% } %>
 </div> 
              
               

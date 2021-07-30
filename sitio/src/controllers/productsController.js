@@ -47,7 +47,7 @@ carrito : (req,res) => {
   })
 },
 search : (req,res) => {
-  let resultado2 = productoparavista.filter(producto => producto.nombre.toLowerCase() === req.query.search.toLowerCase())
+  let resultado2 = productoparavista.filter(producto => producto.nombre.toLowerCase().includes(req.query.search.toLowerCase().trim()))
   
 
   return res.render('resultado',{
