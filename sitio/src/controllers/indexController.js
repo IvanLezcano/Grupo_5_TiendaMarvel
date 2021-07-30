@@ -19,10 +19,14 @@ module.exports = {
       })
   },
   carrito : (req,res) => {
+     
+  
+      
+    
     let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
     console.log(productofinal)
     return res.render('carrito',{
-      productofinal,productoparavista
+      productofinal,productoparavista,productosdelcarrito
     })
   },
   contactos: (req, res) => {

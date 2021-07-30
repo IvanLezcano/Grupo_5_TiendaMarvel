@@ -9,6 +9,7 @@ let productosDB = path.join(__dirname,'../data/productos.json')
 let productos = JSON.parse(fs.readFileSync(productosDB, "utf-8"));
 let producto = path.join(__dirname,'../data/producto.json')
 let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
+let carritodinamico = []
 
 
 module.exports = {
@@ -23,6 +24,13 @@ module.exports = {
       return res.send(producto); */
   },
   carrito: (req, res) => {
+    let productosdelcarrito=["ada","adadada"]
+      console.log(productosdelcarrito)
+      localStorage.setItem("productosdelcarrito",JSON.stringify(productosdelcarrito))
+    
+      if (localStorage.getItem("Tareas") === null) {
+        this.crearObjeto()}
+
     return res.render("carrito");
   },
   detail : (req,res) => {
@@ -34,19 +42,22 @@ module.exports = {
 },
 carrito : (req,res) => {
   let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
+  carritodinamico.push(productofinal.id)
   console.log(productofinal)
   return res.render('carrito',{
     productofinal,productoparavista
   })
 },
 search : (req,res) => {
-  let resultado2 = productoparavista.filter(producto => producto === req.query.search)
-  console.log(req.query.search)
+  let resultado2 = productoparavista.filter(producto => producto.nombre.toLowerCase() === req.query.search.toLowerCase())
+  
+
   return res.render('resultado',{
     resultado2,
       productoparavista,
       busqueda : req.query.search
   })
+
 },
   lista: (req, res) => {
     return res.render("productos",{comics : productoparavista.filter(producto => producto.categoria === "Comic"),
