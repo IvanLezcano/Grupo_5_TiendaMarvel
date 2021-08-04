@@ -1,5 +1,47 @@
 
 @media (min-width: 319px){
+    .random{
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    #imageboxxx{
+        background-color: rgb(234, 0, 0,0.5);
+        color: white;
+        padding: 10px;
+        font-size: 4rem;
+        text-align: center;
+        font-family: 'Bebas Neue';
+    }
+    .random button{
+        width: 30rem;
+        height: 7rem;
+        background-color: red;
+        font-family: 'Bebas Neue';
+        font-size: 2.5rem;
+        margin: 10px;
+    }
+    #imagebox{
+        font-size: 5rem;
+        font-family: 'Bebas Neue';
+
+    }
+    #imageboxx img{
+      width: 15rem !important;
+    }
+    .random img{
+        width: 3rem !important;
+    }
+    .botonalazar{
+        font-family: 'Bebas Neue';
+
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
     .fondo2{
         background-image: url("/images/0e6056e77dadf86ab7f51438f8565313.jpg") !important;
         -webkit-filter: blur(5px);
@@ -309,4 +351,31 @@ td{
 }
 @media (min-width: 1024px){ .form2{
     font-size: 5rem;
+}
+
+.random button{
+    width: 30rem;
+    height: 7rem;
+    background-color: red;
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
+    margin: 10px;
+}
+#imagebox{
+    font-size: 7rem;
+    color: white;
+    text-shadow:5px 5px 5px red;
+    font-family: 'Bebas Neue';
+
+}
+#imageboxx img{
+  width: 40rem !important;
+}
+#imageboxxx{
+    background-color: rgb(234, 0, 0,0.5);
+    color: white;
+    padding: 10px;
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Bebas Neue';
 }}

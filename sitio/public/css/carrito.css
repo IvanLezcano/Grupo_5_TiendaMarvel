@@ -85,7 +85,7 @@
 .carrito-main-producto-imagen {
   display: flex;
   justify-content: center;
-  height: 65%;
+  height: 100%;
   width: 100%;
 }
 .carrito-main-producto-imagen img {

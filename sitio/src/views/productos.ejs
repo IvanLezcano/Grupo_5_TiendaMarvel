@@ -24,12 +24,12 @@
 
             <section class="categorias">
               <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
+                <img src="../images/merchandinsing/comic2.png" alt="">
                 <div class="titulocategoria">
                   <h3>COMICS</h3>
                   <P>Emocion en viñetas</P>
                   <div class="vermas">
-                    <a href="/productos">
+                    <a href="/productos/comics">
                       <h4>ver mas</h4>
                     </a>
                   </div>
@@ -37,12 +37,12 @@
 
               </article>
               <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
+                <img src="../images/merchandinsing/figura7.jpg" alt="">
                 <div class="titulocategoria">
                   <h3>FIGURAS</h3>
                   <P>Emocion en viñetas</P>
                   <div class="vermas">
-                    <a href="/productos">
+                    <a href="/productos/figuras">
                       <h4>ver mas</h4>
                     </a>
                   </div>
@@ -50,12 +50,12 @@
 
               </article>
               <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
+                <img src="../images/merchandinsing/Mochila.jpeg" alt="">
                 <div class="titulocategoria">
                   <h3>MERCHANDISING</h3>
                   <P>Emocion en viñetas</P>
                   <div class="vermas">
-                    <a href="/productos">
+                    <a href="/productos/merchandising">
                       <h4>ver mas</h4>
                     </a>
                   </div>
@@ -72,232 +72,103 @@
             </div>
 
 
+            <section class="destacados">
 
-            <section class="categorias">
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>COMICS</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
+             
+              
+            
+              <% for( let index = 0; index < 4; index++ ) { %>
+               
+             
+              <article class="cadadestacado">
+                <a href="/productos/detail/<%= figura[index].id %>"><img src="/images/merchandinsing/<%=figura[index].imagen%> " alt=""></a>
+                <div class="titulodestacado">
+                  <h3><%= figura[index].nombre %> </h3>
+                  <P><%= figura[index].descripcion %></P>
                 </div>
 
               </article>
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>FIGURAS</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
+              <% } %>
+          
+             
+            </section>
+            <section class="destacados destacados2">
+
+              <% for( let index = 4; index < 8; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/productos/detail/<%= figura[index].id %> "><img src="/images/merchandinsing/<%=figura[index].imagen%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= figura[index].nombre %> </h3>
+                    <P><%= figura[index].descripcion %></P>
                   </div>
-                </div>
-
-              </article>
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>MERCHANDISING</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
-                </div>
-
-              </article>
-
+  
+                </article>
+                <% } %>
 
 
             </section>
+            
+            <div class="verdemasproductos zoom">
 
-            <section class="categorias">
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>COMICS</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
-                </div>
-
-              </article>
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>FIGURAS</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
-                </div>
-
-              </article>
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>MERCHANDISING</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
-                </div>
-
-              </article>
+              <a href="/productos/figuras">
+                <h2 class="verproductos">Ver mas figuras</h2>
+              </a>
+            </div>
 
 
-
-            </section>
-
-
-            <section class="categorias">
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>COMICS</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
-                </div>
-
-              </article>
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>FIGURAS</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
-                </div>
-
-              </article>
-              <article class="cadacategoria zoom">
-                <img src="https://picsum.photos/200/300" alt="">
-                <div class="titulocategoria">
-                  <h3>MERCHANDISING</h3>
-                  <P>Emocion en viñetas</P>
-                  <div class="vermas">
-                    <a href="/productos">
-                      <h4>ver mas</h4>
-                    </a>
-                  </div>
-                </div>
-
-              </article>
-
-
-
-            </section>
 
             <div class="titulogeneral">
               <h2 class="TIENDA " id="ROPA"> ROPA</h2>
             </div>
 
 
-
             <section class="destacados">
 
-
-
-
+             
+              
+            
+              <% for( let index = 0; index < 4; index++ ) { %>
+               
+             
               <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
+                <a href="/productos/detail/<%= ropa[index].id %> "><img src="/images/merchandinsing/<%=ropa[index].imagen%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
+                  <h3><%= ropa[index].nombre %> </h3>
+                  <P><%= ropa[index].descripcion %></P>
                 </div>
 
               </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
+              <% } %>
+          
+             
             </section>
             <section class="destacados destacados2">
 
+              <% for( let index = 4; index < 8; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/productos/detail/<%= ropa[index].id %> "><img src="/images/merchandinsing/<%=ropa[index].imagen%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= ropa[index].nombre %> </h3>
+                    <P><%= ropa[index].descripcion %></P>
+                  </div>
+  
+                </article>
+                <% } %>
 
-
-
-              <article class="cadadestacado ">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
 
             </section>
+
+            <div class="verdemasproductos zoom">
+
+              <a href="/productos/ropa">
+                <h2 class="verproductos">Ver mas ropa</h2>
+              </a>
+            </div>
+
 
             <div class="titulogeneral">
               <h2 class="TIENDA " id="COMICS"> COMICS</h2>
@@ -307,87 +178,49 @@
 
             <section class="destacados">
 
-
-
-
+             
+              
+            
+              <% for( let index = 0; index < 4; index++ ) { %>
+               
+             
               <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
+                <a href="/productos/detail/<%= comics[index].id %> "><img src="/images/merchandinsing/<%=comics[index].imagen%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
+                  <h3><%= comics[index].nombre %> </h3>
+                  <P><%= comics[index].descripcion %></P>
                 </div>
 
               </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
+              <% } %>
+          
+             
             </section>
             <section class="destacados destacados2">
 
+              <% for( let index = 4; index < 8; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/productos/detail/<%= comics[index].id %> "><img src="/images/merchandinsing/<%=comics[index].imagen%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= comics[index].nombre %> </h3>
+                    <P><%= comics[index].descripcion %></P>
+                  </div>
+  
+                </article>
+                <% } %>
 
-
-
-              <article class="cadadestacado ">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
 
             </section>
+
+            <div class="verdemasproductos zoom">
+
+              <a href="/productos/comics">
+                <h2 class="verproductos">Ver mas comics</h2>
+              </a>
+            </div>
+
 
 
             <div class="titulogeneral">
@@ -398,87 +231,48 @@
 
             <section class="destacados">
 
-
-
-
+             
+              
+            
+              <% for( let index = 0; index < 4; index++ ) { %>
+               
+             
               <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
+                <a href="/productos/detail/<%= mercha[index].id %> "><img src="/images/merchandinsing/<%=mercha[index].imagen%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
+                  <h3><%= mercha[index].nombre %> </h3>
+                  <P><%= mercha[index].descripcion %></P>
                 </div>
 
               </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/303" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
+              <% } %>
+          
+             
             </section>
             <section class="destacados destacados2">
 
+              <% for( let index = 4; index < 8; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/productos/detail/<%= mercha[index].id %> "><img src="/images/merchandinsing/<%=mercha[index].imagen%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= mercha[index].nombre %> </h3>
+                    <P><%= mercha[index].descripcion %></P>
+                  </div>
+  
+                </article>
+                <% } %>
 
-
-
-              <article class="cadadestacado ">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
-
-              </article>
-              <article class="cadadestacado">
-                <a href="/productos"><img src="https://picsum.photos/200/302" alt=""></a>
-                <div class="titulodestacado">
-                  <h3>Titulo Producto</h3>
-                  <P>Descripcion del producto</P>
-                </div>
-
-              </article>
 
             </section>
+
+            <div class="verdemasproductos zoom">
+
+              <a href="/productos/merchandising">
+                <h2 class="verproductos">Ver mas merchandising</h2>
+              </a>
+            </div>
 
 
 

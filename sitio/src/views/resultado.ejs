@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+
+<body class="quizz">
+    <div class="fondo2"></div>
+
+ 
+    <%- include('./partials/header') %>
+
+    <% if (resultado2) { %>
+     
+ 
+    <div class="productostotales">
+        <% resultado2.forEach(resultado2 => { %>
+     
+        <article class="cadadestacado2">
+            <a href="/productos/detail/<%= resultado2.id %> "><img  class="cadadestacado2" src="/images/merchandinsing/<%=resultado2.imagen%> " alt=""></a>
+            <div class="titulodestacado2">
+            <h3><%= resultado2.nombre %> </h3>
+            <P><%= resultado2.descripcion %></P>
+            <p><%= resultado2.marca %></p>
+            <p>$<%= resultado2.precio %></p>
+
+            </div>
+
+        </article>
+      
+
+    <% }) %>
+
+    <% } %>
+</div> 
+             
+              
+
+
+
+
+
+
+
+
+
+    <%- include('./partials/footer') %>
+
+    <%- include('./partials/scripts') %>

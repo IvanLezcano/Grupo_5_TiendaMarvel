@@ -10,31 +10,33 @@
           <a href="/">Ir a Home >></a>
     </div>
     <main class="modificar">
-      <form action="" method="GET" enctype="multipart/form-data" class="form">
+      <form action="" method="GET" class="form">
         <div>
-          <input type="text" id="nombreProducto" name="nombre-producto" placeholder="Nombre de Producto" />
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombreProducto" name="nombre" value=<%=   producto.nombre%> />
         </div>
         <div>
           <label for="imagen">Imagen</label>
           <input type="file" name="imagen" id="imagenProducto" />
         </div>
         <div>
-          <input type="number" name="precio" id="precioProducto" placeholder="Precio" />
-          <input type="number" name="stock" id="stockProducto" placeholder="Stock" />
-          <input type="number" name="id" id="idProducto" placeholder="id" />
+          <label for="precioProducto">Precio</label>
+          <input type="number" name="precio" id="precioProducto" value="<%= producto.precio %>" />
+          <label for="stockProducto">Stock</label>
+          <input type="number" name="stock" id="stockProducto" value="<%= producto.stock %>" />
         </div>
         <div>
           <label for="descripcion">Descripción del producto</label>
-          <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..."></textarea>
+          <textarea name="descripcion" id="descripcion" cols="8" rows="3" value="<%= producto.descripcion %>"></textarea>
         </div>
 
         <div class="select">
           <label for="categoria">Categoría</label>
           <select name="categoria" id="categoria">
-            <option value="figuras">Figuras</option>
-            <option value="ropa" selected>Ropa</option>
-            <option value="comics">Comics</option>
-            <option value="merchandising">Merchandising</option>
+           <% categorias.forEach(categoria => { %>
+              <option value="<%= categoria %>" <%= categoria == producto.category ? 'selected' : null %> ><%= categoria %></option>
+           <% }) %> 
+            
           </select>
         </div>
 

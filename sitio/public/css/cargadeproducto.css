@@ -121,11 +121,16 @@
 
     .carga-de-producto .form label{
         color: black;
+        font-size: 1.6rem;
     }
 
     .carga-de-producto .form input, textarea{
          border-bottom: 1.5px solid var(--color-oxfordBlue); 
          color: #000;
+         font-size: 1.6rem;
+    }
+    .carga-de-producto .form select {
+        font-size: 1.6rem;
     }
     .carga #descripcion{
         resize: none;

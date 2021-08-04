@@ -13,10 +13,10 @@
 
 
             <div class="buscador">
-              <form action="/productos" method="GET">
+              <form action="/productos/search" type="search">
                 <button type="submit"><i class="fas fa-search"></i></button>
 
-              <input type="text" name="producto" placeholder="   Busca tus productos!">
+              <input type="text" name="search" placeholder="   Busca tus productos!">
             </form>
           </div>
 
@@ -26,11 +26,11 @@
           <div class="botonderegistrarse" >
             <DIV class="enlinea">
               <div class="referencias animate__animated animate__rubberBand">
-              <a class="re" href="/registro"> Registrate</a>
-              <a class="re" href="/login">Ingresá</a>
+              <a class="re" href="/users/registro"> Registrate</a>
+              <a class="re" href="/users/login">Ingresá</a>
             </div>
             <div>
-              <a href="/carrito"><i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig"></i></a>
+              <a href="/productos/carrito/0"><i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig"></i></a>
             </div>
               </DIV>
 
