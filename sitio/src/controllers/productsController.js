@@ -1,16 +1,19 @@
 const path = require("path");
+const productos = require("../data/products_db");
 
 
 module.exports = {
   
   descripcion: (req, res) => {
-    return res.render("descripcion-producto");
-
-    /* let producto = productos.find(
+    
+     let producto = productos.find(
         (producto) => producto.id === +req.params.id
       );
 
-      return res.send(producto); */
+        return res.render('descripcion-producto',{
+            producto,
+            productos
+        })
   },
   carrito: (req, res) => {
     return res.render("carrito");

@@ -5,7 +5,7 @@ const { descripcion, carrito, lista, carga, modificar } = require("../controller
 
 /* /productos */
 router.get("/", lista);
-router.get("/descripcion", descripcion);
+router.get("/descripcion/:id?", descripcion);
 router.get("/carrito", carrito);
 router.get("/carga", carga);
 router.get("/modificar", modificar);
