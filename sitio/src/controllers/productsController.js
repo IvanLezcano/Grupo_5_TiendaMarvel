@@ -1,7 +1,7 @@
 const { Console } = require('console');
 const fs = require('fs')
 const path = require("path");
-const productos = require("../data/products_db");
+
 
 let categoriasDB = path.join(__dirname,'../data/categorias.json')
 let categorias = JSON.parse(fs.readFileSync(categoriasDB, "utf-8"));
