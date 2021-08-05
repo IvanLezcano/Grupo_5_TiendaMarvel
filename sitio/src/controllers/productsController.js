@@ -5,11 +5,16 @@ const path = require("path");
 let categoriasDB = path.join(__dirname,'../data/categorias.json')
 let categorias = JSON.parse(fs.readFileSync(categoriasDB, "utf-8"));
 
-let productosDB = path.join(__dirname,'../data/productos.json')
-let productos = JSON.parse(fs.readFileSync(productosDB, "utf-8"));
 let producto = path.join(__dirname,'../data/producto.json')
 let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
 
+let guardar = (products) => {
+  fs.writeFileSync(
+    path.join(__dirname, "../data/producto.json"),
+    JSON.stringify(products, null, " "),
+    "utf-8"
+  );
+};
 
 module.exports = {
   
@@ -81,16 +86,34 @@ search : (req,res) => {
           comics : productoparavista.filter(producto => producto.categoria === "Comic")});
         },
   carga: (req, res) => {
+    let id= productos[productos.length - 1].id + 1; //usar esta formula para generar id y asignarlo al guardar
     return res.render("cargadeproducto",{categorias});
   },
   modificar: (req, res) => {
-    let producto = productos.find(producto => producto.id === 1)
-    console.log(producto.nombre)
+    let id = +req.params.id
+    let producto = productoparavista.find(producto => producto.id === id)
     return res.render('modificarproducto',{
       categorias,
-      productos,
+      productoparavista,
       producto
-  })
+    })
   },
+  update:(req, res) => {
+    let {nombre, descripcion,precio,categoria} = req.body;
+    const {filename} = req.file
+    let id = +req.params.id;
+    productoparavista.forEach(producto => {
+        if(producto.id === id ){
+          producto.nombre = nombre,
+          producto.imagen=filename,
+          producto.precio = +precio,
+          producto.descripcion=descripcion,
+          producto.categoria = categoria
+
+        }      
+        guardar(productoparavista);
+    res.redirect('/productos');
+    });
+   }
 };
 
