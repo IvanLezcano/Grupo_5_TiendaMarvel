@@ -118,6 +118,10 @@ textarea::placeholder {
   .modificar-producto .form label {
     color: black;
   }
+  .modificar-producto .form p {
+    color: red;
+    font-size: 14px;
+  }
 
   .modificar-producto .form input,
   textarea {

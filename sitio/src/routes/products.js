@@ -3,12 +3,12 @@ const router = express.Router();
 const path = require('path')
 const multer = require('multer');
 const { search,descripcion, carrito, lista, carga, modificar ,ropa,mercha,figura,comics,detail,update} = require("../controllers/productsController");
+let validarModificar = require('../validations/validModificar')
 
-//** MULTER **/
-// 
+//** MULTER **
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
-       cb(null, './public/images'); 
+       cb(null, './public/images/merchandinsing'); 
     }, 
     filename: function (req, file, cb) { 
        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
@@ -25,7 +25,7 @@ router.get("/carrito", carrito);
 
 router.get("/carga", carga);
 router.get("/modificar/:id",modificar);
-router.put("/modificar/:id",upload.single('imagen'),update);
+router.put("/modificar/:id",validarModificar,upload.single('imagen'),update);
 router.get("/ropa", ropa);
 router.get("/merchandising", mercha);
 router.get("/comics", comics);

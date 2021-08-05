@@ -2,12 +2,18 @@ const { Console } = require('console');
 const fs = require('fs')
 const path = require("path");
 
+//categorias
 let categoriasDB = path.join(__dirname,'../data/categorias.json')
 let categorias = JSON.parse(fs.readFileSync(categoriasDB, "utf-8"));
 
+//productos
 let producto = path.join(__dirname,'../data/producto.json')
 let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
 
+//validacion
+const {validationResult}=require('express-validator');
+
+//metodo guardar
 let guardar = (products) => {
   fs.writeFileSync(
     path.join(__dirname, "../data/producto.json"),
@@ -99,6 +105,15 @@ search : (req,res) => {
     })
   },
   update:(req, res) => {
+    let errores = validationResult(req);
+    if (!errores.isEmpty()) {
+      return res.render('modificarproducto',{
+        categorias,
+        producto,
+        errores : errores.mapped(),
+        old: req.body
+      })
+    }
     let {nombre, descripcion,precio,categoria} = req.body;
     const {filename} = req.file
     let id = +req.params.id;
