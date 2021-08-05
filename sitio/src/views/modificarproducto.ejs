@@ -10,7 +10,7 @@
           <a href="/">Ir a Home >></a>
     </div>
     <main class="modificar">
-      <form action="" method="GET" class="form">
+      <form action="/productos/modificar/<%= producto.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
         <div>
           <label for="nombre">Nombre</label>
           <input type="text" id="nombreProducto" name="nombre" value=<%=   producto.nombre%> />
@@ -36,7 +36,7 @@
            <% categorias.forEach(categoria => { %>
               <option value="<%= categoria %>" <%= categoria == producto.category ? 'selected' : null %> ><%= categoria %></option>
            <% }) %> 
-            
+               
           </select>
         </div>
 
