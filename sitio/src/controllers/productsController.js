@@ -1,6 +1,8 @@
 const { Console } = require('console');
 const fs = require('fs')
 const path = require("path");
+const {validationResult} = require('express-validator');
+
 
 
 let categoriasDB = path.join(__dirname,'../data/categorias.json')
@@ -89,8 +91,35 @@ search : (req,res) => {
           comics : productoparavista.filter(producto => producto.categoria === "Comic")});
         },
   carga: (req, res) => {
-    let id= productos[productos.length - 1].id + 1; //usar esta formula para generar id y asignarlo al guardar
+     let id= producto[producto.length - 1].id + 1;//usar esta formula para generar id y asignarlo al guardar
     return res.render("cargadeproducto",{categorias});
+  },
+  create:(req, res) =>{
+    let errors = validationResult(req);
+
+   
+    
+    if (errors.isEmpty()) {
+       let {nombre, descripcion,precio,categoria} = req.body;
+     if((req, file)) {
+      let producto = {
+        id : producto[producto.length - 1].id + 1,
+        nombre,
+        imagen : req.file.filename,
+        descripcion,
+        precio : +precio,
+        categoria
+    }
+    
+   productoparavista.push(producto);
+   guardar(productoparavista);
+   return res.redirect('/productos')
+
+    }else{
+      res.render('/carga', {errors: errors.mapped(), old: req.body});
+    }
+  }
+
   },
   modificar: (req, res) => {
     let id = +req.params.id

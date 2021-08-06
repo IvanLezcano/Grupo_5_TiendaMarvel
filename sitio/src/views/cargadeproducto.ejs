@@ -11,15 +11,24 @@
     <main class="carga">
         <form action="" method="POST" enctype="multipart/form-data" class="form"> 
             <div>
-                <input type="text" id="nombreProducto" name="nombre" placeholder="Nombre de Producto">
+                <input type="text" id="nombreProducto" name="nombre" placeholder="Nombre de Producto" value="<%= locals.old && old.nombre? old.nombre :'' %> ">
+                <%if(locals.errors && errors.nombre){ %> 
+                    <span class="error-carga"><%= errors.nombre %> </span>
+                    <% } %> 
             </div>
             <div>
                 <label for="imagen">Imagen</label>
-                <input type="file" name="imagen" id="imagenProducto">
+                <input type="file" name="imagen" id="imagenProducto" value="<%= locals.old && old.imagen? old.imagen :'' %> ">
+                  <%if(locals.errors && errors.imagen){ %> 
+                    <span class="error-carga"><%= errors.imagen %> </span>
+                    <% } %> 
             </div>
             <div>
                 <input type="number" name="precio" id="precioProducto"
-                placeholder="Precio">
+                placeholder="Precio" value="<%= locals.old && old.precio? old.precio :'' %> ">
+                 <%if(locals.errors && errors.imagen){ %> 
+                    <span class="error-carga"><%= errors.imagen %> </span>
+                    <% } %>
                 <input type="number" name="stock" id="stockProducto" placeholder="Stock">
                 <input type="number" name="id" id="idProducto" placeholder="id">            
             </div>
@@ -31,7 +40,7 @@
                 <label for="categoria">Categoría</label>
                 <select name="categoria">
                     <% categorias.forEach(categoria => { %>
-                        <option value="<%= categoria %>"><%= categoria %> </option> 
+                        <option value="<%= categoria %>"><%= categoria %><%= locals.old && old.categoria? old.categoria :'' %>  </option> 
                     <% }) %>
                   </select>
             </div>
