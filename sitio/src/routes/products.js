@@ -25,7 +25,7 @@ router.get("/carrito", carrito);
 
 router.get("/carga", carga);
 router.get("/modificar/:id",modificar);
-router.put("/modificar/:id",validarModificar,upload.single('imagen'),update);
+router.put("/modificar/:id",upload.single('imagen'),validarModificar,update);
 router.get("/ropa", ropa);
 router.get("/merchandising", mercha);
 router.get("/comics", comics);
