@@ -125,7 +125,7 @@ module.exports = {
     });
   },
   carga: (req, res) => {
-    let id = productos[productos.length - 1].id + 1; //usar esta formula para generar id y asignarlo al guardar
+    let id = producto[producto.length - 1].id + 1; //usar esta formula para generar id y asignarlo al guardar
     return res.render("cargadeproducto", { categorias });
   },
   modificar: (req, res) => {
