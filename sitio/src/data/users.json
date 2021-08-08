@@ -1,0 +1,56 @@
+[
+    {
+        "usuario" : "Luroja" ,
+        "contraseña" : 123 ,
+        "nombre" : "Lucia Camara" ,
+        "email" : "luciamcamara@gmail.com"
+    },
+    {
+        "usuario" : "Panchopanchun"  ,
+        "contraseña" : 456,
+        "nombre" : "Francisco Chavez" ,
+        "email" : "francischa@hotmail.com"
+    },
+    {
+        "usuario" : "Juan_Ironman" ,
+        "contraseña" : 3322 ,
+        "nombre" : "Jaun Carlos" ,
+        "email" : "juancarlos@gmail.com"
+    },
+    {
+        "usuario" : "Lorena" ,
+        "contraseña" : 5645 ,
+        "nombre" : "Lorena Ramallo" ,
+        "email" : "lorenaramallo@gmail.com"
+    },
+    {
+        "usuario" : "HuhgLander" ,
+        "contraseña" : 4544 ,
+        "nombre" : "Luciano Oros" ,
+        "email" : "lucianooros@gmail.com"
+    },
+    {
+        "usuario" : "Alisonn" ,
+        "contraseña" : 9955 ,
+        "nombre" : "Alicia Rodriguez" ,
+        "email" : "aliciar@hotmail.com"
+    },
+    {
+        "usuario" : "Bernardom" ,
+        "contraseña" : 5645 ,
+        "nombre" : "Bernarndo Clemente" ,
+        "email" : "bernacle@gmail.com"
+    },
+    {
+        "usuario" : "Mario_spiderman" ,
+        "contraseña" : 1212 ,
+        "nombre" : "Mario Ledesma" ,
+        "email" : "marled@gmail.com"
+    },
+    {
+        "usuario" : "Sofia.queen" ,
+        "contraseña" : 9988 ,
+        "nombre" : "Sofia Carneiro" ,
+        "email" : "sofcarneiro@live.com"
+    }
+]
