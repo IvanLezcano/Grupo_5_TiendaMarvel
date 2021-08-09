@@ -126,7 +126,7 @@ module.exports = {
   },
   create: (req, res) => {
     let errors = validationResult(req);
-    let {nombre, precio, marca, descripcion, categoria} = req.body;
+    let {nombre,precio, marca, descripcion, categoria} = req.body;
    
    
     if (errors.isEmpty()) {

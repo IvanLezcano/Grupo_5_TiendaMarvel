@@ -5,22 +5,14 @@ const multer = require('../middlewares/multer')
 
 module.exports = [
   check("nombre")
-  .notEmpty().withMessage("El nombre es obligatorio"),
-  /* .isLength({
+  .notEmpty().withMessage("El nombre es obligatorio").bail()
+  .isLength({
       min: 2,
       max: 50,
-    }).withMessage("El nombre tiene que tener como mínimo 2 caracteres").bail()
-    .isAlpha().withMessage("El nombre debe contener solo letras"), */
+    }).withMessage("El nombre tiene que tener como mínimo 2 caracteres"),
+    
 
-  body("imagen").custom((value, { req }) => {
-    let file = req.file;
-    if (!file) {
-      throw new Error("Debe subir una imagen");
-    }
-    return true;
-  }),
-
-  /* body("imagen").custom((value, { req }) => {
+   body("imagen").custom((value, { req }) => {
     let file = req.file;
 
     let extensiones = [".jpg", ".png", ".img"];
@@ -32,9 +24,9 @@ module.exports = [
         throw new Error(`Las extensiones de archivo permitidas son
                 ${extensiones.join(", ")}`);
       }
-    }
-  }), */
-
+    } return true;
+  }), 
+ 
   check("precio")
   .notEmpty().withMessage("Debes completar el precio"),
 

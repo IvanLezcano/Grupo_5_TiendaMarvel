@@ -12,22 +12,22 @@
         <form action="/productos/carga" method="POST" enctype="multipart/form-data" class="form"> 
             <div>
                 <input type="text" id="nombreProducto" name="nombre" placeholder="Nombre de Producto"
-                 value="<%= locals.old && old.nombre? old.nombre :null %> ">
+                 value="<%=locals.old && old.nombre? old.nombre :null %>">
                  <span class="error-carga"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %></span>
 
             </div>
             <div>
                 <label for="imagen">Imagen</label>
-                <input type="file" name="imagen" id="imagenProducto" value="<%= locals.old && old.imagen? old.imagen :null %> ">
+                <input type="file" name="imagen" id="imagenProducto" value="<%= locals.old && old.imagen? old.imagen:null %>">
                    <span class="error-carga"><%= locals.errores && errores.imagen ? errores.imagen.msg : null %></span>
 
             </div>
             <div>
                 <label for="pecio">Precio</label>
-                <input type="number" name="precio" id="precioProducto" value="<%= locals.old && old.precio? old.precio :null %> ">
+                <input type="number" name="precio" id="precioProducto" value="<%= locals.old && old.precio? old.precio:null%>">
                   <span class="error-carga"><%= locals.errores && errores.precio ? errores.precio.msg : null %></span>
 
-                <input type="text" name="marca" id="marcaProducto" placeholder="marca" value="<%= locals.old && old.marca? old.marca :null %> ">
+                <input type="text" name="marca" id="marcaProducto" placeholder="marca" value="<%= locals.old && old.marca? old.marca:null %>">
                  <span class="error-carga"><%= locals.errores && errores.marca ? errores.marca.msg : null %></span>
                       <!-- <input type="number" name="id" id="idProducto" placeholder="id">  -->           
             </div>
