@@ -12,6 +12,7 @@ let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
 
 //validacion
 const { validationResult } = require("express-validator");
+const upload = require('../middlewares/multer')
 
 //metodo guardar
 let guardar = (products) => {
@@ -26,11 +27,6 @@ module.exports = {
   descripcion: (req, res) => {
     return res.render("descripcion-producto");
 
-    /* let producto = productos.find(
-        (producto) => producto.id === +req.params.id
-      );
-
-      return res.send(producto); */
   },
   carrito: (req, res) => {
     let productosdelcarrito = ["ada", "adadada"];
@@ -125,9 +121,41 @@ module.exports = {
     });
   },
   carga: (req, res) => {
-    let id = producto[producto.length - 1].id + 1; //usar esta formula para generar id y asignarlo al guardar
+  
     return res.render("cargadeproducto", { categorias });
   },
+  create: (req, res) => {
+    let errors = validationResult(req);
+    let {nombre, precio, marca, descripcion, categoria} = req.body;
+   
+   
+    if (errors.isEmpty()) {
+      
+    
+        let producto = {
+          id: productoparavista[productoparavista.length - 1].id + 1,
+          nombre,
+          imagen: req.file.filename,
+          precio: +precio,
+          marca,
+          descripcion,
+          categoria,
+        };
+
+        productoparavista.push(producto);
+        guardar(productoparavista);
+
+        return res.redirect("/productos");
+      } else {
+       return res.render("cargadeproducto", {
+          categorias,
+          errores: errors.mapped(), 
+          old: req.body 
+        });
+      }
+    
+  },
+
   modificar: (req, res) => {
     let id = +req.params.id;
     let producto = productoparavista.find((producto) => producto.id === id);

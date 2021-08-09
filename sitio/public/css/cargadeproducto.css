@@ -84,7 +84,10 @@
     font-family: 'Ubuntu',sans-serif;
     font-weight: 400;
 }
-
+.error-carga{
+    font-size: 10px;
+    color: red;
+}
 /* === boton === */
 .carga-de-producto .form button{
         font-family: "Bebas Neue", cursive;
