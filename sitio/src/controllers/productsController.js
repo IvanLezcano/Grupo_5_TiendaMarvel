@@ -12,7 +12,9 @@ let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
 
 //validacion
 const { validationResult } = require("express-validator");
-const upload = require('../middlewares/multer')
+const upload = require('../middlewares/multer');
+const { indexOf } = require("../validations/validCarga");
+const { index } = require("./indexController");
 
 //metodo guardar
 let guardar = (products) => {
@@ -191,4 +193,13 @@ module.exports = {
     guardar(productoparavista);
     res.redirect("/productos");
   },
+  
+    borrar : (req,res) => {
+      let productoaborrar = productoparavista.find((producto) => producto.id == req.params.id);
+      productoparavista.splice(productoparavista.indexOf(productoaborrar),1)
+      console.log(productoaborrar)
+      guardar(productoparavista)
+      res.send(productoparavista)
+      
+      }
 };

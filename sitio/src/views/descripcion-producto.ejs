@@ -37,6 +37,9 @@
       <div class="producto-article-cont-descripcion-comprar-imagen">
         <img class="metodos" src="/images/tarjetas.PNG" />
       </div>
+      <form action="/productos/borrar/<%= productofinal.id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger ms-2">Eliminar</button>
+    </form>
     </main>
     <%- include('./partials/footer') %> <%- include('./partials/scripts') %>
   </body>

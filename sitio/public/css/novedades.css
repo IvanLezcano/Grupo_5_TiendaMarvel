@@ -170,7 +170,7 @@
     
     }
     .fondo{
-        background-image:url("../img/b7531fc8c5986ec3560bde6e789fdf12.jpg"), linear-gradient(red, blue);
+        background-image:url("/images/b7531fc8c5986ec3560bde6e789fdf12.jpg"), linear-gradient(red, blue);
         -webkit-filter: blur(5px);
         -moz-filter: blur(5px);
         -o-filter: blur(5px);
@@ -269,7 +269,7 @@
         justify-content: center;
         font-family: 'Bebas Neue';
         text-align: center;
-        font-size: 5rem;
+        font-size: 4rem;
         width: 50%;
     
     }}
