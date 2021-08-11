@@ -3,6 +3,13 @@
     background-color: #d3dcdf;
     padding: 6% 10%;
 }
+.modificadores{
+    display: flex !important;
+    font-size: 3rem !important ;
+    width: 100% !important;
+    justify-content: center !important;
+    
+}
 
 .producto-article{
    background-color: #152034;

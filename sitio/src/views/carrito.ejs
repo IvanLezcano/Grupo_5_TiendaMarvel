@@ -5,6 +5,8 @@
 
 <body>
      <%- include('./partials/header')  %>
+
+
     <% if (productofinal) { 
         let array=[]
         array.push(productofinal)
@@ -140,6 +142,10 @@
 
     <%- include('./partials/scripts') %>
 </body>
+
+<script>
+         localStorage.setItem(producto,id)
+     </script>
 
 </html>
 

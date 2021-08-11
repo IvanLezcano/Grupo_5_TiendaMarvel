@@ -318,14 +318,5 @@
   "marca": "Ovnipress",
   "descripcion": "Tomo unico",
   "categoria": "Comic"
- },
- {
-  "id": 36,
-  "nombre": "Universe #516",
-  "imagen": "comic11.jpg",
-  "precio": 300,
-  "marca": "Ovnipress",
-  "descripcion": "Tomo unico",
-  "categoria": "Comic"
  }
 ]

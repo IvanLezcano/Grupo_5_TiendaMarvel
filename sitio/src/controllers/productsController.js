@@ -197,9 +197,12 @@ module.exports = {
     borrar : (req,res) => {
       let productoaborrar = productoparavista.find((producto) => producto.id == req.params.id);
       productoparavista.splice(productoparavista.indexOf(productoaborrar),1)
+      var fs = require('fs');
+      var filePath = path.join(__dirname, "../../public/images/merchandinsing/"+productoaborrar.imagen)
+      fs.unlinkSync(filePath);
       console.log(productoaborrar)
       guardar(productoparavista)
-      res.send(productoparavista)
+      res.redirect('/')
       
       }
 };

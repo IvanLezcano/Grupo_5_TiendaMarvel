@@ -8,7 +8,7 @@
     <main class="descripcion-producto">
       <article class="producto-article">
         <div class="producto-article-imagen">
-          <p>inicio>Marvel>Spiderman><%= productofinal.nombre %> <a href="/productos/modificar/<%= productofinal.id %>" style="color:white">modificar</a></p>
+          <p>inicio>Marvel>Spiderman><%= productofinal.nombre %></p>
           <img src="/images/merchandinsing/<%= productofinal.imagen %>" />
         </div>
         <div class="producto-article-cont-descripcion">
@@ -37,9 +37,14 @@
       <div class="producto-article-cont-descripcion-comprar-imagen">
         <img class="metodos" src="/images/tarjetas.PNG" />
       </div>
+      <div class = "modificadores">
       <form action="/productos/borrar/<%= productofinal.id %>?_method=DELETE" method="POST">
         <button class="btn btn-danger ms-2">Eliminar</button>
     </form>
+    <form action="">
+    <button class="btn btn-danger ms-2"><a href="/productos/modificar/<%= productofinal.id %>" 
+      style="color:white">Modificar</a></button></p></form>
+    </div>
     </main>
     <%- include('./partials/footer') %> <%- include('./partials/scripts') %>
   </body>
