@@ -38,14 +38,31 @@
         <img class="metodos" src="/images/tarjetas.PNG" />
       </div>
       <div class = "modificadores">
-      <form action="/productos/borrar/<%= productofinal.id %>?_method=DELETE" method="POST">
-        <button class="btn btn-danger ms-2">Eliminar</button>
+      <form  id= "jajatecache"action="/productos/borrar/<%= productofinal.id %>?_method=DELETE" class = "jajatecache"method="POST">
+        <button type="submit" onclick="confirmacion(event,document.querySelector('#jajatecache'))" class="btn btn-danger ms-2 laAlerta">Eliminar</button>
     </form>
     <form action="">
-    <button class="btn btn-danger ms-2"><a href="/productos/modificar/<%= productofinal.id %>" 
+    <button class="btn btn-danger ms-2 "><a href="/productos/modificar/<%= productofinal.id %>" 
       style="color:white">Modificar</a></button></p></form>
     </div>
     </main>
     <%- include('./partials/footer') %> <%- include('./partials/scripts') %>
+
+
+    <script>
+     let formulario = document.querySelector(".jajatecache")
+     
+      
+    
+    let confirmacion = (e,formulario) =>{ 
+      e.preventDefault()
+      
+      let respuesta = confirm("Seguro que lo queres borrar?");
+      if (!respuesta) {
+      return false;
+              }else {alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
+      formulario.submit()}}
+    </script>
   </body>
 </html>
+

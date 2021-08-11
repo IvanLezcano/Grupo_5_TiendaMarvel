@@ -318,5 +318,14 @@
   "marca": "Ovnipress",
   "descripcion": "Tomo unico",
   "categoria": "Comic"
+ },
+ {
+  "id": 36,
+  "nombre": "rrrrr",
+  "imagen": "1628705275670_img_.png",
+  "precio": 213123,
+  "marca": "asdasd",
+  "descripcion": "sadasdas",
+  "categoria": "Comic"
  }
 ]
