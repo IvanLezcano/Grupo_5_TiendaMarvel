@@ -8,9 +8,10 @@ let validarCarga = require('../validations/validCarga')
 let upload = require('../middlewares/multer')
 
  
+
 /* /productos */
 router.get("/", lista);
-router.get("/descripcion", descripcion);
+router.get("/descripcion/:id?", descripcion);
 router.get("/carrito", carrito);
 
 

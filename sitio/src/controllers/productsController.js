@@ -1,6 +1,9 @@
 const { Console } = require("console");
 const fs = require("fs");
 const path = require("path");
+const {validationResult} = require('express-validator');
+
+
 
 //categorias
 let categoriasDB = path.join(__dirname, "../data/categorias.json");
