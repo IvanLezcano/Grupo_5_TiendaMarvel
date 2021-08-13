@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const path = require('path')
-/* const multer = require('multer'); */
+
 const { search,borrar,descripcion, carrito, lista, carga, modificar ,ropa,mercha,figura,comics,detail,update,create} = require("../controllers/productsController");
 let validarModificar = require('../validations/validModificar')
 let validarCarga = require('../validations/validCarga')
 let upload = require('../middlewares/multer')
 
+ 
 
 /* /productos */
 router.get("/", lista);

@@ -336,5 +336,14 @@
   "marca": "qqq",
   "descripcion": "qqq",
   "categoria": "Figura"
+ },
+ {
+  "id": 38,
+  "nombre": " enojosa",
+  "imagen": "1628860884530_img_.png",
+  "precio": 23243,
+  "marca": " pirulito",
+  "descripcion": "hgfhfhg",
+  "categoria": "Figura"
  }
 ]
