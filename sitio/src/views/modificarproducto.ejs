@@ -13,28 +13,38 @@
       <form action="/productos/modificar/<%= producto.id %>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
         <div>
           <label for="nombre">Nombre</label>
-          <input type="text" id="nombreProducto" name="nombre" value=<%=   producto.nombre%> />
+          <input type="text" id="nombreProducto" name="nombre" value="<%=locals.old ? old.nombre :  producto.nombre  %>" />
+        <% if (locals.errores && errores.nombre) { %>
+         <p>  <%=errores.nombre.msg %> </p>
+        <% } %>
         </div>
         <div>
           <label for="imagen">Imagen</label>
           <input type="file" name="imagen" id="imagenProducto" />
+          <% if (locals.errores && errores.imagen) { %>
+            <p>  <%=errores.imagen.msg %> </p>
+           <% } %>
         </div>
         <div>
           <label for="precioProducto">Precio</label>
-          <input type="number" name="precio" id="precioProducto" value="<%= producto.precio %>" />
-          <label for="stockProducto">Stock</label>
-          <input type="number" name="stock" id="stockProducto" value="<%= producto.stock %>" />
+          <input type="text" id="precioProducto" name="precio" value="<%=locals.old ? old.precio :  producto.precio  %>" />
+          <% if (locals.errores && errores.precio) { %>
+           <p>  <%=errores.precio.msg %> </p>
+          <% } %>
         </div>
         <div>
           <label for="descripcion">Descripción del producto</label>
-          <textarea name="descripcion" id="descripcion" cols="8" rows="3" value="<%= producto.descripcion %>"></textarea>
+          <textarea name="descripcion" id="descripcion" cols="8" rows="3"><%=locals.old ? old.descripcion :  producto.descripcion  %></textarea>
+          <% if (locals.errores && errores.descripcion) { %>
+           <p>  <%=errores.descripcion.msg %> </p>
+          <% } %>
         </div>
 
         <div class="select">
           <label for="categoria">Categoría</label>
           <select name="categoria" id="categoria">
            <% categorias.forEach(categoria => { %>
-              <option value="<%= categoria %>" <%= categoria == producto.category ? 'selected' : null %> ><%= categoria %></option>
+              <option value="<%= categoria %>" <%= categoria == producto.categoria ? 'selected' : null %> ><%= categoria %></option>
            <% }) %> 
                
           </select>

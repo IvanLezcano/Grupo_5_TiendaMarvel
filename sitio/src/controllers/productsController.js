@@ -1,16 +1,25 @@
-const { Console } = require('console');
-const fs = require('fs')
+const { Console } = require("console");
+const fs = require("fs");
 const path = require("path");
 const {validationResult} = require('express-validator');
 
 
 
-let categoriasDB = path.join(__dirname,'../data/categorias.json')
+//categorias
+let categoriasDB = path.join(__dirname, "../data/categorias.json");
 let categorias = JSON.parse(fs.readFileSync(categoriasDB, "utf-8"));
 
-let producto = path.join(__dirname,'../data/producto.json')
+//productos
+let producto = path.join(__dirname, "../data/producto.json");
 let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
 
+//validacion
+const { validationResult } = require("express-validator");
+const upload = require('../middlewares/multer');
+const { indexOf } = require("../validations/validCarga");
+const { index } = require("./indexController");
+
+//metodo guardar
 let guardar = (products) => {
   fs.writeFileSync(
     path.join(__dirname, "../data/producto.json"),
@@ -20,132 +29,188 @@ let guardar = (products) => {
 };
 
 module.exports = {
-  
   descripcion: (req, res) => {
-    
-     let producto = productos.find(
-        (producto) => producto.id === +req.params.id
-      );
+    return res.render("descripcion-producto");
 
-        return res.render('descripcion-producto',{
-            producto,
-            productos
-        })
   },
   carrito: (req, res) => {
-    let productosdelcarrito=["ada","adadada"]
-      console.log(productosdelcarrito)
-      localStorage.setItem("productosdelcarrito",JSON.stringify(productosdelcarrito))
-    
-      if (localStorage.getItem("Tareas") === null) {
-        this.crearObjeto()}
+    let productosdelcarrito = ["ada", "adadada"];
+    console.log(productosdelcarrito);
+    localStorage.setItem(
+      "productosdelcarrito",
+      JSON.stringify(productosdelcarrito)
+    );
+
+    if (localStorage.getItem("Tareas") === null) {
+      this.crearObjeto();
+    }
 
     return res.render("carrito");
   },
-  detail : (req,res) => {
-    let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
-    console.log(productofinal)
-    return res.render('descripcion-producto',{
-      productofinal,productoparavista
-    })
-},
-carrito : (req,res) => {
-  let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
-
-  return res.render('carrito',{
-    productofinal,productoparavista,
-  })
-},
-search : (req,res) => {
-  let resultado2 = productoparavista.filter(producto => producto.nombre.toLowerCase().includes(req.query.search.toLowerCase().trim()))
-  
-
-  return res.render('resultado',{
-    resultado2,
+  detail: (req, res) => {
+    let productofinal = productoparavista.find(
+      (producto) => producto.id === +req.params.id
+    );
+    console.log(productofinal);
+    return res.render("descripcion-producto", {
+      productofinal,
       productoparavista,
-      busqueda : req.query.search
-  })
+    });
+  },
+  carrito: (req, res) => {
+    let productofinal = productoparavista.find(
+      (producto) => producto.id === +req.params.id
+    );
 
-},
+    return res.render("carrito", {
+      productofinal,
+      productoparavista,
+    });
+  },
+  search: (req, res) => {
+    let resultado2 = productoparavista.filter((producto) =>
+      producto.nombre
+        .toLowerCase()
+        .includes(req.query.search.toLowerCase().trim())
+    );
+
+    return res.render("resultado", {
+      resultado2,
+      productoparavista,
+      busqueda: req.query.search,
+    });
+  },
   lista: (req, res) => {
-    return res.render("productos",{comics : productoparavista.filter(producto => producto.categoria === "Comic"),
-    mercha : productoparavista.filter(producto => producto.categoria === "Merchandising"),
-    figura : productoparavista.filter(producto => producto.categoria === "Figura"),
+    return res.render("productos", {
+      comics: productoparavista.filter(
+        (producto) => producto.categoria === "Comic"
+      ),
+      mercha: productoparavista.filter(
+        (producto) => producto.categoria === "Merchandising"
+      ),
+      figura: productoparavista.filter(
+        (producto) => producto.categoria === "Figura"
+      ),
 
-    ropa : productoparavista.filter(producto => producto.categoria === "Ropa")});
+      ropa: productoparavista.filter(
+        (producto) => producto.categoria === "Ropa"
+      ),
+    });
   },
   ropa: (req, res) => {
-    return res.render("ropa",{
-    ropa : productoparavista.filter(producto => producto.categoria === "Ropa")});
+    return res.render("ropa", {
+      ropa: productoparavista.filter(
+        (producto) => producto.categoria === "Ropa"
+      ),
+    });
   },
   mercha: (req, res) => {
-    return res.render("mercha",{
-      mercha : productoparavista.filter(producto => producto.categoria === "Merchandising")});
-    },
-    figura: (req, res) => {
-      return res.render("figura",{
-        figura : productoparavista.filter(producto => producto.categoria === "Figura")});
-      },
-      comics: (req, res) => {
-        return res.render("comics",{
-          comics : productoparavista.filter(producto => producto.categoria === "Comic")});
-        },
+    return res.render("mercha", {
+      mercha: productoparavista.filter(
+        (producto) => producto.categoria === "Merchandising"
+      ),
+    });
+  },
+  figura: (req, res) => {
+    return res.render("figura", {
+      figura: productoparavista.filter(
+        (producto) => producto.categoria === "Figura"
+      ),
+    });
+  },
+  comics: (req, res) => {
+    return res.render("comics", {
+      comics: productoparavista.filter(
+        (producto) => producto.categoria === "Comic"
+      ),
+    });
+  },
   carga: (req, res) => {
-     let id= producto[producto.length - 1].id + 1;//usar esta formula para generar id y asignarlo al guardar
-    return res.render("cargadeproducto",{categorias});
+  
+    return res.render("cargadeproducto", { categorias });
   },
-  create:(req, res) =>{
+  create: (req, res) => {
     let errors = validationResult(req);
-
+    let {nombre,precio, marca, descripcion, categoria} = req.body;
+    let img=req.file.filename
    
-    
     if (errors.isEmpty()) {
-       let {nombre, descripcion,precio,categoria} = req.body;
-     if((req, file)) {
-      let producto = {
-        id : producto[producto.length - 1].id + 1,
-        nombre,
-        imagen : req.file.filename,
-        descripcion,
-        precio : +precio,
-        categoria
-    }
+      
     
-   productoparavista.push(producto);
-   guardar(productoparavista);
-   return res.redirect('/productos')
+        let producto = {
+          id: productoparavista[productoparavista.length - 1].id + 1,
+          nombre,
+          imagen: img,
+          precio: +precio,
+          marca,
+          descripcion,
+          categoria,
+        };
 
-    }else{
-      res.render('/carga', {errors: errors.mapped(), old: req.body});
-    }
-  }
+        productoparavista.push(producto);
+        guardar(productoparavista);
 
+        return res.redirect("/productos");
+      } else {
+        if(req.file){
+        let imgABorrar= path.join(__dirname, "../../public/images"+img)
+        fs.unlinkSync(imgABorrar) 
+        }
+       return res.render("cargadeproducto", {
+          categorias,
+          errores: errors.mapped(), 
+          old: req.body 
+        })
+              
+      }
+    
   },
+
   modificar: (req, res) => {
-    let id = +req.params.id
-    let producto = productoparavista.find(producto => producto.id === id)
-    return res.render('modificarproducto',{
+    let id = +req.params.id;
+    let producto = productoparavista.find((producto) => producto.id === id);
+    return res.render("modificarproducto", {
       categorias,
       productoparavista,
-      producto
-    })
-  },
-  update:(req, res) => {
-    let {nombre, descripcion,precio,categoria} = req.body;
-    const {filename} = req.file
-    let id = +req.params.id;
-    productoparavista.forEach(producto => {
-        if(producto.id === id ){
-          producto.nombre = nombre,
-          producto.imagen=filename,
-          producto.precio = +precio,
-          producto.descripcion=descripcion,
-          producto.categoria = categoria
-
-        }      
-        guardar(productoparavista);
-    res.redirect('/productos');
+      producto,
     });
-   }
-};
+  },
+  update: (req, res, next) => {
+    let errores = validationResult(req);
+    if (!errores.isEmpty()) {
+      return res.render("modificarproducto", {
+        categorias,
+        producto,
+        errores: errores.mapped(),
+        old: req.body,
+      });
+    }
+    let { nombre, descripcion, precio, categoria } = req.body;
+    const { filename } = req.file;
+    let id = +req.params.id;
+    productoparavista.forEach((producto) => {
+      if (producto.id === id) {
+        (producto.nombre = nombre),
+          (producto.imagen = filename),
+          (producto.precio = +precio),
+          (producto.descripcion = descripcion),
+          (producto.categoria = categoria);
+      }
+    });
 
+    guardar(productoparavista);
+    res.redirect("/productos");
+  },
+  
+    borrar : (req,res) => {
+      let productoaborrar = productoparavista.find((producto) => producto.id == req.params.id);
+      productoparavista.splice(productoparavista.indexOf(productoaborrar),1)
+      var fs = require('fs');
+      var filePath = path.join(__dirname, "../../public/images/merchandinsing/"+productoaborrar.imagen)
+      fs.unlinkSync(filePath);
+      console.log(productoaborrar)
+      guardar(productoparavista)
+      res.redirect('/')
+      
+      }
+};

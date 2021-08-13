@@ -9,40 +9,44 @@
 
     </div>
     <main class="carga">
-        <form action="" method="POST" enctype="multipart/form-data" class="form"> 
+        <form action="/productos/carga" method="POST" enctype="multipart/form-data" class="form"> 
             <div>
-                <input type="text" id="nombreProducto" name="nombre" placeholder="Nombre de Producto" value="<%= locals.old && old.nombre? old.nombre :'' %> ">
-                <%if(locals.errors && errors.nombre){ %> 
-                    <span class="error-carga"><%= errors.nombre %> </span>
-                    <% } %> 
+                <input type="text" id="nombreProducto" name="nombre" placeholder="Nombre de Producto"
+                 value="<%=locals.old && old.nombre? old.nombre :null %>">
+                 <span class="error-carga"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %></span>
+
             </div>
             <div>
                 <label for="imagen">Imagen</label>
-                <input type="file" name="imagen" id="imagenProducto" value="<%= locals.old && old.imagen? old.imagen :'' %> ">
-                  <%if(locals.errors && errors.imagen){ %> 
-                    <span class="error-carga"><%= errors.imagen %> </span>
-                    <% } %> 
+                <input type="file" name="imagen" id="imagenProducto" value="<%= locals.old && old.imagen? old.imagen:null %>">
+                   <span class="error-carga"><%= locals.errores && errores.imagen ? errores.imagen.msg : null %></span>
+
             </div>
             <div>
-                <input type="number" name="precio" id="precioProducto"
-                placeholder="Precio" value="<%= locals.old && old.precio? old.precio :'' %> ">
-                 <%if(locals.errors && errors.imagen){ %> 
-                    <span class="error-carga"><%= errors.imagen %> </span>
-                    <% } %>
-                <input type="number" name="stock" id="stockProducto" placeholder="Stock">
-                <input type="number" name="id" id="idProducto" placeholder="id">            
+                <label for="pecio">Precio</label>
+                <input type="number" name="precio" id="precioProducto" value="<%= locals.old && old.precio? old.precio:null%>">
+                  <span class="error-carga"><%= locals.errores && errores.precio ? errores.precio.msg : null %></span>
+
+                <input type="text" name="marca" id="marcaProducto" placeholder="marca" value="<%= locals.old && old.marca? old.marca:null %>">
+                 <span class="error-carga"><%= locals.errores && errores.marca ? errores.marca.msg : null %></span>
+                      <!-- <input type="number" name="id" id="idProducto" placeholder="id">  -->           
             </div>
             <div>
                 <label for="descripcion">Descripción del producto</label>
-                <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..." ></textarea>
+                <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..." ><%= locals.old && old.descripcion ? old.descripcion : null %></textarea>
+                 <span class="error-carga"><%= locals.errores && errores.descripcion ? errores.descripcion.msg : null %></span>
             </div>
             <div>
                 <label for="categoria">Categoría</label>
                 <select name="categoria">
-                    <% categorias.forEach(categoria => { %>
-                        <option value="<%= categoria %>"><%= categoria %><%= locals.old && old.categoria? old.categoria :'' %>  </option> 
+                    <option value="" selected hidden>Seleccione la categoría</option>
+                    <% categorias.forEach(rubro => { %>
+                        <option value="<%= rubro %>"<%= locals.old && old.categoria===rubro ? 'selected' :null%> ><%= rubro %></option> 
                     <% }) %>
                   </select>
+                  
+                  <span class="error-carga"><%= locals.errores && errores.categoria ? errores.categoria.msg : null %></span>
+                   
             </div>
             <button type="submit">Publicar</button>
         </form>

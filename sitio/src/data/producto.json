@@ -321,11 +321,20 @@
  },
  {
   "id": 36,
-  "nombre": "Universe #516",
-  "imagen": "comic11.jpg",
-  "precio": 300,
-  "marca": "Ovnipress",
-  "descripcion": "Tomo unico",
+  "nombre": "rrrrr",
+  "imagen": "1628705275670_img_.png",
+  "precio": 213123,
+  "marca": "asdasd",
+  "descripcion": "sadasdas",
   "categoria": "Comic"
+ },
+ {
+  "id": 37,
+  "nombre": "qqq",
+  "imagen": "1628782044055_img_.png",
+  "precio": 122,
+  "marca": "qqq",
+  "descripcion": "qqq",
+  "categoria": "Figura"
  }
 ]
