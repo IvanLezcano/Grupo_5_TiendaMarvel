@@ -153,7 +153,10 @@ module.exports = {
         return res.redirect("/productos");
       } else {
         if(req.file){
-        let imgABorrar= path.join(__dirname, "../../public/images"+img)
+        let imgABorrar = path.join(
+          __dirname,
+          "../../public/image/merchandinsing/" + img
+        );
         fs.unlinkSync(imgABorrar) 
         }
        return res.render("cargadeproducto", {
