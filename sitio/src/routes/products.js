@@ -1,23 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const path = require('path')
-/* const multer = require('multer'); */
+
 const { search,borrar,descripcion, carrito, lista, carga, modificar ,ropa,mercha,figura,comics,detail,update,create} = require("../controllers/productsController");
 let validarModificar = require('../validations/validModificar')
 let validarCarga = require('../validations/validCarga')
 let upload = require('../middlewares/multer')
 
-/* 
-//** MULTER **
-const storage = multer.diskStorage({ 
-    destination: function (req, file, cb) { 
-       cb(null, './public/images/merchandinsing'); 
-    }, 
-    filename: function (req, file, cb) { 
-       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
-  })
-  const upload = multer({ storage });
-  */
  
 /* /productos */
 router.get("/", lista);
