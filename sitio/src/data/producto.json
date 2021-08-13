@@ -327,5 +327,14 @@
   "marca": "asdasd",
   "descripcion": "sadasdas",
   "categoria": "Comic"
+ },
+ {
+  "id": 37,
+  "nombre": "qqq",
+  "imagen": "1628782044055_img_.png",
+  "precio": 122,
+  "marca": "qqq",
+  "descripcion": "qqq",
+  "categoria": "Figura"
  }
 ]

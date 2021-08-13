@@ -129,7 +129,7 @@ module.exports = {
   create: (req, res) => {
     let errors = validationResult(req);
     let {nombre,precio, marca, descripcion, categoria} = req.body;
-   
+    let img=req.file.filename
    
     if (errors.isEmpty()) {
       
@@ -137,7 +137,7 @@ module.exports = {
         let producto = {
           id: productoparavista[productoparavista.length - 1].id + 1,
           nombre,
-          imagen: req.file.filename,
+          imagen: img,
           precio: +precio,
           marca,
           descripcion,
@@ -149,11 +149,16 @@ module.exports = {
 
         return res.redirect("/productos");
       } else {
+        if(req.file){
+        let imgABorrar= path.join(__dirname, "../../public/images/merchandinsing/"+img)
+        fs.unlinkSync(imgABorrar) 
+        }
        return res.render("cargadeproducto", {
           categorias,
           errores: errors.mapped(), 
           old: req.body 
-        });
+        })
+              
       }
     
   },
