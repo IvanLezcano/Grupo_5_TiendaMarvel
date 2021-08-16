@@ -29,8 +29,7 @@
 
                 <input type="text" name="marca" id="marcaProducto" placeholder="marca" value="<%= locals.old && old.marca? old.marca:null %>">
                  <span class="error-carga"><%= locals.errores && errores.marca ? errores.marca.msg : null %></span>
-                      <!-- <input type="number" name="id" id="idProducto" placeholder="id">  -->           
-            </div>
+                   
             <div>
                 <label for="descripcion">Descripción del producto</label>
                 <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..." ><%= locals.old && old.descripcion ? old.descripcion : null %></textarea>
@@ -48,7 +47,9 @@
                   <span class="error-carga"><%= locals.errores && errores.categoria ? errores.categoria.msg : null %></span>
                    
             </div>
+            <div class="button">
             <button type="submit">Publicar</button>
+            </div>
         </form>
     </main>
 </body>
