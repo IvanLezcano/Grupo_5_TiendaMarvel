@@ -175,7 +175,7 @@ module.exports = {
       producto,
     });
   },
-  update: (req, res, next) => {
+  update: (req, res) => {
     let errores = validationResult(req);
     if (!errores.isEmpty()) {
       return res.render("modificarproducto", {

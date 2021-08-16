@@ -1,13 +1,13 @@
 [
  {
-  "id": 1,
-  "nombre": "Mochila",
-  "imagen": "Mochila.jpeg",
-  "precio": 200,
-  "marca": "Toysman",
-  "estado": "oferta",
-  "descripcion": "Mochila Escolar",
-  "categoria": "Merchandising"
+    "id": 1,
+    "nombre": "Mochila",
+    "imagen": "Mochila.jpeg",
+    "precio": 200,
+    "marca": "Toysman",
+    "estado": "oferta",
+    "descripcion": "Mochila Escolar",
+    "categoria": "Merchandising"
  },
  {
   "id": 2,
