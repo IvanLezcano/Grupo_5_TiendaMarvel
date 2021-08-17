@@ -297,8 +297,9 @@
 
 @media (min-width: 1024px) {
   .registro {
+    height: 80%;
     max-height: 110vh; /*75*/
-    max-width: 50vw;
+    max-width: 55vw;
   }
 
   .registro .inputs {
@@ -333,9 +334,6 @@
     margin-left: -14rem;
   }
 
-  .registro{
-    max-height: 65vh;
-  }
   .registro .logo-info {
     justify-content: space-evenly;
     

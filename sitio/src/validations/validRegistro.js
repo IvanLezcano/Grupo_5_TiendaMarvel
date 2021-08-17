@@ -15,8 +15,7 @@ module.exports = [
     .notEmpty()
     .withMessage("Tienes que colocar una contraseña"),
 
-  check("categoria").notEmpty().withMessage("Debes elegir la categoria"),
-
+  
     check("nombre")
   .notEmpty().withMessage("Debes colocar tu nombre y apellido").bail()
   .isLength({
@@ -33,10 +32,8 @@ module.exports = [
     let file = req.file;
 
     let extensiones = [".jpg", ".png", ".img"];
-    if (!file) {
-      throw new Error("Tienes que subir una imagen");
-    } else {
-      let fileExtension = path.extname(file.originalname);
+    if (file) {
+       let fileExtension = path.extname(file.originalname);
       if (!extensiones.includes(fileExtension)) {
         throw new Error(`Las extensiones de archivo permitidas son
                 ${extensiones.join(", ")}`);

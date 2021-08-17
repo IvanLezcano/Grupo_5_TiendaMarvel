@@ -318,32 +318,5 @@
   "marca": "Ovnipress",
   "descripcion": "Tomo unico",
   "categoria": "Comic"
- },
- {
-  "id": 36,
-  "nombre": "rrrrr",
-  "imagen": "1628705275670_img_.png",
-  "precio": 213123,
-  "marca": "asdasd",
-  "descripcion": "sadasdas",
-  "categoria": "Comic"
- },
- {
-  "id": 37,
-  "nombre": "qqq",
-  "imagen": "1628782044055_img_.png",
-  "precio": 122,
-  "marca": "qqq",
-  "descripcion": "qqq",
-  "categoria": "Figura"
- },
- {
-  "id": 38,
-  "nombre": " enojosa",
-  "imagen": "1628860884530_img_.png",
-  "precio": 23243,
-  "marca": " pirulito",
-  "descripcion": "hgfhfhg",
-  "categoria": "Figura"
  }
 ]
