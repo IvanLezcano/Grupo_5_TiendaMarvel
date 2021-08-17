@@ -175,7 +175,7 @@ module.exports = {
       producto,
     });
   },
-  update: (req, res, next) => {
+  update: (req, res) => {
     let errores = validationResult(req);
     if (!errores.isEmpty()) {
       return res.render("modificarproducto", {
@@ -186,7 +186,21 @@ module.exports = {
       });
     }
     let { nombre, descripcion, precio, categoria } = req.body;
-    const { filename } = req.file;
+    
+    let filename;
+    if (req.file == undefined) {
+      let id = +req.params.id;
+        productoparavista.forEach((producto) => {
+          if (producto.id === id) {
+              filename = producto.imagen
+          }
+        });
+  console.log("productImg ",filename);
+    } else{
+      filename = req.file.filename;
+      console.log('si existe ',filename);
+    }
+    console.log("entonces la img es ",filename);
     let id = +req.params.id;
     productoparavista.forEach((producto) => {
       if (producto.id === id) {

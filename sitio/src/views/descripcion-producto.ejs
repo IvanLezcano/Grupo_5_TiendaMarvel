@@ -41,9 +41,10 @@
       <form  id= "jajatecache"action="/productos/borrar/<%= productofinal.id %>?_method=DELETE" class = "jajatecache"method="POST">
         <button type="submit" onclick="confirmacion(event,document.querySelector('#jajatecache'))" class="btn btn-danger ms-2 laAlerta">Eliminar</button>
     </form>
-    <form action="">
-    <button class="btn btn-danger ms-2 "><a href="/productos/modificar/<%= productofinal.id %>" 
-      style="color:white">Modificar</a></button></p></form>
+    <div>
+      <form action="/productos/modificar/<%= productofinal.id %>" method="get">
+    <button type="submit" class="btn btn-danger ms-2 m-auto" style="color:white">Modificar</buttom>
+    </form>
     </div>
     </main>
     <%- include('./partials/footer') %> <%- include('./partials/scripts') %>
