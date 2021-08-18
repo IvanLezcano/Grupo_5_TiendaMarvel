@@ -37,6 +37,7 @@
       <div class="producto-article-cont-descripcion-comprar-imagen">
         <img class="metodos" src="/images/tarjetas.PNG" />
       </div>
+      <% if (locals.isLogged && locals.user.rol === 'admin') { %>
       <div class = "modificadores">
       <form  id= "jajatecache"action="/productos/borrar/<%= productofinal.id %>?_method=DELETE" class = "jajatecache"method="POST">
         <button type="submit" onclick="confirmacion(event,document.querySelector('#jajatecache'))" class="btn btn-danger ms-2 laAlerta">Eliminar</button>
@@ -45,7 +46,8 @@
       <form action="/productos/modificar/<%= productofinal.id %>" method="get">
     <button type="submit" class="btn btn-danger ms-2 m-auto" style="color:white">Modificar</buttom>
     </form>
-    </div>
+  </div>
+  <% } %>
     </main>
     <%- include('./partials/footer') %> <%- include('./partials/scripts') %>
 

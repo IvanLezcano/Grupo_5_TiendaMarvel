@@ -1,13 +1,18 @@
-const { check } = require("express-validator");
-const path = require("path");
-const fs = require("fs");
+const {body, check} = require('express-validator');
+const {usuarios} = require('../data/user_db');
+const bcrypt = require('bcryptjs');
 
-let validLogin = [
-    check("email")
-    .isEmail().withMessage('Debe ingresar un email válido'),
-    check("password")
-    .notEmpty().withMessage("El campo no puede estar vacío").bail()
-    .isLength({min:4}).withMessage('Debe tener como minimo 4 (cuatro) caracteres'),
-  ];
 
-module.exports = validLogin;
+module.exports = [
+    body('email')
+    .custom((value,{req}) => {
+        
+        let usuario = usuarios.find(usuario => usuario.email === value && bcrypt.compareSync(req.body.password,usuario.password));
+       
+        if (usuario){
+            return true
+        }else{
+            return false
+        }
+    }).withMessage('credenciales inválidas')
+]
