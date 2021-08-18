@@ -91,6 +91,7 @@ module.exports = {
   },
   logout: (req, res) => {
     req.session.destroy();
+    res.clearCookie('userEmail');
     res.redirect("/");
   },
 };
