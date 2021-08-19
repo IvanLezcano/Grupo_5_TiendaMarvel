@@ -26,47 +26,41 @@ module.exports = {
   procesarRegistro: (req, res) => {
     let resultadoValidacion = validationResult(req);
     //PARA NO REGISTRAR UN MISMO USUARIO DOS VECES, ANTES DE CREAR UN USUARIO
-     let userInDB = User.buscarPorCampo("email", req.body.email);
-    
+    let userInDB = User.buscarPorCampo("email", req.body.email);
+
     if (userInDB) {
-    
       return res.render("registrarse", {
         errors: {
           email: {
             msg: "Este email ya está registrado",
           },
-        }, 
-        old: req.body, 
+        },
+        old: req.body,
       });
     }
     //SI NO ESTA REGISTRADA SIGO CON EL PROCESO, GENERO LA INFORMACION DEL USUARIO
-   
-     
+
     if (resultadoValidacion.isEmpty()) {
       let userToCreate = {
         id: User.generarId(),
         ...req.body,
-        password: bcryptjs.hashSync(req.body.password, 10), 
-        imagenUsuario:req.file? req.file.filename: 'default-avatar.jpg', //uso el filename- nombre del archivo de imagen subido
-        rol: "usuario"  
+        password: bcryptjs.hashSync(req.body.password, 10),
+        imagenUsuario: req.file ? req.file.filename : "default-avatar.jpg", //uso el filename- nombre del archivo de imagen subido
+        rol: "usuario",
       };
-      
-     
-      usuariosDB.push(userToCreate)
-      guardar(usuariosDB) 
 
-    
-      return res.redirect('/users/login'); 
+      usuariosDB.push(userToCreate);
+      guardar(usuariosDB);
+
+      return res.redirect("/users/login");
     } else {
-     
-       if (req.file) {
-        
+      if (req.file) {
         let imgABorrar = path.join(
           __dirname,
           "../../public/images/users/" + req.file.filename
         );
         fs.unlinkSync(imgABorrar);
-      } 
+      }
       return res.render("registrarse", {
         errors: resultadoValidacion.mapped(),
         old: req.body,
@@ -76,6 +70,9 @@ module.exports = {
 
   login: (req, res) => {
     return res.render("login");
+  },
+  perfil: (req, res) => {
+    return res.render("perfilUsuario");
   }
 };
 

@@ -6,8 +6,11 @@ const avatar = require('../middlewares/userMulter')
 const {
  login,
  registro,
- procesarRegistro
+ procesarRegistro,
+ perfil
+ 
 } = require("../controllers/usersController");
+
 
 
 /* /users */
@@ -20,5 +23,5 @@ router.post(
   validarRegistro,
   procesarRegistro
 );
-
+router.get("/perfil", perfil);
 module.exports = router;
