@@ -6,6 +6,7 @@ const { search,borrar,descripcion, carrito, lista, carga, modificar ,ropa,mercha
 let validarModificar = require('../validations/validModificar')
 let validarCarga = require('../validations/validCarga')
 let upload = require('../middlewares/multer')
+const checkAdmin = require('../middlewares/checkAdmin');
 
  
 
@@ -16,9 +17,9 @@ router.get("/carrito", carrito);
 
 
 
-router.get("/carga", carga);
+router.get("/carga",checkAdmin, carga);
 router.post("/carga", upload.single("imagen"), validarCarga, create);
-router.get("/modificar/:id",modificar);
+router.get("/modificar/:id",checkAdmin,modificar);
 router.put("/modificar/:id",upload.single('imagen'),validarModificar,update);
 router.get("/ropa", ropa);
 router.get("/merchandising", mercha);

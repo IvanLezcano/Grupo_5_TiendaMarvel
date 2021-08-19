@@ -1,3 +1,11 @@
 [
- 
+ {
+  "id": 1,
+  "usuario": "cristian",
+  "password": "$2a$10$sobMr/uBXEYeq6ArEWehAucX1SHSc/9tDD6/FeX8JgBJMMM82WoAS",
+  "nombre": "cristian lell",
+  "email": "cristianlell24@gmail.com",
+  "imagenUsuario": "default-avatar.jpg",
+  "rol": "usuario"
+ }
 ]

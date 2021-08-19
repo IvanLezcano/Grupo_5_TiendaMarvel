@@ -1,7 +1,7 @@
 const path = require("path");
-const bcryptjs = require('bcryptjs');//para encriptar el password- que sea brcyptjs
-const fs = require('fs');
-const {validationResult} = require('express-validator');
+const bcryptjs = require("bcryptjs"); //para encriptar el password- que sea brcyptjs
+const fs = require("fs");
+const { validationResult } = require("express-validator");
 
 let usuarios = path.join(__dirname, "../data/users.json");
 let usuariosDB = JSON.parse(fs.readFileSync(usuarios, "utf-8"));
@@ -14,10 +14,7 @@ let guardar = (users) => {
   );
 };
 
-
-
-const User = require('../models/Users'); 
-
+const User = require("../models/Users");
 
 module.exports = {
   registro: (req, res) => {
@@ -71,11 +68,30 @@ module.exports = {
   login: (req, res) => {
     return res.render("login");
   },
-  perfil: (req, res) => {
-    return res.render("perfilUsuario");
-  }
+  processLogin: (req, res) => {
+    let errors = validationResult(req);
+    const { email, password } = req.body;
+    if (errors.isEmpty()) {
+      let on = req.body.recordar;
+      if (on) {
+        res.cookie("userEmail", req.body.email, { maxAge: 120000 });
+      }
+      let usuario = usuariosDB.find((usuario) => usuario.email === email);
+      req.session.user = {
+        id: usuario.id,
+        usuario: usuario.usuario,
+        rol: usuario.rol,
+      };
+      return res.redirect("/");
+    } else {
+      return res.render("login", {
+        errores: errors.mapped(),
+      });
+    }
+  },
+  logout: (req, res) => {
+    req.session.destroy();
+    res.clearCookie('userEmail');
+    res.redirect("/");
+  },
 };
-
-
-
-   

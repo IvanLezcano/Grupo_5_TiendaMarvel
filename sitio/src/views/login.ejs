@@ -6,16 +6,17 @@
     <h1 class="titulo">Login</h1>
     <main class="login-main">
 
-      <form action="" method="" class="inputs" enctype="multipart/form-data">
+      <form action="" method="POST" class="inputs" novalidate> 
         <h4 class="ingresa-google">Ingresa con <a href="#">Google</a></h4>
         <div>
-          <input type="text" id="usuario" required name="usuario" placeholder="Usuario" />
+          <input type="text" id="usuario" name="email" placeholder="Email"/>
         </div>
         <div>
-          <input type="password" id="contrasena" required name="password" placeholder="Contraseña" />
+          <input type="password" id="contrasena" name="password" placeholder="Contraseña" />
         </div>
+        <span class="text-danger fs-4"><%= locals.errores && errores.email ? errores.email.msg :null%></span>
         <div class="recordarme">
-          <input type="checkbox" name="recordarme" id="recordarme" />
+          <input type="checkbox" name="recordar" id="recordarme" />
           <label for="recordarme">Recordarme</label>
         </div>
         <p class="recuperar-cont">
