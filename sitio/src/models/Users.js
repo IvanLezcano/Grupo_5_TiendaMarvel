@@ -6,7 +6,7 @@ const User = {
   
  
   listaUsuarios: function(){
-    return usuariosDB
+    return usuariosDB.usuarios
   },
       
   generarId: function () {
