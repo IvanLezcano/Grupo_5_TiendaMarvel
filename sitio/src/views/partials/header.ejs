@@ -34,17 +34,16 @@
 
             
 					<!-- COMO ESTA SETEADO EN FALSE EN EL MIDDLEWARE userLogged ME VA A MOSTRAR ESTO -->
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown" style="margin-top: 0px;">
 						<a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<img src="/images/users/<%=locals.user.imagenUsuario %>" width="40" style="border-radius: 100%;">
               <br>
-              
-							Hola <%= locals.user.usuario %> 
+              Hola <%= locals.user.usuario %> 
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="/users/perfil" style="color: blue; font-weight: 700;">Mi perfil</a>
+							<a class="dropdown-item" href="/users/perfil" style="color:white; font-weight: 700;">Mi perfil</a>
 							<li><hr class="dropdown-divider"></li>
-							<a class="dropdown-item" href="/users/logout" style="color: blue;">Cerrar sesion</a>
+							<a class="dropdown-item" href="/users/logout" style="color:white; font-weight: 700;">Cerrar sesion</a>
 						</ul>
 					</li>
            
@@ -58,8 +57,8 @@
               </div>
             <% } %>
             </DIV>
-            <div>
-              <a href="/productos/carrito/0"><i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig"></i></a>
+            <div class="imagen-carrito">
+              <a href="/productos/carrito/0"><i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig separate"></i></a>
             </div>
               
 

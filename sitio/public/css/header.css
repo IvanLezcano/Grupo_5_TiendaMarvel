@@ -26,6 +26,7 @@ header{
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        height: 40vh;
     }
     .busqueda input{
         width: 75% !important;
@@ -57,7 +58,6 @@ header{
   
     .botonderegistrarse{
         align-items: center;
-        
         align-self: center;
         height: 100% !important;
         
@@ -65,7 +65,7 @@ header{
         flex-direction: column !important;
         justify-content:center;
         border-left: 3px solid #262626;
-            width: 20% !important;
+        width: 25% !important;
             
         
         }
@@ -84,12 +84,12 @@ header{
         color: white;
         display: none;
     }
+   
     .menumobile{
         background-color: transparent !important;
         border: none;
         color: white;
-
-    }
+        }
     #dropdownMenuButton1{
         height: 20px !important;
         box-shadow: none !important;
@@ -120,6 +120,9 @@ header{
         border: none;
 
        }
+    .separate{
+        margin-top: 10px;
+    }
       
     .botonderegistrarse .dropdown-menu{
         background-color:var(--color-header);
@@ -131,6 +134,19 @@ header{
  
 
 }
+
+@media (min-width: 550px){
+    .busqueda{
+       
+        height: 50vh;
+    }
+     .botonderegistrarse{
+         width: 20% !important;
+            
+        
+        }
+}
+
 @media (min-width: 768px){
 
      header{
@@ -280,6 +296,7 @@ header .botonderegistrarse a{
 .re{
     display: block;
     font-size: 1.3em;
+    
 }
 .enlinea{
     width: 100%;
