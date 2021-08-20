@@ -8,31 +8,14 @@
   "imagenUsuario": "default-avatar.jpg",
   "rol": "usuario"
  },
+ 
  {
   "id": 2,
-  "usuario": "ricardo",
-  "password": "$2a$10$gwbyfmHgSgaDjSP7Q5Jai.ZAnONAMBUujMrcE5nJmwHXGsQYcWAjS",
-  "nombre": "victor menta",
-  "email": "lezcanoivangabriel@gmail.com",
-  "imagenUsuario": "1629398797696_img_.jpg",
-  "rol": "usuario"
- },
- {
-  "id": 3,
-  "usuario": "jorge",
-  "password": "$2a$10$whkGyd4U942Z.nNKNeDPOulil8YYPwGOudxGBj0fXLiWhUzZQtYe6",
-  "nombre": "juan lezcano",
-  "email": "lezcanoivangasbriel@gmail.com",
-  "imagenUsuario": "1629398875597_img_.jpg",
-  "rol": "usuario"
- },
- {
-  "id": 2,
-  "usuario": "juancito123",
-  "password": "$2a$10$bTbIewYvXLYJo6FRQYGLLOkbyZ1j.l4BVHLFuVDcLsxFGJUN9vF4C",
-  "nombre": "juancito perez",
-  "email": "juancito@gmail.com",
-  "imagenUsuario": "default-avatar.jpg",
+  "usuario": "EzeBauer",
+  "password": "$2a$10$vm0tylKGO./gXFhn2YAgdujb.8fqdg.SfW/zpZ75.PthYnTbEPXZG",
+  "nombre": "Carlos Ezequiel",
+  "email": "bauereze@gmail.com",
+  "imagenUsuario": "1629400871244_img_.jpg",
   "rol": "usuario"
  }
 ]

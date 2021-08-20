@@ -24,23 +24,44 @@
 
            
           <div class="botonderegistrarse" >
-            <% if (locals.isLogged) { %>
-              <div class="enlinea">
-                <div class="referencias animate__animated animate__rubberBand">
-                <p class="re text-primary">Hola <%= locals.user.usuario %> </p>
-                <a class="re" href="/users/logout">Cerrar sesión</a>
-              </div>
-            <% } else { %>   
             <div class="enlinea">
+            <% if (locals.isLogged) { %>
+          
+               <!--  <div class="referencias animate__animated animate__rubberBand"> -->
+               <!--  <p class="re text-primary">Hola </p>
+                <a class="re" href="/users/logout">Cerrar sesión</a>
+              </div> -->
+
+            
+					<!-- COMO ESTA SETEADO EN FALSE EN EL MIDDLEWARE userLogged ME VA A MOSTRAR ESTO -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="/images/users/<%=locals.user.imagenUsuario %>" width="40" style="border-radius: 100%;">
+              <br>
+              
+							Hola <%= locals.user.usuario %> 
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/users/perfil" style="color: blue; font-weight: 700;">Mi perfil</a>
+							<li><hr class="dropdown-divider"></li>
+							<a class="dropdown-item" href="/users/logout" style="color: blue;">Cerrar sesion</a>
+						</ul>
+					</li>
+           
+          
+
+            <% } else { %>   
+            <!-- <div class="enlinea"> -->
               <div class="referencias animate__animated animate__rubberBand">
               <a class="re" href="/users/registro"> Registrate</a>
               <a class="re" href="/users/login">Ingresá</a>
-            </div>
+              </div>
             <% } %>
+            </DIV>
             <div>
               <a href="/productos/carrito/0"><i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig"></i></a>
             </div>
-              </DIV>
+              
 
             <div class="menuMobile">
                 <button class="btn btn-secondary dropdown-toggle menumobile" type="button" id="dropdownMenuButton1"
@@ -76,6 +97,8 @@
     
     
                
+            </div>
+
             </div>
 
 

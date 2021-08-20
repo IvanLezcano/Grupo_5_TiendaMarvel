@@ -63,7 +63,7 @@ header{
         
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center;
+        justify-content:center;
         border-left: 3px solid #262626;
             width: 20% !important;
             
