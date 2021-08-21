@@ -92,7 +92,7 @@ header{
         top:70%;
         background-image: url('/images/580b57fbd9996e24bc43c047.png');
         background-size: 100% 100%; 
-        animation: fantasma2 3s;
+        animation: fantasma2 2s;
         animation-iteration-count: initial;
         opacity: 0%;
 
@@ -112,7 +112,7 @@ header{
         top:70%;
         background-image: url('/images/580b57fbd9996e24bc43c05b.png');
         background-size: 100% 100%; 
-        animation: fantasma 3s;
+        animation: fantasma 2s;
         animation-iteration-count: initial;
         opacity: 0%;
 
