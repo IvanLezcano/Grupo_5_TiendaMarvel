@@ -67,9 +67,16 @@ header{
         border-left: 3px solid #262626;
         width: 25% !important;
             
-        
-        }
-        
+    }
+
+    .avatar{
+        width:40px;
+        border-radius: 100%
+    }
+    .dropdown-item{
+        color: white;
+        font-weight: 700;
+    }  
  
     .botonderegistrarse button{
         height: 20% !important;
@@ -142,9 +149,14 @@ header{
     }
      .botonderegistrarse{
          width: 20% !important;
-            
-        
-        }
+    }
+    .avatar{
+        width:50px;
+       
+    }
+    .saludo{
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 768px){
@@ -159,8 +171,15 @@ header{
      .dropdown-menu{
         background-color:var(--color-header);
         border-radius: 10px !important;
+    }
 
-
+    .avatar{
+        width:60px;
+        border-radius: 100%;
+        font-size: 16px;
+    }
+    .saludo{
+        font-size: 14px;
     }
     .busqueda input{
         width: 75% !important;
@@ -328,6 +347,10 @@ header .botonderegistrarse a{
 }
 }
 @media (min-width: 1024px){
+
+ .avatar{
+        width:70px;
+ }
  .cargarymodificar{
      width: 100% !important;
      display: flex !important;
