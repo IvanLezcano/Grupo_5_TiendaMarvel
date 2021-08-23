@@ -7,5 +7,14 @@
   "email": "cristianlell24@gmail.com",
   "imagenUsuario": "default-avatar.jpg",
   "rol": "usuario"
+ },
+ {
+  "id": 2,
+  "usuario": "EzeBauer",
+  "password": "$2a$10$1hNtQI87mrjPcyhL7ULJ3e1MB2L2LE8nirAPmioRySSWaS0SUKqJC",
+  "nombre": "Ezequiel ",
+  "email": "bauereze@gmail.com",
+  "imagenUsuario": "1629723087978_img_.jpg",
+  "rol": "usuario"
  }
 ]

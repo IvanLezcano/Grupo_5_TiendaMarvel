@@ -33,6 +33,8 @@
             <img src="../images/tarjetas.PNG" alt="" />
           </div>
         </div>
+
+      
       </article>
       <div class="producto-article-cont-descripcion-comprar-imagen">
         <img class="metodos" src="/images/tarjetas.PNG" />
@@ -48,9 +50,31 @@
     </form>
   </div>
   <% } %>
+  <div class="relacionados mt-5">
+    <h4>Productos relacionados</h4>
+    <hr>
+    <div class="glider-contain">
+      <div class="glider ">
+        <% relacionados.forEach(producto => { %>
+          <div class="card mb-3  p-5 cardGlider">
+          <div class="d-flex flex-column align-items-center ">
+            <!-- <a href="/detail/<%= productoparavista[index].id %>"> -->
+            <img class="w-100" src="/images/merchandinsing/<%= producto.imagen %>" alt="">
+           
+            <p class="mt-4"><%= producto.nombre %> </p>
+        <!--   </a> -->
+          </div>
+        </div>
+        <% }) %>
+       
+      </div>
+      <button aria-label="Previous" class="glider-prev">«</button>
+      <button aria-label="Next" class="glider-next">»</button>
+      <div role="tablist" class="dots"></div>
+    </div>
+  </div>
     </main>
-    <%- include('./partials/footer') %> <%- include('./partials/scripts') %>
-
+    
 
     <script>
      let formulario = document.querySelector(".jajatecache")
@@ -66,6 +90,16 @@
               }else {alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
       formulario.submit()}}
     </script>
+
+
+    
+     
+    
+  
+    <%- include('./partials/footer') %>
+     <%- include('./partials/scripts') %>
+     <script src="/javascript/productDetail.js"></script>
+        
   </body>
 </html>
 

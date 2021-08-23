@@ -55,6 +55,7 @@ module.exports = {
     return res.render("descripcion-producto", {
       productofinal,
       productoparavista,
+      relacionados: productoparavista.filter(item => item.categoria === productofinal.categoria)
     });
   },
   carrito: (req, res) => {
