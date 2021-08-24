@@ -55,6 +55,7 @@ module.exports = {
     return res.render("descripcion-producto", {
       productofinal,
       productoparavista,
+      categorias,//agregue//
       relacionados: productoparavista.filter(item => item.categoria === productofinal.categoria)
     });
   },

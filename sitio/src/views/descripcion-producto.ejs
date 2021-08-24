@@ -57,12 +57,12 @@
       <div class="glider ">
         <% relacionados.forEach(producto => { %>
           <div class="card mb-3  p-5 cardGlider">
-          <div class="d-flex flex-column align-items-center ">
-            <!-- <a href="/detail/<%= productoparavista[index].id %>"> -->
-            <img class="w-100" src="/images/merchandinsing/<%= producto.imagen %>" alt="">
+          <div class="d-flex flex-column align-items-center  ">
+            <a href="/productos/detail/<%= producto.id %> ">
+            <img class="w-100" src="/images/merchandinsing/<%= producto.imagen %>" alt=""></a>
            
             <p class="mt-4"><%= producto.nombre %> </p>
-        <!--   </a> -->
+      
           </div>
         </div>
         <% }) %>
