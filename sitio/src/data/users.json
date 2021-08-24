@@ -25,5 +25,23 @@
   "email": "bauerezequiel@yahoo.es",
   "imagenUsuario": "1629812687948_img_.jpg",
   "rol": "admin"
+ },
+ {
+  "id": 4,
+  "usuario": "ivaneldestructor",
+  "password": "$2a$10$dGZOdjRKxN0yJ.DNR1VbHu3aEIC8PTR3EJzsY9y88iQDw/mmVtWU2",
+  "nombre": "ivan lezcano",
+  "email": "lezcanoivangabriel@gmail.com",
+  "imagenUsuario": "I.jpeg",
+  "rol": "usuario"
+ },
+ {
+  "id": 5,
+  "usuario": "ezequiel",
+  "password": "$2a$10$Qq4F.CPZkk5Y/yxDsHCRYuuwuYpPX49sM6XQjgaejkXyiXWB9kGLS",
+  "nombre": "ezequiel bauer",
+  "email": "eze@gmail.com",
+  "imagenUsuario": "E.jpg",
+  "rol": "usuario"
  }
 ]

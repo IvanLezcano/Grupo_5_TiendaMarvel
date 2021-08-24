@@ -98,9 +98,9 @@ header{
     }
 
     .avatar{
-        width:20px;
-        height: 20px;
-        border-radius: 100%
+        width:35px;
+        height: 35px;
+        border-radius: 10%
     }
      @keyframes fantasma {
         0%{opacity: 0%}
@@ -221,13 +221,17 @@ header{
     .saludo{
         font-size: 12px;
     }
+    .separate{
+        margin-top: 40px;
+    }
+
 }
 
 @media (min-width: 768px){
     .avatar{
-        width:40px;
-        height: 40px;
-        border-radius: 100%
+        width:70px;
+        height: 60px;
+        border-radius: 30%;
     }
 
      header{
@@ -419,6 +423,8 @@ header .botonderegistrarse a{
 
  .avatar{
         width:70px;
+        height: 60px;
+        border-radius: 30%;
  }
   .fijo1{
         width: 80px;
