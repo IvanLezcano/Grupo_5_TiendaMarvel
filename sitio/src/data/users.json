@@ -16,5 +16,14 @@
   "email": "bauereze@gmail.com",
   "imagenUsuario": "default-avatar.jpg",
   "rol": "usuario"
+ },
+ {
+  "id": 3,
+  "usuario": "lore",
+  "password": "$2a$10$Ujz9TqEOLo2ghEhWBhEj4.Uqq0uQjISp/UBDBC1/MX8vZflOgufaW",
+  "nombre": " enojosa",
+  "email": "bauerezequiel@yahoo.es",
+  "imagenUsuario": "1629812687948_img_.jpg",
+  "rol": "admin"
  }
 ]
