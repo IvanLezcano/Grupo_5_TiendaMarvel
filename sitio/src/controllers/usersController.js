@@ -76,6 +76,7 @@ module.exports = {
       id: usuario.id,
       usuario: usuario.usuario,
       rol: usuario.rol,
+      imagenUsuario: usuario.imagenUsuario
     };
     console.log('controlador: ',req.session.user);
     if (errors.isEmpty()) {
