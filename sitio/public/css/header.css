@@ -15,10 +15,19 @@ header{
      border: solid 1px white; 
 }
 .saludo{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     font-family: 'Ubuntu';
     color: blue;
      font-weight: 700;
     
+}
+.centrarelavar{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 
@@ -26,6 +35,7 @@ header{
     header nav{
         display: flex !important;
     }
+  
     header{
         border-bottom: 3px solid #262626;
         position: sticky;
@@ -33,7 +43,9 @@ header{
         z-index: 100;
     }
         
-
+    .separate{
+        margin-top: 10px;
+    }
 
 
     .busqueda{
@@ -86,7 +98,8 @@ header{
     }
 
     .avatar{
-        width:40px;
+        width:20px;
+        height: 20px;
         border-radius: 100%
     }
      @keyframes fantasma {
@@ -101,8 +114,8 @@ header{
     }
 
     .fijo1{
-        width: 50px;
-        height: 60px;
+        width: 20px;
+        height: 30px;
         position: absolute;
         right: 35%;
         top:70%;
@@ -116,8 +129,9 @@ header{
     
       
     .fijo2{
-        width: 50px;
-        height: 60px;
+
+        width: 20px;
+        height: 30px;
         position: absolute;
         left: 35%;
         top:70%;
@@ -180,9 +194,7 @@ header{
         border: none;
 
        }
-    .separate{
-        margin-top: 10px;
-    }
+  
       
     .botonderegistrarse .dropdown-menu{
         background-color:var(--color-header);
@@ -198,7 +210,6 @@ header{
 @media (min-width: 550px){
     .busqueda{
        
-        height: 50vh;
     }
      .botonderegistrarse{
          width: 20% !important;
@@ -213,6 +224,11 @@ header{
 }
 
 @media (min-width: 768px){
+    .avatar{
+        width:40px;
+        height: 40px;
+        border-radius: 100%
+    }
 
      header{
         
@@ -412,6 +428,7 @@ header .botonderegistrarse a{
         top:60%;
   }
    .fijo2{
+
         width: 80px;
         height: 100px;
         position: absolute;
@@ -448,5 +465,8 @@ display: flex !important;
 }
 .re{
     font-size: 2.4;
+}
+.separate{
+    margin-top: 40px;
 }
 }
