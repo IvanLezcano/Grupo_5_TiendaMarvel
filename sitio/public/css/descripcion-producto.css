@@ -110,7 +110,26 @@
     padding: 0 !important;
 
 }
+.cardGlider{
+    margin: 20px;
+    background-color: #152034;
+    font-family: "Ubuntu";
+   font-weight: 300;
+   color: white
 
+}
+
+.relacionados h4{
+    margin-left: 20px;
+    font-family: "Ubuntu";
+   font-weight: 700;
+   font-size: larger;
+   text-shadow: 2px 2px gray;
+   color: white;
+}
+.tarjetaRelacionados{
+    border-radius: 5%;
+}
 
 /*===============TABLET================*/
 @media(min-width:768px) {

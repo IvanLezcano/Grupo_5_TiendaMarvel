@@ -71,17 +71,18 @@ module.exports = {
   processLogin: (req, res) => {
     let errors = validationResult(req);
     const { email, password } = req.body;
+    let usuario = usuariosDB.find((usuario) => usuario.email === email);
+    req.session.user = usuario/* {
+      id: usuario.id,
+      usuario: usuario.usuario,
+      rol: usuario.rol,
+    }; */
     if (errors.isEmpty()) {
       let on = req.body.recordar;
       if (on) {
         res.cookie("userEmail", req.body.email, { maxAge: 120000 });
       }
-      let usuario = usuariosDB.find((usuario) => usuario.email === email);
-      req.session.user = {
-        id: usuario.id,
-        usuario: usuario.usuario,
-        rol: usuario.rol,
-      };
+      
       return res.redirect("/");
     } else {
       return res.render("login", {
@@ -94,4 +95,9 @@ module.exports = {
     res.clearCookie('userEmail');
     res.redirect("/");
   },
+  perfil: (req, res)=>{
+    return res.render('perfil', {
+      user:req.session.user  
+    })
+  }
 };

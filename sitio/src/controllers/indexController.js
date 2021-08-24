@@ -13,7 +13,8 @@ module.exports = {
       let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
       console.log(productofinal)
       return res.render('descripcion-producto',{
-        productofinal,productoparavista
+        productofinal,productoparavista,
+         relacionados: productoparavista.filter(item => item.categoria === productofinal.categoria)
       })
   },
   carrito : (req,res) => {

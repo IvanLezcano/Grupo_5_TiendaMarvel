@@ -7,5 +7,23 @@
   "email": "cristianlell24@gmail.com",
   "imagenUsuario": "default-avatar.jpg",
   "rol": "usuario"
+ },
+ {
+  "id": 2,
+  "usuario": "EzeBauer",
+  "password": "$2a$10$lzRgsvPOsJTWGJNR0wNns.KH/pZCYxmsS1CenvNVYKjmWEhojkFiW",
+  "nombre": "Carlos Ezequiel",
+  "email": "bauereze@gmail.com",
+  "imagenUsuario": "default-avatar.jpg",
+  "rol": "usuario"
+ },
+ {
+  "id": 3,
+  "usuario": "lore",
+  "password": "$2a$10$Ujz9TqEOLo2ghEhWBhEj4.Uqq0uQjISp/UBDBC1/MX8vZflOgufaW",
+  "nombre": " enojosa",
+  "email": "bauerezequiel@yahoo.es",
+  "imagenUsuario": "1629812687948_img_.jpg",
+  "rol": "admin"
  }
 ]

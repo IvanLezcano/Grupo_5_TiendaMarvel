@@ -4,6 +4,22 @@ header{
     padding: 0 !important;
     box-sizing: border-box !important;
 }
+.dropdown-item{
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    font-size: 12px;
+    color: white;
+}  
+.dropdown-item:hover{
+    box-shadow: white 4px;
+     border: solid 1px white; 
+}
+.saludo{
+    font-family: 'Ubuntu';
+    color: blue;
+     font-weight: 700;
+    
+}
 
 
 @media (min-width: 319px){
@@ -26,6 +42,7 @@ header{
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        height: 40vh;
     }
     .busqueda input{
         width: 75% !important;
@@ -57,20 +74,63 @@ header{
   
     .botonderegistrarse{
         align-items: center;
-        
         align-self: center;
         height: 100% !important;
         
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center;
+        justify-content:center;
         border-left: 3px solid #262626;
-            width: 20% !important;
+        width: 25% !important;
             
-        
-        }
-        
- 
+    }
+
+    .avatar{
+        width:40px;
+        border-radius: 100%
+    }
+     @keyframes fantasma {
+        0%{opacity: 0%}
+        75%  {transform: translateY(-20px) translateX(-20px); opacity: 100%;}
+        100% {opacity: 0%;}
+    }
+     @keyframes fantasma2 {
+        0%{opacity: 0%}
+        75%  {transform: translateY(20px) translateX(20px); opacity: 100%;}
+        100% {opacity: 0%;}
+    }
+
+    .fijo1{
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        right: 35%;
+        top:70%;
+        background-image: url('/images/580b57fbd9996e24bc43c047.png');
+        background-size: 100% 100%; 
+        animation: fantasma2 1.5s;
+        animation-iteration-count: initial;
+        opacity: 0%;
+
+    }
+    
+      
+    .fijo2{
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        left: 35%;
+        top:70%;
+        background-image: url('/images/580b57fbd9996e24bc43c05b.png');
+        background-size: 100% 100%; 
+        animation: fantasma 1.5s;
+        animation-iteration-count: initial;
+        opacity: 0%;
+
+    }
+     
+    
+    
     .botonderegistrarse button{
         height: 20% !important;
         
@@ -84,12 +144,12 @@ header{
         color: white;
         display: none;
     }
+   
     .menumobile{
         background-color: transparent !important;
         border: none;
         color: white;
-
-    }
+        }
     #dropdownMenuButton1{
         height: 20px !important;
         box-shadow: none !important;
@@ -120,6 +180,9 @@ header{
         border: none;
 
        }
+    .separate{
+        margin-top: 10px;
+    }
       
     .botonderegistrarse .dropdown-menu{
         background-color:var(--color-header);
@@ -131,6 +194,24 @@ header{
  
 
 }
+
+@media (min-width: 550px){
+    .busqueda{
+       
+        height: 50vh;
+    }
+     .botonderegistrarse{
+         width: 20% !important;
+    }
+    .avatar{
+        width:50px;
+       
+    }
+    .saludo{
+        font-size: 12px;
+    }
+}
+
 @media (min-width: 768px){
 
      header{
@@ -143,8 +224,15 @@ header{
      .dropdown-menu{
         background-color:var(--color-header);
         border-radius: 10px !important;
+    }
 
-
+    .avatar{
+        width:60px;
+        border-radius: 100%;
+        font-size: 16px;
+    }
+    .saludo{
+        font-size: 14px;
     }
     .busqueda input{
         width: 75% !important;
@@ -280,6 +368,7 @@ header .botonderegistrarse a{
 .re{
     display: block;
     font-size: 1.3em;
+    
 }
 .enlinea{
     width: 100%;
@@ -311,6 +400,24 @@ header .botonderegistrarse a{
 }
 }
 @media (min-width: 1024px){
+
+ .avatar{
+        width:70px;
+ }
+  .fijo1{
+        width: 80px;
+        height: 100px;
+        position: absolute;
+        right: 25%;
+        top:60%;
+  }
+   .fijo2{
+        width: 80px;
+        height: 100px;
+        position: absolute;
+        left: 25%;
+        top:60%;
+  }
  .cargarymodificar{
      width: 100% !important;
      display: flex !important;
