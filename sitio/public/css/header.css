@@ -73,11 +73,69 @@ header{
         width:40px;
         border-radius: 100%
     }
+     @keyframes fantasma {
+        0%{opacity: 0%}
+        75%  {transform: translateY(-20px) translateX(-20px); opacity: 100%;}
+        100% {opacity: 0%;}
+    }
+     @keyframes fantasma2 {
+        0%{opacity: 0%}
+        75%  {transform: translateY(20px) translateX(20px); opacity: 100%;}
+        100% {opacity: 0%;}
+    }
+
+    .fijo1{
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        right: 35%;
+        top:70%;
+        background-image: url('/images/580b57fbd9996e24bc43c047.png');
+        background-size: 100% 100%; 
+        animation: fantasma2 2s;
+        animation-iteration-count: initial;
+        opacity: 0%;
+
+    }
+    .fijo1:hover{
+      
+        opacity: 100%;
+
+    }
+
+      
+    .fijo2{
+        width: 50px;
+        height: 60px;
+        position: absolute;
+        left: 35%;
+        top:70%;
+        background-image: url('/images/580b57fbd9996e24bc43c05b.png');
+        background-size: 100% 100%; 
+        animation: fantasma 2s;
+        animation-iteration-count: initial;
+        opacity: 0%;
+
+    }
+     .fijo2:hover{
+      
+        opacity: 100%;
+
+    }
+
     .dropdown-item{
-        color: white;
-        font-weight: 700;
+        font-weight: 500;
     }  
- 
+    .dropdown-item:hover{
+        box-shadow: white 4px;
+         border: solid 1px white; 
+    }
+    .saludo{
+        color: blue;
+         font-weight: 700;
+        
+    }
+    
     .botonderegistrarse button{
         height: 20% !important;
         
@@ -351,6 +409,20 @@ header .botonderegistrarse a{
  .avatar{
         width:70px;
  }
+  .fijo1{
+        width: 80px;
+        height: 100px;
+        position: absolute;
+        right: 25%;
+        top:60%;
+  }
+   .fijo2{
+        width: 80px;
+        height: 100px;
+        position: absolute;
+        left: 25%;
+        top:60%;
+  }
  .cargarymodificar{
      width: 100% !important;
      display: flex !important;

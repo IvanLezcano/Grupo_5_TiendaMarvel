@@ -11,10 +11,10 @@
  {
   "id": 2,
   "usuario": "EzeBauer",
-  "password": "$2a$10$1hNtQI87mrjPcyhL7ULJ3e1MB2L2LE8nirAPmioRySSWaS0SUKqJC",
-  "nombre": "Ezequiel ",
+  "password": "$2a$10$lzRgsvPOsJTWGJNR0wNns.KH/pZCYxmsS1CenvNVYKjmWEhojkFiW",
+  "nombre": "Carlos Ezequiel",
   "email": "bauereze@gmail.com",
-  "imagenUsuario": "1629723087978_img_.jpg",
+  "imagenUsuario": "default-avatar.jpg",
   "rol": "usuario"
  }
 ]
