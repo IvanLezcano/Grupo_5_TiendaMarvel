@@ -7,6 +7,7 @@ let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
 
 module.exports = {
   index: (req, res) => {
+    console.log('controlador index: ',req.session.user);
     return res.render("index",{productoparavista, ofertas : productoparavista.filter(producto => producto.estado === "oferta")}
     )},
     detail : (req,res) => {

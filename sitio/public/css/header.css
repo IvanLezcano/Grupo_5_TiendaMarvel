@@ -208,9 +208,6 @@ header{
 }
 
 @media (min-width: 550px){
-    .busqueda{
-       
-    }
      .botonderegistrarse{
          width: 20% !important;
     }

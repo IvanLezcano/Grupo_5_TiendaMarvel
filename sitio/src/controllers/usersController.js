@@ -72,11 +72,12 @@ module.exports = {
     let errors = validationResult(req);
     const { email, password } = req.body;
     let usuario = usuariosDB.find((usuario) => usuario.email === email);
-    req.session.user = usuario/* {
+    req.session.user = {
       id: usuario.id,
       usuario: usuario.usuario,
       rol: usuario.rol,
-    }; */
+    };
+    console.log('controlador: ',req.session.user);
     if (errors.isEmpty()) {
       let on = req.body.recordar;
       if (on) {
