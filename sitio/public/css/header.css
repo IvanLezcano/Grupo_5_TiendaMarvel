@@ -4,12 +4,38 @@ header{
     padding: 0 !important;
     box-sizing: border-box !important;
 }
+.dropdown-item{
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    font-size: 12px;
+    color: white;
+}  
+.dropdown-item:hover{
+    box-shadow: white 4px;
+     border: solid 1px white; 
+}
+.saludo{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-family: 'Ubuntu';
+    color: blue;
+     font-weight: 700;
+    
+}
+.centrarelavar{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
 
 
 @media (min-width: 319px){
     header nav{
         display: flex !important;
     }
+  
     header{
         border-bottom: 3px solid #262626;
         position: sticky;
@@ -17,7 +43,9 @@ header{
         z-index: 100;
     }
         
-
+    .separate{
+        margin-top: 10px;
+    }
 
 
     .busqueda{
@@ -70,8 +98,9 @@ header{
     }
 
     .avatar{
-        width:40px;
-        border-radius: 100%
+        width:35px;
+        height: 35px;
+        border-radius: 10%
     }
      @keyframes fantasma {
         0%{opacity: 0%}
@@ -85,14 +114,14 @@ header{
     }
 
     .fijo1{
-        width: 50px;
-        height: 60px;
+        width: 20px;
+        height: 30px;
         position: absolute;
         right: 35%;
         top:70%;
         background-image: url('/images/580b57fbd9996e24bc43c047.png');
         background-size: 100% 100%; 
-        animation: fantasma2 2s;
+        animation: fantasma2 1.5s;
         animation-iteration-count: initial;
         opacity: 0%;
 
@@ -100,19 +129,21 @@ header{
     
       
     .fijo2{
-        width: 50px;
-        height: 60px;
+
+        width: 20px;
+        height: 30px;
         position: absolute;
         left: 35%;
         top:70%;
         background-image: url('/images/580b57fbd9996e24bc43c05b.png');
         background-size: 100% 100%; 
-        animation: fantasma 2s;
+        animation: fantasma 1.5s;
         animation-iteration-count: initial;
         opacity: 0%;
 
     }
      
+<<<<<<< HEAD
     .dropdown-item{
         font-weight: 500;
     }  
@@ -125,6 +156,9 @@ header{
          font-weight: 700;
         
     }
+=======
+    
+>>>>>>> 1ea85650c340afbcffb210255cba15d35444adac
     
     .botonderegistrarse button{
         height: 20% !important;
@@ -175,9 +209,7 @@ header{
         border: none;
 
        }
-    .separate{
-        margin-top: 10px;
-    }
+  
       
     .botonderegistrarse .dropdown-menu{
         background-color:var(--color-header);
@@ -191,10 +223,6 @@ header{
 }
 
 @media (min-width: 550px){
-    .busqueda{
-       
-        height: 50vh;
-    }
      .botonderegistrarse{
          width: 20% !important;
     }
@@ -205,9 +233,18 @@ header{
     .saludo{
         font-size: 12px;
     }
+    .separate{
+        margin-top: 40px;
+    }
+
 }
 
 @media (min-width: 768px){
+    .avatar{
+        width:70px;
+        height: 60px;
+        border-radius: 30%;
+    }
 
      header{
         
@@ -398,6 +435,8 @@ header .botonderegistrarse a{
 
  .avatar{
         width:70px;
+        height: 60px;
+        border-radius: 30%;
  }
   .fijo1{
         width: 80px;
@@ -407,6 +446,7 @@ header .botonderegistrarse a{
         top:60%;
   }
    .fijo2{
+
         width: 80px;
         height: 100px;
         position: absolute;
@@ -443,5 +483,8 @@ display: flex !important;
 }
 .re{
     font-size: 2.4;
+}
+.separate{
+    margin-top: 40px;
 }
 }

@@ -125,8 +125,11 @@
    font-weight: 700;
    font-size: larger;
    text-shadow: 2px 2px gray;
+   color: white;
 }
-
+.tarjetaRelacionados{
+    border-radius: 5%;
+}
 
 /*===============TABLET================*/
 @media(min-width:768px) {

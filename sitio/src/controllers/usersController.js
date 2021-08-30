@@ -42,14 +42,14 @@ module.exports = {
         id: User.generarId(),
         ...req.body,
         password: bcryptjs.hashSync(req.body.password, 10),
-        imagenUsuario: req.file ? req.file.filename : "default-avatar.jpg", //uso el filename- nombre del archivo de imagen subido
+        imagenUsuario: req.file ? req.file.filename : req.body.usuario[0].toUpperCase()+".jpg", //uso el filename- nombre del archivo de imagen subido
         rol: "usuario",
       };
 
       usuariosDB.push(userToCreate);
       guardar(usuariosDB);
 
-      return res.redirect("/users/login");
+      return res.redirect("/");
     } else {
       if (req.file) {
         let imgABorrar = path.join(
@@ -72,11 +72,13 @@ module.exports = {
     let errors = validationResult(req);
     const { email, password } = req.body;
     let usuario = usuariosDB.find((usuario) => usuario.email === email);
-    req.session.user = usuario/* {
+    req.session.user = {
       id: usuario.id,
       usuario: usuario.usuario,
       rol: usuario.rol,
-    }; */
+      imagenUsuario: usuario.imagenUsuario
+    };
+    console.log('controlador: ',req.session.user);
     if (errors.isEmpty()) {
       let on = req.body.recordar;
       if (on) {

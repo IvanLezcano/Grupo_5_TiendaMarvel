@@ -50,6 +50,9 @@
     </form>
   </div>
   <% } %>
+
+  
+  <% if (!locals.user || locals.user.rol !== 'admin') { %>
   <div class="relacionados mt-5">
     <h4>Productos relacionados</h4>
     <hr>
@@ -57,9 +60,9 @@
       <div class="glider ">
         <% relacionados.forEach(producto => { %>
           <div class="card mb-3  p-5 cardGlider">
-          <div class="d-flex flex-column align-items-center  ">
+          <div class="d-flex flex-column align-items-center ">
             <a href="/productos/detail/<%= producto.id %> ">
-            <img class="w-100" src="/images/merchandinsing/<%= producto.imagen %>" alt=""></a>
+            <img class="w-100 tarjetaRelacionados" src="/images/merchandinsing/<%= producto.imagen %>" alt=""></a>
            
             <p class="mt-4"><%= producto.nombre %> </p>
       
@@ -73,6 +76,7 @@
       <div role="tablist" class="dots"></div>
     </div>
   </div>
+  <% } %>
     </main>
     
 

@@ -31,21 +31,23 @@
           
                          
 					<!-- COMO ESTA SETEADO EN FALSE EN EL MIDDLEWARE userLogged ME VA A MOSTRAR ESTO -->
-					<li class="nav-item dropdown" style="margin-top: 0px;">
-						<a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img class="avatar" src="/images/users/<%=locals.user.imagenUsuario %>"  >
+
+
+          <div class="centrando">
+					        <li class="nav-item dropdown " style="margin-top: 0px;">
+						          <a class="nav-link dropdown-toggle centrarelavar" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							        <img class="avatar" src="/images/users/<%=locals.user.imagenUsuario %>"  >
              
-              <div class="saludo"> Hola <%= locals.user.usuario %> </div>
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <div class="saludo"> Hola <%= locals.user.usuario %> </div>
+					                	</a>
+					                  	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               
 							<a class="dropdown-item " href="/users/perfil" >Mi perfil</a>
 							<li><hr class="dropdown-divider"></li>
 							<a class="dropdown-item" href="/users/logout">Cerrar sesion</a>
 						</ul>
 					</li>
-           
-          
+        </div>
 
             <% } else { %>   
             
@@ -79,10 +81,13 @@
                         </li>
                         <li class="nenes"> <a href="plays/kids"><button type="button" class="btn btn-secondary ">KIDS</button></a></li>
                         <li> <a href="/plays/quiz"><button type="button" class="btn btn-secondary">QUIZ</button></a> </li>
-                        <li> <a href="/users/registro"><button type="button" class="btn btn-secondary">REGISTRARSE</button></a>
-                        </li>
-                        <li> <a href="/users/login"><button type="button" class="btn btn-secondary">LOGUEARSE</button></a>
-                        </li>
+                        <% if (!locals.isLogged) { %>
+                          <li> <a href="/users/registro"><button type="button" class="btn btn-secondary">REGISTRARSE</button></a>
+                          </li>
+                          <li> <a href="/users/login"><button type="button" class="btn btn-secondary">LOGUEARSE</button></a>
+                          </li>
+                            
+                          <% } %>
                         <li> <a href="/nosotros"><button type="button" class="btn btn-secondary">NOSOTROS</button></a> </li>
                         <% if (locals.isLogged && locals.user.rol === 'admin') { %>
                           <li> <a href="/productos/carga"><button type="button" class="btn btn-secondary">CARGAR </button></a> </li>
