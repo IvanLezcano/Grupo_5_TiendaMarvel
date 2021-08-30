@@ -97,12 +97,7 @@ header{
         opacity: 0%;
 
     }
-    .fijo1:hover{
-      
-        opacity: 100%;
-
-    }
-
+    
       
     .fijo2{
         width: 50px;
@@ -117,12 +112,7 @@ header{
         opacity: 0%;
 
     }
-     .fijo2:hover{
-      
-        opacity: 100%;
-
-    }
-
+     
     .dropdown-item{
         font-weight: 500;
     }  
