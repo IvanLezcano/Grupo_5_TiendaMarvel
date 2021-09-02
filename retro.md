@@ -4,12 +4,20 @@
 
 # Grupo 5: [TiendaMarvel][website]
 
-Nuestro trabajo en el segundo sprint como equipo fue bastante interesante.
-
-decidimos que en nuestro esquema colocar en la parte de **dejar de hacer** el tema de posponer reuniones aunque sin dudas intentamos mantener al equipo en contacto ,asi como tambien **empezar a hacer** una division de tareas un poco mas equitativa, estuvimos tambien empezando a trabajar de manera mas comunicativa y eficiente
-
-**Seguimos** reforzando mucho el tema de las reuniones pero los horarios a veces nos cuestan y hay un gran espiritu de buena onda e iniciativa de los integrantes por avanzar en el momento que sea para poder hacer que el proyecto siga creciendo, tambien propusimos **empezar a hacer** un poco mas de incapie en mejorar varias de las funcionalidades de la pagina asi como aventurarnos a mejorar los diseños
-
+La comunicacion del grupo fue buena, nos comunicamos todo el tiempo
+en general mas alla de las complicaciones seguimos estando al tanto de los problemas , se ha comunicado y resuelto bien
+los canales de comunicacions fueron bastante utiles para la comunicacion sobre todo los grupos, aunque no hemos utilizado tanto zoom
+porque cada uno tiene sus ocupaciones y obligaciones.
+todos hemos comunicado nuestros problemas y logros al equipo, tambien hubo pedidos de ayuda de parte de algunos integrantes
+las decisiones las tomamos por whatssap en el transcurso del sprint, todos participamos, reuniones fijas no tenemos pero si 
+esporadicas y aprovechamos los espacios de reunion de las clases.
+el equipo se siente productivo y a pesar de los desbalances en el nivel de conocimientos logra resolver los problemas a tiempo y de manera eficiente.
+los pilares fundamentales son el compañerismo, el optimismo, se genera un clima en el equipo en el que es facil comunicarse y plantear dudas o problemas,
+adquirimos un grado de confianza en el trayecto.
+pudimos distribuir todas las tareas de manera equitativa, todos sabiamos como iba el progreso de las tareas asi como tambien
+pudimos adelantar trabajo en el sprint 4 para el sprint 5.
+el trello estuvo actualizado pero al desarrollarse el sprint el ritmo en el cual progresa no es acorde al ritmo de actualizacion de las 
+tareas
 
 esto es todo por ahora lector! espero que disfrute mucho las siguientes etapas! EXCELSIOR!!! 
 
