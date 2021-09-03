@@ -70,26 +70,32 @@ module.exports = {
   },
   processLogin: (req, res) => {
     let errors = validationResult(req);
-    const { email, password } = req.body;
+    const { email } = req.body;
+    
     let usuario = usuariosDB.find((usuario) => usuario.email === email);
-    req.session.user = {
-      id: usuario.id,
-      usuario: usuario.usuario,
-      rol: usuario.rol,
-      imagenUsuario: usuario.imagenUsuario
+    if(usuario){
+      req.session.user = {
+        id: usuario.id,
+        usuario: usuario.usuario,
+        rol: usuario.rol,
+        imagenUsuario: usuario.imagenUsuario
+      }
+      console.log(req.session.user);
     };
-    console.log('controlador: ',req.session.user);
+    console.log('error: ',errors.isEmpty());
     if (errors.isEmpty()) {
+      console.log('si esta vacio');
+  
+      return res.redirect("/");
+    } else {
+      console.log('no esta vacio');
       let on = req.body.recordar;
       if (on) {
         res.cookie("userEmail", req.body.email, { maxAge: 120000 });
       }
-      
-      return res.redirect("/");
-    } else {
       return res.render("login", {
         errores: errors.mapped(),
-      });
+      })
     }
   },
   logout: (req, res) => {
