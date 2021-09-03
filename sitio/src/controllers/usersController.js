@@ -70,8 +70,14 @@ module.exports = {
   },
   processLogin: (req, res) => {
     let errors = validationResult(req);
+   
     const { email, password } = req.body;
+    
     let usuario = usuariosDB.find((usuario) => usuario.email === email);
+    if(!usuario){
+      res.redirect("/users/login");
+      console.log()
+    }
     req.session.user = {
       id: usuario.id,
       usuario: usuario.usuario,
