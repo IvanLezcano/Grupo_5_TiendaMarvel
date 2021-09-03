@@ -43,5 +43,14 @@
   "email": "eze@gmail.com",
   "imagenUsuario": "E.jpg",
   "rol": "usuario"
+ },
+ {
+  "id": 6,
+  "usuario": "cristian",
+  "password": "$2a$10$jBNKrhnuRbdej98wz83nhuOXeYaZlrdNzmP5y6UcwEDXQf5tgmlPO",
+  "nombre": "cristian lell",
+  "email": "cristianlell9@gmail.com",
+  "imagenUsuario": "C.jpg",
+  "rol": "usuario"
  }
 ]
