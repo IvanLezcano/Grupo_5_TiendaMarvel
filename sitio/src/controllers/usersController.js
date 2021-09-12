@@ -77,6 +77,7 @@ module.exports = {
       req.session.user = {
         id: usuario.id,
         usuario: usuario.usuario,
+        email: usuario.email,
         rol: usuario.rol,
         imagenUsuario: usuario.imagenUsuario
       }
