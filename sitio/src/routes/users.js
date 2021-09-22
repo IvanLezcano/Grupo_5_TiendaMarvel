@@ -6,6 +6,7 @@ const validLogin = require('../validations/validLogin');
 const avatar = require('../middlewares/userMulter')
 const checkLogin = require('../middlewares/checkLogin');
 const perfilMiddleware = require('../middlewares/perfilMiddleware')
+const userMulter = require('../middlewares/userMulter')
 
 const {
  login,
@@ -13,8 +14,10 @@ const {
  procesarRegistro,
  processLogin,
  logout,
- perfil
+ perfil,
+ save
 } = require("../controllers/usersController");
+const updatePassword = require("../validations/updatePassword");
 
 
 
@@ -32,5 +35,6 @@ router.post(
   procesarRegistro
 );
 router.get("/perfil", perfilMiddleware, perfil);
+router.put("/save/:id",userMulter.single('avatar'),save);
 
 module.exports = router;
