@@ -15,6 +15,9 @@ for (let i = 0; i < 3; i++) {
   users.push(user)
   
 }
+
+
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
 
