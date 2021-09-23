@@ -1,5 +1,6 @@
 const { body, check } = require("express-validator");
 const path = require('path');
+const db = require('../database/models')
 
 
 
@@ -39,6 +40,20 @@ module.exports = [
     .bail()
     .isEmail()
     .withMessage("Tiene que tener formato de email"),
+
+    body('email')
+    .custom(value => {
+        console.log(value)
+        return db.User.findOne({
+            where : {
+                email : value
+            }
+        }).then(user => {
+            if(user){
+                return Promise.reject('El email ya está registrado')
+            }
+        })
+    }),
 
   body("imagenUsuario").custom((value, { req }) => {
     let file = req.file;

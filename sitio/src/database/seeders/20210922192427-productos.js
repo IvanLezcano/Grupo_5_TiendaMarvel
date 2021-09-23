@@ -11,7 +11,9 @@ productitos.forEach(producto => {
     price: producto.precio,
     image: producto.imagen,
     discount: producto.discount ? producto.discount : null ,
-    categoryId: producto.categoria
+    categoryId: producto.categoria,
+    createdAt: new Date,
+    updatedAt: new Date,
   }
   products.push(product)
 });

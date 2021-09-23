@@ -13,3 +13,5 @@ const storage = multer.diskStorage({
 const avatar = multer({ storage });
 
 module.exports = avatar;
+
+

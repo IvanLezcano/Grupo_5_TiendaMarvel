@@ -19,7 +19,7 @@ module.exports = {
         email:email.trim(),
         password : bcryptjs.hashSync(req.body.password,10),
         avatar: req.file ? req.file.filename : req.body.nameUser[0].toUpperCase()+".jpg",
-        rol:'admin'
+        rol:'usuario'
       }).then(user => {
         req.session.userLogin = {
             id : user.id,
@@ -62,7 +62,7 @@ module.exports = {
      if (on) {
       res.cookie("user", req.session.userLogin, { maxAge: 120000 });
     }
-      return res.redirect("/");
+      return res.redirect("/users/perfil");
     })
     }else {
       return res.render("login", {
@@ -76,14 +76,42 @@ module.exports = {
     res.clearCookie('user');
     res.redirect("/");
   },
-  perfil: (req, res)=>{
-    return res.render('perfil', {
-      user:req.session.userLogin
-    })
-  },
-  save : (req,res) => {
-     console.log(req.file);
-  res.send(req.body)
-   
+  perfil : (req,res) => {
+  res.render('profile',{
+    user:req.session.userLogin
+  })
 },
+  update : (req,res) => {
+ 
+    let resultadoValidacion = validationResult(req);
+    console.log(resultadoValidacion.mapped());
+    if(resultadoValidacion.isEmpty()){
+      console.log('las contraseñas coinciden');
+      const {name,password} = req.body;
+      db.User.update(
+          {
+              nameUser : name.trim(),
+              avatar: req.file ? req.file.filename : req.body.nameUser[0].toUpperCase()+".jpg",
+              password :  password != " " && bcryptjs.hashSync(password,10)
+          },
+          {
+              where : {
+                  id : req.session.userLogin.id
+              }
+          }).then( () => res.redirect('/'))
+    }else {
+      console.log('las contraseñas no coinciden controlador');
+      if(req.file){
+        let imgABorrar= path.join(__dirname, "../../public/images/users/"+req.file.filename)
+        fs.unlinkSync(imgABorrar) 
+        }
+      return res.render("profile", {
+        errors: resultadoValidacion.mapped(),
+        old: req.body,
+        user: req.session.userLogin
+      });
+    } 
+         
+  },
+  
 }
