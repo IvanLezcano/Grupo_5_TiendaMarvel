@@ -1,15 +1,14 @@
-const { usuarios } = require("../data/user_db");
 function userLog(req,res,next) {
     res.locals.isLogged = false
-    let emailFromCookie = req.cookies.userEmail;
-    let userCheckCookie = usuarios.find(user=> user.email === emailFromCookie)
-    if (userCheckCookie) {
-        req.session.user = userCheckCookie
-    }
-    
-    if (req.session.user) {
+    if(req.cookies.user){
         res.locals.isLogged= true;
-        res.locals.user = req.session.user
+        req.session.userLogin = req.cookies.user;
+        res.locals.userLogin = req.session.userLogin
+        next()
+    }else if (req.session.userLogin) {
+        res.locals.isLogged= true;
+        res.locals.userLogin = req.session.userLogin
+        next()
     }
     next()
 }

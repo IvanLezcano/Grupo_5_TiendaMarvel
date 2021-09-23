@@ -1,5 +1,5 @@
 function authMiddleware(req, res, next) {
-  if (!req.session.user) {
+  if (!req.session.userLogin) {
     //si no tengo a nadie en session
     return res.redirect("/users/login"); //lo redirijo a login
   }

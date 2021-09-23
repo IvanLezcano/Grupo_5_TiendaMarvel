@@ -4,7 +4,7 @@ const path = require('path');
 
 
 module.exports = [
-  check("usuario")
+  check("nameUser")
     .notEmpty()
     .withMessage("El nombre de Usuario es obligatorio")
     .bail()
@@ -23,9 +23,9 @@ module.exports = [
     })
     .withMessage("La contraseña debe tener como minimo 8 caracteres"),
 
-    check("nombre")
+    check("firstName")
     .notEmpty()
-    .withMessage("Debes colocar tu nombre y apellido")
+    .withMessage("Debes colocar tu nombre")
     .bail()
     .isLength({
       min: 2,
