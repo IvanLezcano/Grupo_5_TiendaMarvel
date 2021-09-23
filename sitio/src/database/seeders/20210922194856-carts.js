@@ -8,6 +8,8 @@ for (let i = 0; i < 5; i++) {
     userId: faker.random.number({min:1,max:3}),
     productId: faker.random.number({min:1,max:34}),
     orderId:faker.random.number({min:1,max:3}),
+    createdAt: new Date,
+    updatedAt: new Date,
   }
   carts.push(cart)
   

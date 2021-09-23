@@ -7,6 +7,8 @@ for (let i = 0; i < 3; i++) {
   let order = {
     status: estatus[i] ,
     userId: i+1,
+    createdAt: new Date,
+    updatedAt: new Date,
   }
   orders.push(order)
   
