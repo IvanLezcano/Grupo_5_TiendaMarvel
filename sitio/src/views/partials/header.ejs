@@ -36,9 +36,9 @@
           <div class="centrando">
 					        <li class="nav-item dropdown " style="margin-top: 0px;">
 						          <a class="nav-link dropdown-toggle centrarelavar" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							        <img class="avatar" src="/images/users/<%=locals.user.imagenUsuario %>"  >
+							        <img class="avatar" src="/images/users/<%=locals.userLogin.avatar %>"  >
              
-                   <div class="saludo"> Hola <%= locals.user.usuario %> </div>
+                   <div class="saludo"> Hola <%= locals.userLogin.name %> </div>
 					                	</a>
 					                  	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               
@@ -89,7 +89,7 @@
                             
                           <% } %>
                         <li> <a href="/nosotros"><button type="button" class="btn btn-secondary">NOSOTROS</button></a> </li>
-                        <% if (locals.isLogged && locals.user.rol === 'admin') { %>
+                        <% if (locals.isLogged && locals.userLogin.rol === 'admin') { %>
                           <li> <a href="/productos/carga"><button type="button" class="btn btn-secondary">CARGAR </button></a> </li>
                         <% } %>
                         
@@ -129,7 +129,7 @@
                         <li><a class="dropdown-item" href="/productos#MERCHANDISING">MERCHANDISING</a></li>
                         <li><a class="dropdown-item" href="/productos#COMICS">COMICS</a></li>
                         <li><a class="dropdown-item" href="/productos#FIGURAS">FIGURAS</a></li>
-                        <% if (locals.isLogged && locals.user.rol === 'admin') { %>
+                        <% if (locals.isLogged && locals.userLogin.rol === 'admin') { %>
                         <li> <a class="dropdown-item"  href="/productos/carga"> CARGAR </a> </li>
                         <% } %>
                     </ul>

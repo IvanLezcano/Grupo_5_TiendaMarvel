@@ -22,20 +22,14 @@
         </div>
       </section>
       <section class="registrarse">
-        <h4 class="cuenta-google">Crear Cuenta con <a href="#">Google</a></h4>
         <form action="" method="POST" class="inputs" enctype="multipart/form-data" novalidate>
           <div>
-            <input type="text" id="usuario"  name="usuario" placeholder="Nombre de usuario" value="<%=locals.old && old.usuario? old.usuario :null %>" />
+            <input type="text" id="usuario"  name="nameUser" placeholder="Nombre de usuario" value="<%=locals.old && old.usuario? old.usuario :null %>" />
             <span class="alerta"><%= locals.errors && errors.usuario ? errors.usuario.msg : null %></span>
           </div>
 
           <div>
-            <input type="password" id="contrasenia"  name="password" placeholder="Contraseña" />
-           <span class="alerta"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
-          </div>
-
-          <div>
-            <input type="text" id="nombre"  name="nombre" placeholder="Nombre y apellido" value="<%=locals.old && old.nombre? old.nombre :null %>" />
+            <input type="text" id="nombre"  name="firstName" placeholder="Nombre" value="<%=locals.old && old.nombre? old.nombre :null %>" />
            <span class="alerta"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %></span>
           </div>
           
@@ -43,12 +37,11 @@
             <input type="email" id="email"  name="email" placeholder="Email" value="<%=locals.old && old.email? old.email :null %>" />
            <span class="alerta"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
           </div>
-          <div>
-                <label for="imagen">Avatar</label>
-                <input type="file" name="imagenUsuario" id="imagenUsuario" value="<%=locals.old && old.imagenUsuario? old.imagenUsuario :null %>" />
-                  <span class="alerta"><%= locals.errors && errors.imagenUsuario ? errors.imagenUsuario.msg : null %></span>
-          </div>
 
+          <div>
+            <input type="password" id="contrasenia"  name="password" placeholder="Contraseña" />
+           <span class="alerta"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+          </div>
           <button type="submit" class="btn-registrarse">REGISTRARSE</button>
         </form>
         <h2 class="logueate">
