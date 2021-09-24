@@ -35,16 +35,18 @@ module.exports = {
   })
   },
   detail: (req, res) => {
+     
       db.Product.findOne({
         where: {
           id: req.params.id,
-        },
+        }/* ,
         include : [
-            {asocciation: 'category'}
-        ]
+            {asocciation:'category'}
+        ] */
       }).then(producto =>{
+        return res.send(producto)
           console.log(producto);
-          db.Category.findOne({
+         /*  db.Category.findOne({
               where: {
                   id: producto.categoryId,
                 include: [
@@ -54,12 +56,14 @@ module.exports = {
                 ]
               }
           }).then(category =>{
+            return res.send(category)
               return res.render("descripcion-producto", {
-                  producto,
-                  relacionados : category.products
+                
+                   producto,
+                  relacionados : category.products 
           })
       }).catch(error => console.log(error))
-
+ */
   })
 },
   carga: (req, res) => {
