@@ -1,0 +1,28 @@
+.perfil {
+    font-size: 1.6rem;
+}
+
+.perfil input{
+    margin: 0 !important;
+}
+.perfil .avatar-user{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px !important;
+    box-shadow: 1px 1px 10px rgb(121, 115, 115);
+}
+
+@media (min-width: 700px) {
+    .perfil .contenedor{
+        flex-direction: row !important;
+    }
+    .perfil .avatar-user{
+        width: 70%;
+        height: 50%;
+        border-radius: 10px !important;
+        box-shadow: 1px 1px 10px rgb(121, 115, 115);
+    }
+    .perfil .btn{
+        font-size: 1.6rem;
+    }
+}

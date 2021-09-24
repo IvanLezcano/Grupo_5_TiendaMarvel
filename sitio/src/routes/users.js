@@ -15,8 +15,10 @@ const {
  processLogin,
  logout,
  perfil,
+ modificar,
  update,
-
+ confirmacion,
+ destroy
 } = require("../controllers/usersController");
 
 
@@ -38,8 +40,6 @@ router.get("/login", checkLogin,login);
 router.post("/login",validLogin,processLogin);
 router.get("/logout", logout);
 router.get("/registro",checkLogin, registro);
-
-router.get("/registro", registro);
 router.post(
   "/registro",
   avatar.single("imagenUsuario"),
@@ -47,6 +47,9 @@ router.post(
   procesarRegistro
 );
 router.get("/perfil", perfilMiddleware, perfil);
+router.get("/modificar", perfilMiddleware, modificar);
 router.put('/update/:id', avatar.single('avatar'),validPass,update);
+router.get('/confirmar',perfilMiddleware,confirmacion);
+router.delete('/delete',validLogin,destroy);
 
 module.exports = router;
