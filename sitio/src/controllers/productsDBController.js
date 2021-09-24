@@ -5,7 +5,7 @@ const {Op}= require('sequelize')
 
 module.exports = {
  search: (req, res) => {
-   db.Product.finAll({
+   db.Product.findAll({
      where: {
        [Op.or]: [
          {
@@ -29,42 +29,44 @@ module.exports = {
   lista: (req, res) => {
       db.Category.findAll()
       .then(categorias =>{
+        
           return res.render("productos", {
               categorias
       }).catch(error => console.log(error))
   })
   },
   detail: (req, res) => {
-     
-      db.Product.findOne({
+       db.Product.findOne({
         where: {
           id: req.params.id,
-        }/* ,
-        include : [
-            {asocciation:'category'}
-        ] */
+        },
+      /*   include : [
+            {association:'category'}
+        ]  */
       }).then(producto =>{
-        return res.send(producto)
-          console.log(producto);
-         /*  db.Category.findOne({
+       
+        console.log(producto);
+         db.Category.findOne({
               where: {
                   id: producto.categoryId,
-                include: [
+                  include: [
                     {
-                     assotiation: 'products'
+                     association:'products'
                     }
-                ]
+                ]  
               }
           }).then(category =>{
-            return res.send(category)
+            return res.send(category) 
+            
               return res.render("descripcion-producto", {
                 
                    producto,
                   relacionados : category.products 
           })
       }).catch(error => console.log(error))
- */
-  })
+    }) 
+      
+    
 },
   carga: (req, res) => {
     db.Product.finAll().then((produto) => {
