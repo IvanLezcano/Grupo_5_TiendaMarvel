@@ -40,24 +40,21 @@ module.exports = {
         where: {
           id: req.params.id,
         },
-      /*   include : [
+        include : [
             {association:'category'}
-        ]  */
+        ]
       }).then(producto =>{
-       
         console.log(producto);
          db.Category.findOne({
               where: {
                   id: producto.categoryId,
-                  include: [
-                    {
-                     association:'products'
-                    }
+              },
+              include: [
+                  {
+                   association:'products'
+                  }
                 ]  
-              }
           }).then(category =>{
-            return res.send(category) 
-            
               return res.render("descripcion-producto", {
                 
                    producto,
