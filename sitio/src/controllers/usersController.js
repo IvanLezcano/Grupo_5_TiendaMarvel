@@ -77,9 +77,11 @@ module.exports = {
     res.redirect("/");
   },
   perfil : (req,res) => {
-  res.render('profile',{
-    user:req.session.userLogin
-  })
+db.User.findByPk(req.session.userLogin.id)
+.then(user=>req.session.userLogin = res.render('profile',{user}))
+},
+  modificar:(req,res)=>{
+    res.render('modificarPerfil',{user:req.session.userLogin})
 },
   update : (req,res) => {
  
@@ -91,27 +93,48 @@ module.exports = {
       db.User.update(
           {
               nameUser : name.trim(),
-              avatar: req.file ? req.file.filename : req.body.nameUser[0].toUpperCase()+".jpg",
+              avatar: req.file ? req.file.filename : req.body.name[0].toUpperCase()+".jpg",
               password :  password != " " && bcryptjs.hashSync(password,10)
           },
           {
               where : {
                   id : req.session.userLogin.id
               }
-          }).then( () => res.redirect('/'))
+          }).then( () => {
+            req.session.userLogin = {
+              id : req.session.userLogin.id,
+              name : req.body.name,
+              avatar:req.file ? req.file.filename : req.body.name[0].toUpperCase()+".jpg",
+              rol:req.session.userLogin.rol,
+              email:req.body.email,
+          
+            }
+          res.redirect('/users/perfil')})
     }else {
       console.log('las contraseñas no coinciden controlador');
       if(req.file){
         let imgABorrar= path.join(__dirname, "../../public/images/users/"+req.file.filename)
         fs.unlinkSync(imgABorrar) 
         }
-      return res.render("profile", {
-        errors: resultadoValidacion.mapped(),
+      return res.render("modificarPerfil", {
+        errores: resultadoValidacion.mapped(),
         old: req.body,
         user: req.session.userLogin
       });
     } 
          
   },
+  confirmacion:(req,res)=>{
+    res.render('confirm',{user:req.session.userLogin})
+  },
+  destroy:(req, res)=>{
+    db.User.destroy({
+      where: { id: req.session.userLogin.id }
+     }).then(()=>{ 
+      req.session.destroy();
+      res.clearCookie('user');
+       res.redirect('/')
+      })
+  }
   
 }

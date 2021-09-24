@@ -1,0 +1,35 @@
+<html>
+    <%- include('./partials/head') %>
+    <body>
+        
+        <%- include('./partials/header') %>
+        <div class="card">
+
+            <div class="row text-center flex-column contenedor">
+             
+                <div class="col-8 mx-auto mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Ingrese su contraseña para <span class="text-danger">Eliminar</span></h5>
+                        <div class="row" >
+                            <form action="/users/delete?_method=DELETE" method="post" class="">
+                                    <div class="text-center d-flex flex-column  align-items-center">
+                                        <label for="exampleInputEmail1" class="form-label h4">Contraseña</label>
+                                        <input type="password" class="form-control w-50" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" name="password">
+                                    </div>
+                                    <span class="text-danger small">
+                                        <%= locals.errores && locals.errores.password ? errores.password.msg :
+                                            null %>
+                                    </span>
+                                    <button type="submit" class="btn btn-danger my-3">Confirmar</button>
+                              </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+    </body>
+</html>
