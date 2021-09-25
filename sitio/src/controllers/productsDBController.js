@@ -4,67 +4,118 @@ const {Op}= require('sequelize')
 
 
 module.exports = {
- search: (req, res) => {
-   db.Product.findAll({
-     where: {
-       [Op.or]: [
-         {
-           title: {
-             [Op.substring]: req.query.search,
-           }
-         },
-         {
-           description: {
-             [Op.substring]: req.query.search,
-           }
-         }
-       ]
-     },
-   }).then(resultado => res.render("resultado", {
-      resultado,
-      busqueda: req.query.search,
-    })).catch(error =>console.log(error))
- },
+  search: (req, res) => {
+    db.Product.findAll({
+      where: {
+        [Op.or]: [
+          {
+            title: {
+              [Op.substring]: req.query.search,
+            },
+          },
+          {
+            description: {
+              [Op.substring]: req.query.search,
+            },
+          },
+        ],
+      },
+    })
+      .then((resultado) =>
+        res.render("resultado", {
+          resultado,
+          busqueda: req.query.search,
+        })
+      )
+      .catch((error) => console.log(error));
+  },
 
   lista: (req, res) => {
-      db.Category.findAll()
-      .then(categorias =>{
-        
-          return res.render("productos", {
-              categorias
-      }).catch(error => console.log(error))
-  })
+    db.Category.findAll().then((categorias) => {
+      return res.render("productos", {
+          categorias,
+        })
+        .catch((error) => console.log(error));
+    });
+  },
+  ropa: (req, res) => {
+    db.Product.findAll({
+      where: {
+        category: "Ropa",
+      },
+      include: [{ association: "category" }],
+    }).then((ropa) => {
+        return res.render("comics", {
+        ropa,
+      });
+    });
+  },
+  mercha: (req, res) => {
+    db.Product.findAll({
+      where: {
+        category: "Merchandising",
+      },
+      include: [{ association: "category" }],
+    }).then((mercha) => {
+      console.log(producto);
+      return res.render("mercha", {
+        mercha,
+      });
+    });
+  },
+  figura: (req, res) => {
+    db.Product.findAll({
+      where: {
+        category: "Figura",
+      },
+      include: [{ association: "category" }],
+    }).then((figura) => {
+      console.log(producto);
+      return res.render("figura", {
+        figura,
+      });
+    });
+  },
+  comics: (req, res) => {
+    db.Product.findAll({
+      where: {
+        category: "Comics",
+      },
+      include: [{ association: "category" }],
+    }).then((comics) => {
+      console.log(producto);
+      return res.render("comics", {
+        comics,
+      });
+    });
   },
   detail: (req, res) => {
-       db.Product.findOne({
+    db.Product.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [{ association: "category" }],
+    }).then((producto) => {
+      console.log(producto);
+      db.Category.findOne({
         where: {
-          id: req.params.id,
+          id: producto.categoryId,
         },
-        include : [
-            {association:'category'}
-        ]
-      }).then(producto =>{
-        console.log(producto);
-         db.Category.findOne({
-              where: {
-                  id: producto.categoryId,
-              },
-              include: [
-                  {
-                   association:'products'
-                  }
-                ]  
-          }).then(category =>{
-              return res.render("descripcion-producto", {
-                
-                   producto,
-                  relacionados : category.products 
-          })
-      }).catch(error => console.log(error))
-    }) 
-      
-    
-},
+        include: [
+          {
+            association: "products",
+          },
+        ],
+      })
+        .then((category) => {
+          return res.render("descripcion-producto", {
+            producto,
+            relacionados: category.products,
+          });
+        })
+        .catch((error) => console.log(error));
+    });
+  },
   carga: (req, res) => {
     db.Product.finAll().then((produto) => {
       return res.render("cargadeproducto", { category, cart });
@@ -81,7 +132,6 @@ module.exports = {
           return res.redirect("/productos");
         })
         .catch((error) => console.log(error));
-
     } else {
       if (req.file) {
         let imgABorrar = path.join(
@@ -90,13 +140,14 @@ module.exports = {
         );
         fs.unlinkSync(imgABorrar);
       }
-      db.Category.finAll()
-      return res.render("cargadeproducto", {
+      db.Category.finAll();
+      return res
+        .render("cargadeproducto", {
           categorias,
           errores: errors.mapped(),
           old: req.body,
         })
-       .catch((error) => console.log(error));
+        .catch((error) => console.log(error));
     }
   },
   modificar: (req, res) => {
@@ -161,5 +212,5 @@ module.exports = {
     guardar(productoparavista);
     res.redirect("/");
   },
-}
+};
 
