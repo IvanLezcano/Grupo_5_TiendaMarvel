@@ -41,11 +41,11 @@ module.exports = {
   ropa: (req, res) => {
     db.Product.findAll({
       where: {
-        category: "Ropa",
+        categoryId: "1",
       },
       include: [{ association: "category" }],
     }).then((ropa) => {
-        return res.render("comics", {
+        return res.render("ropa", {
         ropa,
       });
     });
@@ -53,7 +53,7 @@ module.exports = {
   mercha: (req, res) => {
     db.Product.findAll({
       where: {
-        category: "Merchandising",
+        categoryId: "2",
       },
       include: [{ association: "category" }],
     }).then((mercha) => {
@@ -66,7 +66,7 @@ module.exports = {
   figura: (req, res) => {
     db.Product.findAll({
       where: {
-        category: "Figura",
+        categoryId: "4",
       },
       include: [{ association: "category" }],
     }).then((figura) => {
@@ -79,7 +79,7 @@ module.exports = {
   comics: (req, res) => {
     db.Product.findAll({
       where: {
-        category: "Comics",
+        categoryId: "3",
       },
       include: [{ association: "category" }],
     }).then((comics) => {
