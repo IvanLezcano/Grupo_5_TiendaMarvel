@@ -2,14 +2,35 @@ const fs = require('fs')
 const path = require("path");
 let producto = path.join(__dirname,'../data/producto.json')
 let productoparavista = JSON.parse(fs.readFileSync(producto, "utf-8"));
-
-
+const db = require('../database/models')
+const {Op}= require('sequelize')
 
 module.exports = {
   index: (req, res) => {
-    console.log('controlador index: ',req.session.userLogin);
-    return res.render("index",{productoparavista, ofertas : productoparavista.filter(producto => producto.estado === "oferta")}
-    )},
+    let category = db.Category.findAll({
+      include:[
+        {association:'products'}
+      ]
+    });
+    let productsDiscount = db.Product.findAll({
+      where:{
+        discount : {[Op.is]: !null,}
+      },
+      include:[
+        {association:'category'}
+      ]
+    })
+    Promise.all([category, productsDiscount])
+    .then((response,) =>
+     res.render('index',{
+       category : response[0],
+       productsDiscount : response[1],
+       productoparavista,
+       ofertas:productoparavista
+     })
+    )
+
+  },
     detail : (req,res) => {
       let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
       console.log(productofinal)

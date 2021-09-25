@@ -1,7 +1,7 @@
 @import url("./general.css");
 
 .registro-body {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   background-color: var(--color-oxfordBlue);
   color: white;
   display: flex;
@@ -11,6 +11,9 @@
 }
 .registro-body .titulo {
   margin-bottom: 1rem;
+}
+.registro-body .subtitulo {
+  font-size: 1.4rem !important;
 }
 .registro {
   font-family: "Ubuntu", sans-serif;
@@ -29,6 +32,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: left;
+  margin-bottom: 1.5rem;
 }
 
 /* === logo === */
@@ -65,8 +69,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh; 
-  margin-top: 4rem;
+  max-width: 30rem;
 }
 
 /* === cuenta-google === */
@@ -88,7 +91,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 70%;
+  max-width: 16rem;
 }
 .registro .inputs div {
   margin-bottom: 1rem;
@@ -159,7 +162,7 @@
     width: 50%;
   }
   .intento img{
-    width: 100% !important;
+    width: 17rem !important;
     margin-left: -4rem;
 
   }
@@ -172,9 +175,9 @@
   }
 
   .registro {
-    margin: auto;
+    margin: 10rem auto;
     border-radius: 20px;
-    height: 80%;
+
     max-width: 60vw;
     flex-direction: row;
     justify-content: space-between;
@@ -218,7 +221,7 @@
   }
 
   .registro .logo-info .info .p-margin-top p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   /* ===== registrarse ===== */
@@ -226,7 +229,7 @@
   .registro .registrarse {
     margin: 0;
     padding: 0;
-    width: 56%;
+    width: 85%;
     height: 100%;
     justify-content: space-around;
   }
@@ -241,25 +244,22 @@
 
   /* ===== inputs ===== */
   .registro .inputs {
-    width: 65%;
-    height: 70%;
+  
+    margin: 1rem;
     justify-content: space-between;
   }
-  .registro .inputs div {
+ .registro .inputs div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
-    height: 20%;
-    margin: 0;
-  }
+
+  } 
 
   .registro .inputs input {
     width: 100%;
-    margin: 0;
-    height: 40%;
-    padding: 6px;
+    margin: 0 !important;
+    font-size: 1rem;
   }
 
   /* ===== label ===== */
@@ -272,9 +272,10 @@
 
   /* ===== span ===== */
   .registro .inputs div span {
-    height: 20%;
     margin: 0;
     font-size: 1rem;
+    height: 2rem;
+    width: 16rem;
   }
 #imagenUsuario{
   font-size: 7px !important;

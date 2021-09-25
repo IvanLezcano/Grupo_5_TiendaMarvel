@@ -7,7 +7,7 @@ const db = require('../database/models')
 module.exports = [
   check("nameUser")
     .notEmpty()
-    .withMessage("El nombre de Usuario es obligatorio")
+    .withMessage("El Campo es obligatorio")
     .bail()
     .isLength({
       min: 2,

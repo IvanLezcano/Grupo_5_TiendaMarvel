@@ -3,34 +3,36 @@
 <%- include('./partials/head') %>
 
   <body class="registro-body">
-    <h1 class="titulo">Registro</h1>
+    <div>
+    <h1 class="titulo">Sumate a nuestra comunidad para poder disfrutar nuestros beneficios</h1>
+    <div class="p-margin-top container subtitulo">
+      <p>Comprar en nuestro sitio,
+      Enterarte novedades,
+      Sorteos y Descuentos Exclusivos
+      y más...</p>
+    </div>
+  </div>
+
     <main class="registro">
       <section class="logo-info">
         <div class="intento"><a href="/users/login">
           <img src="/images/torre.png" alt="logo-torre" /></a>
         </div>
-        <div class="info">
-          <h4>
-            Sumate a nuestra comunidad para poder disfrutar nuestros beneficios
-            </h6>
-            <div class="p-margin-top">
-              <p>Comprar en nuestro sitio</p>
-              <p>Enterarte novedades</p>
-              <p>Sorteos y Descuentos Exclusivos</p>
-              <p>y más...</p>
-            </div>
         </div>
       </section>
       <section class="registrarse">
         <form action="" method="POST" class="inputs" enctype="multipart/form-data" novalidate>
-          <div>
-            <input type="text" id="usuario"  name="nameUser" placeholder="Nombre de usuario" value="<%=locals.old && old.usuario? old.usuario :null %>" />
-            <span class="alerta"><%= locals.errors && errors.usuario ? errors.usuario.msg : null %></span>
+          
+          <div class="container">
+            
+          <div >
+            <input type="text" id="usuario"  name="nameUser" placeholder="Nombre de usuario" value="<%=locals.old && old.nameUser? old.nameUser :null %>" />
+            <span class="alerta"><%= locals.errors && errors.nameUser ? errors.nameUser.msg : null %></span>
           </div>
 
           <div>
-            <input type="text" id="nombre"  name="firstName" placeholder="Nombre" value="<%=locals.old && old.nombre? old.nombre :null %>" />
-           <span class="alerta"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %></span>
+            <input type="text" id="nombre"  name="firstName" placeholder="Nombre" value="<%=locals.old && old.firstName? old.firstName :null %>" />
+           <span class="alerta"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></span>
           </div>
           
           <div>
@@ -42,6 +44,7 @@
             <input type="password" id="contrasenia"  name="password" placeholder="Contraseña" />
            <span class="alerta"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
           </div>
+        </div>
           <button type="submit" class="btn-registrarse">REGISTRARSE</button>
         </form>
         <h2 class="logueate">
