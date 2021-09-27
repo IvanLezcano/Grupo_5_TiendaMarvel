@@ -23,10 +23,10 @@
               <article class="cadacategoria zoom">
                 <img src="../images/merchandising/<%=categoria.products[0].image%>" alt="">
                 <div class="titulocategoria">
-                  <h3><%= categoria.name %> </h3>
+                  <h3><%= categoria.title %> </h3>
                   <P>Todo lo que buscas a un click</P>
                   <div class="vermas">
-                    <a href="/productos#<%= categoria.name %>">
+                    <a href="/productos#<%= categoria.title %>">
                       <h4>ver mas</h4>
                     </a>
                   </div>
@@ -50,7 +50,7 @@
                    
                   <a href="/productos/detail/<%= products[index].id %>"><img src="/images/merchandising/<%=products[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= products[index].name %> </h3>
+                    <h3><%= products[index].title %> </h3>
                     <P><%= products[index].description %></P>
                   </div>
   
@@ -70,7 +70,7 @@
                    
                   <a href="/productos/detail/<%= products[index].id %>"><img src="/images/merchandising/<%=products[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= products[index].name %> </h3>
+                    <h3><%= products[index].title %> </h3>
                     <P><%= products[index].description %></P>
                   </div>
   
@@ -101,9 +101,9 @@
     
               <% productsDiscount.forEach(product => { %>
                 <article class="cadadestacado col-3">
-                  <a href="/productos/detail/<%= product.id %>"><img src="/images/merchandising/<%=product.image%>" alt="<%= product.name %> "></a>
+                  <a href="/productos/detail/<%= product.id %>"><img src="/images/merchandising/<%=product.image%>" alt="<%= product.title %> "></a>
                   <div class="titulodestacado">
-                    <h3><%= product.name %> </h3>
+                    <h3><%= product.title %> </h3>
                     <P><%= product.discount %>% de descuento</P>
                   </div>
     
