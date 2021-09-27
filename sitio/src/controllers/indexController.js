@@ -8,44 +8,60 @@ const {Op}= require('sequelize')
 module.exports = {
   index: (req, res) => {
     let category = db.Category.findAll({
-      include:[
-        {association:'products'}
-      ]
+      include: [{ association: "products" }],
     });
     let productsDiscount = db.Product.findAll({
-      where:{
-        discount : {[Op.is]: !null,}
+      where: {
+        discount: { [Op.is]: !null },
       },
-      include:[
-        {association:'category'}
-      ]
-    })
-    Promise.all([category, productsDiscount])
-    .then((response,) =>
-     res.render('index',{
-       category : response[0],
-       productsDiscount : response[1],
-       productoparavista,
-       ofertas:productoparavista
-     })
-    )
-
-  },
-    detail : (req,res) => {
-      let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
-      console.log(productofinal)
-      return res.render('descripcion-producto',{
-        productofinal,productoparavista,
-         relacionados: productoparavista.filter(item => item.categoria === productofinal.categoria)
+      include: [{ association: "category" }],
+    });
+    Promise.all([category, productsDiscount]).then((response) =>
+      res.render("index", {
+        category: response[0],
+        productsDiscount: response[1],
+        productoparavista,
+        ofertas: productoparavista,
       })
+    );
   },
-  carrito : (req,res) => {
-     
-    let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
-    console.log(productofinal)
-    return res.render('carrito',{
-      productofinal,productoparavista,productosdelcarrito
-    })
+  detail: (req, res) => {
+    db.Product.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [{ association: "category" }],
+    }).then((producto) => {
+      console.log(producto);
+      db.Category.findOne({
+        where: {
+          id: producto.categoryId,
+        },
+        include: [
+          {
+            association: "products",
+          },
+        ],
+      })
+        .then((category) => {
+          return res.render("descripcion-producto", {
+            producto,
+            relacionados: category.products,
+          });
+        })
+        .catch((error) => console.log(error));
+    });
+  },
+  carrito: (req, res) => {
+    let productofinal = productoparavista.find(
+      (producto) => producto.id === +req.params.id
+    );
+    console.log(productofinal);
+    return res.render("carrito", {
+      productofinal,
+      productoparavista,
+      productosdelcarrito,
+    });
   },
   contactos: (req, res) => {
     return res.render("contactos");
@@ -55,5 +71,5 @@ module.exports = {
   },
   novedades: (req, res) => {
     return res.render("novedades");
-  }
-}
+  },
+};

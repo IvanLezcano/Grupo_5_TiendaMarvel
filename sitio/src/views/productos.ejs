@@ -24,7 +24,7 @@
 
             <section class="categorias">
               <article class="cadacategoria zoom">
-                <img src="../images/merchandinsing/comic2.png" alt="">
+                <img src="../images/merchandising/comic2.png" alt="">
                 <div class="titulocategoria">
                   <h3>COMICS</h3>
                   <P>Emocion en viñetas</P>
@@ -37,7 +37,7 @@
 
               </article>
               <article class="cadacategoria zoom">
-                <img src="../images/merchandinsing/figura7.jpg" alt="">
+                <img src="../images/merchandising/figura7.jpg" alt="">
                 <div class="titulocategoria">
                   <h3>FIGURAS</h3>
                   <P>Emocion en viñetas</P>
@@ -50,7 +50,7 @@
 
               </article>
               <article class="cadacategoria zoom">
-                <img src="../images/merchandinsing/Mochila.jpeg" alt="">
+                <img src="../images/merchandising/Mochila.jpeg" alt="">
                 <div class="titulocategoria">
                   <h3>MERCHANDISING</h3>
                   <P>Emocion en viñetas</P>
@@ -81,10 +81,10 @@
                
              
               <article class="cadadestacado">
-                <a href="/productos/detail/<%= figura[index].id %>"><img src="/images/merchandinsing/<%=figura[index].imagen%> " alt=""></a>
+                <a href="/productos/detail/<%= figuras[0].products[index].id %>"><img src="/images/merchandising/<%=figuras[0].products[index].image%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3><%= figura[index].nombre %> </h3>
-                  <P><%= figura[index].descripcion %></P>
+                  <h3><%= figuras[0].products[index].title%> </h3>
+                  <P><%= figuras[0].products[index].description %></P>
                 </div>
 
               </article>
@@ -98,10 +98,10 @@
                
              
                 <article class="cadadestacado">
-                  <a href="/productos/detail/<%= figura[index].id %> "><img src="/images/merchandinsing/<%=figura[index].imagen%> " alt=""></a>
+                  <a href="/productos/detail/<%= figuras[0].products[index].id %> "><img src="/images/merchandising/<%=figuras[0].products[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= figura[index].nombre %> </h3>
-                    <P><%= figura[index].descripcion %></P>
+                    <h3><%= figuras[0].products[index].title%> </h3>
+                    <P><%= figuras[0].products[index].description %></P>
                   </div>
   
                 </article>
@@ -133,10 +133,10 @@
                
              
               <article class="cadadestacado">
-                <a href="/productos/detail/<%= ropa[index].id %> "><img src="/images/merchandinsing/<%=ropa[index].imagen%> " alt=""></a>
+                <a href="/productos/detail/<%= ropa[0].products[index].id %> "><img src="/images/merchandising/<%=ropa[0].products[index].image%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3><%= ropa[index].nombre %> </h3>
-                  <P><%= ropa[index].descripcion %></P>
+                  <h3><%= ropa[0].products[index].title%> </h3>
+                  <P><%= ropa[0].products[index].description %></P>
                 </div>
 
               </article>
@@ -150,10 +150,10 @@
                
              
                 <article class="cadadestacado">
-                  <a href="/productos/detail/<%= ropa[index].id %> "><img src="/images/merchandinsing/<%=ropa[index].imagen%> " alt=""></a>
+                  <a href="/productos/detail/<%= ropa[0].products[index].id %> "><img src="/images/merchandising/<%=ropa[0].products[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= ropa[index].nombre %> </h3>
-                    <P><%= ropa[index].descripcion %></P>
+                    <h3><%= ropa[0].products[index].title%> </h3>
+                    <P><%= ropa[0].products[index].description %></P>
                   </div>
   
                 </article>
@@ -185,10 +185,10 @@
                
              
               <article class="cadadestacado">
-                <a href="/productos/detail/<%= comics[index].id %> "><img src="/images/merchandinsing/<%=comics[index].imagen%> " alt=""></a>
+                <a href="/productos/detail/<%= comics[0].products[index].id %> "><img src="/images/merchandising/<%=comics[0].products[index].image%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3><%= comics[index].nombre %> </h3>
-                  <P><%= comics[index].descripcion %></P>
+                  <h3><%= comics[0].products[index].title%> </h3>
+                  <P><%= comics[0].products[index].description %></P>
                 </div>
 
               </article>
@@ -202,10 +202,10 @@
                
              
                 <article class="cadadestacado">
-                  <a href="/productos/detail/<%= comics[index].id %> "><img src="/images/merchandinsing/<%=comics[index].imagen%> " alt=""></a>
+                  <a href="/productos/detail/<%= comics[0].products[index].id %> "><img src="/images/merchandising/<%=comics[0].products[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= comics[index].nombre %> </h3>
-                    <P><%= comics[index].descripcion %></P>
+                    <h3><%= comics[0].products[index].title%> </h3>
+                    <P><%= comics[0].products[index].description %></P>
                   </div>
   
                 </article>
@@ -238,10 +238,10 @@
                
              
               <article class="cadadestacado">
-                <a href="/productos/detail/<%= mercha[index].id %> "><img src="/images/merchandinsing/<%=mercha[index].imagen%> " alt=""></a>
+                <a href="/productos/detail/<%= mercha[0].products[index].id %> "><img src="/images/merchandising/<%=mercha[0].products[index].image%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3><%= mercha[index].nombre %> </h3>
-                  <P><%= mercha[index].descripcion %></P>
+                  <h3><%= mercha[0].products[index].title%> </h3>
+                  <P><%= mercha[0].products[index].description %></P>
                 </div>
 
               </article>
@@ -255,10 +255,10 @@
                
              
                 <article class="cadadestacado">
-                  <a href="/productos/detail/<%= mercha[index].id %> "><img src="/images/merchandinsing/<%=mercha[index].imagen%> " alt=""></a>
+                  <a href="/productos/detail/<%= mercha[0].products[index].id %> "><img src="/images/merchandising/<%=mercha[0].products[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= mercha[index].nombre %> </h3>
-                    <P><%= mercha[index].descripcion %></P>
+                    <h3><%= mercha[0].products[index].title%> </h3>
+                    <P><%= mercha[0].products[index].description %></P>
                   </div>
   
                 </article>
