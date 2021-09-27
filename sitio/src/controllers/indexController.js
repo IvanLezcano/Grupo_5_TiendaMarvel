@@ -20,25 +20,31 @@ module.exports = {
         {association:'category'}
       ]
     })
-    Promise.all([category, productsDiscount])
-    .then((response,) =>
+    let products = db.Product.findAll({
+      include:[
+        {association:'category'}
+      ]
+    })
+
+    Promise.all([category, productsDiscount,products])
+    .then((response,) =>{
+     response[0].length = response[0].length - 1
      res.render('index',{
+
        category : response[0],
+       
        productsDiscount : response[1],
-       productoparavista,
+       products:response[2],
        ofertas:productoparavista
      })
-    )
+    })
 
   },
     detail : (req,res) => {
-      let productofinal = productoparavista.find(producto => producto.id === +req.params.id);
-      console.log(productofinal)
-      return res.render('descripcion-producto',{
-        productofinal,productoparavista,
-         relacionados: productoparavista.filter(item => item.categoria === productofinal.categoria)
-      })
-  },
+      
+      db.Product.findByPk(req.params.id,{include:[{association:"category"}]}).then(producto => 
+      res.render('descripcion-producto',{producto}))
+      },
   carrito : (req,res) => {
      
     let productofinal = productoparavista.find(producto => producto.id === +req.params.id);

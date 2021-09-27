@@ -8,7 +8,7 @@
     <main class="descripcion-producto">
       <article class="producto-article">
         <div class="producto-article-imagen">
-          <p>inicio>Marvel>Spiderman><%= producto.title %></p>
+          <p>inicio>Marvel>Spiderman><%= producto.name %></p>
           <img src="/images/merchandising/<%= producto.image %>" />
         </div>
         <div class="producto-article-cont-descripcion">
@@ -39,7 +39,7 @@
       <div class="producto-article-cont-descripcion-comprar-imagen">
         <img class="metodos" src="/images/tarjetas.PNG" />
       </div>
-      <% if (locals.isLogged && locals.user.rol === 'admin') { %>
+      <% if (locals.isLogged && locals.userLogin.rol === 'admin') { %>
       <div class = "modificadores">
       <form  id= "jajatecache"action="/productos/borrar/<%= producto.id %>?_method=DELETE" class = "jajatecache"method="POST">
         <button type="submit" onclick="confirmacion(event,document.querySelector('#jajatecache'))" class="btn btn-danger ms-2 laAlerta">Eliminar</button>
@@ -52,7 +52,7 @@
   <% } %>
 
   
-  <% if (!locals.user || locals.user.rol !== 'admin') { %>
+  <% if (!locals.userLogin || locals.userLogin.rol !== 'admin') { %>
   <div class="relacionados mt-5">
     <h4>Productos relacionados</h4>
     <hr>

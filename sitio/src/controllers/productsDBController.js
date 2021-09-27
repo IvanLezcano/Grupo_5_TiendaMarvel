@@ -27,13 +27,8 @@ module.exports = {
  },
 
   lista: (req, res) => {
-      db.Category.findAll()
-      .then(categorias =>{
-        
-          return res.render("productos", {
-              categorias
-      }).catch(error => console.log(error))
-  })
+    db.Category.findAll({include : [{association : "products"}]}).then(categorias => res.render("productos",{categorias}))
+
   },
   detail: (req, res) => {
        db.Product.findOne({
@@ -65,6 +60,19 @@ module.exports = {
       
     
 },
+ropa:(req,res) =>{db.Category.findOne({where:{name:"ropa"},include:[{association:"products"}]}).then(ropa => res.render("ropa",{ropa}))}
+
+,
+mercha:(req,res) =>{db.Category.findOne({where:{name:"merchandising"},include:[{association:"products"}]}).then(mercha => res.render("mercha",{mercha}))}
+
+,
+comics:(req,res) =>{db.Category.findOne({where:{name:"comics"},include:[{association:"products"}]}).then(comics => res.render("comics",{comics}))}
+
+,
+figura:(req,res) =>{db.Category.findOne({where:{name:"figuras"},include:[{association:"products"}]}).then(figura => res.render("figura",{figura}))}
+
+,
+
   carga: (req, res) => {
     db.Product.finAll().then((produto) => {
       return res.render("cargadeproducto", { category, cart });
