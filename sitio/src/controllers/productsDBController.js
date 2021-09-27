@@ -61,8 +61,8 @@ module.exports = {
         categoryId: "4",
       },
     }).then((figura) => {
-      return res
-        .render("figura", {
+     /*  return res.send(figura) */
+      return res.render("figura", {
           figura,
         })
         .catch((error) => console.log(error));
@@ -83,7 +83,20 @@ module.exports = {
   },
 
   lista: (req, res) => {
-  let ropa = db.Category.findAll({
+    db.Category.findAll({
+      include: [
+        {
+          association: "products",
+        },
+      ],
+    })
+      .then((categorias) =>
+         res.render("productos", {
+          categorias
+        })
+      ) 
+
+      /* let ropa = db.Category.findAll({
     where: {
       id: '1'
     },
@@ -126,15 +139,15 @@ module.exports = {
   
   Promise.all([ropa, mercha, comics, figuras])
     .then(([ropa, mercha, comics, figuras]) =>
-      /* res.send(ropa[0].products[1]) ) */
+    
       res.render("productos", {
         ropa,
         mercha,
         comics,
         figuras,
       }) 
-    ) 
-    .catch((error) => console.log(error));
+    )  */
+      .catch((error) => console.log(error));
       
   },
 

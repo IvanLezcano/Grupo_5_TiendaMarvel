@@ -48,10 +48,10 @@
              
                 <article class="cadadestacado">
                    
-                  <a href="/productos/detail/<%= products[index].id %>"><img src="/images/merchandising/<%=products[index].image%> " alt=""></a>
+                  <a href="/productos/detail/<%= product[index].id %>"><img src="/images/merchandising/<%=product[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= products[index].name %> </h3>
-                    <P><%= products[index].description %></P>
+                    <h3><%= product[index].name %> </h3>
+                    <P><%= product[index].description %></P>
                   </div>
   
                 </article>
@@ -68,10 +68,10 @@
              
                 <article class="cadadestacado">
                    
-                  <a href="/productos/detail/<%= products[index].id %>"><img src="/images/merchandising/<%=products[index].image%> " alt=""></a>
+                  <a href="/productos/detail/<%=product[index].id %>"><img src="/images/merchandising/<%=product[index].image%> " alt=""></a>
                   <div class="titulodestacado">
-                    <h3><%= products[index].name %> </h3>
-                    <P><%= products[index].description %></P>
+                    <h3><%=product[index].name %> </h3>
+                    <P><%=product[index].description %></P>
                   </div>
   
                 </article>
@@ -99,7 +99,7 @@
             
 
     
-              <% productsDiscount.forEach(product => { %>
+              <% productsDiscount.forEach(producto => { %>
                 <article class="cadadestacado col-3">
                   <a href="/productos/detail/<%= product.id %>"><img src="/images/merchandising/<%=product.image%>" alt="<%= product.name %> "></a>
                   <div class="titulodestacado">
