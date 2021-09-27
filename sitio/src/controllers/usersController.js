@@ -19,7 +19,7 @@ module.exports = {
         email:email.trim(),
         password : bcryptjs.hashSync(req.body.password,10),
         avatar: req.file ? req.file.filename : req.body.nameUser[0].toUpperCase()+".jpg",
-        rol:'admin'
+        rol:'usuario'
       }).then(user => {
         req.session.userLogin = {
             id : user.id,

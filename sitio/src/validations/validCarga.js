@@ -4,7 +4,7 @@ const path = require('path');
 
 
 module.exports = [
-  check("nombre")
+  check("title")
   .notEmpty().withMessage("El nombre es obligatorio").bail()
   .isLength({
       min: 2,
@@ -12,7 +12,7 @@ module.exports = [
     }).withMessage("El nombre tiene que tener como mínimo 2 caracteres"),
     
 
-   body("imagen").custom((value, { req }) => {
+   body("image").custom((value, { req }) => {
     let file = req.file;
 
     let extensiones = [".jpg", ".png", ".img"];
@@ -27,15 +27,14 @@ module.exports = [
     } return true;
   }), 
  
-  check("precio")
+  check("price")
   .notEmpty().withMessage("Debes completar el precio"),
 
-  check("marca")
-  .notEmpty().withMessage("Debes indicar la marca"),
 
-  check("descripcion")
+
+  check("description")
     .notEmpty()
     .withMessage("Debes completar la descripción del producto"),
 
-  check("categoria").notEmpty().withMessage("Debes elegir la categoria"),
+  check("categoryId").notEmpty().withMessage("Debes elegir la categoria"),
 ];

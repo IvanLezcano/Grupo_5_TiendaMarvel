@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const path = require('path')
 
-const { search,borrar, /* carrito */ lista, carga, modificar ,ropa,mercha,figura,comics,detail,update,create} = require("../controllers/productsDBController");
+const { search,borrar, /* carrito */ lista, carga, modificar ,ropa,mercha,figura,comics,/* ropa,mercha,figura,comics */detail,update,create} = require("../controllers/productsDBController");
 let validarModificar = require('../validations/validModificar')
 let validarCarga = require('../validations/validCarga')
 let upload = require('../middlewares/multer')
@@ -18,10 +18,10 @@ router.get("/", lista);
 
 
 router.get("/carga",checkAdmin, carga);
-router.post("/carga", upload.single("imagen"), validarCarga, create);
+router.post("/carga", upload.single("image"), validarCarga, create);
 router.get("/modificar/:id",checkAdmin,modificar);
-router.put("/modificar/:id",upload.single('imagen'),validarModificar,update);
-router.get("/ropa", ropa);
+router.put("/modificar/:id",upload.single('image'),validarModificar,update);
+ router.get("/ropa", ropa);
 router.get("/merchandising", mercha);
 router.get("/comics", comics);
 router.get("/figuras", figura);
