@@ -27,7 +27,7 @@ router.get("/comics", comics);
 router.get("/figuras", figura);
 router.get("/detail/:id", detail);
 router.delete('/borrar/:id',borrar);
-/* router.get("/carrito/:id", carrito); */
+ /*router.get("/carrito/:id", carrito);*/ 
 router.get('/search',search);
 
 

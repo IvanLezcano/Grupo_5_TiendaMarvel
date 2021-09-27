@@ -93,6 +93,9 @@
   text-align: center;
   max-width: 16rem;
 }
+.registro .inputs input{
+  margin: 0 !important;
+}
 .registro .inputs div {
   margin-bottom: 1rem;
 }
