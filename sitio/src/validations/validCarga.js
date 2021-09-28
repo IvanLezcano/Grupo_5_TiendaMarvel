@@ -28,8 +28,11 @@ module.exports = [
   }), 
  
   check("price")
-  .notEmpty().withMessage("Debes completar el precio"),
+  .notEmpty().withMessage("Debes completar el precio")
+  .isNumeric().withMessage("Debe ser un número"),
 
+  check("discount")
+  .isNumeric().withMessage("Debe ser un número"),
 
 
   check("description")

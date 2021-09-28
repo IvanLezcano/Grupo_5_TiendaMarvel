@@ -110,66 +110,84 @@ figura:(req,res) =>{db.Category.findOne({where:{name:"figuras"},include:[{associ
     }
   },
   modificar: (req, res) => {
-    let pedidoProducto = db.Product.findByPk(req.params.id);
+    let pedidoProducto = db.Product.findByPk(req.params.id,{
+      include:[{association:'category'}]
+    });
     let pedidoCategorias = db.Category.findAll();
 
     Promise.all([pedidoProducto, pedidoCategorias])
-      .then(([producto, categoria]) => {
+      .then(([producto, categorias]) => {
         res.render("modificarproducto", {
           producto,
-          categoria,
+          categorias,
         });
       })
       .catch((error) => console.log(error));
   },
-  update: (req, res) => {
+  update: async (req, res) => {
+  
     let errores = validationResult(req);
     if (!errores.isEmpty()) {
-      return res.render("modificarproducto", {
-        categoria,
-        producto,
-        errores: errores.mapped(),
-        old: req.body,
+      let pedidoProducto = db.Product.findByPk(req.params.id,{
+        include:[{association:'category'}]
       });
+      let pedidoCategorias = db.Category.findAll();
+  
+      Promise.all([pedidoProducto, pedidoCategorias])
+        .then(([producto, categorias]) => {
+          res.render("modificarproducto", {
+            producto,
+            categorias,
+            old :req.body,
+            errores : errores.mapped()
+          });
+        })
+        .catch((error) => console.log(error));
     } else {
+      let imagen = await db.Product.findByPk(req.params.id).then()
+
+      if (req.file) {
+        let rutaImg = path.join(
+          __dirname,
+          "../../public/images/merchandising/" + imagen.image
+          );
+          fs.unlinkSync(rutaImg);
+      }
+      
       db.Product.update(
         {
           ...req.body,
+          image : req.file ? req.file.filename : imagen.image
         },
         {
           where: {
             id: req.params.id,
           },
         }
-      )
-        .then((response) => {
-          console.log(response);
+      ).then((response) => {
           return res.redirect("/productos");
         })
         .catch((error) => console.log(error));
     }
   },
 
-  borrar: (req, res) => {
+  borrar: async (req, res) => {
+    let imagen = await db.Product.findByPk(req.params.id).then()
+    let rutaImg = path.join(
+      __dirname,
+      "../../public/images/merchandising/" + imagen.image
+      );
+      fs.unlinkSync(rutaImg);
     db.Product.destroy({
       where: {
         id: req.params.id,
       },
     })
       .then((response) => {
-        console.log(response);
         return res.redirect("/productos");
       })
       .catch((error) => console.log(error));
-    var fs = require("fs");
-    var filePath = path.join(
-      __dirname,
-      "../../public/images/merchandinsing/" + productoaborrar.imagen
-    );
-    fs.unlinkSync(filePath);
-    console.log(productoaborrar);
-    guardar(productoparavista);
-    res.redirect("/");
+   
   },
 }
 
