@@ -14,10 +14,10 @@
           <%- include('./partials/menuVentas') %>
 
             <div class="titulogeneral tituloproductos">
-              <h2 class="TIENDA23"> <a href="#ROPA"> FIGURAS</a></h2>
-              <h2 class="TIENDA23"><a href="#MERCHANDISING"> ROPA</a></h2>
+              <h2 class="TIENDA23"> <a href="#FIGURAS"> FIGURAS</a></h2>
+              <h2 class="TIENDA23"><a href="#ROPA"> ROPA</a></h2>
               <h2 class="TIENDA23"><a href="#COMICS"> COMICS</a></h2>
-              <h2 class="TIENDA23"><a href="#FIGURAS"> MERCHANDISING</a></h2>
+              <h2 class="TIENDA23"><a href="#MERCHANDISING"> MERCHANDISING</a></h2>
             </div>
 
   
@@ -67,7 +67,7 @@
             </section>
 
             <div class="titulogeneral">
-              <h2 class="TIENDA " id="FIGURAS"> <%=categorias[0].name%></h2>
+              <h2 class="TIENDA " id="FIGURAS"> <%=categorias[3].name%></h2>
             </div>
 
 
@@ -80,7 +80,59 @@
                
              
               <article class="cadadestacado">
-                <a href="/productos/detail/<%= categorias[0].products[index].id %>"><img src="/images/merchandising/<%=categorias[0].products[index].image%> " alt=""></a>
+                <a href="/productos/detail/<%= categorias[3].products[index].id %>"><img src="/images/merchandising/<%=categorias[3].products[index].image%> " alt=""></a>
+                <div class="titulodestacado">
+                  <h3><%= categorias[3].products[index].title%> </h3>
+                  <P><%= categorias[3].products[index].description %></P>
+                </div>
+
+              </article>
+              <% } %>
+          
+             
+            </section>
+            <section class="destacados destacados2">
+
+              <% for( let index = 4; index < 8; index++ ) { %>
+               
+             
+                <article class="cadadestacado">
+                  <a href="/productos/detail/<%= categorias[3].products[index].id %> "><img src="/images/merchandising/<%=categorias[3].products[index].image%> " alt=""></a>
+                  <div class="titulodestacado">
+                    <h3><%= categorias[3].products[index].title%> </h3>
+                    <P><%= categorias[3].products[index].description %></P>
+                  </div>
+  
+                </article>
+                <% } %>
+
+
+            </section>
+            
+            <div class="verdemasproductos zoom">
+
+              <a href="/productos/figuras">
+                <h2 class="verproductos">Ver mas <%=categorias[3].name%></h2>
+              </a>
+            </div>
+
+
+
+            <div class="titulogeneral">
+              <h2 class="TIENDA " id="ROPA"> <%=categorias[0].name%></h2>
+            </div>
+
+
+            <section class="destacados">
+
+             
+              
+            
+              <% for( let index = 0; index < 4; index++ ) { %>
+               
+             
+              <article class="cadadestacado">
+                <a href="/productos/detail/<%= categorias[0].products[index].id %> "><img src="/images/merchandising/<%=categorias[0].products[index].image%> " alt=""></a>
                 <div class="titulodestacado">
                   <h3><%= categorias[0].products[index].title%> </h3>
                   <P><%= categorias[0].products[index].description %></P>
@@ -97,74 +149,22 @@
                
              
                 <article class="cadadestacado">
-                  <a href="/productos/detail/<%= categorias[0].products[index].id %> "><img src="/images/merchandising/<%=categorias[0].products[index].image%> " alt=""></a>
-                  <div class="titulodestacado">
-                    <h3><%= categorias[0].products[index].title%> </h3>
-                    <P><%= categorias[0].products[index].description %></P>
-                  </div>
-  
-                </article>
+                <a href="/productos/detail/<%= categorias[0].products[index].id %> "><img src="/images/merchandising/<%=categorias[0].products[index].image%> " alt=""></a>
+                <div class="titulodestacado">
+                  <h3><%= categorias[0].products[index].title%> </h3>
+                  <P><%= categorias[0].products[index].description %></P>
+                </div>
+
+              </article>
                 <% } %>
 
 
             </section>
-            
+
             <div class="verdemasproductos zoom">
 
               <a href="/productos/ropa">
-                <h2 class="verproductos">Ver mas indumentaria</h2>
-              </a>
-            </div>
-
-
-
-            <div class="titulogeneral">
-              <h2 class="TIENDA " id="ROPA"> <%=categorias[1].name%></h2>
-            </div>
-
-
-            <section class="destacados">
-
-             
-              
-            
-              <% for( let index = 0; index < 4; index++ ) { %>
-               
-             
-              <article class="cadadestacado">
-                <a href="/productos/detail/<%= categorias[1].products[index].id %> "><img src="/images/merchandising/<%=categorias[1].products[index].image%> " alt=""></a>
-                <div class="titulodestacado">
-                  <h3><%= categorias[1].products[index].title%> </h3>
-                  <P><%= categorias[1].products[index].description %></P>
-                </div>
-
-              </article>
-              <% } %>
-          
-             
-            </section>
-            <section class="destacados destacados2">
-
-              <% for( let index = 4; index < 8; index++ ) { %>
-               
-             
-                <article class="cadadestacado">
-                <a href="/productos/detail/<%= categorias[1].products[index].id %> "><img src="/images/merchandising/<%=categorias[1].products[index].image%> " alt=""></a>
-                <div class="titulodestacado">
-                  <h3><%= categorias[1].products[index].title%> </h3>
-                  <P><%= categorias[1].products[index].description %></P>
-                </div>
-
-              </article>
-                <% } %>
-
-
-            </section>
-
-            <div class="verdemasproductos zoom">
-
-              <a href="/productos/merchandising">
-                <h2 class="verproductos">Ver mas <%=categorias[1].name%></h2>
+                <h2 class="verproductos">Ver mas <%=categorias[0].name%></h2>
               </a>
             </div>
 
@@ -223,7 +223,7 @@
 
 
             <div class="titulogeneral">
-              <h2 class="TIENDA " id="MERCHANDISING">  <%=categorias[3].name%></h2>
+              <h2 class="TIENDA " id="MERCHANDISING">  <%=categorias[1].name%></h2>
             </div>
 
 
@@ -237,10 +237,10 @@
                
              
               <article class="cadadestacado">
-                <a href="/productos/detail/<%= categorias[3].products[index].id %> "><img src="/images/merchandising/<%=categorias[3].products[index].image%> " alt=""></a>
+                <a href="/productos/detail/<%= categorias[1].products[index].id %> "><img src="/images/merchandising/<%=categorias[1].products[index].image%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3><%= categorias[3].products[index].title %> </h3>
-                  <P><%= categorias[3].products[index].description %></P>
+                  <h3><%= categorias[1].products[index].title %> </h3>
+                  <P><%= categorias[1].products[index].description %></P>
                 </div>
 
               </article>
@@ -254,10 +254,10 @@
                
              
                 <article class="cadadestacado">
-                <a href="/productos/detail/<%= categorias[3].products[index].id %> "><img src="/images/merchandising/<%=categorias[3].products[index].image%> " alt=""></a>
+                <a href="/productos/detail/<%= categorias[1].products[index].id %> "><img src="/images/merchandising/<%=categorias[1].products[index].image%> " alt=""></a>
                 <div class="titulodestacado">
-                  <h3><%= categorias[3].products[index].title%> </h3>
-                  <P><%= categorias[3].products[index].description %></P>
+                  <h3><%= categorias[1].products[index].title%> </h3>
+                  <P><%= categorias[1].products[index].description %></P>
                 </div>
 
               </article>
@@ -268,8 +268,8 @@
 
             <div class="verdemasproductos zoom">
 
-              <a href="/productos/figuras">
-                <h2 class="verproductos">Ver mas  <%=categorias[3].name%></h2>
+              <a href="/productos/merchandising">
+                <h2 class="verproductos">Ver mas  <%=categorias[1].name%></h2>
               </a>
             </div>
 
