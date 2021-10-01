@@ -19,10 +19,8 @@ module.exports = [
     .notEmpty()
     .withMessage("Tienes que colocar una contraseña")
     .bail()
-    .isLength({
-      min: 8
-    })
-    .withMessage("La contraseña debe tener como minimo 8 caracteres"),
+    .isStrongPassword()
+    .withMessage("La contraseña debe tener como minimo 8 caracteres, una mayuscula y numeros"),
 
     check("firstName")
     .notEmpty()
