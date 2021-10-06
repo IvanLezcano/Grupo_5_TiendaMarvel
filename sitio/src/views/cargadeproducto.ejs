@@ -12,13 +12,14 @@
         <form action="/productos/carga" method="POST" enctype="multipart/form-data" class="form"> 
             <div>
                 <input type="text" id="nombreProducto" name="title" placeholder="Nombre de Producto"
-                 value="<%=locals.old && old.nombre? old.nombre :null %>">
-                 <span class="error-carga"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %></span>
+                 value="<%=locals.old && old.title? old.title :null %>">
+                 <span class="error-carga errorName"><%= locals.errores && errores.title ? errores.title.msg : null %></span>
 
             </div>
             <div>
                 <label for="imagen">Imagen</label>
                 <input type="file" name="image" id="imagenProducto" value="<%= locals.old && old.image? old.image:null %>">
+                <span class="error-carga errorImagen"><%= locals.errores && errores.image ? errores.image.msg : null %></span>
             </div>
             <div>
                 <label for="pecio">Precio</label>
@@ -54,5 +55,7 @@
             </div>
         </form>
     </main>
+    <script src="/public/javascript/validateFormRegister.js" ></script>
+    <script src="/javascript/validateCarga.js"></script>
 </body>
 </html>
