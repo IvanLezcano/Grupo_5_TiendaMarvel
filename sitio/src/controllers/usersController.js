@@ -60,7 +60,7 @@ module.exports = {
       }
       let on = req.body.recordar;
      if (on) {
-      res.cookie("user", req.session.userLogin, { maxAge: 120000 });
+      res.cookie("userLogin", req.session.userLogin, { maxAge: 120000 });
     }
       return res.redirect("/users/perfil");
     })
@@ -73,7 +73,7 @@ module.exports = {
   },
   logout: (req, res) => {
     req.session.destroy();
-    res.clearCookie('user');
+    res.clearCookie('userLogin');
     res.redirect("/");
   },
   perfil : (req,res) => {
