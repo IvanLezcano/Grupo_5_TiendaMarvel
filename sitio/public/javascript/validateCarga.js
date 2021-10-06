@@ -2,6 +2,7 @@
 const $ = id =>document.querySelector(id);
 
 
+
 let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
@@ -15,6 +16,17 @@ imagen.addEventListener("focus", () => {
   $(".errorImagen").innerHTML =
     "Las extensiones aceptadas son: .jpg, .npg, .img";
 });
+
+imagen.addEventListener("blur", () => {
+  if (!imagen.value.trim()) {
+  imagen.classList.add("is-invalid");
+    $(".errorImagen").innerHTML = "El nombre es obligatorio";
+  } else {
+   imagen.classList.remove("is-invalid");
+   imagen.classList.add("is-valid");
+    $(".errorImagen").innerHTML = null;
+  }
+});
 let nombre = $("#nombreProducto")
 nombre.addEventListener("blur", () => {
   if (!nombre.value.trim()) {
@@ -26,19 +38,29 @@ nombre.addEventListener("blur", () => {
     $(".errorName").innerHTML = null;
   }
 });
-
- $("email").addEventListener("blur", () => {
-   if (!regExEmail.test($("email").value)) {
-     $("email").classList.add("is-invalid");
-     $("error-email").innerHTML = "Debes ingresar un email válido";
+let precio= $("#precioProducto")
+ precio.addEventListener("blur", () => {
+   if (precio.value <100) {
+     precio.classList.add("is-invalid");
+     $(".errorPrecio").innerHTML = "Debes ingresar un precio mayor a 100";
    } else {
-     $("email").classList.remove("is-invalid");
-     $("email").classList.add("is-valid");
-     $("error-email").innerHTML = null;
+     precio.classList.remove("is-invalid");
+     precio.classList.add("is-valid");
+     $(".errorPrecio").innerHTML = "";
    }
  });
 
-
+ let desc= $("#descuento")
+ desc.addEventListener("blur", () => {
+   if (desc.value >50) {
+     desc.classList.add("is-invalid");
+     $(".errorDesc").innerHTML = "El descuento no puede ser mayor a 50%";
+   } else {
+    desc.classList.remove("is-invalid");
+    desc.classList.add("is-valid");
+     $(".errorDesc").innerHTML = "";
+   }
+ });
  
 
 })
