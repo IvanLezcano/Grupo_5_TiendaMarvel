@@ -21,34 +21,36 @@
         </div>
       </section>
       <section class="registrarse">
-        <form action="" method="POST" class="needs-validation inputs" enctype="multipart/form-data" novalidate>
+        <form action="" method="POST" id="form-register" class="needs-validation inputs" enctype="multipart/form-data" novalidate>
           
           <div class="container">
             
           <div class="cont-input">
             <input type="text" id="validationCustom01" class="form-control" name="nameUser" placeholder="Nombre de usuario" value="<%=locals.old && old.nameUser? old.nameUser :null %>" required/>
             <span class="alerta"><%= locals.errors && errors.nameUser ? errors.nameUser.msg : null %></span>
-          <div class="invalid-feedback"> Se precisa el nombre de usuario</div>
+          <div class="invalid-feedback  error-nameUser"> </div>
           </div>
 
           <div class="cont-input">
             <input type="text" id="validationCustom02" class="form-control" name="firstName" placeholder="Nombre" value="<%=locals.old && old.firstName? old.firstName :null %>" required/>
            <span class="alerta"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></span>
-            <div class="invalid-feedback">Se precisa el nombre de usuario </div>
+           <div class="invalid-feedback error-firstName"> </div>
           </div>
           
           <div class="cont-input">
             <input type="email" id="validationCustom03" class="form-control" name="email" placeholder="Email" value="<%=locals.old && old.email? old.email :null %>" required/>
            <span class="alerta"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
-            <div class="invalid-feedback"> Se precisa el nombre de usuario</div>
+            <div class="invalid-feedback error-email"> </div>
           </div>
 
           <div class="cont-input">
             <input type="password" id="validationCustom04"class="form-control"  name="password" placeholder="Contraseña" required/>
            <span class="alerta"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
-            <div class="invalid-feedback">Se precisa el nombre de usuario </div>
+            <div class="invalid-feedback error-password"> </div>
           </div>
         </div>
+        <div class="error-empty cont-input text-danger"></div>
+
         <div class="container-button">
           <button type="submit" class="btn-registrarse">REGISTRARSE</button>
 

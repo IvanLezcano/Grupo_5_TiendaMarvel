@@ -97,7 +97,7 @@
   margin: 0 !important;
 }
 .registro .inputs .invalid-feedback {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Ubuntu";
   font-size: 1.2rem !important;
   } 
 .registro .inputs div {
@@ -177,8 +177,8 @@
   .registro-body {
     background-color: var(--color-independence);
     width: 100vw;
-    height: 120vh;/*100*/
-    display: flex; 
+    display: flex;
+    justify-content: center;
   }
 
   .registro {
@@ -237,7 +237,6 @@
     margin: 0;
     padding: 0;
     width: 85%;
-    height: 100%;
     justify-content: space-around;
   }
 
@@ -248,7 +247,9 @@
     font-weight: 400;
     height: 6%;
   }
-
+  .registro .inputs .error-empty{
+    font-size: 1.2rem !important;
+  }
   /* ===== inputs ===== */
   .registro .inputs {
   width: 100%;
@@ -261,8 +262,6 @@
     align-items: center;
     justify-content: center;
 
-  } 
- .registro .inputs .cont-input {
   } 
 
   .registro .inputs input {
@@ -283,9 +282,7 @@
 
   /* ===== span ===== */
   .registro .inputs div span {
-    font-family: "Bebas Neue", cursive;
     margin: 0;
-    font-size: 1rem;
     height: 2rem;
     width: 16rem;
   }
@@ -329,7 +326,6 @@ input{
   
   .registro {
     max-width: 55vw;
-    font-family: "Bebas Neue", cursive;
   }
 
   .registro .inputs {
@@ -339,7 +335,6 @@ input{
     width: 100%;
   }
   .registro .inputs .invalid-feedback {
-    font-family: "Bebas Neue", cursive;
     font-size: 1.2rem !important;
     } 
 
@@ -394,6 +389,16 @@ input{
   }
   .registro .inputs .cont-input{
    width: 20rem !important;
+   margin-bottom: 1.5rem !important;
+  }
+  .registro .inputs .error-empty{
+   width: 26rem !important;
+   margin-bottom: 1.5rem !important;
+   font-size: 1.2rem !important;
+   text-align: right !important;
+  }
+  .registro .inputs .invalid-feedback{
+    margin-bottom: 0rem !important;
   }
   .registro .inputs .container-button{
     width: 15rem !important;

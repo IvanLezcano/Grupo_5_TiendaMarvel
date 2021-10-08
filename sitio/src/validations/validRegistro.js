@@ -1,6 +1,7 @@
 const { body, check } = require("express-validator");
 const path = require('path');
 const db = require('../database/models')
+let regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
 
 
 
@@ -18,9 +19,18 @@ module.exports = [
   check("password")
     .notEmpty()
     .withMessage("Tienes que colocar una contraseña")
-    .bail()
-    .isStrongPassword()
-    .withMessage("La contraseña debe tener como minimo 8 caracteres, una mayuscula y numeros"),
+    .bail(),
+    
+    body('password')
+    .custom(value => {
+      console.log(value);
+      if (!regExPass.test(value)){
+        throw new Error("La contraseña debe tener como minimo 8 caracteres, una mayúscula y numeros");
+      }else{
+        return true
+      }
+      
+    }),
 
     check("firstName")
     .notEmpty()
@@ -41,7 +51,6 @@ module.exports = [
 
     body('email')
     .custom(value => {
-        console.log(value)
         return db.User.findOne({
             where : {
                 email : value
