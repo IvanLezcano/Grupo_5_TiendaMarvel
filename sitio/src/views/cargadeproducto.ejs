@@ -29,7 +29,7 @@
                                      
                 </div>
             <div>
-                <label for="pecio">Descuento (opcional)</label>
+                <label for="discount">Descuento (opcional)</label>
                 <input type="number" name="discount"  id="descuento" class="form-control" value="<%= locals.old && old.discount? old.discount:null%>" required>
                   <span class="error-carga errorDesc"><%= locals.errores && errores.discount ? errores.discount.msg : null %></span>
                   
@@ -37,7 +37,7 @@
              <div>
                 <label for="descripcion">Descripción del producto</label>
                 <textarea name="description" id="descripcion" class="form-control" cols="8" rows="3" placeholder="Escribir..." required><%= locals.old && old.description ? old.description : null %></textarea>
-                 <span class="error-carga"><%= locals.errores && errores.description ? errores.description.msg : null %></span>
+                 <span class="error-carga errorDescripcion"><%= locals.errores && errores.description ? errores.description.msg : null %></span>
                  
             </div>
             <div>
@@ -50,7 +50,7 @@
                   </select>
                   
                   <span class="error-carga"><%= locals.errores && errores.categoryId ? errores.categoryId.msg : null %></span>
-                  <div class="invalid-feedback">Este campo no puede estar vacio</div>
+    
             </div>
             <div class="button">
             <button type="submit">Publicar</button>
