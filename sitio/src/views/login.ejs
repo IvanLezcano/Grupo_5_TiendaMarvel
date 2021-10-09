@@ -6,13 +6,13 @@
     <h1 class="titulo">Login</h1>
     <main class="login-main">
 
-      <form action="/users/login" method="POST" class="inputs" novalidate> 
-        <h4 class="ingresa-google">Ingresa con <a href="#">Google</a></h4>
+      <form action="/users/login" method="POST" class="inputs needs-validation" novalidate> 
+        <h4 class="ingresa-google">Ingresar</h4>
         <div>
-          <input type="text" id="usuario" name="email" placeholder="Email"/>
+          <input type="text" id="validationCustom01" class="form-control" name="email" placeholder="Email" required/>
         </div>
         <div>
-          <input type="password" id="contrasena" name="password" placeholder="Contraseña" />
+          <input type="password" id="validationCustom02" name="password" class="form-control" placeholder="Contraseña" required />
         </div>
         <span class="text-danger fs-4"><%= locals.errors && errors.email ? errors.email.msg :null%></span>
         <div class="recordarme">
@@ -32,6 +32,7 @@
         </a>
       </div>
     </main>
+    <script src="/javascript/validateLogin.js"></script>
   </body>
 
 </html>

@@ -20,6 +20,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      lastName: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       email: {
         allowNull: false,
         type: Sequelize.STRING

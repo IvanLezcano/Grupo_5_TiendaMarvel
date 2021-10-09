@@ -7,6 +7,7 @@ for (let i = 0; i < 3; i++) {
     nameUser:faker.name.firstName(),
     password: 123123,
     firstName: faker.name.firstName(),
+    lastName: faker.name.lastName(),
     email: faker.internet.email(),
     rol: 'usuario',
     createdAt: new Date,

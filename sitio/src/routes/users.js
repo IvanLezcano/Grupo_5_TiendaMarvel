@@ -5,7 +5,7 @@ const validarRegistro = require('../validations/validRegistro')
 const validLogin = require('../validations/validLogin');
 const checkLogin = require('../middlewares/checkLogin');
 const perfilMiddleware = require('../middlewares/perfilMiddleware')
-const validPass = require('../validations/validPass');
+const passMiddleware = require('../validations/passMiddleware');
 
 
 const {
@@ -15,10 +15,10 @@ const {
  processLogin,
  logout,
  perfil,
- modificar,
- update,
  confirmacion,
- destroy
+ destroy,
+ updatePass,
+ updateAvatar
 } = require("../controllers/usersController");
 
 
@@ -35,6 +35,7 @@ const storage = multer.diskStorage({
   },
 });
 const avatar = multer({ storage });
+
 /* /users */
 router.get("/login", checkLogin,login);
 router.post("/login",validLogin,processLogin);
@@ -47,9 +48,8 @@ router.post(
   procesarRegistro
 );
 router.get("/perfil", perfilMiddleware, perfil);
-router.get("/modificar", perfilMiddleware, modificar);
-router.put('/update/:id', avatar.single('avatar'),validPass,update);
-router.get('/confirmar',perfilMiddleware,confirmacion);
+router.put("/updatePass/:id", passMiddleware, updatePass);
+router.put('/updateAvatar/:id', avatar.single('avatar'),updateAvatar);
 router.delete('/delete',validLogin,destroy);
 
 module.exports = router;
