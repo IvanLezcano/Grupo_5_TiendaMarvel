@@ -36,7 +36,13 @@
            <span class="alerta"><%= locals.errors && errors.firstName ? errors.firstName.msg : null %></span>
            <div class="invalid-feedback error-firstName"> </div>
           </div>
-          
+
+          <div class="cont-input">
+            <input type="text" id="validationCustom05" class="form-control" name="lastName" placeholder="Apellido" value="<%=locals.old && old.lastName? old.lastName :null %>" required/>
+           <span class="alerta"><%= locals.errors && errors.lastName ? errors.lastName.msg : null %></span>
+           <div class="invalid-feedback error-lastName"> </div>
+          </div>
+
           <div class="cont-input">
             <input type="email" id="validationCustom03" class="form-control" name="email" placeholder="Email" value="<%=locals.old && old.email? old.email :null %>" required/>
            <span class="alerta"><%= locals.errors && errors.email ? errors.email.msg : null %></span>

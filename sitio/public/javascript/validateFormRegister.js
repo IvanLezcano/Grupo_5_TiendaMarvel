@@ -6,6 +6,7 @@ console.log('CONECTADO');
 let form = document.querySelector("form")
 let nameUser = document.querySelector("#validationCustom01")
 let firstName = document.querySelector("#validationCustom02")
+let lastName = document.querySelector("#validationCustom05")
 let email = document.querySelector("#validationCustom03")
 let password = document.querySelector("#validationCustom04")
 let buttom = document.querySelector(".btn-registrarse")
@@ -45,6 +46,16 @@ firstName.addEventListener('input', ()=>{
        firstName.classList.remove('is-invalid')
        firstName.classList.add('is-valid')
         document.querySelector('.error-firstName').innerHTML = null
+    }
+})
+lastName.addEventListener('input', ()=>{
+    if(lastName.value.length < 2){
+        lastName.classList.add('is-invalid')
+        document.querySelector('.error-lastName').innerHTML = "Debes ingresar un nombre de usuario válido"
+    }else{
+       lastName.classList.remove('is-invalid')
+       lastName.classList.add('is-valid')
+        document.querySelector('.error-lastName').innerHTML = null
     }
 })
 
@@ -91,7 +102,6 @@ email.addEventListener('input',async ()=>{
 
 form.addEventListener("submit", e =>{
     e.preventDefault()
-    console.log('al finnnn');
     let error = false;
     let elementosForm = form.elements
 

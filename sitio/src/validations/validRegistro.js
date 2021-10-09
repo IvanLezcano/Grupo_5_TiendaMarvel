@@ -42,6 +42,16 @@ module.exports = [
     })
     .withMessage("El nombre tiene que tener como mínimo 2 caracteres"),
 
+    check("lastName")
+    .notEmpty()
+    .withMessage("Debes colocar tu apellido")
+    .bail()
+    .isLength({
+      min: 2,
+      max: 50,
+    })
+    .withMessage("El apellido tiene que tener como mínimo 2 caracteres"),
+
   check("email")
     .notEmpty()
     .withMessage("Debes colocar tu email")
