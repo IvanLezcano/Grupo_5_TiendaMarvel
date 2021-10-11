@@ -3,6 +3,7 @@ const router = express.Router();
 
 const validarRegistro = require('../validations/validRegistro')
 const validLogin = require('../validations/validLogin');
+const validEliminar = require('../validations/validEliminar');
 const checkLogin = require('../middlewares/checkLogin');
 const perfilMiddleware = require('../middlewares/perfilMiddleware')
 const passMiddleware = require('../validations/passMiddleware');
@@ -15,7 +16,6 @@ const {
  processLogin,
  logout,
  perfil,
- confirmacion,
  destroy,
  updatePass,
  updateAvatar
@@ -50,6 +50,6 @@ router.post(
 router.get("/perfil", perfilMiddleware, perfil);
 router.put("/updatePass/:id", passMiddleware, updatePass);
 router.put('/updateAvatar/:id', avatar.single('avatar'),updateAvatar);
-router.delete('/delete',validLogin,destroy);
+router.delete('/delete',validEliminar,destroy);
 
 module.exports = router;

@@ -79,7 +79,7 @@ module.exports = {
   },
   perfil : (req,res) => {
 db.User.findByPk(req.session.userLogin.id)
-.then(user=>res.render('profile',{user,display:false}))
+.then(user=>res.render('profile',{user,display:false,displayError:false,}))
 },
   modificar:(req,res)=>{
     res.render('modificarPerfil',{
@@ -161,14 +161,17 @@ db.User.findByPk(req.session.userLogin.id)
         errores: resultadoValidacion.mapped(),
         old: req.body,
         user: req.session.userLogin,
-        display: "d-flex"
+        display: "d-flex",
+        displayError:"d-none"
       });
     } 
          
   },
   updateAvatar : (req,res) => {
     let imgABorrar= path.join(__dirname, "../../public/images/users/"+req.session.userLogin.avatar)
-        fs.unlinkSync(imgABorrar) 
+    if (req.session.userLogin.avatar !== req.session.userLogin.name[0].toUpperCase()+".jpg") {
+      fs.unlinkSync(imgABorrar) 
+    }
       db.User.update(
           {
               avatar: req.file ? req.file.filename : req.body.name[0].toUpperCase()+".jpg",
@@ -191,13 +194,25 @@ db.User.findByPk(req.session.userLogin.id)
   
   },
   destroy:(req, res)=>{
-    db.User.destroy({
-      where: { id: req.session.userLogin.id }
-     }).then(()=>{ 
-      req.session.destroy();
-      res.clearCookie('user');
-       res.redirect('/')
-      })
+    let resultadoValidacion = validationResult(req);
+    if (resultadoValidacion.isEmpty()) {
+      db.User.destroy({
+        where: { id: req.session.userLogin.id }
+       }).then(()=>{ 
+        req.session.destroy();
+        res.clearCookie('user');
+         res.redirect('/')
+        })
+    }else{
+      return res.render("profile", {
+        errores: resultadoValidacion.mapped(),
+        old: req.body,
+        user: req.session.userLogin,
+        display: "d-none",
+        displayError:"d-flex"
+      });      
+    }
+  
   }
   
 }

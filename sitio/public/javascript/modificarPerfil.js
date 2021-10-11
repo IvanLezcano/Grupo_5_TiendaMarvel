@@ -59,14 +59,4 @@ window.addEventListener('load',()=>{
     })
 
 
-
-
-
-
-
-
-
-// como renderizar ejs desde js front
-
-
 })
