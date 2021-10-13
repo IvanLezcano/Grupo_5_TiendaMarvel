@@ -33,6 +33,11 @@ module.exports = {
     db.Category.findAll({include : [{association : "products"}]}).then(categorias => res.render("productos",{categorias}))
 
   },
+  carrito: (req, res) => {
+    db.Product.findByPk(req.params.id).then( respons => res.render("carrito",{respons}) );
+    
+
+  },
   detail: (req, res) => {
        db.Product.findOne({
         where: {
