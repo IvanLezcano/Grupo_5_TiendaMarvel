@@ -29,7 +29,7 @@ module.exports = {
     Promise.all([category, productsDiscount,products])
     .then((response,) =>{
      
-    /*  response[0].length = response[0].length - 1 */
+      response[0].length = response[0].length - 1 
      res.render('index',{
 
        category : response[0],

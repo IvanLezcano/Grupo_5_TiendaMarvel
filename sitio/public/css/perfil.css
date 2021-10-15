@@ -5,6 +5,8 @@
 .perfil input{
     margin: 0 !important;
 }
+
+
 .perfil .avatar-user{
     width: 100%;
     height: 100%;
@@ -25,4 +27,13 @@
     .perfil .btn{
         font-size: 1.6rem;
     }
+}
+@media (min-width: 1024px) {
+    .perfil .contenedor{
+        flex-direction: row !important;
+    }
+    .perfil .navUser .opciones{
+    display: none;
+    }
+    
 }

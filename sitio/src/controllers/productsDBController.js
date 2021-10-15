@@ -33,6 +33,11 @@ module.exports = {
     db.Category.findAll({include : [{association : "products"}]}).then(categorias => res.render("productos",{categorias}))
 
   },
+  carrito: (req, res) => {
+    db.Product.findByPk(req.params.id).then( respons => res.render("carrito",{respons}) );
+    
+
+  },
   detail: (req, res) => {
        db.Product.findOne({
         where: {
@@ -78,7 +83,8 @@ figura:(req,res) =>{db.Category.findOne({where:{name:"figuras"},include:[{associ
 
   carga: (req, res) => {
     db.Category.findAll().then((categorias) => {
-      return res.render("cargadeproducto", { categorias});
+       return res.render("cargadeproducto", { categorias});
+     
     });
   },
   create: (req, res) => {
@@ -102,12 +108,13 @@ figura:(req,res) =>{db.Category.findOne({where:{name:"figuras"},include:[{associ
         );
         fs.unlinkSync(imgABorrar);
       }
-      db.Category.findAll().then(categorias => res.render("cargadeproducto", {
+      db.Category.findAll().then(categorias => 
+        res.render("cargadeproducto", {
         categorias,
         errores: errors.mapped(),
         old: req.body,
       })).catch((error) => console.log(error));
-    }
+    } 
   },
   modificar: (req, res) => {
     let pedidoProducto = db.Product.findByPk(req.params.id,{
