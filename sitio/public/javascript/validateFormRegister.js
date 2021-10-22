@@ -63,7 +63,7 @@ password.addEventListener('input', ()=>{
     if(!regExPass.test(password.value) ){
         password.classList.add('is-invalid')
         console.log(password.value);
-        document.querySelector('.error-password').innerHTML = "Debe tener como mínimo <strong>8</strong> caracteres 1 <strong>Número</strong> y 1 <strong>Mayúscula</strong>"
+        document.querySelector('.error-password').innerHTML = "Debe tener entre <strong>8</strong> y <strong>12</strong> caracteres 1 <strong>Número</strong> y 1 <strong>Mayúscula</strong>"
     }else{
        password.classList.remove('is-invalid')
        password.classList.add('is-valid')
