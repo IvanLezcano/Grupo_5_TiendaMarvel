@@ -11,12 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasMany(models.Cart,{
+     /*  User.hasMany(models.Cart,{
         as : 'cart'
       })
       User.hasMany(models.Order,{
         as : 'order'
-      })
+      }) */
     }
   };
   User.init({
