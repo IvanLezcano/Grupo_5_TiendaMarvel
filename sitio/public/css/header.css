@@ -4,6 +4,13 @@ header{
     padding: 0 !important;
     box-sizing: border-box !important;
 }
+.centrando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .dropdown-item{
     font-weight: 500;
     font-family: 'Ubuntu';
@@ -151,8 +158,9 @@ header{
          border: solid 1px white; 
     }
     .saludo{
-        color: blue;
+        color: white;
          font-weight: 700;
+         font-size: 10px;
         
     }
     
@@ -163,6 +171,9 @@ header{
 
     }
     .menu a{
+    color: white;
+}
+.dropdown-toggle::after{
     color: white;
 }
     .menu{
@@ -484,4 +495,25 @@ display: flex !important;
 .separate{
     margin-top: 40px;
 }
+}
+
+/* MODAL */
+
+.modal-content{
+    background-color: #d3dcdf;
+     font-family: "Ubuntu";
+}
+
+.badge{
+   position: absolute;
+    right: 40%;
+    bottom: 50%; 
+   
+}
+.imagen-carrito{
+    position: relative;
+    margin-top: 20px;
+}
+.modal-title{
+  font-family: "Ubuntu";
 }

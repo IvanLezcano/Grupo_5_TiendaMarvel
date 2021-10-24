@@ -15,12 +15,12 @@ module.exports = (sequelize, DataTypes) => {
         as: "category",
         foreignKey: "categoryId"
       });
-     /*  Product.hasMany(models.Cart, {
+      Product.hasMany(models.Cart, {
         as: "cart",
         onDelete : 'cascade',
         onUpdate : 'cascade'
        
-      }); */
+      });
     }
   };
   Product.init(

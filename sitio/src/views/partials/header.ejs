@@ -51,7 +51,9 @@
                          
              <!--  <button type="button" class="nav-link btn-cart bg-transparent" data-bs-toggle="modal" data-bs-target="#modal-carrito"> -->
              <div class="imagen-carrito" data-bs-toggle="modal" data-bs-target="#modal-carrito">
-                <i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig"></i>
+                <i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig">
+                 <!--  <span class="badge rounded-pill bg-warning"></span> -->
+                </i>
                 <span class="badge rounded-pill bg-warning"></span>
                 </div>
                
@@ -67,10 +69,7 @@
               </div>
             <% } %>
             </DIV>
-           <!--  <div class="imagen-carrito">
-              <a href="/productos/carrito/0"><i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig separate"></i></a>
-            </div> -->
-           
+         
               
 
             <div class="menuMobile">
@@ -124,10 +123,10 @@
 <aside>
   <!-- Modal -->
   <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog ">
       <div class="modal-content" id="miCarrito">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Mi changuito</h5>
+          <h5 class="modal-title" id="exampleModalLabel"> Carrito Torre Marvel </h5>
         </div>
         <div class="modal-body" id="lista-carrito">
           <div class="table-responsive">
@@ -155,8 +154,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-danger" id="btn-delete-cart" onclick="empty()">Vaciar carrito</button>
-          <button type="button" class="btn btn-sm btn-success" data-bs-dismiss="modal">Seguir comprando</button>
-          <a href="/compra" class="btn btn-sm btn-primary" id="btn-next-buy"> Finalizar compra</a>
+          <button type="button" class="btn btn-sm btn-success d-flex align-items-center justify-content-center" data-bs-dismiss="modal">Seguir comprando</button>
+        <a href="/comprar" class="btn btn-sm btn-primary d-flex align-items-center justify-content-center" id="btn-next-buy"> Finalizar compra</a>
         </div>
       </div>
     </div>
