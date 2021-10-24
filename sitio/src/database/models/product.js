@@ -13,15 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Product.belongsTo(models.Category, {
         as: "category",
-        foreignKey: "categoryId"
+        foreignKey: "categoryId",
       });
-      Product.hasMany(models.Cart, {
-        as: "cart",
-        onDelete : 'cascade',
-        onUpdate : 'cascade'
-       
-      });
-    }
+      
+    } 
   };
   Product.init(
     {
