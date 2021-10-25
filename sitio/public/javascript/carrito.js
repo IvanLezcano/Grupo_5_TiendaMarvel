@@ -79,51 +79,56 @@ const show = async () => {
         console.log(error)
     }
 }
+ 
+
 
 const agregarItem = async (e,id) => {
     e.preventDefault()
+   const productos = [];
     try {
         let response = await fetch(urlBase + '/api/carts/add/' + id)
         let result = await response.json();
         mostrarCantidad(result.data);
         mostrarProductos(result.data);
+        productos.push(result.data);
+        localStorage.setItem("producto", JSON.stringify(productos));
+
+        let prueba= localStorage.getItem('producto')
+        console.log(JSON.parse(prueba))
+      
 
     } catch (error) {
         console.log(error)
 
     }
+    console.log(productos);
+    
     console.log('producto ' + id + ' agregado!!')
+    
 }
+  
 
 const quitarItem = async (e,id,cantidad) => {
   e.preventDefault();
   console.log(cantidad.innerText);
 
-  /* if(cantidad.innerText > 1){ */
   try {
     let response = await fetch(urlBase + "/api/carts/remove/" + id);
     let result = await response.json();
     mostrarCantidad(result.data);
     mostrarProductos(result.data);
+    localStorage.removeItem('producto')
+    localStorage.setItem("producto", JSON.stringify(result.data));
+      
+    let prueba = localStorage.getItem("producto");
+    console.log("producto borrado");
+    console.log(JSON.parse(prueba));
+    
   } catch (error) {
     console.log(error);
   }
   console.log("producto " + id + " eliminado!!");
-  /* }else{
-        let response = confirm('¿Estás seguro que querés eliminar')
-        if(response){
-            try {
-                let response = await fetch(urlBase + '/api/carts/remove/' + id)
-                let result = await response.json();
-                mostrarCantidad(result.data);
-                mostrarProductos(result.data);
-        
-            } catch (error) {
-                console.log(error)
-        
-            }
-        }
-    }*/
+ 
 } 
 
 const empty = async () => {
@@ -134,6 +139,7 @@ const empty = async () => {
         let result = await response.json();
         mostrarCantidad(result.data);
         changuito.innerHTML = ""
+        localStorage.removeItem('producto');
 
     } catch (error) {
         console.log(error)
