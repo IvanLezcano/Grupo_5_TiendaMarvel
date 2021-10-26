@@ -13,6 +13,7 @@ module.exports = {
     let resultadoValidacion = validationResult(req);
     let {nameUser,firstName,password,email,lastName}=req.body
     if (resultadoValidacion.isEmpty()) {
+
       db.User.create({
         nameUser:nameUser.trim(),
         firstName:firstName.trim(),
@@ -28,6 +29,45 @@ module.exports = {
             avatar:user.avatar,
             rol:user.rol
         }
+          //CARRITO//
+     req.session.cart = [];
+
+     db.Order.findOne({
+       where: {
+         userId: req.session.userLogin.id,
+         status: "pending",
+       },
+       include: [
+         {
+           association: "carts",
+           include: [
+             { association: "product", include: ["category"] },
+           ],
+         },
+       ],
+     })
+       .then((order) => {
+         if (order) {
+           order.carts.forEach((item) => {
+             let product = {
+               id: item.productId,
+               nombre: item.product.title,
+               imagen: item.product.image,
+               categoria: item.product.category.name,
+               cantidad: item.quantity,
+               precio: item.product.price,
+               total: item.product.price * item.quantity,
+               orderId: order.id,
+             };
+             console.log(product);
+             req.session.cart.push(product);
+           });
+         }
+         return res.redirect("/users/perfil");
+       })
+       .catch((error) => console.log(error));
+
+      //FIN DE CARRITO//
         return res.redirect('/')
       }).catch(error => console.log(error))
     } else {
@@ -36,6 +76,7 @@ module.exports = {
          old: req.body,
        });
      }
+     
   },
   login: (req, res) => {
     return res.render("login");
