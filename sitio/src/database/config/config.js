@@ -2,8 +2,8 @@
 module.exports = {
   development: {
     username: 'root',
-    password:'',
-    database: 'torremarvel_db',
+    password:'password',
+    database: 'torreMarvel_db',
     host: "127.0.0.1",
     dialect: "mysql",
   },

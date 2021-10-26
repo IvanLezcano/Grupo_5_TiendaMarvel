@@ -2,11 +2,13 @@ console.log('hola mundo');
 
 let contenedor= document.querySelector('.contenedor')
 let spantotal= document.querySelector('.total')
-let finalizarCompra= document.querySelector('#11')
+let finalizarCompra= document.querySelector('.finalizarCompra')
 
 let productos= localStorage.getItem('producto')
 productos= JSON.parse(productos)
-
+console.log("productos ", productos)
+let orderId = productos[0][0].orderId
+console.log("orderId ", orderId)
 productos.forEach(producto => {
     console.log(producto);
 });
@@ -60,4 +62,5 @@ productos.forEach((producto) => {
   });
 })
 
-finalizarCompra.href=`/productos/finalizado/${localStorage.getItem}`
+
+finalizarCompra.href = `/productos/finalizado/${orderId}`
