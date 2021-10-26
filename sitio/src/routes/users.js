@@ -3,10 +3,11 @@ const router = express.Router();
 
 const validarRegistro = require('../validations/validRegistro')
 const validLogin = require('../validations/validLogin');
-const avatar = require('../middlewares/userMulter')
+const validEliminar = require('../validations/validEliminar');
 const checkLogin = require('../middlewares/checkLogin');
 const perfilMiddleware = require('../middlewares/perfilMiddleware')
-const userMulter = require('../middlewares/userMulter')
+const passMiddleware = require('../validations/passMiddleware');
+
 
 const {
  login,
@@ -15,19 +16,31 @@ const {
  processLogin,
  logout,
  perfil,
- save
+ destroy,
+ updatePass,
+ updateAvatar
 } = require("../controllers/usersController");
-const updatePassword = require("../validations/updatePassword");
 
 
+const multer = require("multer");
+const path = require("path");
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/images/users"); //Indica en donde se va a guardar la imagen
+  },
+  filename: function (req, file, cb) {
+    cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
+    //indica el nombre del archivo. path.extname(extrae la extension del archivo(de su nombre original))
+  },
+});
+const avatar = multer({ storage });
 
 /* /users */
 router.get("/login", checkLogin,login);
 router.post("/login",validLogin,processLogin);
 router.get("/logout", logout);
 router.get("/registro",checkLogin, registro);
-
-router.get("/registro", registro);
 router.post(
   "/registro",
   avatar.single("imagenUsuario"),
@@ -35,6 +48,8 @@ router.post(
   procesarRegistro
 );
 router.get("/perfil", perfilMiddleware, perfil);
-router.put("/save/:id",userMulter.single('avatar'),save);
+router.put("/updatePass/:id", passMiddleware, updatePass);
+router.put('/updateAvatar/:id', avatar.single('avatar'),updateAvatar);
+router.delete('/delete',validEliminar,destroy);
 
 module.exports = router;

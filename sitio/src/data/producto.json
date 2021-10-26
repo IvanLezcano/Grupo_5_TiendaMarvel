@@ -7,6 +7,7 @@
   "marca": "Toysman",
   "estado": "oferta",
   "descripcion": "Mochila Escolar",
+  "discount": 80,
   "categoria": 2
  },
  {
@@ -42,6 +43,8 @@
   "imagen": "comic2.png",
   "precio": 300,
   "marca": "Ovnipress",
+  "discount": 80,
+
   "descripcion": "Tomo unico",
   "categoria": 3
  },
@@ -162,6 +165,8 @@
   "precio": 600,
   "marca": "cannon",
   "estado": "oferta",
+  "discount": 80,
+
   "descripcion": "hecha de algodon",
   "categoria": 2
  },
@@ -205,6 +210,8 @@
   "id": 23,
   "nombre": "Buzo marvel",
   "imagen": "ropa2.jpg",
+  "discount": 10,
+
   "precio": 650,
   "marca": "Gucci",
   "descripcion": "Buzo de Lana",
@@ -280,6 +287,8 @@
   "imagen": "comic6.jpg",
   "precio": 250,
   "marca": "Ovnipress",
+  "discount": 12,
+
   "descripcion": "Tomo unico",
   "categoria": 3
  },
@@ -316,6 +325,8 @@
   "imagen": "comic10.jpg",
   "precio": 200,
   "marca": "Ovnipress",
+  "discount": 16,
+
   "descripcion": "Tomo unico",
   "categoria": 3
  }

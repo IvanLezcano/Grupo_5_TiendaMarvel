@@ -65,6 +65,10 @@
   padding: 0;
 
 }
+.login .inputs .invalid-feedback {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.6rem !important;
+  } 
 .login-main .inputs .recordarme input{
   margin: 0.5rem;
   width: 15px;
@@ -123,6 +127,7 @@
     display: flex;
   }
   .login .login-main{
+
     margin: auto;
     border-radius: 20px;
     height: 60%;
@@ -143,6 +148,7 @@
     height: 70%;
     justify-content: space-evenly;
     align-items: center;
+    margin: 1rem;
   }
   .login .inputs div {
     display: flex;
@@ -152,15 +158,22 @@
     width: 90%;
     height: 20%;
     margin: 0;
+
+    max-width: 70%;
+
   }
   
   .login .inputs input {
+    font-family: "Bebas Neue", cursive;
     width: 100%;
-    margin: 0;
-    height: 40%;
-    padding: 1rem;
+    height: 3rem !important;
+    margin: 0 !important;
+    font-size: 1.6rem;
   }
-  
+  .login .inputs .invalid-feedback {
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.6rem !important;
+    } 
   /* ===== label ===== */
   .login .inputs div label {
     font-size: 1.3rem;
@@ -170,9 +183,11 @@
   
   /* ===== span ===== */
   .login .inputs div span {
-    height: 20%;
+    font-family: "Bebas Neue", cursive;
     margin: 0;
     font-size: 1rem;
+    height: 2rem;
+    width: 16rem;
   }
   
   /* ===== boton ===== */
@@ -198,20 +213,10 @@
   }
 
 }
+
 @media (min-width: 768px) {
-  .login{
-    justify-content: end;
-  }
   .login .login-main{
-    max-width: 55vw;
+    max-width: 40vw;
   }
-  .login .inputs{
-    justify-content: center;
-  }
-  .login .inputs div {
-    max-width: 70%;
-}
-  .login .inputs div span {
-    font-size: 1.1rem;
-  }
+
 }

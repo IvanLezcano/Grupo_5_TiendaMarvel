@@ -1,8 +1,8 @@
 function checkAdmin(req,res,next) {
-    if (req.session.user == undefined) {
+    if (req.session.userLogin == undefined) {
         return res.redirect('/')
     }
-    if (req.session.user.rol === 'usuario') {
+    if (req.session.userLogin.rol === 'usuario') {
         return res.redirect('/')
     }
         next()

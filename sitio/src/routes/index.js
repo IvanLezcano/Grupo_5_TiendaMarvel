@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const { index, contactos, nosotros, novedades,detail,carrito } = require("../controllers/indexController");
+const { index, contactos, nosotros, novedades,detail,carrito, admin } = require("../controllers/indexController");
 /* /index */
 router.get("/", index);
+router.get('/admin',admin)
 router.get("/contactos", contactos);
 router.get("/nosotros", nosotros);
 router.get("/novedades", novedades);
