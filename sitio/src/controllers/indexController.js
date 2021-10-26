@@ -62,5 +62,6 @@ module.exports = {
   },
   novedades: (req, res) => {
     return res.render("novedades");
-  }
+  },
+  admin : (req,res) => res.render('admin/index')
 }
