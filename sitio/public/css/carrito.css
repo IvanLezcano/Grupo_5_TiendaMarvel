@@ -112,6 +112,7 @@
 
 .carrito-main-article-precio-subrayado {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
     
@@ -120,16 +121,17 @@
 /*----------    SECTION FACTURACION -------------*/
 .carrito-facturacion{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   }
 
 .carrito-facturacion-tarjetas {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 50%; 
-  padding: 10px 10px;
+  padding: 10px 20px;
 }
 .carrito-facturacion-tarjetas-descuento{
   width: 100%;

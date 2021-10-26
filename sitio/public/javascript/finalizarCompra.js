@@ -19,21 +19,21 @@ productos.forEach((producto) => {
 }); 
 console.log(total);
 
- spanTotal.innerHTML += `$ ${total}`
+ spantotal.innerHTML = `<p>$ ${total}</p>`
 
 
 productos.forEach((producto) => {
   producto.forEach((item) => {
       
     contenedor.innerHTML += `
-     <article class="carrito-main-article">
+                         <article class="carrito-main-article">
                             <div class="carrito-main-producto">
                                 <div class="carrito-main-producto-imagen"><img src="/images/merchandising/${item.imagen}" alt=""></div>
                                 <div class="carrito-main-producto-descripcion">
                                     <div>
-
-                                        <p id="nombrecito">${item.nombre} </p>
                                         <p>Entregado por Torre Marvel</p>
+                                        
+                                        <p id="nombrecito"><strong>${item.nombre}</strong> </p>
                                         <p>Cantidad ${item.cantidad}</p>
                                     </div>
                                    
@@ -53,21 +53,7 @@ productos.forEach((producto) => {
 
 
 
-                        <section class="carrito-facturacion">
-                            <div class="carrito-facturacion-tarjetas">
-                                <div class="carrito-facturacion-tarjetas-descuento">
-                                <h3>Codigo de descuento</h3>
-                                <form action=""><input type="text" placeholder="Ingrese codigo"></form>
-                            </div> 
-                                <div class="carrito-facturacion-tarjetas-descuento-imagen">
-                                    <img src="/images/tarjetas.PNG" alt="">
-                                </div>
-                            </div>
-
-                            <div class="carrito-facturacion-cobro">
-                                
-                               
-                           </div>
+                      
 
     `;
   });
