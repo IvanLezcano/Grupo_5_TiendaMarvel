@@ -196,5 +196,9 @@ figura:(req,res) =>{db.Category.findOne({where:{name:"figuras"},include:[{associ
       .catch((error) => console.log(error));
    
   },
+  comprafinalizada :(req,res)=>{
+    db.Order.update
+
+  res.render("comprafinalizada")},
 }
 
