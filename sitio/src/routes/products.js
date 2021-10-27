@@ -7,6 +7,7 @@ let validarModificar = require('../validations/validModificar')
 let validarCarga = require('../validations/validCarga')
 let upload = require('../middlewares/multer')
 const checkAdmin = require('../middlewares/checkAdmin');
+const perfilMiddleware = require("../middlewares/perfilMiddleware");
 
  
 
@@ -27,7 +28,7 @@ router.get("/comics", comics);
 router.get("/figuras", figura);
 router.get("/detail/:id", detail);
 router.delete('/borrar/:id',borrar);
- router.get("/carrito", carrito);
+ router.get("/carrito",perfilMiddleware, carrito);
 router.get('/search',search);
 router.get('/finalizado',comprafinalizada);
 

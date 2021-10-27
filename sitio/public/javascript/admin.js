@@ -1,32 +1,35 @@
 console.log('admin conneted success')
+const $ = (id) => document.querySelector(id);
 
-$('table-products').innerHTML = null; //limpio el caja padre
+$('#table-products').innerHTML = null; //limpio el caja padre
 
-const loadProduct = async (list) => {
+const show = async () => {
     try {
         let response = await fetch('/api/products');
         let result = await response.json();
         
         result.data.forEach(product => {
-            addItem(product)
+            let listado= addItem(product)
+            console.log("lista productos");
+            return response.render('admin/index', listado)
         });
-        console.log()
-        paginator(result.meta.total,limit,show,current,initial,next)
+        
+       
 
     } catch (error) {
         console.log(error)
     }
 }
 
-loadProduct(10,6,1,1,0)
+/* loadProduct(list) */
 
 
 const addItem = product => {
     let item = `
     <tr>
         <th scope="row">${product.id} </th>
-        <td>${product.name} </td>
-        <td>${product.price} </td>
+        <td>${product.nombre} </td>
+        <td>${product.precio} </td>
         <td>${product.category.name} </td>
         <td class="d-flex justify-content-around">
             <a class="btn btn-sm btn-success"
@@ -42,10 +45,10 @@ const addItem = product => {
         </td>
     </tr>
     `
-    $('table-products').innerHTML += item;
+    $('#table-products').innerHTML += item;
 }
 
-const goPage = async (event,current,limit,initial,next) => {
+/* const goPage = async (event,current,limit,initial,next) => {
     event.preventDefault();
     $('table-products').innerHTML = null;
     $('box-paginator').innerHTML = null;
@@ -107,5 +110,5 @@ function paginator(total, limit, show, current,initial,next){
             <i class="fas fa-angle-right"></i>
         </a>
     </li>
-    `
-}
+    ` 
+}*/
