@@ -6,7 +6,9 @@ let spantotal= document.querySelector('.total')
 
 let productos= localStorage.getItem('producto')
 productos= JSON.parse(productos)
-
+console.log("productos ", productos)
+let orderId = productos[0][0].orderId
+console.log("orderId ", orderId)
 productos.forEach(producto => {
     console.log(producto);
 });

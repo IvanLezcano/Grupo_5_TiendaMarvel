@@ -30,7 +30,7 @@ router.get("/detail/:id", detail);
 router.delete('/borrar/:id',borrar);
  router.get("/carrito",perfilMiddleware, carrito);
 router.get('/search',search);
-router.get('/finalizado',comprafinalizada);
+router.get('/finalizado/:id',comprafinalizada);
 
 
 
