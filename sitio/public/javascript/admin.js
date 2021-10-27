@@ -2,8 +2,14 @@ console.log('admin conneted success')
 const $ = (id) => document.querySelector(id);
 
 $('#table-products').innerHTML = null; //limpio el caja padre
+$('.listar').addEventListener("click", () =>{
+    listado()
+})
+$('.agregar').addEventListener("click", () =>{
 
-const show = async () => {
+})
+const listado = async () => {
+
     try {
         let response = await fetch('/api/products');
         let result = await response.json();
@@ -11,7 +17,6 @@ const show = async () => {
         result.data.forEach(product => {
             let listado= addItem(product)
             console.log("lista productos");
-            return response.render('admin/index', listado)
         });
         
        
@@ -19,6 +24,7 @@ const show = async () => {
     } catch (error) {
         console.log(error)
     }
+
 }
 
 /* loadProduct(list) */
@@ -28,15 +34,15 @@ const addItem = product => {
     let item = `
     <tr>
         <th scope="row">${product.id} </th>
-        <td>${product.nombre} </td>
-        <td>${product.precio} </td>
+        <td>${product.title} </td>
+        <td>${product.price} </td>
         <td>${product.category.name} </td>
         <td class="d-flex justify-content-around">
             <a class="btn btn-sm btn-success"
-            href="/products/edit/${product.id} "><i class="fas fa-edit"></i></a>
+            href="/productos/modificar/${product.id} "><i class="fas fa-edit"></i></a>
         <div>
             <form
-                action="/products/delete/${product.id}?_method=DELETE"
+                action="/productos/borrar/${product.id}?_method=DELETE"
                 method="POST">
                 <button class="btn btn-sm btn-danger"
                     type='submit'><i class="fas fa-trash-alt"></i></button>
@@ -45,7 +51,7 @@ const addItem = product => {
         </td>
     </tr>
     `
-    $('#table-products').innerHTML += item;
+    return $('#table-products').innerHTML += item;
 }
 
 /* const goPage = async (event,current,limit,initial,next) => {

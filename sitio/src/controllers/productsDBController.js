@@ -205,8 +205,9 @@ module.exports = {
       }
     }
     ).then(()=>{
+      req.session.cart = []
       res.render("comprafinalizada")
-
+      
     }).catch(e =>{
       console.log(e);
     })
