@@ -32,8 +32,9 @@ const listado = async () => {
 
 const addItem = product => {
     let item = `
-    <tr>
+    <tr style="width:10px; height:10px">
         <th scope="row">${product.id} </th>
+        <td scope="row" style="width:10px; height:10px"> <img src="/images/merchandising/${product.image}" class="img-fluid" alt="">  </td>
         <td>${product.title} </td>
         <td>${product.price} </td>
         <td>${product.category.name} </td>
@@ -50,7 +51,7 @@ const addItem = product => {
         </div>
         </td>
     </tr>
-    `
+    `;
     return $('#table-products').innerHTML += item;
 }
 
