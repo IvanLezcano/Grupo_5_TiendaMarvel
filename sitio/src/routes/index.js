@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const perfilMiddleware = require('../middlewares/perfilMiddleware')
+const administrador = require('../middlewares/checkAdmin')
 
 const { index, contactos, nosotros, novedades,detail,carrito, admin } = require("../controllers/indexController");
 /* /index */
 router.get("/", index);
-router.get('/admin', perfilMiddleware, admin)
+router.get('/admin', administrador, admin)
 router.get("/contactos", contactos);
 router.get("/nosotros", nosotros);
 router.get("/novedades", novedades);
