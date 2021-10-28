@@ -39,7 +39,7 @@
       <div class="producto-article-cont-descripcion-comprar-imagen">
         <img class="metodos" src="/images/tarjetas.PNG" />
       </div>
-      <% if (locals.isLogged && locals.userLogin.rol === 'admin') { %>
+     <!--  <% if (locals.isLogged && locals.userLogin.rol === 'admin') { %>
       <div class = "modificadores">
       <form  id= "jajatecache"action="/productos/borrar/<%= producto.id %>?_method=DELETE" class = "jajatecache"method="POST">
         <button type="submit" onclick="confirmacion(event,document.querySelector('#jajatecache'))" class="btn btn-danger ms-2 laAlerta">Eliminar</button>
@@ -52,7 +52,7 @@
   <% } %>
 
   
-  <% if (!locals.userLogin || locals.userLogin.rol !== 'admin') { %>
+  <% if (!locals.userLogin || locals.userLogin.rol !== 'admin') { %> -->
   <div class="relacionados mt-5">
     <h4>Productos relacionados</h4>
     <hr>
@@ -80,26 +80,7 @@
     </main>
     
 
-    <script>
-     let formulario = document.querySelector(".jajatecache")
-     
-      
     
-    let confirmacion = (e,formulario) =>{ 
-      e.preventDefault()
-      
-      let respuesta = confirm("Seguro que lo queres borrar?");
-      if (!respuesta) {
-      return false;
-              }else {alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
-      formulario.submit()}}
-    </script>
-
-
-    
-     
-    
-  
     <%- include('./partials/footer') %>
      <%- include('./partials/scripts') %>
      <script src="/javascript/productDetail.js"></script>
