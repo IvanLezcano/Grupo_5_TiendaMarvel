@@ -14,9 +14,6 @@ const perfilMiddleware = require("../middlewares/perfilMiddleware");
 /* /productos */
 router.get("/", lista);
 
-/* router.get("/carrito", carrito); */
-
-
 
 router.get("/carga",checkAdmin, carga);
 router.post("/carga", upload.single("image"), validarCarga, create);

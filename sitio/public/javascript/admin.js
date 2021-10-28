@@ -42,11 +42,10 @@ const addItem = product => {
             <a class="btn btn-sm btn-success"
             href="/productos/modificar/${product.id} "><i class="fas fa-edit"></i></a>
         <div>
-            <form
-                action="/productos/borrar/${product.id}?_method=DELETE"
+            <form id="eliminar" class="eliminar" action="/productos/borrar/${product.id}?_method=DELETE"
                 method="POST">
-                <button class="btn btn-sm btn-danger"
-                    type='submit'><i class="fas fa-trash-alt"></i></button>
+                <button class="btn btn-sm btn-lg-sm btn-danger borrar"
+                    type='submit'onclick="confirmacion(e,document.querySelector("#eliminar"))><i class="fas fa-trash-alt"></i></button>
             </form>
         </div>
         </td>
@@ -54,6 +53,33 @@ const addItem = product => {
     `;
     return $('#table-products').innerHTML += item;
 }
+
+
+    let formulario = document.querySelector(".eliminar")
+    
+
+     /*  $(".borrar").addEventListener("click", (e,formulario) =>{
+        e.preventDefault()
+      
+      let respuesta = confirm("Seguro que lo queres borrar?");
+      if (!respuesta) {
+      return false;
+    }else {
+        alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
+      formulario.submit()
+    }
+}) */
+      
+    let confirmacion = (e,formulario) =>{ 
+      e.preventDefault()
+      
+      let respuesta = confirm("Seguro que lo queres borrar?");
+      if (!respuesta) {
+      return false;
+    }else {
+        alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
+      formulario.submit()}}
+   
 
 /* const goPage = async (event,current,limit,initial,next) => {
     event.preventDefault();

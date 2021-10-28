@@ -96,7 +96,7 @@ module.exports = {
         image: req.file.filename,
       })
         .then((product) => {
-          return res.redirect("/productos");
+          return res.redirect("/admin");
         })
         .catch((error) => console.log(error));
 
@@ -172,7 +172,7 @@ module.exports = {
           },
         }
       ).then((response) => {
-        return res.redirect("/productos");
+        return res.redirect("/admin");
       })
         .catch((error) => console.log(error));
     }
@@ -191,7 +191,7 @@ module.exports = {
       },
     })
       .then((response) => {
-        return res.redirect("/productos");
+        return res.redirect("/admin");
       })
       .catch((error) => console.log(error));
 
