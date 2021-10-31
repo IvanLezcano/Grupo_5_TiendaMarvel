@@ -86,10 +86,11 @@ module.exports = {
     console.log(req.query.keywords);
     try {
       let products = await db.Product.findAll({
+        include: [{ association: "category" }],
         where: {
           [Op.or]: [
             {
-              name: {
+              title: {
                 [Op.substring]: req.query.keywords,
               },
             },
@@ -98,9 +99,13 @@ module.exports = {
                 [Op.substring]: req.query.keywords,
               },
             },
+            {
+              categoryId: {
+                [Op.substring]: req.query.keywords,
+              },
+            }
           ],
         },
-       
       });
       let response = {
         status: 200,

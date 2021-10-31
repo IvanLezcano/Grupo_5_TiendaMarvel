@@ -1,6 +1,20 @@
 console.log('admin conneted success')
 const $ = (id) => document.querySelector(id);
 
+const $1 = (id) => document.getElementById(id);
+const query = new URLSearchParams(location.search); //nos devuelve el query string
+
+if ($1("form-search")) {
+  $1("form-search").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    query.set("keywords", $1("input-search").value);
+    history.replaceState({}, "", `${location.pathname}?${query}`);
+    search(query.get("keywords")); //query.get nos toma la palbra ingresada por el buscador
+  });
+}
+
+
 $('#table-products').innerHTML = null; //limpio el caja padre
 $('.listar').addEventListener("click", () =>{
     listado()
@@ -8,6 +22,11 @@ $('.listar').addEventListener("click", () =>{
 $('.agregar').addEventListener("click", () =>{
 
 })
+
+
+
+
+
 const listado = async () => {
 
     try {
@@ -27,12 +46,12 @@ const listado = async () => {
 
 }
 
-/* loadProduct(list) */
+
 
 
 const addItem = product => {
     let item = `
-    <tr style="width:10px; height:10px">
+    <tr style="width:10px; height:15px">
         <th scope="row">${product.id} </th>
         <td scope="row" style="width:10px; height:10px"> <img src="/images/merchandising/${product.image}" class="img-fluid" alt="">  </td>
         <td>${product.title} </td>
@@ -45,7 +64,7 @@ const addItem = product => {
             <form id="eliminar" class="eliminar" action="/productos/borrar/${product.id}?_method=DELETE"
                 method="POST">
                 <button class="btn btn-sm btn-lg-sm btn-danger borrar"
-                    type='submit'onclick="confirmacion(e,document.querySelector("#eliminar"))><i class="fas fa-trash-alt"></i></button>
+                    type='submit'><i class="fas fa-trash-alt"></i></button>
             </form>
         </div>
         </td>
@@ -53,24 +72,54 @@ const addItem = product => {
     `;
     return $('#table-products').innerHTML += item;
 }
+async function search(keywords) {
+    $("#table-products").innerHTML="";
+    try {
+      let response = await fetch("/api/products/search?keywords=" + keywords);
+      let result = await response.json();
+      console.log(result.data);
 
-
-    let formulario = document.querySelector(".eliminar")
+      if (result.meta.total > 0) { 
     
-
-     /*  $(".borrar").addEventListener("click", (e,formulario) =>{
-        e.preventDefault()
-      
-      let respuesta = confirm("Seguro que lo queres borrar?");
-      if (!respuesta) {
-      return false;
-    }else {
-        alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
-      formulario.submit()
+      result.data.forEach((product) => {
+        addItem(product);
+        console.log("lista productos");
+      });
+    } else {
+   
+        return ($("#table-products").innerHTML =`<p class="fs-2"><strong>No hay resultados para la búsqueda: "${keywords}"</strong></p>`);
+     } 
+    } 
+    catch (error) {
+     console.log(error);
     }
-}) */
+  };
+
+
+   let boton = $(".borrar")
+   console.log(boton);
+    
+    if(boton!== null){
+        boton.addEventListener("click", (e) => {
+          e.preventDefault();
+          let formulario = document.querySelector(".eliminar");
+
+          let respuesta = confirm("Seguro que lo queres borrar?");
+          if (!respuesta) {
+            return false;
+          } else {
+            alert(
+              "El producto ah sido completamente eliminado del inventario que poseemos actualmente"
+            );
+            formulario.submit();
+          }
+        });
+
+    }
+
       
-    let confirmacion = (e,formulario) =>{ 
+      
+  /*   let confirmacion = (e,formulario) =>{ 
       e.preventDefault()
       
       let respuesta = confirm("Seguro que lo queres borrar?");
@@ -80,68 +129,4 @@ const addItem = product => {
         alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
       formulario.submit()}}
    
-
-/* const goPage = async (event,current,limit,initial,next) => {
-    event.preventDefault();
-    $('table-products').innerHTML = null;
-    $('box-paginator').innerHTML = null;
-
-    try {
-        let response = await fetch(`/api/products?current=${current}&limit=${limit}`);
-        let result = await response.json();
-        result.data.forEach(product => {
-            addItem(product)
-        });
-        paginator(result.meta.total,limit,6,current,initial,next)
-
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-goPagesNext = (event,total,limit,show,current,initial,next) => {
-    event.preventDefault();
-    current = current + show;
-    initial = initial + show;
-    next = next + show
-    paginator(total,limit,show,current,initial,next)
-    goPage(event,current,limit,initial,next)
-}
-
-
-function paginator(total, limit, show, current,initial,next){
-    let pages = Math.ceil(total / limit)
-    $('box-paginator').innerHTML = 
-    `
-        <li class="page-item">
-            <a class="page-link me-1" href="#">
-                <i class="fas fa-angle-left"></i>
-            </a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">
-                <i class="fas fa-angle-double-left"></i>
-            </a>
-        </li>
-    `
-    for (let i = initial; i < initial + show; i++) {
-        $('box-paginator').innerHTML += 
-        `
-            <li class="page-item ${current == i ? 'active' : null}" onclick="goPage(event, ${i},${limit},${initial},${next})"><a class="page-link" href="#">${i}</a></li>
-        `
-    }
-   
-    $('box-paginator').innerHTML += 
-    `
-        <li class="page-item">
-            <a class="page-link" href="#" onclick="goPagesNext(event,${total},${limit},${show},${current},${initial},${next})">
-                <i class="fas fa-angle-double-right"></i>
-            </a>
-        </li>
-        <li class="page-item ms-1">
-        <a class="page-link" href="#">
-            <i class="fas fa-angle-right"></i>
-        </a>
-    </li>
-    ` 
-}*/
+ */
