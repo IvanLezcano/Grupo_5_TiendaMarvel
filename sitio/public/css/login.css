@@ -19,16 +19,20 @@
   height: 80%;
 }
 .login .titulo{
+  font-family: 'Bebas Neue';
   flex-direction: column;
     justify-content: center;
+    margin-top: 2rem !important;
   height: 20%;
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 6rem;
   color: var(--color-independence);
 }
 .login-main .ingresa-google{
-  margin-bottom: 3rem;
-  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+
+  font-size: 2rem;
 }
 
 /* === formulario === */
@@ -45,9 +49,11 @@
   padding:1rem;
 }
 .login-main .inputs input {
+  text-align: center !important;
+
   border-radius: 1rem;
   padding: 0.2rem;
-  width: 100%;
+  width: 25rem;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -88,7 +94,7 @@
 
 /* === logo === */
 .cont-img img{
-  width: 150px;
+  width: 180px;
 }
 
 /* === boton === */
@@ -109,16 +115,14 @@
 /* ==== TABLET ==== */
 @media (min-width: 768px) {
   .pruebass{
-    width: 40%;
+    width: 50%;
   }
   .pruebass img{
-    max-width: 100% !important;
+    max-width: 80% !important;
 
   }
   .login {
     background-color: var(--color-independence);
-    width: 100vw;
-    height: 100vh;
     display: flex;
     
   }
@@ -130,9 +134,9 @@
 
     margin: auto;
     border-radius: 20px;
-    height: 60%;
+    height: 70%;
     margin: 0;
-    max-width: 60vw;
+    max-width: 70vw;
     background-color: var(--color-oxfordBlue);
     display: flex;
     flex-direction: row-reverse;
@@ -144,8 +148,8 @@
   }
   /* ===== inputs ===== */
   .login .inputs {
-    width: 65%;
-    height: 70%;
+    width: 70%;
+    height: 90%;
     justify-content: space-evenly;
     align-items: center;
     margin: 1rem;
@@ -155,7 +159,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     height: 20%;
     margin: 0;
 
@@ -204,8 +208,8 @@
 }
   /* === logo === */
   .login .cont-img {
-    height: 50%;
-    width: 40%;
+    height: 60%;
+    width: 50%;
   }
   .login .cont-img img{
     height: 100%;
@@ -216,7 +220,6 @@
 
 @media (min-width: 768px) {
   .login .login-main{
-    max-width: 40vw;
   }
 
 }
