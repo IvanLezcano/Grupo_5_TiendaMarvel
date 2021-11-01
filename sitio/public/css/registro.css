@@ -314,14 +314,19 @@ input{
     height: 17%;
     margin: 0;
   }
+  .intento img{
+    width: 30rem !important ;
+    margin-left: -10rem;
+
+  }
 }
 
 /* ====== DESKTOP ======*/
 
 @media (min-width: 1024px) {
   .intento img{
-    width: 100% ;
-    margin-left: -10rem;
+    width: 30rem !important ;
+    margin-left: -5rem;
 
   }
   #imagenUsuario{
@@ -332,11 +337,11 @@ input{
   }
   
   .registro {
-    max-width: 55vw;
+    max-width: 65vw;
   }
 
   .registro .inputs {
-    width: 70%;
+    width: 90%;
   }
   .registro .inputs label {
     width: 100%;
@@ -356,7 +361,7 @@ input{
   }
 
   .registro .logo-info .img {
-    width: 20rem;
+    width: 40rem !important;
     margin-left: -14rem;
   }
 }
@@ -367,7 +372,7 @@ input{
     margin: 3rem !important;
   }
   .registro{
-    width: 45%;
+    width: 60% !important;
     justify-content: center;
     margin: 0;
   }
@@ -421,7 +426,7 @@ input{
 
   }
   .registro .logueate{
-    font-size: 1.9rem !important;
+    font-size: 1.4rem !important;
   }
 
   .registro .inputs div span {
@@ -432,8 +437,13 @@ input{
     } 
   .registro .inputs .btn-registrarse {
     font-size: 1.5rem;
-    margin: 0;
+    margin: auto;
     padding: 0.5rem;
     width: 8rem;
+  }
+  .intento img{
+    width: 30rem !important ;
+    margin-left: -15rem;
+
   }
 }
