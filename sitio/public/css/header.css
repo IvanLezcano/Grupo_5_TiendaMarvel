@@ -69,7 +69,6 @@ header{
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 35vh;
     }
     .imagenNavegacion{
         width: 25%;
@@ -272,6 +271,9 @@ header{
     .imagenNavegacion{
         width: 20% !important;
         height: 100%;
+    }
+    .imagenNavegacion img{
+        width: 100% !important;
     }
      .dropdown-menu{
         background-color:var(--color-header);
