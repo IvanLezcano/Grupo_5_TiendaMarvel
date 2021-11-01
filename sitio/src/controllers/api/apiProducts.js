@@ -99,14 +99,22 @@ module.exports = {
                 [Op.substring]: req.query.keywords,
               },
             },
-            {
-              categoryId: {
-                [Op.substring]: req.query.keywords,
-              },
-            }
           ],
         },
       });
+      /* let category = await db.Category.findAll({
+        include: [{ association: "products" }],
+        where: {
+          [Op.or]: [
+            {
+              name: {
+                [Op.substring]: req.query.keywords,
+              },
+            }
+          ]}
+          });
+         Promise.all([products, category])
+      .then(([products, category]) => { */
       let response = {
         status: 200,
         meta: {
@@ -115,9 +123,32 @@ module.exports = {
         },
         data: products,
       };
+      console.log(response);
       return res.status(200).json(response);
+      /*  }) */
     } catch (error) {
       throwError(res, error);
     }
+  },
+  categories: async(req, res) => {
+    try { 
+      let categoria= await db.Category.findAll({
+       include: [{ association: "products" }],
+    })
+     let response = {
+        status: 200,
+        meta: {
+          total: categoria.length,
+          url: getURL(req),
+        },
+        data: categoria,
+      };
+      console.log(response);
+      return res.status(200).json(response);
+      
+    } catch (error) {
+       throwError(res, error);
+    }
+   
   },
 };

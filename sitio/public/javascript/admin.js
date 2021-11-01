@@ -22,6 +22,9 @@ $('.listar').addEventListener("click", () =>{
 $('.agregar').addEventListener("click", () =>{
 
 })
+$1('ropa').addEventListener("click", () =>{
+    filtrar()
+})
 
 
 
@@ -83,17 +86,36 @@ async function search(keywords) {
     
       result.data.forEach((product) => {
         addItem(product);
-        console.log("lista productos");
+        $(
+          ".productos"
+        ).innerHTML = `<p class="fs-1">Productos encontrados para la búsqueda<b>"${keywords}": ${result.meta.total}</b></p>`;
+        
       });
     } else {
    
-        return ($("#table-products").innerHTML =`<p class="fs-2"><strong>No hay resultados para la búsqueda: "${keywords}"</strong></p>`);
+        $(
+          ".productos"
+        ).innerHTML = `<p class="fs-1">No hay resultados para la búsqueda: <b>"${keywords}"</b></p>`;
      } 
     } 
     catch (error) {
      console.log(error);
     }
   };
+
+  const filtrar = async () => {
+   try {
+     let response = await fetch("/api/categories");
+     let result = await response.json();
+
+     result.data.forEach((product) => {
+     console.log(product);
+      
+     });
+   } catch (error) {
+     console.log(error);
+   }
+ }; 
 
 
    let boton = $(".borrar")
