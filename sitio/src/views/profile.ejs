@@ -54,13 +54,20 @@
                                     </form>
 
                                     <form action="/users/updateAvatar/<%= user.id %>?_method=PUT" class="row d-none formCambiarAvatar align-items-center justify-content-center" method="POST" novalidate enctype="multipart/form-data">
-                                        <h5 class="card-title col-6 text-center mt-5 ">Modificar Avatar</h5>
-                                        <div class="col-12 col-md-6 mb-3 align-items-center justify-content-center mt-5">
+                                        <h5 class="card-title col-12 text-center mt-5 ">Modificar Avatar</h5>
+                                        <div class="col-12 col-md-6 mb-3 d-flex align-items-center justify-content-center mt-5">
                                                 <label for="avatar" class="btn btn-primary my-3 h-50">Subir imagen</label>
                                                 <input type="file" name="avatar" id="avatar" hidden>
                                         </div>
+                                       
+                                        <div class="contAvatarPreview col-32 col-md-6 mb-3 d-flex align-items-center justify-content-center mt-5">
+                                                
+                                        </div>
+                                        <div>
+                                            <span class="errorImagen"></span>
+                                        </div>
                                         <div class="container text-center">
-                                            <button type="submit" class="btn btn-success my-3">Guardar</button>
+                                            <button type="submit" id="guardarImg" class="btn btn-success my-3">Guardar</button>
                                             <a href="/users/perfil" class="btn btn-secondary">Cancelar</a>
                                         </div>
                                             

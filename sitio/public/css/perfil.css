@@ -35,5 +35,11 @@
     .perfil .navUser .opciones{
     display: none;
     }
+    .perfil .avatarPreview{
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px rgb(121, 115, 115);
+    }
     
 }
