@@ -1,11 +1,21 @@
 console.log('admin conneted success')
 const $ = (id) => document.querySelector(id);
+const S1 = (id) =>document.querySelector(id);
+const query = new URLSearchParams(location.search);
+
+if($1("form-search")){
+  $1("form-search").addEventListener("submit", (e) =>{
+    e.preventDefault();
+    query.set("keywords", $1("imput-search").value);
+    history.replaceState({}, "", `${location.pathname}?${query}`);
+   search(query.get("keywords"));
+  })
+}
 
 $('#table-products').innerHTML = null; //limpio el caja padre
 $('.listar').addEventListener("click", () =>{
     listado()
-
-      
+     
 })
 $('.agregar').addEventListener("click", () =>{
 
@@ -115,6 +125,19 @@ async function search(keywords) {
       let result = await response.json();
       console.log(result.data);
 
+      if(result.meta.total > 0){
+
+        result.data.forEach((product)=>{
+          addItem(product);
+          $(".productos").innerHTML = `<p><b>Productos encontrados para la busqueda ${keywords}: ${result.meta.total}<b><p>`;
+        })
+      }else{
+         $(".productos").innerHTML = `<p><b>No hay resultados para la busqueda: ${keywords}<b><p>`;
+      }
+    }  catch (error) {
+   console.log(error);
+ }
+}
 
   async function ropa() {
     $("#table-products").innerHTML="";
