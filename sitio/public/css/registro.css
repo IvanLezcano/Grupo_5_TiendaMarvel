@@ -91,7 +91,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 16rem;
+  max-width: 23rem;
 }
 .registro .inputs input{
   margin: 0 !important;
@@ -162,9 +162,15 @@
 .registro .logueate a {
   color: var(--color-red);
 }
+.registro .inputs {
+  width: 33rem;
+}
 
 /* ======= TABLET ======= */
 @media (min-width: 768px) {
+  .tituloSubtitulo{
+    margin: 3rem !important;
+  }
   .intento{
     width: 50%;
   }
@@ -182,12 +188,13 @@
   }
 
   .registro {
-    margin: 10rem auto;
+    margin: 1rem auto;
     border-radius: 20px;
 
-    max-width: 60vw;
+    max-width: 80vw;
     flex-direction: row;
     justify-content: space-between;
+    padding: 2rem;
   }
 
   /* ===== logo-info ===== */
@@ -284,7 +291,7 @@
   .registro .inputs div span {
     margin: 0;
     height: 2rem;
-    width: 16rem;
+    width: 18rem;
   }
 #imagenUsuario{
   font-size: 7px !important;
