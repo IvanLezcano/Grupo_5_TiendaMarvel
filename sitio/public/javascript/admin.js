@@ -107,13 +107,13 @@ const addItemCategory = product => {
       <td>${product.title} </td>
       <td>${product.price} </td>
       <td></td>
-      <td class="d-flex justify-content-around">
+      <td ">
           <a class="btn btn-sm btn-success"
           href="/productos/modificar/${product.id}"><i class="fas fa-edit"></i></a>
       <div>
           <form id="eliminar" class="eliminar" action="/productos/borrar/${product.id}?_method=DELETE"
               method="POST">
-              <button class="btn btn-sm btn-lg-sm btn-danger borrar"
+              <button class="btn btn-sm  btn-danger borrar"
                   type='submit'><i class="fas fa-trash-alt"></i></button>
           </form>
       </div>
