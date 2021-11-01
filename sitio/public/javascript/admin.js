@@ -43,6 +43,7 @@ const listado = async () => {
     try {
         let response = await fetch('/api/products');
         let result = await response.json();
+        console.log(result.data);
         result.data.forEach(product => {
            addItem(product);
            console.log(document.querySelector('.borrar'))
@@ -50,15 +51,16 @@ const listado = async () => {
         let borrar = document.querySelectorAll('.borrar')
         
         borrar.forEach(e => e.addEventListener("click",(event)=>{
-            event.preventDefault()
             let formulario = document.querySelector('.eliminar')
             console.log(formulario);
             let respuesta = confirm("Seguro que lo queres borrar?");
             if (!respuesta) {
+                event.preventDefault()
             return false;
             }else {
                 alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
             formulario.submit()
+            
             }
             
         }))
@@ -72,6 +74,7 @@ const listado = async () => {
 
 
 const addItem = product => {
+    console.log(product.id);
     let item = `
     <tr style="width:10px; height:10px">
         <th scope="row">${product.id} </th>
@@ -106,7 +109,7 @@ const addItemCategory = product => {
       <td></td>
       <td class="d-flex justify-content-around">
           <a class="btn btn-sm btn-success"
-          href="/productos/modificar/${product.id} "><i class="fas fa-edit"></i></a>
+          href="/productos/modificar/${product.id}"><i class="fas fa-edit"></i></a>
       <div>
           <form id="eliminar" class="eliminar" action="/productos/borrar/${product.id}?_method=DELETE"
               method="POST">

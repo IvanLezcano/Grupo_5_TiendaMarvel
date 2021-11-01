@@ -179,7 +179,9 @@ module.exports = {
   },
 
   borrar: async (req, res) => {
-    let imagen = await db.Product.findByPk(req.params.id).then()
+    let id = +req.params.id
+    let imagen = await db.Product.findByPk(id).then()
+    console.log(imagen)
     let rutaImg = path.join(
       __dirname,
       "../../public/images/merchandising/" + imagen.image
@@ -187,7 +189,7 @@ module.exports = {
     fs.unlinkSync(rutaImg);
     db.Product.destroy({
       where: {
-        id: req.params.id,
+        id: id,
       },
     })
       .then((response) => {
