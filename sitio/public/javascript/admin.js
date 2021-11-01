@@ -38,19 +38,30 @@ $('.comics').addEventListener("click", () =>{
 
 
 
-
 const listado = async () => {
 
     try {
         let response = await fetch('/api/products');
         let result = await response.json();
-        
         result.data.forEach(product => {
-            let listado= addItem(product)
-            console.log("lista productos");
+           addItem(product);
+           console.log(document.querySelector('.borrar'))
         });
+        let borrar = document.querySelectorAll('.borrar')
         
-       
+        borrar.forEach(e => e.addEventListener("click",(event)=>{
+            event.preventDefault()
+            let formulario = document.querySelector('.eliminar')
+            console.log(formulario);
+            let respuesta = confirm("Seguro que lo queres borrar?");
+            if (!respuesta) {
+            return false;
+            }else {
+                alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
+            formulario.submit()
+            }
+            
+        }))
 
     } catch (error) {
         console.log(error)
@@ -228,15 +239,3 @@ async function comics() {
     }
 
       
-      
-  /*   let confirmacion = (e,formulario) =>{ 
-      e.preventDefault()
-      
-      let respuesta = confirm("Seguro que lo queres borrar?");
-      if (!respuesta) {
-      return false;
-    }else {
-        alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
-      formulario.submit()}}
-   
- */
