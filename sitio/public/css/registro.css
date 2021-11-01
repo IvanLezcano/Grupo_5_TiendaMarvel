@@ -427,6 +427,7 @@ input{
   }
   .registro .logueate{
     font-size: 1.4rem !important;
+    margin: auto !important;;
   }
 
   .registro .inputs div span {
