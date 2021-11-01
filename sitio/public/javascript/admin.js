@@ -4,6 +4,8 @@ const $ = (id) => document.querySelector(id);
 $('#table-products').innerHTML = null; //limpio el caja padre
 $('.listar').addEventListener("click", () =>{
     listado()
+
+      
 })
 $('.agregar').addEventListener("click", () =>{
 
@@ -13,27 +15,40 @@ const listado = async () => {
     try {
         let response = await fetch('/api/products');
         let result = await response.json();
-        
         result.data.forEach(product => {
-            let listado= addItem(product)
-            console.log("lista productos");
+           addItem(product);
+           console.log(document.querySelector('.borrar'))
         });
+        let borrar = document.querySelectorAll('.borrar')
         
-       
+        borrar.forEach(e => e.addEventListener("click",(event)=>{
+            event.preventDefault()
+            let formulario = document.querySelector('.eliminar')
+            console.log(formulario);
+            let respuesta = confirm("Seguro que lo queres borrar?");
+            if (!respuesta) {
+            return false;
+            }else {
+                alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
+            formulario.submit()
+            }
+            
+        }))
+
 
     } catch (error) {
         console.log(error)
     }
 
 }
-
 /* loadProduct(list) */
 
 
 const addItem = product => {
     let item = `
-    <tr>
+    <tr style="width:10px; height:10px">
         <th scope="row">${product.id} </th>
+        <td scope="row" style="width:10px; height:10px"> <img src="/images/merchandising/${product.image}" class="img-fluid" alt="">  </td>
         <td>${product.title} </td>
         <td>${product.price} </td>
         <td>${product.category.name} </td>
@@ -41,19 +56,25 @@ const addItem = product => {
             <a class="btn btn-sm btn-success"
             href="/productos/modificar/${product.id} "><i class="fas fa-edit"></i></a>
         <div>
-            <form
-                action="/productos/borrar/${product.id}?_method=DELETE"
+            <form id="eliminar" class="eliminar" action="/productos/borrar/${product.id}?_method=DELETE"
                 method="POST">
-                <button class="btn btn-sm btn-danger"
-                    type='submit'><i class="fas fa-trash-alt"></i></button>
+                <button class="btn btn-sm btn-lg-sm btn-danger borrar" type="submit">
+                <i class="fas fa-trash-alt"></i>
+                </button>
             </form>
         </div>
         </td>
     </tr>
-    `
-    return $('#table-products').innerHTML += item;
+    `;
+
+
+    
+return $('#table-products').innerHTML += item;
 }
 
+
+
+   
 /* const goPage = async (event,current,limit,initial,next) => {
     event.preventDefault();
     $('table-products').innerHTML = null;
