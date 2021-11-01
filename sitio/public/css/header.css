@@ -61,7 +61,6 @@ header{
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 40vh;
     }
     .busqueda input{
         width: 75% !important;
@@ -260,6 +259,9 @@ header{
     }
     .imagenNavegacion{
         width: 20% !important;
+    }
+    .imagenNavegacion img{
+        width: 100% !important;
     }
      .dropdown-menu{
         background-color:var(--color-header);
