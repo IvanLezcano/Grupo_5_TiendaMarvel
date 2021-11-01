@@ -1,81 +1,102 @@
 let db = require("../database/models");
 const { validationResult } = require("express-validator");
-const {Op}= require('sequelize')
+const { Op } = require('sequelize')
+const path = require('path')
+const fs = require('fs');
+
 
 
 module.exports = {
- search: (req, res) => {
-   db.Product.finAll({
-     where: {
-       [Op.or]: [
-         {
-           title: {
-             [Op.substring]: req.query.search,
-           }
-         },
-         {
-           description: {
-             [Op.substring]: req.query.search,
-           }
-         }
-       ]
-     },
-   }).then(resultado => res.render("resultado", {
+  search: (req, res) => {
+    db.Product.findAll({
+      where: {
+        [Op.or]: [
+          {
+            title: {
+              [Op.substring]: req.query.search,
+            }
+          },
+          {
+            description: {
+              [Op.substring]: req.query.search,
+            }
+          }
+        ]
+      },
+    }).then(resultado => res.render("resultado", {
       resultado,
       busqueda: req.query.search,
-    })).catch(error =>console.log(error))
- },
+    })).catch(error => console.log(error))
+  },
 
   lista: (req, res) => {
-      db.Category.findAll()
-      .then(categorias =>{
-          return res.render("productos", {
-              categorias
-      }).catch(error => console.log(error))
-  })
+    db.Category.findAll({ include: [{ association: "products" }] }).then(categorias => res.render("productos", { categorias }))
+
+  },
+  carrito: (req, res) => {
+    db.Product.findByPk(req.params.id).then(respons => res.render("carrito", { respons }));
+
+
   },
   detail: (req, res) => {
-      db.Product.findOne({
+    db.Product.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [
+        { association: 'category' }
+      ]
+    }).then(producto => {
+      console.log(producto);
+      db.Category.findOne({
         where: {
-          id: req.params.id,
+          id: producto.categoryId,
         },
-        include : [
-            {asocciation: 'category'}
+        include: [
+          {
+            association: 'products'
+          }
         ]
-      }).then(producto =>{
-          console.log(producto);
-          db.Category.findOne({
-              where: {
-                  id: producto.categoryId,
-                include: [
-                    {
-                     assotiation: 'products'
-                    }
-                ]
-              }
-          }).then(category =>{
-              return res.render("descripcion-producto", {
-                  producto,
-                  relacionados : category.products
-          })
-      }).catch(error => console.log(error))
+      }).then(category => {
+        return res.render("descripcion-producto", {
 
-  })
-},
+          producto,
+          relacionados: category.products
+        })
+      }).catch(error => console.log(error))
+    })
+
+
+  },
+  ropa: (req, res) => { db.Category.findOne({ where: { name: "ropa" }, include: [{ association: "products" }] }).then(ropa => res.render("ropa", { ropa })) }
+
+  ,
+  mercha: (req, res) => { db.Category.findOne({ where: { name: "merchandising" }, include: [{ association: "products" }] }).then(mercha => res.render("mercha", { mercha })) }
+
+  ,
+  comics: (req, res) => { db.Category.findOne({ where: { name: "comics" }, include: [{ association: "products" }] }).then(comics => res.render("comics", { comics })) }
+
+  ,
+  figura: (req, res) => { db.Category.findOne({ where: { name: "figuras" }, include: [{ association: "products" }] }).then(figura => res.render("figura", { figura })) }
+
+  ,
+
   carga: (req, res) => {
-    db.Product.finAll().then((produto) => {
-      return res.render("cargadeproducto", { category, cart });
+    db.Category.findAll().then((categorias) => {
+      return res.render("cargadeproducto", { categorias });
+
     });
   },
   create: (req, res) => {
     let errors = validationResult(req);
+
     if (errors.isEmpty()) {
       db.Product.create({
         ...req.body,
         image: req.file.filename,
       })
         .then((product) => {
-          return res.redirect("/productos");
+          return res.redirect("/admin");
         })
         .catch((error) => console.log(error));
 
@@ -83,80 +104,114 @@ module.exports = {
       if (req.file) {
         let imgABorrar = path.join(
           __dirname,
-          "../../public/images/merchandinsing/" + req.file.filename
+          "../../public/images/merchandising/" + req.file.filename
         );
         fs.unlinkSync(imgABorrar);
       }
-      db.Category.finAll()
-      return res.render("cargadeproducto", {
+      db.Category.findAll().then(categorias =>
+        res.render("cargadeproducto", {
           categorias,
           errores: errors.mapped(),
           old: req.body,
-        })
-       .catch((error) => console.log(error));
+        })).catch((error) => console.log(error));
     }
   },
   modificar: (req, res) => {
-    let pedidoProducto = db.Product.findByPk(req.params.id);
-    let pedidoCategorias = db.Category.finAll();
+    let pedidoProducto = db.Product.findByPk(req.params.id, {
+      include: [{ association: 'category' }]
+    });
+    let pedidoCategorias = db.Category.findAll();
 
     Promise.all([pedidoProducto, pedidoCategorias])
-      .then(([producto, categoria]) => {
+      .then(([producto, categorias]) => {
         res.render("modificarproducto", {
           producto,
-          categoria,
+          categorias,
         });
       })
       .catch((error) => console.log(error));
   },
-  update: (req, res) => {
+  update: async (req, res) => {
+
     let errores = validationResult(req);
     if (!errores.isEmpty()) {
-      return res.render("modificarproducto", {
-        categoria,
-        producto,
-        errores: errores.mapped(),
-        old: req.body,
+      let pedidoProducto = db.Product.findByPk(req.params.id, {
+        include: [{ association: 'category' }]
       });
+      let pedidoCategorias = db.Category.findAll();
+
+      Promise.all([pedidoProducto, pedidoCategorias])
+        .then(([producto, categorias]) => {
+          res.render("modificarproducto", {
+            producto,
+            categorias,
+            old: req.body,
+            errores: errores.mapped()
+          });
+        })
+        .catch((error) => console.log(error));
     } else {
+      let imagen = await db.Product.findByPk(req.params.id).then()
+
+      if (req.file) {
+        let rutaImg = path.join(
+          __dirname,
+          "../../public/images/merchandising/" + imagen.image
+        );
+        fs.unlinkSync(rutaImg);
+      }
+
       db.Product.update(
         {
           ...req.body,
+          image: req.file ? req.file.filename : imagen.image
         },
         {
           where: {
             id: req.params.id,
           },
         }
-      )
-        .then((response) => {
-          console.log(response);
-          return res.redirect("/productos");
-        })
+      ).then((response) => {
+        return res.redirect("/admin");
+      })
         .catch((error) => console.log(error));
     }
   },
 
-  borrar: (req, res) => {
+  borrar: async (req, res) => {
+    let imagen = await db.Product.findByPk(req.params.id).then()
+    let rutaImg = path.join(
+      __dirname,
+      "../../public/images/merchandising/" + imagen.image
+    );
+    fs.unlinkSync(rutaImg);
     db.Product.destroy({
       where: {
         id: req.params.id,
       },
     })
       .then((response) => {
-        console.log(response);
-        return res.redirect("/productos");
+        return res.redirect("/admin");
       })
       .catch((error) => console.log(error));
-    var fs = require("fs");
-    var filePath = path.join(
-      __dirname,
-      "../../public/images/merchandinsing/" + productoaborrar.imagen
-    );
-    fs.unlinkSync(filePath);
-    console.log(productoaborrar);
-    guardar(productoparavista);
-    res.redirect("/");
+
+  },
+  comprafinalizada: (req, res) => {
+    db.Order.update({
+      status: "success"
+    }, {
+      where: {
+        id: req.params.id
+      }
+    }
+    ).then(()=>{
+      req.session.cart = []
+      res.render("comprafinalizada")
+      
+    }).catch(e =>{
+      console.log(e);
+    })
+
   },
 }
 

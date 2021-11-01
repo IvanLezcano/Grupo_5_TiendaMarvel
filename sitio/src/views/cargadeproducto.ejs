@@ -9,48 +9,58 @@
 
     </div>
     <main class="carga">
-        <form action="/productos/carga" method="POST" enctype="multipart/form-data" class="form"> 
+        <form action="/productos/carga" method="POST" enctype="multipart/form-data" class="form needs-validation" novalidate> 
             <div>
-                <input type="text" id="nombreProducto" name="nombre" placeholder="Nombre de Producto"
-                 value="<%=locals.old && old.nombre? old.nombre :null %>">
-                 <span class="error-carga"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %></span>
-
+                <input type="text" id="nombreProducto" class="form-control" name="title" placeholder="Nombre de Producto"
+                 value="<%=locals.old && old.title? old.title :null %>" required>
+                 <span class="error-carga errorName"><%= locals.errores && errores.title ? errores.title.msg : null %></span>
+                
             </div>
             <div>
                 <label for="imagen">Imagen</label>
-                <input type="file" name="imagen" id="imagenProducto" value="<%= locals.old && old.imagen? old.imagen:null %>">
-                   <span class="error-carga"><%= locals.errores && errores.imagen ? errores.imagen.msg : null %></span>
-
+                <input type="file" name="image" class="form-control" id="imagenProducto" value="<%= locals.old && old.image? old.image:null %>" required>
+                <span class="error-carga errorImagen"><%= locals.errores && errores.image ? errores.image.msg : null %></span>
+                
             </div>
             <div>
-                <label for="pecio">Precio</label>
-                <input type="number" name="precio" id="precioProducto" value="<%= locals.old && old.precio? old.precio:null%>">
-                  <span class="error-carga"><%= locals.errores && errores.precio ? errores.precio.msg : null %></span>
-
-                <input type="text" name="marca" id="marcaProducto" placeholder="marca" value="<%= locals.old && old.marca? old.marca:null %>">
-                 <span class="error-carga"><%= locals.errores && errores.marca ? errores.marca.msg : null %></span>
-                   
+                <label for="precio">Precio</label>
+                <input type="number" name="price" class="form-control"id="precioProducto" value="<%= locals.old && old.price? old.price:null%>" required>
+                  <span class="error-carga errorPrecio"><%= locals.errores && errores.price ? errores.price.msg : null %></span>
+                                     
+                </div>
             <div>
+                <label for="discount">Descuento (opcional)</label>
+                <input type="number" name="discount"  id="descuento" class="form-control" value="<%= locals.old && old.discount? old.discount:null%>" required>
+                  <span class="error-carga errorDesc"><%= locals.errores && errores.discount ? errores.discount.msg : null %></span>
+                  
+             </div>
+             <div>
                 <label for="descripcion">Descripción del producto</label>
-                <textarea name="descripcion" id="descripcion" cols="8" rows="3" placeholder="Escribir..." ><%= locals.old && old.descripcion ? old.descripcion : null %></textarea>
-                 <span class="error-carga"><%= locals.errores && errores.descripcion ? errores.descripcion.msg : null %></span>
+                <textarea name="description" id="descripcion" class="form-control" cols="8" rows="3" placeholder="Escribir..." required><%= locals.old && old.description ? old.description : null %></textarea>
+                 <span class="error-carga errorDescripcion"><%= locals.errores && errores.description ? errores.description.msg : null %></span>
+                 
             </div>
             <div>
                 <label for="categoria">Categoría</label>
-                <select name="categoria">
+                <select name="categoryId" class="form-select" required>
                     <option value="" selected hidden>Seleccione la categoría</option>
-                    <% categorias.forEach(rubro => { %>
-                        <option value="<%= rubro %>"<%= locals.old && old.categoria===rubro ? 'selected' :null%> ><%= rubro %></option> 
+                    <% categorias.forEach(categoria => { %>
+                        <option value="<%= categoria.id %>"<%= locals.old && old.categoryId===categoria.id ? 'selected' :null%> ><%= categoria.name %></option> 
                     <% }) %>
                   </select>
                   
-                  <span class="error-carga"><%= locals.errores && errores.categoria ? errores.categoria.msg : null %></span>
-                   
+                  <span class="error-carga"><%= locals.errores && errores.categoryId ? errores.categoryId.msg : null %></span>
+    
             </div>
             <div class="button">
             <button type="submit">Publicar</button>
             </div>
         </form>
     </main>
+
+    <%- include('./partials/scripts')  %> 
+    
+    <script src="/javascript/validateFormRegister.js"></script>
+    <script src="/javascript/validateCarga.js"></script>
 </body>
 </html>

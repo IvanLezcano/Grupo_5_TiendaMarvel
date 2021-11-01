@@ -112,6 +112,7 @@
 
 .carrito-main-article-precio-subrayado {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
     
@@ -120,16 +121,17 @@
 /*----------    SECTION FACTURACION -------------*/
 .carrito-facturacion{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   }
 
 .carrito-facturacion-tarjetas {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   height: 50%; 
-  padding: 10px 10px;
+  padding: 10px 20px;
 }
 .carrito-facturacion-tarjetas-descuento{
   width: 100%;
@@ -363,7 +365,7 @@ color: #3f4f68;
 }
 
 /*========DESKTOP=======*/
-@media (min-width:1024px) {
+/* @media (min-width:1024px) {
 
  
   .carrito {
@@ -387,7 +389,7 @@ color: #3f4f68;
 } 
 
 /*=====ARTICULOS=======*/
-.carrito-main-article {
+/* .carrito-main-article {
   height: 50%;
 }
 .carrito-main-producto{
@@ -424,4 +426,4 @@ color: #3f4f68;
   padding-bottom: 0;
   }
   
-}
+}  */

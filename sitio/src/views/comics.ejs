@@ -12,13 +12,15 @@
 
 
 
-    <% comics.forEach(comics => { %>
+    <% comics.products.forEach(comics => { %>
         <div class="productostotales">
         <article class="cadadestacado2">
-            <a href="/productos/detail/<%= comics.id %> "><img  class="cadadestacado2" src="/images/merchandinsing/<%=comics.imagen%> " alt=""></a>
+            <a href="/productos/detail/<%= comics.id %> "><img  class="cadadestacado2" src="/images/merchandising/<%=comics.image%> " alt=""></a>
             <div class="titulodestacado2">
-            <h3><%= comics.nombre %> </h3>
-            <P><%= comics.descripcion %></P>
+            <h3><%= comics.title %> </h3>
+            <P><%= comics.description %></P>
+            <P>$<%= comics.price %></P>
+
             </div>
 
         </article>

@@ -4,6 +4,21 @@ header{
     padding: 0 !important;
     box-sizing: border-box !important;
 }
+.centrando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.ContlogoTorre{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dropdown-item{
     font-weight: 500;
     font-family: 'Ubuntu';
@@ -42,10 +57,10 @@ header{
         top: 0;
         z-index: 100;
     }
-        
-    .separate{
-        margin-top: 10px;
-    }
+    .logoTorre{
+    max-width: 90%;
+    height: 90%;
+} 
 
 
     .busqueda{
@@ -54,8 +69,18 @@ header{
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 40vh;
     }
+    .imagenNavegacion{
+        width: 25%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+     .buscador{
+        width: 60%;
+    }
+   
     .busqueda input{
         width: 75% !important;
         height: 30px;
@@ -74,21 +99,12 @@ header{
         font-size: 20px;
         margin-right: 5px;
     }
-    .imagenNavegacion{
-        max-width: 30% !important;
-    }
-    .imagenNavegacion img{
-        width: 250px !important;
-        max-width: 100% !important;
 
-     
-    }
   
     .botonderegistrarse{
         align-items: center;
         align-self: center;
         height: 100% !important;
-        
         display: flex !important;
         flex-direction: column !important;
         justify-content:center;
@@ -143,6 +159,19 @@ header{
 
     }
      
+    .dropdown-item{
+        font-weight: 500;
+    }  
+    .dropdown-item:hover{
+        box-shadow: white 4px;
+         border: solid 1px white; 
+    }
+    .saludo{
+        color: white;
+         font-weight: 700;
+         font-size: 10px;
+        
+    }
     
     
     .botonderegistrarse button{
@@ -151,6 +180,9 @@ header{
 
     }
     .menu a{
+    color: white;
+}
+.dropdown-toggle::after{
     color: white;
 }
     .menu{
@@ -211,6 +243,10 @@ header{
      .botonderegistrarse{
          width: 20% !important;
     }
+    .logoTorre{
+    max-width: 100%;
+    height: 100%;
+    }
     .avatar{
         width:50px;
        
@@ -218,10 +254,7 @@ header{
     .saludo{
         font-size: 12px;
     }
-    .separate{
-        margin-top: 40px;
-    }
-
+  
 }
 
 @media (min-width: 768px){
@@ -237,6 +270,10 @@ header{
     }
     .imagenNavegacion{
         width: 20% !important;
+        height: 100%;
+    }
+    .imagenNavegacion img{
+        width: 100% !important;
     }
      .dropdown-menu{
         background-color:var(--color-header);
@@ -418,6 +455,9 @@ header .botonderegistrarse a{
 }
 @media (min-width: 1024px){
 
+
+   
+
  .avatar{
         width:70px;
         height: 60px;
@@ -469,7 +509,26 @@ display: flex !important;
 .re{
     font-size: 2.4;
 }
-.separate{
-    margin-top: 40px;
+
 }
+
+/* MODAL */
+
+.modal-content{
+    background-color: #d3dcdf;
+     font-family: "Ubuntu";
+}
+
+.badge{
+   position: absolute;
+    right: 40%;
+    bottom: 50%; 
+   
+}
+.imagen-carrito{
+    position: relative;
+    margin-top: 20px;
+}
+.modal-title{
+  font-family: "Ubuntu";
 }

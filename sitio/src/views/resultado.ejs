@@ -10,19 +10,19 @@
  
     <%- include('./partials/header') %>
 
-    <% if (resultado2) { %>
+    <% if (resultado) { %>
      
  
     <div class="productostotales">
-        <% resultado2.forEach(resultado2 => { %>
+        <% resultado.forEach(resultado => { %>
      
         <article class="cadadestacado2">
-            <a href="/productos/detail/<%= resultado2.id %> "><img  class="cadadestacado2" src="/images/merchandinsing/<%=resultado2.imagen%> " alt=""></a>
+            <a href="/productos/detail/<%= resultado.id %> "><img  class="cadadestacado2" src="/images/merchandising/<%=resultado.image%> " alt=""></a>
             <div class="titulodestacado2">
-            <h3><%= resultado2.nombre %> </h3>
-            <P><%= resultado2.descripcion %></P>
-            <p><%= resultado2.marca %></p>
-            <p>$<%= resultado2.precio %></p>
+            <h3><%= resultado.title %> </h3>
+            <P><%= resultado.description %></P>
+            <!-- <p><%= resultado.marca %></p> -->
+            <p>$<%= resultado.price %></p>
 
             </div>
 

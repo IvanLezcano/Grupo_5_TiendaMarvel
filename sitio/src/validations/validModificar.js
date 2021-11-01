@@ -5,10 +5,19 @@ const fs = require("fs");
 let producto = path.join(__dirname, "../data/producto.json");
 
 let validarModificar = [
-  check("nombre").notEmpty().withMessage("El campo no puede estar vacío"),
-  check("precio").notEmpty().withMessage("El campo no puede estar vacío"),
-  check("descripcion").notEmpty().withMessage("El campo no puede estar vacío"),
-  check("categoria").notEmpty().withMessage("El campo no puede estar vacío"),
+  check("title").notEmpty().withMessage("El campo no puede estar vacío"),
+  
+
+  check("price").notEmpty().withMessage("El campo no puede estar vacío")
+  .isNumeric().withMessage("Debe ser un número"),
+
+  check("discount").isNumeric().withMessage("El campo debe ser numérico")
+  .isNumeric().withMessage("Debe ser un número"),
+
+  check("description").notEmpty().withMessage("El campo no puede estar vacío"),
+
+  check("categoryId").notEmpty().withMessage("El campo no puede estar vacío"),
+
 ];
 
 module.exports = validarModificar;

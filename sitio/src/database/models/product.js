@@ -11,24 +11,71 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Product.belongsTo(models.Category,{
-        as : 'category'
-      })
-      Product.hasMany(models.Cart,{
-        as : 'cart'
-      })
-    }
+      Product.belongsTo(models.Category, {
+        as: "category",
+        foreignKey: "categoryId",
+      });
+      
+    } 
   };
-  Product.init({
-    title: DataTypes.STRING(100),
-    description: DataTypes.STRING(250),
-    price: DataTypes.INTEGER,
-    image: DataTypes.STRING,
-    discount: DataTypes.INTEGER,
-    categoryId: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Product',
-  });
+  Product.init(
+    {
+      title: {
+        type: DataTypes.STRING(100),
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "El campo 'title' no puede ser nulo",
+          },
+          notEmpty: {
+            msg: "El titulo del producto es requerido",
+          },
+        },
+      },
+      description: {
+        type: DataTypes.STRING(250),
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "El campo 'description' no puede ser nulo",
+          },
+          notEmpty: {
+            msg: "La descripción del producto es requerida",
+          },
+        },
+      },
+      price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "El campo 'price' no puede ser nulo",
+          },
+          notEmpty: {
+            msg: "El precio del producto es requerido",
+          },
+        },
+      },
+      image: DataTypes.STRING,
+      discount: DataTypes.INTEGER,
+      categoryId: {
+      type : DataTypes.INTEGER,
+      allowNull : false,
+      validate : {
+        notNull : {
+          msg : "La 'categoría' no puede ser nulo"
+        },
+        notEmpty : {
+          msg : 'La categoría del producto es requerida'
+        }
+      }
+    }
+  
+    },
+    {
+      sequelize,
+      modelName: "Product",
+    }
+  );
   return Product;
 };

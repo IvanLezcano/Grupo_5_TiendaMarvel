@@ -8,25 +8,25 @@
     <main class="descripcion-producto">
       <article class="producto-article">
         <div class="producto-article-imagen">
-          <p>inicio>Marvel>Spiderman><%= productofinal.nombre %></p>
-          <img src="/images/merchandinsing/<%= productofinal.imagen %>" />
+          <p>inicio>Marvel>Spiderman><%= producto.name %></p>
+          <img src="/images/merchandising/<%= producto.image %>" />
         </div>
         <div class="producto-article-cont-descripcion">
           <div class="producto-article-cont-descripcion1">
             <div class="textodescripcion">
-              <h4><%= productofinal.marca %></h4>
-              <h6><%= productofinal.nombre %> </h6>
-              <h5><%= productofinal.descripcion %></h5>
+           
+              <h6><%= producto.title %> </h6>
+              <h5><%= producto.description %></h5>
             </div>
 
             <div>
-              <span>$<%= productofinal.precio %></span>
+              <span>$<%= producto.price %></span>
               <p>Ver cuotas</p>
             </div>
           </div>
           <div class="producto-article-cont-descripcion-comprar">
             <button class="producto-article-cont-descripcion-comprar-button">
-              <h3><i class="fas fa-shopping-cart"></i> <a href="/productos/carrito/<%= productofinal.id %>">Comprar</a> </h3>
+              <h3><i class="fas fa-shopping-cart"></i> <a id="botondeagregaralcarrito" href="#"onclick="agregarItem(event,'<%=producto.id%>')">Agregar al carrito</a> </h3>
             </button>
           </div>
           <div class="tarjetadeladescripciondelproductoalfinal">
@@ -39,20 +39,20 @@
       <div class="producto-article-cont-descripcion-comprar-imagen">
         <img class="metodos" src="/images/tarjetas.PNG" />
       </div>
-      <% if (locals.isLogged && locals.user.rol === 'admin') { %>
+     <!--  <% if (locals.isLogged && locals.userLogin.rol === 'admin') { %>
       <div class = "modificadores">
-      <form  id= "jajatecache"action="/productos/borrar/<%= productofinal.id %>?_method=DELETE" class = "jajatecache"method="POST">
+      <form  id= "jajatecache"action="/productos/borrar/<%= producto.id %>?_method=DELETE" class = "jajatecache"method="POST">
         <button type="submit" onclick="confirmacion(event,document.querySelector('#jajatecache'))" class="btn btn-danger ms-2 laAlerta">Eliminar</button>
     </form>
     <div>
-      <form action="/productos/modificar/<%= productofinal.id %>" method="get">
+      <form action="/productos/modificar/<%= producto.id %>" method="get">
     <button type="submit" class="btn btn-danger ms-2 m-auto" style="color:white">Modificar</buttom>
     </form>
   </div>
   <% } %>
 
   
-  <% if (!locals.user || locals.user.rol !== 'admin') { %>
+  <% if (!locals.userLogin || locals.userLogin.rol !== 'admin') { %> -->
   <div class="relacionados mt-5">
     <h4>Productos relacionados</h4>
     <hr>
@@ -62,9 +62,9 @@
           <div class="card mb-3  p-5 cardGlider">
           <div class="d-flex flex-column align-items-center ">
             <a href="/productos/detail/<%= producto.id %> ">
-            <img class="w-100 tarjetaRelacionados" src="/images/merchandinsing/<%= producto.imagen %>" alt=""></a>
+            <img class="w-100 tarjetaRelacionados" src="/images/merchandising/<%= producto.image %>" alt=""></a>
            
-            <p class="mt-4"><%= producto.nombre %> </p>
+            <p class="mt-4"><%= producto.title %> </p>
       
           </div>
         </div>
@@ -80,29 +80,12 @@
     </main>
     
 
-    <script>
-     let formulario = document.querySelector(".jajatecache")
-     
-      
     
-    let confirmacion = (e,formulario) =>{ 
-      e.preventDefault()
-      
-      let respuesta = confirm("Seguro que lo queres borrar?");
-      if (!respuesta) {
-      return false;
-              }else {alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
-      formulario.submit()}}
-    </script>
-
-
-    
-     
-    
-  
     <%- include('./partials/footer') %>
      <%- include('./partials/scripts') %>
      <script src="/javascript/productDetail.js"></script>
+     <script src="/javascript/carrito.js"></script>
+    
         
   </body>
 </html>

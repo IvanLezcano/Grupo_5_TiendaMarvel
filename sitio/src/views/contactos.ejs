@@ -11,20 +11,22 @@
           <main class="contactito">
             <div class="cartita">
 
-              <form class="contacto"   action="https://formspree.io/f/mvodwbop"
-              method="POST">
+              <form class="contacto needs-validation"   action="https://formspree.io/f/mvodwbop"
+              method="POST" novalidate>
                 <div class="form-group row">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" name="email"
+                    <input type="email" class="form-control" id="inputEmail" name="email"
                       placeholder="laviudanegra@gmail.com" required>
+                      <div class="text-danger errorEmail"></div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre completo</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" name="Nombre"
+                    <input type="text" class="form-control" id="nombre" name="Nombre"
                       placeholder="NoSoyBatman Nirobin" required>
+                      <div class="text-danger errorName"></div>
                   </div>
                 </div>
                 <div class="form-group row">
@@ -48,15 +50,17 @@
                 <div class="form-group row">
                   <label for="inputEmail3" class="col-sm-2 col-form-label">Genero</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" name="Genero"
-                      placeholder="Expresanos como te identificas">
+                    <input type="text" class="form-control" id="genero" name="Genero"
+                      placeholder="Expresanos como te identificas" required>
+                      <div class="text-danger errorGenero"></div>
                   </div>
                 </div>
                 <div class="form-group ">
                   <label for="inputPassword3" class="col-sm-2 col-form-label">Dejanos tu mensaje</label>
                   <div class="col-sm-10">
                     <textarea rows="12" col="1" type="text" class="form-control jaja textarea2" name="mensaje"
-                      id="inputPasswor"> </textarea>
+                      id="inputPaswor" required></textarea>
+                      <div class="text-danger errorDescripcion"></div>
                   </div>
                 </div>
 
@@ -76,6 +80,11 @@
 
           </main>
           <%- include('./partials/footer') %>
+    
+    
+          <script src="/javascript/validateLogin.js"></script>
+          <script src="/javascript/validContactos.js"></script>
+
 
             <%- include('./partials/scripts') %>
 

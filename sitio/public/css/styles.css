@@ -1,4 +1,3 @@
-
 @import url('./general.css');
 @import url('./index.css');
 @import url('./header.css');
@@ -17,6 +16,10 @@
 @import url('./contactos.css');
 @import url('./sobrenosotros.css');
 @import url('./productostotales.css');
+@import url('./perfil.css');
+@import url('./modificarPerfil.css');
+@import url('./comprafinalizada.css');
+@import url('./adminIndex.css');
 
 
 

@@ -7,7 +7,8 @@
   "marca": "Toysman",
   "estado": "oferta",
   "descripcion": "Mochila Escolar",
-  "categoria": "Merchandising"
+  "discount": 80,
+  "categoria": 2
  },
  {
   "id": 2,
@@ -16,7 +17,7 @@
   "precio": 300,
   "marca": "Toysman",
   "descripcion": "Justo a tiempo",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 3,
@@ -25,7 +26,7 @@
   "precio": 400,
   "marca": "HASBRO",
   "descripcion": "Excelente estado",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 4,
@@ -34,7 +35,7 @@
   "precio": 200,
   "marca": "Ovnipress",
   "descripcion": "Tomo unico",
-  "categoria": "Comic"
+  "categoria": 3
  },
  {
   "id": 5,
@@ -42,8 +43,10 @@
   "imagen": "comic2.png",
   "precio": 300,
   "marca": "Ovnipress",
+  "discount": 80,
+
   "descripcion": "Tomo unico",
-  "categoria": "Comic"
+  "categoria": 3
  },
  {
   "id": 6,
@@ -53,7 +56,7 @@
   "marca": "Ovnipress",
   "estado": "oferta",
   "descripcion": "Tomo original",
-  "categoria": "Comic"
+  "categoria": 3
  },
  {
   "id": 7,
@@ -62,7 +65,7 @@
   "precio": 800,
   "marca": "Capcom",
   "descripcion": "Figura de 20cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 8,
@@ -71,7 +74,7 @@
   "precio": 1300,
   "marca": "Capcom",
   "descripcion": "Figura de 40cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 9,
@@ -80,7 +83,7 @@
   "precio": 1200,
   "marca": "Capcom",
   "descripcion": "Figura de 25cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 10,
@@ -89,7 +92,7 @@
   "precio": 1200,
   "marca": "Capcom",
   "descripcion": "Figura de 35cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 11,
@@ -98,7 +101,7 @@
   "precio": 1400,
   "marca": "Capcom",
   "descripcion": "Figura de 30cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 12,
@@ -107,7 +110,7 @@
   "precio": 2000,
   "marca": "Capcom",
   "descripcion": "Figuras de 35cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 13,
@@ -116,7 +119,7 @@
   "precio": 1400,
   "marca": "HASBRO",
   "descripcion": "Figura de 20cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 14,
@@ -125,7 +128,7 @@
   "precio": 1400,
   "marca": "HASBRO",
   "descripcion": "Figura de 25cm",
-  "categoria": "Figura"
+  "categoria": 4
  },
  {
   "id": 15,
@@ -135,7 +138,7 @@
   "marca": "47 Street",
   "estado": "oferta",
   "descripcion": "comodidad infinita",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 16,
@@ -144,7 +147,7 @@
   "precio": 400,
   "marca": "Mattel",
   "descripcion": "Porcelana",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 17,
@@ -153,7 +156,7 @@
   "precio": 400,
   "marca": "Mattel",
   "descripcion": "Porcelana",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 18,
@@ -162,8 +165,10 @@
   "precio": 600,
   "marca": "cannon",
   "estado": "oferta",
+  "discount": 80,
+
   "descripcion": "hecha de algodon",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 19,
@@ -172,7 +177,7 @@
   "marca": "Mattel",
   "precio": 350,
   "descripcion": "Plastico infantil",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 20,
@@ -181,7 +186,7 @@
   "marca": "Mattel",
   "precio": 250,
   "descripcion": "Poster edicion limitada",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 21,
@@ -190,7 +195,7 @@
   "precio": 400,
   "marca": "Mattel",
   "descripcion": "Porcelana",
-  "categoria": "Merchandising"
+  "categoria": 2
  },
  {
   "id": 22,
@@ -199,16 +204,18 @@
   "precio": 550,
   "marca": "Gucci",
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 23,
   "nombre": "Buzo marvel",
   "imagen": "ropa2.jpg",
+  "discount": 10,
+
   "precio": 650,
   "marca": "Gucci",
   "descripcion": "Buzo de Lana",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 24,
@@ -218,7 +225,7 @@
   "marca": "Gucci",
   "precio": 550,
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 25,
@@ -227,7 +234,7 @@
   "precio": 550,
   "marca": "Gucci",
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 26,
@@ -236,7 +243,7 @@
   "precio": 550,
   "marca": "Gucci",
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 27,
@@ -245,7 +252,7 @@
   "precio": 550,
   "marca": "Gucci",
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 28,
@@ -254,7 +261,7 @@
   "precio": 550,
   "marca": "Gucci",
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 29,
@@ -263,7 +270,7 @@
   "precio": 550,
   "marca": "Gucci",
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 30,
@@ -272,7 +279,7 @@
   "precio": 550,
   "marca": "Gucci",
   "descripcion": "Remera de poliester",
-  "categoria": "Ropa"
+  "categoria": 1
  },
  {
   "id": 31,
@@ -280,8 +287,10 @@
   "imagen": "comic6.jpg",
   "precio": 250,
   "marca": "Ovnipress",
+  "discount": 12,
+
   "descripcion": "Tomo unico",
-  "categoria": "Comic"
+  "categoria": 3
  },
  {
   "id": 32,
@@ -290,7 +299,7 @@
   "precio": 250,
   "marca": "Ovnipress",
   "descripcion": "Tomo unico",
-  "categoria": "Comic"
+  "categoria": 3
  },
  {
   "id": 33,
@@ -299,7 +308,7 @@
   "precio": 250,
   "marca": "Ovnipress",
   "descripcion": "Tomo unico",
-  "categoria": "Comic"
+  "categoria": 3
  },
  {
   "id": 34,
@@ -308,7 +317,7 @@
   "precio": 250,
   "marca": "Ovnipress",
   "descripcion": "Tomo unico",
-  "categoria": "Comic"
+  "categoria": 3
  },
  {
   "id": 35,
@@ -316,7 +325,9 @@
   "imagen": "comic10.jpg",
   "precio": 200,
   "marca": "Ovnipress",
+  "discount": 16,
+
   "descripcion": "Tomo unico",
-  "categoria": "Comic"
+  "categoria": 3
  }
 ]
