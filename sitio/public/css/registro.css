@@ -91,7 +91,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 16rem;
+  max-width: 23rem;
 }
 .registro .inputs input{
   margin: 0 !important;
@@ -162,9 +162,15 @@
 .registro .logueate a {
   color: var(--color-red);
 }
+.registro .inputs {
+  width: 33rem;
+}
 
 /* ======= TABLET ======= */
 @media (min-width: 768px) {
+  .tituloSubtitulo{
+    margin: 3rem !important;
+  }
   .intento{
     width: 50%;
   }
@@ -182,12 +188,13 @@
   }
 
   .registro {
-    margin: 10rem auto;
+    margin: 1rem auto;
     border-radius: 20px;
 
-    max-width: 60vw;
+    max-width: 80vw;
     flex-direction: row;
     justify-content: space-between;
+    padding: 2rem;
   }
 
   /* ===== logo-info ===== */
@@ -284,7 +291,7 @@
   .registro .inputs div span {
     margin: 0;
     height: 2rem;
-    width: 16rem;
+    width: 18rem;
   }
 #imagenUsuario{
   font-size: 7px !important;
@@ -307,14 +314,19 @@ input{
     height: 17%;
     margin: 0;
   }
+  .intento img{
+    width: 30rem !important ;
+    margin-left: -10rem;
+
+  }
 }
 
 /* ====== DESKTOP ======*/
 
 @media (min-width: 1024px) {
   .intento img{
-    width: 100% ;
-    margin-left: -10rem;
+    width: 30rem !important ;
+    margin-left: -5rem;
 
   }
   #imagenUsuario{
@@ -325,11 +337,11 @@ input{
   }
   
   .registro {
-    max-width: 55vw;
+    max-width: 65vw;
   }
 
   .registro .inputs {
-    width: 70%;
+    width: 90%;
   }
   .registro .inputs label {
     width: 100%;
@@ -349,7 +361,7 @@ input{
   }
 
   .registro .logo-info .img {
-    width: 20rem;
+    width: 40rem !important;
     margin-left: -14rem;
   }
 }
@@ -360,7 +372,7 @@ input{
     margin: 3rem !important;
   }
   .registro{
-    width: 45%;
+    width: 60% !important;
     justify-content: center;
     margin: 0;
   }
@@ -414,7 +426,8 @@ input{
 
   }
   .registro .logueate{
-    font-size: 1.9rem !important;
+    font-size: 1.4rem !important;
+    margin: auto !important;;
   }
 
   .registro .inputs div span {
@@ -425,8 +438,13 @@ input{
     } 
   .registro .inputs .btn-registrarse {
     font-size: 1.5rem;
-    margin: 0;
+    margin: auto;
     padding: 0.5rem;
     width: 8rem;
+  }
+  .intento img{
+    width: 30rem !important ;
+    margin-left: -15rem;
+
   }
 }
