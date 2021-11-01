@@ -36,7 +36,7 @@
              </div>
              <div>
                 <label for="descripcion">Descripción del producto</label>
-                <textarea name="description" id="descripcion" class="form-control" cols="8" rows="3" placeholder="Escribir..." required><%= locals.old && old.description ? old.description : null %></textarea>
+                <textarea name="description" id="descripcion" class="" cols="8" rows="3" placeholder="Escribir..." required><%= locals.old && old.description ? old.description : null %></textarea>
                  <span class="error-carga errorDescripcion"><%= locals.errores && errores.description ? errores.description.msg : null %></span>
                  
             </div>
@@ -53,7 +53,10 @@
     
             </div>
             <div class="button">
-            <button type="submit">Publicar</button>
+            <button type="submit" class="btnEnviar">Publicar</button>
+            </div>
+            <div >
+            <span class="msjGeneral error-carga "></span>
             </div>
         </form>
     </main>
