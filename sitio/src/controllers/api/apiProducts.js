@@ -102,20 +102,7 @@ module.exports = {
           ],
         },
       });
-      /* let category = await db.Category.findAll({
-        include: [{ association: "products" }],
-        where: {
-          [Op.or]: [
-            {
-              name: {
-                [Op.substring]: req.query.keywords,
-              },
-            }
-          ]}
-          });
-         Promise.all([products, category])
-      .then(([products, category]) => { */
-      let response = {
+       let response = {
         status: 200,
         meta: {
           total: products.length,
@@ -130,18 +117,78 @@ module.exports = {
       throwError(res, error);
     }
   },
-  categories: async(req, res) => {
+  ropa: async(req, res) => {
     try { 
-      let categoria= await db.Category.findAll({
-       include: [{ association: "products" }],
-    })
+      let ropa= await db.Category.findOne({ where: { name: "ropa" }, include: [{ association: "products" }] })
+      
      let response = {
         status: 200,
         meta: {
-          total: categoria.length,
+          total: ropa.length,
           url: getURL(req),
         },
-        data: categoria,
+        data: ropa,
+      };
+      console.log(response);
+      return res.status(200).json(response);
+      
+    } catch (error) {
+       throwError(res, error);
+    }
+   
+  },
+
+  figuras: async(req, res) => {
+    try { 
+      let figuras= await db.Category.findOne({ where: { name: "figuras" }, include: [{ association: "products" }] })
+      
+     let response = {
+        status: 200,
+        meta: {
+          total: figuras.length,
+          url: getURL(req),
+        },
+        data: figuras,
+      };
+      console.log(response);
+      return res.status(200).json(response);
+      
+    } catch (error) {
+       throwError(res, error);
+    }
+   
+  },
+  mercha: async(req, res) => {
+    try { 
+      let merchandinsing= await db.Category.findOne({ where: { name: "merchandising" }, include: [{ association: "products" }] })
+      
+     let response = {
+        status: 200,
+        meta: {
+          total: merchandinsing.length,
+          url: getURL(req),
+        },
+        data: merchandinsing,
+      };
+      console.log(response);
+      return res.status(200).json(response);
+      
+    } catch (error) {
+       throwError(res, error);
+    }
+   
+  },
+  comics: async(req, res) => {
+    try { 
+      let comics= await db.Category.findOne({ where: { name: "comics" }, include: [{ association: "products" }] })
+      
+     let response = {
+        status: 200,
+        meta: {
+          total: comics.length,
+          url: getURL(req),
+        },
+        data: comics,
       };
       console.log(response);
       return res.status(200).json(response);

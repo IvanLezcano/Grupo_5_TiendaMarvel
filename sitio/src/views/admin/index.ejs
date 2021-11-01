@@ -16,8 +16,18 @@
 <link rel="stylesheet" href="/css/general.css"> 
   <link rel="stylesheet" href="/css/header.css"> 
   <link rel="stylesheet" href="/css/carrito.css"> 
+  <style>
+
+    .container{
+     font-size: 16px;
+    }
+
+    .headertabla{
+    font-size: 16px;
+  }
+  </style>
  
- 
+  
 
 
 </head>
@@ -25,25 +35,44 @@
   <%- include('../partials/header') %>  
    
 
-    <%- include('partials/header') %> 
+  <!-- <header class="bg-primary headertabla"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary headerTabla">
+        <div class="container-fluid">
+         <!--  <a class="navbar-brand" href="/">Home</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Productos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item agregar" href="/productos/carga">Agregar</a></li>
+                  <li><a class="dropdown-item listar" href="#">Lista de Productos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+            </ul>
+           
+          
+          </div>
+        </div>
+      </nav>
+<!-- </header> -->
 
     <main class="container">
         <div class="card my-3">
             <div class="table-responsive">
         <div class="card-header">
             <div class="row d-flex">
-                <div class="col-12 col-md-4">
-                    <form action="">
-                        <select class="form-select" name="" id="">
-                            <option id="" value="" selected hidden>Filtrar</option>
-                            <option  id="ropa" value="" >Ropa</option>
-                            <option  id="figuras" value="" >Figuras</option>
-                            <option  id="mercha" value="" >Merchandinsing</option>
-                            <option  id="comics" value="" >Comics</option>
-                  
-                  </select>
-                        </select>
-                    </form>
+             
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-primary ropa" type="button">Ropa</button>
+                  <button class="btn btn-primary figuras" type="button">Figuras</button>
+                  <button class="btn btn-primary mercha" type="button">Merchandinsing</button>
+                  <button class="btn btn-primary comics" type="button">Comics</button>
                 </div>
                 
                 <div class="col-12 col-md-4">

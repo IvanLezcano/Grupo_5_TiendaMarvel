@@ -1,15 +1,43 @@
 console.log('admin conneted success')
 const $ = (id) => document.querySelector(id);
+const $1 = (id) =>document.getElementById(id);
+const query =new URLSearchParams(location.search);
+
+if ($1("form-search")) {
+  $1("form-search").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    query.set("keywords", $1("input-search").value);
+    history.replaceState({}, "", `${location.pathname}?${query}`);
+    search(query.get("keywords")); //query.get nos toma la palbra ingresada por el buscador
+  });
+}
+
 
 $('#table-products').innerHTML = null; //limpio el caja padre
 $('.listar').addEventListener("click", () =>{
     listado()
-
-      
+     
 })
 $('.agregar').addEventListener("click", () =>{
 
 })
+$('.ropa').addEventListener("click", () =>{
+    ropa()
+})
+$('.mercha').addEventListener("click", () =>{
+    mercha()
+})
+$('.figuras').addEventListener("click", () =>{
+    figuras()
+})
+$('.comics').addEventListener("click", () =>{
+    comics()
+})
+
+
+
+
 const listado = async () => {
 
     try {
@@ -34,7 +62,6 @@ const listado = async () => {
             }
             
         }))
-
 
     } catch (error) {
         console.log(error)
@@ -66,76 +93,123 @@ const addItem = product => {
         </td>
     </tr>
     `;
-
-
-    
-return $('#table-products').innerHTML += item;
+    return $('#table-products').innerHTML += item;
 }
 
+const addItemCategory = product => {
+  let item = `
+  <tr style="width:10px; height:15px">
+      <th scope="row">${product.id} </th>
+      <td scope="row" style="width:10px; height:10px"> <img src="/images/merchandising/${product.image}" class="img-fluid" alt="">  </td>
+      <td>${product.title} </td>
+      <td>${product.price} </td>
+      <td></td>
+      <td class="d-flex justify-content-around">
+          <a class="btn btn-sm btn-success"
+          href="/productos/modificar/${product.id} "><i class="fas fa-edit"></i></a>
+      <div>
+          <form id="eliminar" class="eliminar" action="/productos/borrar/${product.id}?_method=DELETE"
+              method="POST">
+              <button class="btn btn-sm btn-lg-sm btn-danger borrar"
+                  type='submit'><i class="fas fa-trash-alt"></i></button>
+          </form>
+      </div>
+      </td>
+  </tr>
+  `;
+  return $('#table-products').innerHTML += item;
+}
 
-
-   
-/* const goPage = async (event,current,limit,initial,next) => {
-    event.preventDefault();
-    $('table-products').innerHTML = null;
-    $('box-paginator').innerHTML = null;
-
+async function search(keywords) {
+    $("#table-products").innerHTML="";
     try {
-        let response = await fetch(`/api/products?current=${current}&limit=${limit}`);
-        let result = await response.json();
-        result.data.forEach(product => {
-            addItem(product)
-        });
-        paginator(result.meta.total,limit,6,current,initial,next)
+      let response = await fetch("/api/products/search?keywords=" + keywords);
+      let result = await response.json();
+      console.log(result.data);
 
-    } catch (error) {
-        console.log(error)
-    }
-}
+      if(result.meta.total > 0){
 
-goPagesNext = (event,total,limit,show,current,initial,next) => {
-    event.preventDefault();
-    current = current + show;
-    initial = initial + show;
-    next = next + show
-    paginator(total,limit,show,current,initial,next)
-    goPage(event,current,limit,initial,next)
-}
+        result.data.forEach((product)=>{
+          addItem(product);
+          $(".productos").innerHTML = `<p><b>Productos encontrados para la busqueda ${keywords}: ${result.meta.total}</b></p>`;
+        })
+      }else{
+         $(".productos").innerHTML = `<p><b>No hay resultados para la busqueda: ${keywords}</b></p>`;
+      }
+    }catch (error) {
+   console.log(error);
+ }
+};
 
+  async function ropa() {
+    $("#table-products").innerHTML="";
+   try {
+     let response = await fetch("/api/products/categories/ropa")
+     let result = await response.json();
+     console.log(result);
 
-function paginator(total, limit, show, current,initial,next){
-    let pages = Math.ceil(total / limit)
-    $('box-paginator').innerHTML = 
-    `
-        <li class="page-item">
-            <a class="page-link me-1" href="#">
-                <i class="fas fa-angle-left"></i>
-            </a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">
-                <i class="fas fa-angle-double-left"></i>
-            </a>
-        </li>
-    `
-    for (let i = initial; i < initial + show; i++) {
-        $('box-paginator').innerHTML += 
-        `
-            <li class="page-item ${current == i ? 'active' : null}" onclick="goPage(event, ${i},${limit},${initial},${next})"><a class="page-link" href="#">${i}</a></li>
-        `
-    }
+     result.data.products.forEach(product => {
+     
+     addItemCategory(product);
+      
+     });
+   } catch (error) {
+     console.log(error);
+   }
+ }; 
+
+ async function mercha() {
+  $("#table-products").innerHTML="";
+ try {
+   let response = await fetch("/api/products/categories/mercha")
+   let result = await response.json();
+   console.log(result);
+
+   result.data.products.forEach(product => {
    
-    $('box-paginator').innerHTML += 
-    `
-        <li class="page-item">
-            <a class="page-link" href="#" onclick="goPagesNext(event,${total},${limit},${show},${current},${initial},${next})">
-                <i class="fas fa-angle-double-right"></i>
-            </a>
-        </li>
-        <li class="page-item ms-1">
-        <a class="page-link" href="#">
-            <i class="fas fa-angle-right"></i>
-        </a>
-    </li>
-    ` 
-}*/
+   addItemCategory(product);
+    
+   });
+ } catch (error) {
+   console.log(error);
+ }
+}; 
+
+async function figuras() {
+  $("#table-products").innerHTML="";
+ try {
+   let response = await fetch("/api/products/categories/figuras")
+   let result = await response.json();
+   console.log(result);
+
+   result.data.products.forEach(product => {
+   
+   addItemCategory(product);
+    
+   });
+ } catch (error) {
+   console.log(error);
+ }
+}; 
+
+async function comics() {
+  $("#table-products").innerHTML="";
+ try {
+   let response = await fetch("/api/products/categories/comics")
+   let result = await response.json();
+   console.log(result);
+
+   result.data.products.forEach(product => {
+   
+   addItemCategory(product);
+    
+   });
+ } catch (error) {
+   console.log(error);
+ }
+}; 
+
+
+   
+
+      
