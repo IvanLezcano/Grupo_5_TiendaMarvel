@@ -10,9 +10,15 @@
  
     <%- include('./partials/header') %>
 
-    <% if (resultado) { %>
+    <% if (resultado[0]==null){ %>
      
- 
+        <p>no hay nada</p>
+      
+
+
+
+    <% } else{ %>
+        
     <div class="productostotales">
         <% resultado.forEach(resultado => { %>
      
@@ -27,11 +33,9 @@
             </div>
 
         </article>
-      
+        <% }) %>
+        <% } %>
 
-    <% }) %>
-
-    <% } %>
 </div> 
              
               
