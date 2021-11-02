@@ -164,6 +164,7 @@ module.exports = {
       db.Product.update(
         {
           ...req.body,
+          discount: req.body.discount ? req.body.discount : null, 
           image: req.file ? req.file.filename : imagen.image
         },
         {
