@@ -57,9 +57,11 @@ window.addEventListener('load', () => {
         let avatarPreview = document.querySelector('.contAvatarPreview')
         document.querySelector("#avatar").onchange = function (e) {
             // Creamos el objeto de la clase FileReader
+            avatarPreview.innerHTML = null;
             let reader = new FileReader();
 
             // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+            console.log(e.target.files);
             reader.readAsDataURL(e.target.files[0]);
 
             // Le decimos que cuando este listo ejecute el código interno
