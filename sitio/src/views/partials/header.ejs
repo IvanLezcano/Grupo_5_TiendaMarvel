@@ -15,11 +15,15 @@
 
 
             <div class="buscador">
-              <form action="/productos/search" type="search">
-                <button type="submit"><i class="fas fa-search"></i></button>
+              <form id="formHome" action="/productos/search" type="search">
+                <button id="buttonHome" type="submit"><i class="fas fa-search"></i></button>
 
-              <input type="text" name="search" placeholder="   Busca tus productos!">
+              <input id="inputSearch" type="text" name="search" placeholder="   Busca tus productos!">
+              
             </form>
+            <div id="mensajebusqueda">
+                
+              </div>
           </div>
 
           <!-- ANIMACIONES -->
@@ -210,3 +214,4 @@
                 </div>
             </div>
     </section>
+    <script src="/javascript/buscador.js"> </script>
