@@ -34,7 +34,7 @@
         <div>
           <label for="descripcion">Descripción del producto</label>
           <textarea name="description" id="descripcion" cols="8" rows="3"><%=locals.old ? old.description :  producto.description  %></textarea>
-          <span class="error-carga"><%= locals.errores && errores.description ? errores.description.msg : null %></span>
+          <span class="error-carga error-desc"><%= locals.errores && errores.description ? errores.description.msg : null %></span>
         </div>
 
         <div class="select">
@@ -48,7 +48,10 @@
           <span class="error-carga"><%= locals.errores && errores.categoryId ? errores.categoryId.msg : null %></span>
         </div>
 
-        <button type="submit">GUARDAR</button>
+        <button type="submit" class="btnEnviar">GUARDAR</button>
+        <div >
+          <span class="msjGeneral error-carga "></span>
+          </div>
       </form>
     </main>
     <%- include('./partials/scripts')  %> 

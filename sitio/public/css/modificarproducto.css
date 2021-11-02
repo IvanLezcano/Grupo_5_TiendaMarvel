@@ -8,6 +8,10 @@
   flex-direction: column;
   align-items: center;
 }
+.error-carga{
+  font-size: 1.3rem;
+  color: rgb(145, 9, 9);
+}
 .modificar-producto .volver {
   display: flex;
   justify-content: space-around;
