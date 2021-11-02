@@ -124,7 +124,7 @@ module.exports = {
      let response = {
         status: 200,
         meta: {
-          total: ropa.length,
+          total:ropa.products.length,
           url: getURL(req),
         },
         data: ropa,
@@ -145,7 +145,7 @@ module.exports = {
      let response = {
         status: 200,
         meta: {
-          total: figuras.length,
+          total: figuras.products.length,
           url: getURL(req),
         },
         data: figuras,
@@ -165,7 +165,7 @@ module.exports = {
      let response = {
         status: 200,
         meta: {
-          total: merchandinsing.length,
+          total: merchandinsing.products.length,
           url: getURL(req),
         },
         data: merchandinsing,
@@ -185,7 +185,7 @@ module.exports = {
      let response = {
         status: 200,
         meta: {
-          total: comics.length,
+          total: comics.products.length,
           url: getURL(req),
         },
         data: comics,

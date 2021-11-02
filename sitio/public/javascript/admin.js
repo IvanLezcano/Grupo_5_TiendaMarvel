@@ -13,6 +13,25 @@ if ($1("form-search")) {
   });
 }
 
+const borrar = async () => {
+let borrar = document.querySelectorAll('.borrar')
+ borrar.forEach(e => e.addEventListener("click",(event)=>{
+    let formulario = document.querySelector('.eliminar')
+    console.log(formulario);
+    let respuesta = confirm("Seguro que lo queres borrar?");
+    if (!respuesta) {
+        event.preventDefault()
+    return false;
+    }else {
+        alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
+    formulario.submit()
+    
+    }
+    
+}))
+}
+
+
 
 $('#table-products').innerHTML = null; //limpio el caja padre
 $('.listar').addEventListener("click", () =>{
@@ -39,31 +58,16 @@ $('.comics').addEventListener("click", () =>{
 
 
 const listado = async () => {
-
+  $("#table-products").innerHTML="";
     try {
         let response = await fetch('/api/products');
         let result = await response.json();
-        console.log(result.data);
+        console.log(result);
         result.data.forEach(product => {
-           addItem(product);
-           console.log(document.querySelector('.borrar'))
+         addItem(product);
+         $(".productos").innerHTML = `<p><b>Lista completa de productos: ${result.meta.cantidad}</b></p>`;
         });
-        let borrar = document.querySelectorAll('.borrar')
-        
-        borrar.forEach(e => e.addEventListener("click",(event)=>{
-            let formulario = document.querySelector('.eliminar')
-            console.log(formulario);
-            let respuesta = confirm("Seguro que lo queres borrar?");
-            if (!respuesta) {
-                event.preventDefault()
-            return false;
-            }else {
-                alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
-            formulario.submit()
-            
-            }
-            
-        }))
+       borrar()
 
     } catch (error) {
         console.log(error)
@@ -82,10 +86,12 @@ const addItem = product => {
         <td>${product.title} </td>
         <td>${product.price} </td>
         <td>${product.category.name} </td>
-        <td class="d-flex justify-content-around">
+        <td>
+        <div style="margin:5px">
             <a class="btn btn-sm btn-success"
             href="/productos/modificar/${product.id} "><i class="fas fa-edit"></i></a>
-        <div>
+        </div>
+        <div style="margin:5px">
             <form id="eliminar" class="eliminar" action="/productos/borrar/${product.id}?_method=DELETE"
                 method="POST">
                 <button class="btn btn-sm btn-lg-sm btn-danger borrar" type="submit">
@@ -107,7 +113,7 @@ const addItemCategory = product => {
       <td>${product.title} </td>
       <td>${product.price} </td>
       <td></td>
-      <td ">
+      <td>
           <a class="btn btn-sm btn-success"
           href="/productos/modificar/${product.id}"><i class="fas fa-edit"></i></a>
       <div>
@@ -139,6 +145,7 @@ async function search(keywords) {
       }else{
          $(".productos").innerHTML = `<p><b>No hay resultados para la busqueda: ${keywords}</b></p>`;
       }
+      borrar()
     }catch (error) {
    console.log(error);
  }
@@ -150,12 +157,15 @@ async function search(keywords) {
      let response = await fetch("/api/products/categories/ropa")
      let result = await response.json();
      console.log(result);
-
+    $(".productos").innerHTML = `<p><b>Productos encontrados para la categoria ROPA: ${result.meta.total}</b></p>`; 
+  
      result.data.products.forEach(product => {
      
      addItemCategory(product);
-      
-     });
+    
+     })
+     
+     borrar()
    } catch (error) {
      console.log(error);
    }
@@ -167,12 +177,13 @@ async function search(keywords) {
    let response = await fetch("/api/products/categories/mercha")
    let result = await response.json();
    console.log(result);
-
+   $(".productos").innerHTML = `<p><b>Productos encontrados para la categoria MERCHANDISING: ${result.meta.total}</b></p>`;  
    result.data.products.forEach(product => {
    
    addItemCategory(product);
-    
-   });
+ 
+   })
+   borrar()
  } catch (error) {
    console.log(error);
  }
@@ -184,12 +195,13 @@ async function figuras() {
    let response = await fetch("/api/products/categories/figuras")
    let result = await response.json();
    console.log(result);
-
+   $(".productos").innerHTML = `<p><b>Productos encontrados para la categoria FIGURAS: ${result.meta.total}</b></p>`;  
    result.data.products.forEach(product => {
    
    addItemCategory(product);
-    
-   });
+  
+   })
+   borrar()
  } catch (error) {
    console.log(error);
  }
@@ -200,13 +212,14 @@ async function comics() {
  try {
    let response = await fetch("/api/products/categories/comics")
    let result = await response.json();
-   console.log(result);
-
+      console.log(result);
+      $(".productos").innerHTML = `<p><b>Productos encontrados para la categoria COMICS: ${result.meta.total}</b></p>`;  
    result.data.products.forEach(product => {
    
    addItemCategory(product);
-    
-   });
+  
+   })
+   borrar()
  } catch (error) {
    console.log(error);
  }
