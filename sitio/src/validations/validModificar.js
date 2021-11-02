@@ -15,7 +15,12 @@ let validarModificar = [
   .custom((value, { req }) => {
     
     if (value !== "") {
-      if (value !== Number) { 
+      console.log(value);
+      console.log(typeof value);
+      let number = Number(value)
+      console.log(typeof value);
+      console.log(isNaN(value));
+      if (isNaN(value)) { 
         throw new Error("Tiene que ser numérico");
       }
     } return true;

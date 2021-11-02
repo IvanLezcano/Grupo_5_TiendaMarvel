@@ -26,31 +26,6 @@ nombre.addEventListener("blur", () => {
   }
 });
 
-imagen.addEventListener("focus", () => {
-  let ext = imagen.value.split(".")
-  console.log(ext)
-  if (imagen.value !== "" && ext[1] !== "jpg" || ext[1] !== "png" || ext[1] !== "img") {
-  document.querySelector(".errorImagen").innerHTML = "Las extensiones aceptadas son: .jpg, .png, .img"
-    error = true
-  } else {
-  document.querySelector(".errorImagen").innerHTML = ""
-    error = false
-  }
-
-});
-
-imagen.addEventListener("blur", () => {
-  if (!imagen.value.trim()) {
-    error = true
-    imagen.classList.add("is-invalid");
-    document.querySelector(".errorImagen").innerHTML = "Debes subir al menos una imagen";
-  } else {
-    error = false
-    imagen.classList.remove("is-invalid");
-    imagen.classList.add("is-valid");
-    document.querySelector(".errorImagen").innerHTML = null;
-  }
-});
 precio.addEventListener("blur", () => {
   if (!precio.value.trim()) {
     error = true
@@ -103,7 +78,7 @@ enviar.addEventListener('click', (e) => {
   console.log(elementosForm);
   elementosForm.forEach(e => {
     console.log(e + " " + e.classList.contains("is-invalid"));
-    if (e.value == "" && e.id !== "descuento") {
+    if (e.value == "" && e.id !== "descuento" && e.id !== "imagenProducto") {
       console.log("entro al si");
       vacio = true
 
@@ -114,12 +89,7 @@ enviar.addEventListener('click', (e) => {
     }
    
   })
-  console.log(imagen.value == "");
   if (imagen.value == "") {
-    vacio = true
-    document.querySelector(".errorImagen").innerHTML = "Debes subir al menos una imagen";
-
-  } else {
     vacio = false
     document.querySelector(".errorImagen").innerHTML = "";
   }
