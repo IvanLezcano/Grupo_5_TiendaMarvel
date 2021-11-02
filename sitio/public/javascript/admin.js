@@ -17,7 +17,7 @@ const query =new URLSearchParams(location.search);
   }else{
      $(
          ".productos"
-       ).innerHTML ="<P>Ingresa una palabra para la busqueda</p>"
+       ).innerHTML ="<P><b>Ingresa una palabra para la busqueda</b></p>"
   }
     
       
