@@ -211,6 +211,7 @@ main{
         width: 100%;
         max-width: 30rem;
 
+
         margin-bottom: 3rem;
     
     }
@@ -250,7 +251,7 @@ main{
     
     .cadadestacado{
         width: 100%;
-        max-width: 25rem;
+        max-width: 15rem;
         margin-left: 5px;
 
         margin-bottom: 3rem;
@@ -530,13 +531,13 @@ main{
 }
 .cadadestacado{
     width: 20%;
-    max-width: 25rem;
+    max-width: 30rem;
 
 
 }
 .destacados img{
     width: 100%;
-    height: 20rem;
+    height: 30rem;
 
 }
 .titulodestacado{
