@@ -3,15 +3,26 @@ const $ = (id) => document.querySelector(id);
 const $1 = (id) =>document.getElementById(id);
 const query =new URLSearchParams(location.search);
 
-if ($1("form-search")) {
-  $1("form-search").addEventListener("submit", (e) => {
-    e.preventDefault();
 
+ $(".searchButton").addEventListener("click", (e) => {
+    e.preventDefault();
+     $("#table-products").innerHTML = "";
+       $(
+         ".productos"
+       ).innerHTML = "";
     query.set("keywords", $1("input-search").value);
     history.replaceState({}, "", `${location.pathname}?${query}`);
-    search(query.get("keywords")); //query.get nos toma la palbra ingresada por el buscador
-  });
-}
+     if (query.get("keywords")!==""){
+       search(query.get("keywords")); //query.get nos toma la palbra ingresada por el buscador
+  }else{
+     $(
+         ".productos"
+       ).innerHTML ="<P>Ingresa una palabra para la busqueda</p>"
+  }
+    
+      
+ })
+
 
 const borrar = async () => {
 let borrar = document.querySelectorAll('.borrar')
@@ -131,24 +142,28 @@ const addItemCategory = product => {
 
 async function search(keywords) {
     $("#table-products").innerHTML="";
-    try {
-      let response = await fetch("/api/products/search?keywords=" + keywords);
-      let result = await response.json();
-      console.log(result.data);
+   
+      try {
+        let response = await fetch("/api/products/search?keywords=" + keywords);
+        let result = await response.json();
+        console.log(result.data);
 
-      if(result.meta.total > 0){
-
-        result.data.forEach((product)=>{
-          addItem(product);
-          $(".productos").innerHTML = `<p><b>Productos encontrados para la busqueda ${keywords}: ${result.meta.total}</b></p>`;
-        })
-      }else{
-         $(".productos").innerHTML = `<p><b>No hay resultados para la busqueda: ${keywords}</b></p>`;
+        if (result.meta.total > 0) {
+          result.data.forEach((product) => {
+            addItem(product);
+            $(
+              ".productos"
+            ).innerHTML = `<p><b>Productos encontrados para la busqueda ${keywords}: ${result.meta.total}</b></p>`;
+          });
+        } else {
+          $(
+            ".productos"
+          ).innerHTML = `<p><b>No hay resultados para la busqueda: ${keywords}</b></p>`;
+        }
+        borrar();
+      } catch (error) {
+        console.log(error);
       }
-      borrar()
-    }catch (error) {
-   console.log(error);
- }
 };
 
   async function ropa() {

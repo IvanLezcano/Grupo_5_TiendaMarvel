@@ -8,7 +8,8 @@ const fs = require('fs');
 
 module.exports = {
   search: (req, res) => {
-    db.Product.findAll({
+
+      db.Product.findAll({
       where: {
         [Op.or]: [
           {
@@ -23,7 +24,8 @@ module.exports = {
           }
         ]
       },
-    }).then(resultado => res.render("resultado", {
+    }).then(resultado => 
+      res.render("resultado", {
       resultado,
       busqueda: req.query.search,
     })).catch(error => console.log(error))
