@@ -160,7 +160,11 @@ module.exports = {
           __dirname,
           "../../public/images/merchandising/" + imagen.image
         );
-        fs.unlinkSync(rutaImg);
+        if(fs.existsSync(rutaImg)){
+          console.log("El archivo EXISTE!");
+          fs.unlinkSync(rutaImg);
+        }
+          
       }
 
       db.Product.update(

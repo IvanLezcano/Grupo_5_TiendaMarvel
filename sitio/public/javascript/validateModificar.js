@@ -43,7 +43,7 @@ precio.addEventListener("blur", () => {
   }
 });
 
-desc.addEventListener("blur", () => {
+desc.addEventListener("input", () => {
   if (desc.value > 50 && desc.value !== 0) {
     error = true
     desc.classList.add("is-invalid");

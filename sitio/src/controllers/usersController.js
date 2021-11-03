@@ -251,7 +251,11 @@ db.User.findByPk(req.session.userLogin.id)
   updateAvatar : (req,res) => {
     let imgABorrar= path.join(__dirname, "../../public/images/users/"+req.session.userLogin.avatar)
     if (req.session.userLogin.avatar !== req.session.userLogin.name[0].toUpperCase()+".jpg") {
-      fs.unlinkSync(imgABorrar) 
+      console.log("ruta imagen: ",imgABorrar);
+      if(fs.existsSync(imgABorrar)){
+        console.log("El archivo EXISTE!");
+        fs.unlinkSync(imgABorrar);
+      }
     }
       db.User.update(
           {
