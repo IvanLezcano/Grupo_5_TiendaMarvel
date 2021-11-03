@@ -47,6 +47,8 @@ header{
 
 
 @media (min-width: 319px){
+    .busqueda{
+    }
     header nav{
         display: flex !important;
     }
