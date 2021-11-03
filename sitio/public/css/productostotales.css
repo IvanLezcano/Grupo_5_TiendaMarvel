@@ -128,13 +128,13 @@
         margin: auto !important;
     }
     .titulodestacado2 h3{
-        font-size: 6rem;
+        font-size: 2rem;
     }
     .titulodestacado2{
         width: 60% !important;
         height: 20% !important;
         font-family: 'Bebas Neue';
-        font-size: 4rem;
+        font-size: 2rem;
         background-color: #d3dbde;
         text-align: center;
         color: #ff0000;
@@ -144,7 +144,7 @@
         margin: auto !important;
     }
     .titulodestacado h3{
-        font-size: 6rem;
+        font-size: 2.5rem;
     }
    
 }
