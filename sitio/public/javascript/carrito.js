@@ -81,9 +81,42 @@ const show = async () => {
 }
  
 
+const agregarItemDescription = async (e) => {
+    e.preventDefault()
+    console.log("hola");
+    let href = location.pathname
+    console.log("href ",href);
+    let id = href.split("/")
+    console.log("id ",id);
+    id = id[3]
+    console.log("id final ",id);
+   const productos = [];
+    try {
+        let response = await fetch(urlBase + '/api/carts/add/' + id)
+        let result = await response.json();
+        mostrarCantidad(result.data);
+        mostrarProductos(result.data);
+        productos.push(result.data);
+        localStorage.setItem("producto", JSON.stringify(productos));
+
+        let prueba= localStorage.getItem('producto')
+        console.log(JSON.parse(prueba))
+      
+
+    } catch (error) {
+        console.log(error)
+
+    }
+    console.log(productos);
+    
+    console.log('producto ' + id + ' agregado!!')
+    
+}
+  
 
 const agregarItem = async (e,id) => {
     e.preventDefault()
+    console.log("hola");
    const productos = [];
     try {
         let response = await fetch(urlBase + '/api/carts/add/' + id)
