@@ -7,7 +7,8 @@ header{
 .centrando{
     display: flex;
     flex-direction: column;
-    align-items: center;
+     align-items: center;
+     
 }
 
 
@@ -48,7 +49,11 @@ header{
 
 @media (min-width: 319px){
     .busqueda{
-    }
+    width: 100%;
+    height: 30vh;
+
+}
+  
     header nav{
         display: flex !important;
     }
@@ -60,8 +65,8 @@ header{
         z-index: 100;
     }
     .logoTorre{
-    max-width: 90%;
-    height: 90%;
+    max-width: 11em;
+    max-height: 11em;
 } 
 
 
@@ -109,7 +114,7 @@ header{
         height: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content:center;
+        justify-content: center;
         border-left: 3px solid #262626;
         width: 25% !important;
             
@@ -212,6 +217,7 @@ header{
     .fa-shopping-cart{
         color: white;
         font-size: 30px;
+       
     }
     .re{
         display: none;
@@ -246,9 +252,9 @@ header{
          width: 20% !important;
     }
     .logoTorre{
-    max-width: 100%;
-    height: 100%;
-    }
+    max-width: 13em;
+    max-height: 13em;
+    } 
     .avatar{
         width:50px;
        
@@ -308,7 +314,7 @@ header{
     display: none;
 }
 .menu{
-    
+   /*  height: 3.2rem; */
     display: inline !important;
 }
 .menus ul{
@@ -386,16 +392,14 @@ header ul li a{
 
 .resto button{
     background-color: #262626 !important;
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* boton menu */
 }
 
 
 .menus .btn{
     
     background-color: #262626 !important;
-    font-size: 1.3rem;
-
-
+    font-size: 1.3rem; /*  boton menu */
 }
 .buscador input{
     width: 70%;
@@ -457,8 +461,7 @@ header .botonderegistrarse a{
 }
 @media (min-width: 1024px){
 
-
-   
+  
 
  .avatar{
         width:70px;
@@ -502,15 +505,27 @@ header .botonderegistrarse a{
 display: flex !important; 
 }
 .btn{
-    width: 12rem;
+    width: 12rem; /*  10 */
     height: 4rem;
 }
 #dropdownMenuButton1{
-    height: 4rem !important;
+    height: 4rem !important; /* 3 */
 }
 .re{
     font-size: 2.4;
 }
+
+/* .resto button{
+    background-color: #262626 !important;
+    font-size: 0.9rem;
+}
+
+
+.menus .btn{
+    
+    background-color: #262626 !important;
+    font-size: 0.9rem;
+} */
 
 }
 

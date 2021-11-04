@@ -7,20 +7,23 @@
         <!--  ============= imagenLogo========= -->
          
           <div class="imagenNavegacion">
-           <div class="ContlogoTorre"><a href="/users/login">
-          <img src="/images/torre.png" class="animate__animated animate__fadeInLeftBig logoTorre" alt="logo-torre" /></a>
-          </div> 
+            <a href="/users/login" class=""></a>
+           <div class="ContlogoTorre">
+          <img src="/images/torre.png" class="animate__animated animate__fadeInLeftBig logoTorre" alt="logo-torre" />
+          </div></a> 
         </div>
 
 
 
-            <div class="buscador">
+            <div class="buscador d-flex flex-column">
+              
               <form id="formHome" action="/productos/search" type="search">
                 <button id="buttonHome" type="submit"><i class="fas fa-search"></i></button>
 
               <input id="inputSearch" type="text" name="search" placeholder="   Busca tus productos!">
               
             </form>
+            
             <div id="mensajebusqueda">
                 
               </div>
@@ -58,18 +61,16 @@
 							<a class="dropdown-item" href="/users/logout">Cerrar sesion</a>
 						</ul>
 					</li>
-           <!--  carrito -->
-                         
-             <!--  <button type="button" class="nav-link btn-cart bg-transparent" data-bs-toggle="modal" data-bs-target="#modal-carrito"> -->
+         
              <div class="imagen-carrito" data-bs-toggle="modal" data-bs-target="#modal-carrito">
                 <i class="fas fa-shopping-cart animate__animated animate__fadeInRightBig">
-                 <!--  <span class="badge rounded-pill bg-warning"></span> -->
+                
                 </i>
                 <span class="badge rounded-pill bg-warning"></span>
-                </div>
+               </div>
                
           
-              <!--  </button> -->
+             
         </div>
 
             <% } else { %>   
