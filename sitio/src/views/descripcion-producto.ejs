@@ -8,7 +8,7 @@
     <main class="descripcion-producto">
       <article class="producto-article">
         <div class="producto-article-imagen">
-          <p><a href="/">INICIO</a> ><%= producto.title %><%= producto.name %></p>
+          <p><a href="/">INICIO</a> > <a href="/productos/<%= producto.category.name %>"><%= producto.category.name %></a>><%= producto.title %><%= producto.name %></p>
           <img src="/images/merchandising/<%= producto.image %>" />
         </div>
         <div class="producto-article-cont-descripcion">
@@ -117,8 +117,13 @@
   <script >
     document.querySelector(".deslogueado").addEventListener("click", (e) => {
     e.preventDefault();
-    Swal.fire("Debes loguearte para poder realizar la compra")
-    })
+    Swal.fire({
+    icon: "info",
+    title: "Debes estar logueado para poder realizar la compra",
+    confirm: false,
+    timer: 2000,
+  })});
+
   </script>
 
 </html>
