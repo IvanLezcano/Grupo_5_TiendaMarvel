@@ -23,7 +23,7 @@ const query =new URLSearchParams(location.search);
       
  })
 
-
+/* 
 const borrar = async () => {
 let borrar = document.querySelectorAll('.borrar')
  borrar.forEach(e => e.addEventListener("click",(event)=>{
@@ -41,6 +41,36 @@ let borrar = document.querySelectorAll('.borrar')
     
 }))
 }
+ */
+
+     const borrar = async () => {
+       let borrar = document.querySelectorAll(".borrar");
+
+       borrar.forEach((e) =>e.addEventListener("click", (event) => {
+           
+           let formulario = document.querySelector(".eliminar");
+
+           Swal.fire({
+             title: "Seguro que queres eliminar este producto?",
+             text: "You won't be able to revert this!",
+             icon: "warning",
+             showCancelButton: true,
+             confirmButtonColor: "#3085d6",
+             cancelButtonColor: "#d33",
+             confirmButtonText: "Si, quiero eliminarlo!",
+           }).then((result) => {
+             if (result.isConfirmed) {
+              
+               Swal.fire("Borrado!", "Your file has been deleted.", "success");
+               formulario.submit();
+                 
+             }else{
+               event.preventDefault();
+             }
+           });
+         })
+       );
+     };
 
 
 

@@ -70,7 +70,7 @@ window.addEventListener('load', (e) => {
   });
 
   let desc = $("#descuento")
-  desc.addEventListener("blur", () => {
+  desc.addEventListener("input", () => {
     if (desc.value > 50) {
       error = true
       desc.classList.add("is-invalid");
