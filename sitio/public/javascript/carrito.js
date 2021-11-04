@@ -128,7 +128,13 @@ const agregarItem = async (e,id) => {
 
         let prueba= localStorage.getItem('producto')
         console.log(JSON.parse(prueba))
-      
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Agregado al carrito',
+            showConfirmButton: false,
+            timer: 1500
+          })
 
     } catch (error) {
         console.log(error)
@@ -156,7 +162,13 @@ const quitarItem = async (e,id,cantidad) => {
     let prueba = localStorage.getItem("producto");
     console.log("producto borrado");
     console.log(JSON.parse(prueba));
-    
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Eliminado del carrito',
+        showConfirmButton: false,
+        timer: 1500
+      })
   } catch (error) {
     console.log(error);
   }
