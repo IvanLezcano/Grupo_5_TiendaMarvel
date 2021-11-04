@@ -23,7 +23,8 @@
 
       <div class="fondo2">
       </div>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
       <script language="JavaScript">
         var alfab = "abcdefghijklmnñopqrstuvxyz"
         var nump = 10
@@ -81,7 +82,20 @@
 
         }
         let felicitar = () => {
-          alert("el doctor strange ya sabia que dirias que es la mejor pagina del mundo!")
+          Swal.fire({
+          icon: "info",
+          background:'#000 url(/images/comics.jpg)',
+          backdrop:`
+     rgba(5, 5, 25, 0.4)
+     url("https://thumbs.gfycat.com/NiceWillingDoctorfish.webp")
+    center left 
+    no-repeat
+    `,
+          title: "el doctor strange ya sabia que dirias que es la mejor pagina del mundo!",
+          confirm: false,
+          timer: 2000,
+        });
+     
 
           return document.getElementById("mensaje").innerHTML = "Gracias por elegirnos!"
         
