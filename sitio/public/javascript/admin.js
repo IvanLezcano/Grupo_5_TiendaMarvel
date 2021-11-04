@@ -44,28 +44,30 @@ let borrar = document.querySelectorAll('.borrar')
  */
 
 const borrar = async () => {
-  let borrar = document.querySelectorAll(".borrar");
+  let formularios = document.querySelectorAll(".eliminar");
 
-  borrar.forEach((e) =>e.addEventListener("click", (event) => {
-      
-      let formulario = document.querySelector(".eliminar");
+  formularios.forEach((e) =>
+    e.addEventListener("submit", (event) => {
+      event.preventDefault();
+      console.log("hola");
 
       Swal.fire({
         title: "Seguro que queres eliminar este producto?",
-        text: "You won't be able to revert this!",
+        text: "Ya no podras revertir este cambio!",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Si, quiero eliminarlo!",
       }).then((result) => {
+        console.log(result);
         if (result.isConfirmed) {
-         
-          Swal.fire("Borrado!", "Your file has been deleted.", "success");
-          formulario.submit();
-            
-        }else{
-          event.preventDefault();
+          Swal.fire(
+            "Borrado!",
+            "El producto a sido eliminado",
+            "success"
+          );
+          e.submit();
         }
       });
     })
