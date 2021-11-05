@@ -20,7 +20,7 @@ else if(!regExEmail.test(email.value)){
 } else {
    email.classList.remove("is-invalid");
    email.classList.add("is-valid");
-    $(".errorEmail").innerHTML = null;
+    $(".errorEmail").innerHTML = "";
   }
 });
 let nombre = $("#nombre")
@@ -37,6 +37,22 @@ nombre.addEventListener("blur", () => {
     $(".errorName").innerHTML = null;
   }
 });
+let apellido = $("#apellido");
+apellido.addEventListener("blur", () => {
+  if (!apellido.value.trim()) {
+    apellido.classList.add("is-invalid");
+    $(".errorApellido").innerHTML = "El apellido es obligatorio";
+  } else if (apellido.value.length < 3) {
+    apellido.classList.add("is-invalid");
+    $(".errorApellido").innerHTML = "El apellido debe tener al menos 3 letras";
+  } else {
+    apellido.classList.remove("is-invalid");
+    apellido.classList.add("is-valid");
+    $(".errorApellido").innerHTML = null;
+  }
+});
+
+
 
 let genero = $("#genero")
 genero.addEventListener("blur", () => {
@@ -53,7 +69,7 @@ genero.addEventListener("blur", () => {
 
 
  let mensaje = $("#inputPaswor");
- mensaje.addEventListener("blur", () => {
+ mensaje.addEventListener("input", () => {
     if (!mensaje.value.trim()) {
         mensaje.classList.add("is-invalid");
           $(".errorDescripcion").innerHTML = "Contanos algo porfa!!!!";

@@ -85,14 +85,20 @@
               
 
             <div class="menuMobile">
-                <button class="btn btn-secondary dropdown-toggle menumobile" type="button" id="dropdownMenuButton1"
+               
+             <% if (locals.isLogged) { %>
+              <button class="btn btn-secondary dropdown-toggle menumobile" type="button" id="dropdownMenuButton1"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        ☰
-                </button>
-
-            
+                       
+                </button> 
+                <% } else { %>   
+             <button class="btn btn-secondary dropdown-toggle menumobile" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        ☰  
+                </button> 
+                <% } %>
                 
-                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+                   <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1"> 
                       <li> <a href="/"><button type="button" class="btn btn-secondary">HOME</button></a>
                       </li>  
                       <li> <a href="/novedades"><button type="button" class="btn btn-secondary">NOVEDADES</button></a>
@@ -119,8 +125,7 @@
                     </ul>
              </div>
     
-    
-               
+                       
             </div>
 
         </section>

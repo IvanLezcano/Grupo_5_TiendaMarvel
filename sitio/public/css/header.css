@@ -50,7 +50,7 @@ header{
 @media (min-width: 319px){
     .busqueda{
     width: 100%;
-    height: 30vh;
+    height: 22vh; /*aca*/
 
 }
   
@@ -121,7 +121,8 @@ header{
     }
 
     .avatar{
-        width:35px;
+        margin-top: 5px;
+        width:50px;
         height: 35px;
         border-radius: 10%
     }
@@ -200,6 +201,7 @@ header{
    
     .menumobile{
         background-color: transparent !important;
+        display:flex; /*aca*/
         border: none;
         color: white;
         }
@@ -251,14 +253,7 @@ header{
      .botonderegistrarse{
          width: 20% !important;
     }
-    .logoTorre{
-    max-width: 13em;
-    max-height: 13em;
-    } 
-    .avatar{
-        width:50px;
-       
-    }
+  
     .saludo{
         font-size: 12px;
     }
@@ -266,9 +261,19 @@ header{
 }
 
 @media (min-width: 768px){
+     .busqueda{
+    width: 100%;
+    height: 25vh;
+     }
+
+      .logoTorre{
+    margin-top: 14px;
+    max-width: 14em;
+    max-height: 15em;
+    }
     .avatar{
-        width:70px;
-        height: 60px;
+        width:60px;
+        height: 50px;
         border-radius: 30%;
     }
 
@@ -288,12 +293,7 @@ header{
         border-radius: 10px !important;
     }
 
-    .avatar{
-        width:60px;
-        border-radius: 100%;
-        font-size: 16px;
-    }
-    .saludo{
+   .saludo{
         font-size: 14px;
     }
     .busqueda input{
@@ -335,11 +335,6 @@ header{
 }
 
 
-
-.busqueda{
-    width: 100%;
-
-}
 .buscador input{
     height: 30px;
     border-radius: 15px;
@@ -399,7 +394,7 @@ header ul li a{
 .menus .btn{
     
     background-color: #262626 !important;
-    font-size: 1.3rem; /*  boton menu */
+    font-size: 1.3rem; 
 }
 .buscador input{
     width: 70%;
@@ -460,16 +455,7 @@ header .botonderegistrarse a{
 }
 }
 @media (min-width: 1024px){
- .logoTorre{
-    max-width: 15em;
-    max-height: 15em;
- }
 
- .avatar{
-        width:70px;
-        height: 60px;
-        border-radius: 30%;
- }
   .fijo1{
         width: 80px;
         height: 100px;
@@ -507,27 +493,17 @@ header .botonderegistrarse a{
 display: flex !important; 
 }
 .btn{
-    width: 12rem; /*  10 */
+    width: 12rem; 
     height: 4rem;
 }
 #dropdownMenuButton1{
-    height: 4rem !important; /* 3 */
+    height: 4rem !important; 
 }
 .re{
     font-size: 2.4;
 }
 
-/* .resto button{
-    background-color: #262626 !important;
-    font-size: 0.9rem;
-}
 
-
-.menus .btn{
-    
-    background-color: #262626 !important;
-    font-size: 0.9rem;
-} */
 
 }
 
@@ -540,7 +516,7 @@ display: flex !important;
 
 .badge{
    position: absolute;
-    right: 40%;
+    right: 10%;
     bottom: 50%; 
    
 }
