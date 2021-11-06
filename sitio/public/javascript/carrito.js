@@ -177,9 +177,23 @@ const quitarItem = async (e,id,cantidad) => {
 } 
 
 const empty = async () => {
-     let response = confirm('¿Estás seguro que querés eliminar todos los productos?')
-        if(response){
-    try {
+    Swal.fire({
+        title: "Seguro que queres eliminar este producto?",
+        text: "Ya no podras revertir este cambio!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, quiero eliminarlo!",
+        animation: false,
+        customClass: {
+          popup: "animated tada",
+        },
+       
+      }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire("Borrado!", "El producto a sido eliminado", "success");
+            try {
         let response = await fetch(urlBase + '/api/carts/empty')
         let result = await response.json();
         mostrarCantidad(result.data);
@@ -190,6 +204,6 @@ const empty = async () => {
         console.log(error)
     }
 } 
-}
+})}
 
 show()

@@ -51,7 +51,7 @@ const borrar = async () => {
       event.preventDefault();
       console.log("hola");
 
-      Swal.fire({
+      .then((result) => {Swal.fire({
         title: "Seguro que queres eliminar este producto?",
         text: "Ya no podras revertir este cambio!",
         icon: "warning",
@@ -64,7 +64,7 @@ const borrar = async () => {
           popup: "animated tada",
         },
        
-      }).then((result) => {
+      })
         console.log(result);
         if (result.isConfirmed) {
           Swal.fire("Borrado!", "El producto a sido eliminado", "success");
