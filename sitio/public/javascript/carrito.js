@@ -193,16 +193,15 @@ const empty = async () => {
       }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire("Borrado!", "El producto a sido eliminado", "success");
-            try {
-        let response = await fetch(urlBase + '/api/carts/empty')
-        let result = await response.json();
-        mostrarCantidad(result.data);
-        changuito.innerHTML = ""
-        localStorage.removeItem('producto');
+        fetch(urlBase + '/api/carts/empty')
+        .then( response => response.json())
+        .then(result => {
+            mostrarCantidad(result.data);
+            changuito.innerHTML = ""
+            localStorage.removeItem('producto');
 
-    } catch (error) {
-        console.log(error)
-    }
+        }).catch(error => console.log(error))
+
 } 
 })}
 
