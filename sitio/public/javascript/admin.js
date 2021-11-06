@@ -74,10 +74,15 @@ const borrar = async () => {
   );
 };
 
+window.addEventListener("load",function(){
+ listado()
+  console.log("documento cargado");
+}) 
+  
 
 
 $('#table-products').innerHTML = null; //limpio el caja padre
-$('.listar').addEventListener("click", () =>{
+$('.listado').addEventListener("click", () =>{
     listado()
      
 })
