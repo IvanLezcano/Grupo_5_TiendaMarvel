@@ -20,6 +20,7 @@
           <label for="imagen">Imagen</label>
           <input type="file" name="image" id="imagenProducto" />
           <span class="error-carga errorImagen"><%= locals.errores && errores.image ? errores.image.msg : null %></span>
+          <div id="preview"></div>
         </div>
         <div>
           <label for="precioProducto">Precio</label>
@@ -57,6 +58,7 @@
     <%- include('./partials/scripts')  %> 
     
     <script src="/javascript/validateModificar.js"></script>
+    <script src="/javascript/imagenProducto.js"></script>
   </body>
 
 </html>
