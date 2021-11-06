@@ -59,14 +59,15 @@ const borrar = async () => {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Si, quiero eliminarlo!",
+        animation: false,
+        customClass: {
+          popup: "animated tada",
+        },
+       
       }).then((result) => {
         console.log(result);
         if (result.isConfirmed) {
-          Swal.fire(
-            "Borrado!",
-            "El producto a sido eliminado",
-            "success"
-          );
+          Swal.fire("Borrado!", "El producto a sido eliminado", "success");
           e.submit();
         }
       });

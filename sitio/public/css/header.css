@@ -460,16 +460,16 @@ header .botonderegistrarse a{
         width: 80px;
         height: 100px;
         position: absolute;
-        right: 25%;
-        top:60%;
+        right: 15%;
+        top:30%;
   }
    .fijo2{
 
         width: 80px;
         height: 100px;
         position: absolute;
-        left: 25%;
-        top:60%;
+        left: 15%;
+        top:30%;
   }
  .cargarymodificar{
      width: 100% !important;
