@@ -57,8 +57,18 @@
   width: 100%;
 }
 .carrito-encabezado-titulo-button1{
-  display:none;
+  display:block;
   margin-bottom: 10px;
+}
+.carrito-encabezado-titulo-button1 button{
+  background-color: #bc0000;
+  color: white;
+  border-radius: 15px;
+  font-family: "Bebas Neue"; 
+  font-weight: 900; 
+  height: 3em;
+  padding: 5px 30px;
+  font-size: 1.1em;
 }
 
 .carrito main{
