@@ -24,7 +24,7 @@ new Glider(document.querySelector('.glider'), {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           itemWidth: 150,
           duration: 0.25
         }
