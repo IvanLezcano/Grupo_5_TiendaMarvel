@@ -59,7 +59,7 @@ lastName.addEventListener('input', ()=>{
     }
 })
 
-password.addEventListener('input', ()=>{
+password.addEventListener('blur', ()=>{
     if(!regExPass.test(password.value) ){
         password.classList.add('is-invalid')
         console.log(password.value);

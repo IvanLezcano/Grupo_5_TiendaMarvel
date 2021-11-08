@@ -54,6 +54,7 @@ apellido.addEventListener("blur", () => {
 
 
 
+
 let genero = $("#genero")
 genero.addEventListener("blur", () => {
   if (!genero.value.trim()) {
@@ -65,7 +66,28 @@ genero.addEventListener("blur", () => {
     $(".errorGenero").innerHTML = null;
   }
 });
-
+let telefono = $("#telefono");
+telefono.addEventListener("blur", () => {
+  if (!telefono.value.trim()) {
+    telefono.classList.add("is-invalid");
+    $(".errorTelefono").innerHTML = "Porfa pasanos tu telefono para comunicarnos rapidamente";
+  } else {
+    telefono.classList.remove("is-invalid");
+    telefono.classList.add("is-valid");
+    $(".errorTelefono").innerHTML = null;
+  }
+});
+let pais = $("#pais");
+pais.addEventListener("blur", () => {
+  if (!pais.value.trim()) {
+    pais.classList.add("is-invalid");
+    $(".errorPais").innerHTML = "Contanos de donde sos";
+  } else {
+    pais.classList.remove("is-invalid");
+    pais.classList.add("is-valid");
+    $(".errorPais").innerHTML = null;
+  }
+});
 
 
  let mensaje = $("#inputPaswor");
@@ -83,6 +105,32 @@ genero.addEventListener("blur", () => {
      $(".errorDescripcion").innerHTML = "";
    }
  });
+
+let form= $('#formContacto')
+form.addEventListener("submit", e =>{
+    e.preventDefault()
+    let error = false;
+    let elementosForm = form.elements
+
+    for (let i = 0; i < elementosForm.length - 1; i++) {
+        
+        if(!elementosForm[i].value){
+            elementosForm[i].classList.add('is-invalid')
+            document.querySelector('.error-empty').innerHTML = 'Los campos señalados son obligatorios';
+            error = true
+        }
+     
+    }
+    if(!error){
+       document.querySelector(".error-empty").innerHTML =
+         "";
+        form.submit()
+    }
+ 
+
+})
+
+
 
 
 })
