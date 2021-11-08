@@ -49,28 +49,26 @@ const borrar = async () => {
   formularios.forEach((e) =>
     e.addEventListener("submit", (event) => {
       event.preventDefault();
-      console.log("hola");
-
-      .then((result) => {Swal.fire({
-        title: "Seguro que queres eliminar este producto?",
-        text: "Ya no podras revertir este cambio!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Si, quiero eliminarlo!",
-        animation: false,
-        customClass: {
-          popup: "animated tada",
-        },
-       
-      })
-        console.log(result);
-        if (result.isConfirmed) {
-          Swal.fire("Borrado!", "El producto a sido eliminado", "success");
-          e.submit();
-        }
-      });
+      console.log("hola")
+     Swal.fire({
+       title: "Seguro que queres eliminar este producto?",
+       text: "Ya no podras revertir este cambio!",
+       icon: "warning",
+       showCancelButton: true,
+       confirmButtonColor: "#3085d6",
+       cancelButtonColor: "#d33",
+       confirmButtonText: "Si, quiero eliminarlo!",
+       animation: false,
+       customClass: {
+         popup: "animated tada",
+       },
+     }).then((result) => {
+       console.log(result);
+       if (result.isConfirmed) {
+         Swal.fire("Borrado!", "El producto a sido eliminado", "success");
+         e.submit();
+       }
+     });
     })
   );
 };
