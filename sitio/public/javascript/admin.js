@@ -6,14 +6,14 @@ const query =new URLSearchParams(location.search);
 
  $(".searchButton").addEventListener("click", (e) => {
     e.preventDefault();
-     $("#table-products").innerHTML = "";
+     $("#table-products").innerHTML = ""; //vacio la tabla
        $(
          ".productos"
        ).innerHTML = "";
-    query.set("keywords", $1("input-search").value);
+    query.set("keywords", $1("input-search").value);//query.set( nombre que le damos, contenido que tendra)
     history.replaceState({}, "", `${location.pathname}?${query}`);
      if (query.get("keywords")!==""){
-       search(query.get("keywords")); //query.get nos toma la palbra ingresada por el buscador
+       search(query.get("keywords")); //query.get nos toma la palabra ingresada por el buscador
   }else{
      $(
          ".productos"
@@ -23,26 +23,23 @@ const query =new URLSearchParams(location.search);
       
  })
 
-
-const borrar = async () => {
-let borrar = document.querySelectorAll('.borrar')
- borrar.forEach(e => e.addEventListener("click",(event)=>{
-    let formulario = document.querySelector('.eliminar')
-    console.log(formulario);
-    let respuesta = confirm("Seguro que lo queres borrar?");
-    if (!respuesta) {
-        event.preventDefault()
-    return false;
-    }else {
-        alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
-    formulario.submit()
-    
-    }
-    
-}))
-}
-
-
+ const borrar = async () => {
+  let borrar = document.querySelectorAll('.borrar')
+   borrar.forEach(e => e.addEventListener("click",(event)=>{
+      let formulario = document.querySelector('.eliminar')
+      console.log(formulario);
+      let respuesta = confirm("Seguro que lo queres borrar?");
+      if (!respuesta) {
+          event.preventDefault()
+      return false;
+      }else {
+          alert("El producto ah sido completamente eliminado del inventario que poseemos actualmente");
+      formulario.submit()
+      
+      }
+      
+  }))
+  }
 
 $('#table-products').innerHTML = null; //limpio el caja padre
 $('.listar').addEventListener("click", () =>{
@@ -140,6 +137,7 @@ const addItemCategory = product => {
   return $('#table-products').innerHTML += item;
 }
 
+//BUSCADOR
 async function search(keywords) {
     $("#table-products").innerHTML="";
    
@@ -166,6 +164,9 @@ async function search(keywords) {
       }
 };
 
+//COMIENZO DE FILTRAR PRODUCTOS POR SU CATEGORIA
+
+//CATEGORIA: ROPA
   async function ropa() {
     $("#table-products").innerHTML="";
    try {
@@ -186,6 +187,7 @@ async function search(keywords) {
    }
  }; 
 
+ //CATEGORIA: MERCHA
  async function mercha() {
   $("#table-products").innerHTML="";
  try {
@@ -204,6 +206,7 @@ async function search(keywords) {
  }
 }; 
 
+//CATEGORIA: FIGURAS
 async function figuras() {
   $("#table-products").innerHTML="";
  try {
@@ -222,6 +225,7 @@ async function figuras() {
  }
 }; 
 
+//CATEGORIA: COMICS
 async function comics() {
   $("#table-products").innerHTML="";
  try {
