@@ -460,8 +460,10 @@ header .botonderegistrarse a{
 }
 }
 @media (min-width: 1024px){
-
-  
+ .logoTorre{
+    max-width: 15em;
+    max-height: 15em;
+ }
 
  .avatar{
         width:70px;
