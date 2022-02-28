@@ -75,7 +75,7 @@ const borrar = async () => {
 
 window.addEventListener("load",function(){
  listado()
-  console.log("documento cargado");
+  console.log("documento");
 }) 
   
 
